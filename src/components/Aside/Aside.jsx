@@ -112,9 +112,10 @@ export const Aside = () => {
 
             <ContainerMenu className="container-menu-ua">
               <MenuList>
-                {menuList.map(({ nameEn, nameUa, link }) => {
+                {menuList.map(({ nameEn, nameUa, link, id }) => {
                   return (
                     <MenuItem
+                      key={id}
                       className="menu-items"
                       onClick={() => {
                         enableBodyScroll(document.body);
