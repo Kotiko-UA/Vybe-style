@@ -102,9 +102,7 @@ height: calc(100% / 4);
 &:hover::after {
   opacity:1;
 }
-&:focus::after {
-  opacity:1;
-}
+
 &:hover {
     flex-shrink: 0;
     height: 315px;

@@ -320,11 +320,23 @@ export const ContactUsBtn = styled.button`
   width: 100%;
   margin-top: 42px;
   padding: 16px 40px;
-
+position: relative;
   border: none;
   background: ${({ theme, disabled }) =>
     disabled ? theme.greyColor : theme.brandColor};
 
+  
+  color: ${({ theme }) => theme.blackColor};
+
+  cursor: pointer;
+  // transition: background 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  // &:hover,
+  // &:focus{
+  //   background: ${({ theme }) => theme.hoverBtnGradient};
+  // }
+.btn-text{
+  color: ${({ theme }) => theme.blackColor};
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -332,15 +344,28 @@ export const ContactUsBtn = styled.button`
   letter-spacing: -0.16px;
   text-transform: uppercase;
   text-align: left;
-  color: ${({ theme }) => theme.blackColor};
+  position:relative;
+  z-index: 333;
+}
+&::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: ${({ theme }) => theme.hoverBtnGradient};
+  opacity: 0;
+  transition: opacity 300ms linear;
+}
 
-  cursor: pointer;
-  transition: background 1000ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover:not(:disabled),
-  &:focus:not(:disabled) {
-    background: ${({ theme }) => theme.hoverBtnGradient};
-  }
+&:hover::after {
+  opacity:1;
+}
+&:focus::after {
+  opacity:1;
+}
 
   @media only screen and (min-width: 768px) {
     display: block;

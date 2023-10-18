@@ -217,7 +217,7 @@ export const ContactForm = () => {
                   ) : null}
                 </TextareaAndAttachedWrap>
                 <ContactUsBtn type="submit" disabled={props.isSubmitting}>
-                  {props.isSubmitting ? t('form-sumbitting') : t('form-submit')}
+                  <p className='btn-text'>{props.isSubmitting ? t('form-sumbitting') : t('form-submit')}</p>
                 </ContactUsBtn>
                 {showSuccessPopup && <PopUpSuccess handlePopUp={handlePopUp} />}
               </Form>

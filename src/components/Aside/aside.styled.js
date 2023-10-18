@@ -124,7 +124,7 @@ export const CloseBtnMenu = styled(AiOutlineClose)`
 
 export const ContainerMenu = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0 auto;
   margin-top: 39px;
   @media screen and (min-width: 1368px) {
