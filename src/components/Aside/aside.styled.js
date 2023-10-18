@@ -133,7 +133,7 @@ export const ContainerMenu = styled.div`
 `;
 
 export const Menu = styled.div`
-  width: 105px;
+  width: 140px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -155,16 +155,15 @@ export const MenuItem = styled.li`
 `;
 
 export const SelectContainer = styled.div`
-  max-width: 100px;
-  display: flex;
+  max-width: 100%;
   cursor: pointer;
   position: relative;
+  border: 1px solid #fff;
 `;
 
 export const SelectLang = styled.select`
-  max-width: 109px;
-  border: 1px solid #fff;
-  background: #000;
+  width: 138px;
+  background-color: transparent;
   color: #fff;
   padding: 10px 16px;
   appearance: none;
@@ -182,8 +181,9 @@ export const ArrowDropDown = styled.img`
   width: 20px;
   position: absolute;
   top: 10px;
-  left: 75px;
+  left: 108px;
   cursor: pointer;
+  z-index: -1;
 `;
 
 export const BackgroundMenuOpen = styled.div`
