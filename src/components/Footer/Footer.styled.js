@@ -105,7 +105,6 @@ export const AddressLink = styled.a`
   @media only screen and (min-width: 1368px) {
     margin: 0px;
     font-size: 18px;
-
     text-transform: uppercase;
   }
 
@@ -220,6 +219,7 @@ export const CreatedByLink = styled.p`
 
   @media only screen and (min-width: 1368px) {
     text-align: left;
+    white-space: nowrap;
     margin: 0px;
     order: 2;
   }
