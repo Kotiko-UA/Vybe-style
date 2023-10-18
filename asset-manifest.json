@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Vybe-style/static/css/main.9cfbd5ee.css",
-    "main.js": "/Vybe-style/static/js/main.736d534d.js",
+    "main.js": "/Vybe-style/static/js/main.bf86cec8.js",
     "static/media/girlwithwords2x.jpg": "/Vybe-style/static/media/girlwithwords2x.5f39b7cdd9eebd2c7d19.jpg",
     "static/media/BGphoto2x.png": "/Vybe-style/static/media/BGphoto2x.2c273c2151c6136c190c.png",
     "static/media/sadgirl2x.png": "/Vybe-style/static/media/sadgirl2x.e668809db3bc8de1d585.png",
@@ -150,10 +150,10 @@
     "static/media/plus.svg": "/Vybe-style/static/media/plus.62aa920e29d06cc58b3c3bb6fb89dff8.svg",
     "static/media/close-icon.svg": "/Vybe-style/static/media/close-icon.fec7c356a8b8c8bf7ab2537f6a1e1d5f.svg",
     "main.9cfbd5ee.css.map": "/Vybe-style/static/css/main.9cfbd5ee.css.map",
-    "main.736d534d.js.map": "/Vybe-style/static/js/main.736d534d.js.map"
+    "main.bf86cec8.js.map": "/Vybe-style/static/js/main.bf86cec8.js.map"
   },
   "entrypoints": [
     "static/css/main.9cfbd5ee.css",
-    "static/js/main.736d534d.js"
+    "static/js/main.bf86cec8.js"
   ]
 }
