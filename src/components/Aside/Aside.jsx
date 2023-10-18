@@ -20,11 +20,12 @@ import {
 import LogoVibeStyle from './images/logo-vibe-style.png';
 import BurgerMenu from './images/burger-menu.png';
 import { useTranslation } from 'react-i18next';
+import { menuList } from './menu-list';
 import dropDownArrow from './images/chevron-down.png';
 
 export const Aside = () => {
-  const { t, i18n } = useTranslation();
-  const { changeLanguage } = useContext(LanguageContext);
+  const { i18n } = useTranslation();
+  const { changeLanguage, currentLanguage } = useContext(LanguageContext);
   const [isOpen, setIsOpen] = useState(false);
   const [isNarrowScreen, setIsNarrowScreen] = useState(false);
 
@@ -111,94 +112,21 @@ export const Aside = () => {
 
             <ContainerMenu className="container-menu-ua">
               <MenuList>
-                <MenuItem
-                  className="menu-items"
-                  onClick={() => {
-                    enableBodyScroll(document.body);
-                    closeMenu();
-                  }}
-                >
-                  <a href="#home">{t('menu-home')}</a>
-                </MenuItem>
-                <MenuItem
-                  className="menu-items"
-                  onClick={() => {
-                    enableBodyScroll(document.body);
-                    closeMenu();
-                  }}
-                >
-                  <a href="#aboutus">{t('menu-about-us')}</a>
-                </MenuItem>
-                <MenuItem
-                  className="menu-items"
-                  onClick={() => {
-                    enableBodyScroll(document.body);
-                    closeMenu();
-                  }}
-                >
-                  <a href="#services">{t('menu-services')}</a>
-                </MenuItem>
-                <MenuItem
-                  className="menu-items"
-                  onClick={() => {
-                    enableBodyScroll(document.body);
-                    closeMenu();
-                  }}
-                >
-                  <a href="#ourclients">{t('menu-our-clients')}</a>
-                </MenuItem>
-                <MenuItem
-                  className="menu-items"
-                  onClick={() => {
-                    enableBodyScroll(document.body);
-                    closeMenu();
-                  }}
-                >
-                  <a href="#howwework">{t('menu-work')}</a>
-                </MenuItem>
-                <MenuItem
-                  className="menu-items"
-                  onClick={() => {
-                    enableBodyScroll(document.body);
-                    closeMenu();
-                  }}
-                >
-                  <a href="#portfolio">{t('menu-portfolio')}</a>
-                </MenuItem>
-                <MenuItem
-                  className="menu-items"
-                  onClick={() => {
-                    enableBodyScroll(document.body);
-                    closeMenu();
-                  }}
-                ></MenuItem>
-                <MenuItem
-                  className="menu-items"
-                  onClick={() => {
-                    enableBodyScroll(document.body);
-                    closeMenu();
-                  }}
-                >
-                  <a href="#team">{t('menu-team')}</a>
-                </MenuItem>
-                <MenuItem
-                  className="menu-items"
-                  onClick={() => {
-                    enableBodyScroll(document.body);
-                    closeMenu();
-                  }}
-                >
-                  <a href="#faq">{t('menu-FAQ')}</a>
-                </MenuItem>
-                <MenuItem
-                  className="menu-items"
-                  onClick={() => {
-                    enableBodyScroll(document.body);
-                    closeMenu();
-                  }}
-                >
-                  <a href="#contactus">{t('menu-contact-us')}</a>
-                </MenuItem>
+                {menuList.map(({ nameEn, nameUa, link }) => {
+                  return (
+                    <MenuItem
+                      className="menu-items"
+                      onClick={() => {
+                        enableBodyScroll(document.body);
+                        closeMenu();
+                      }}
+                    >
+                      <a href={link}>
+                        {currentLanguage === 'en' ? nameEn : nameUa}
+                      </a>
+                    </MenuItem>
+                  );
+                })}
               </MenuList>
               <CloseBtnMenu onClick={toggleMenuBtn} />
             </ContainerMenu>
