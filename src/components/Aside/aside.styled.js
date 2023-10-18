@@ -24,6 +24,14 @@ export const NameCompany = styled.h1`
   }
 `;
 
+const animationMenuOpen = keyframes`
+   from {
+        transform: translateX(100%); }
+
+    to {
+        transform: translateX(0);
+    }
+`;
 const animationMenuClose = keyframes`
    from {
         transform: translateX(0); 
@@ -33,7 +41,53 @@ const animationMenuClose = keyframes`
         transform: translateX(100%);
     }
 `;
+export const ContainerMobileMenu = styled.div`
+  animation: ${animationMenuClose} 250ms cubic-bezier(0.61, 0, 0.51, 1);
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  display: none;
+  background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+  backdrop-filter: blur(11px);
+  overflow: scroll;
+  &.main-menu.open-menu {
+    display: block;
+    animation: ${animationMenuOpen} 550ms cubic-bezier(0.61, 0, 0.51, 1);
+  }
+  @media screen and (min-width: 768px) {
+    width: 50%;
+    right: 0;
+    z-index: 999;
+    background-color: ${props => props.theme.colorBlack};
+    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+    backdrop-filter: blur(11px);
+    overflow: scroll;
+  }
+  @media screen and (max-width: 1367px) {
+    z-index: 999;
+  }
 
+  @media screen and (min-width: 1368px) {
+    width: 200px;
+    position: fixed;
+    top: 41px;
+    right: 20px;
+    background: transparent;
+    backdrop-filter: blur(0);
+    overflow: hidden;
+  }
+  @media screen and (min-width: 1920px) {
+    width: 200px;
+    position: fixed;
+    top: 41px;
+    background: transparent;
+    backdrop-filter: blur(0);
+    right: 0px;
+  }
+`;
 export const BurgerMenuBtn = styled.img`
   animation: ${animationMenuClose} 250ms cubic-bezier(0.61, 0, 0.51, 1);
   max-width: 55px;
@@ -50,67 +104,6 @@ export const BurgerMenuBtn = styled.img`
     display: none;
   }
 `;
-
-const animationMenuOpen = keyframes`
-   from {
-        transform: translateX(100%); }
-
-    to {
-        transform: translateX(0);
-    }
-`;
-
-export const ContainerMobileMenu = styled.div`
-  animation: ${animationMenuOpen} 550ms cubic-bezier(0.61, 0, 0.51, 1);
-  width: 50%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  display: none;
-  background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
-  backdrop-filter: blur(11px);
-  overflow: scroll;
-  &.main-menu.open-menu {
-    display: block;
-    animation: ${animationMenuOpen} 550ms cubic-bezier(0.61, 0, 0.51, 1);
-  }
-  @media screen and (min-width: 768px) {
-    display: none;
-    width: 50%;
-    right: 0;
-    z-index: 999;
-    background-color: ${props => props.theme.colorBlack};
-    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
-    backdrop-filter: blur(11px);
-    overflow: scroll;
-  }
-  @media screen and (max-width: 1367px) {
-    z-index: 999;
-  }
-
-  @media screen and (min-width: 1368px) {
-    display: block;
-    width: 200px;
-    position: fixed;
-    top: 41px;
-    right: 20px;
-    background: transparent;
-    backdrop-filter: blur(0);
-    overflow: hidden;
-  }
-  @media screen and (min-width: 1920px) {
-    display: block;
-    width: 200px;
-    position: fixed;
-    top: 41px;
-    background: transparent;
-    backdrop-filter: blur(0);
-    right: 0px;
-  }
-`;
-
 export const CloseBtnMenu = styled(AiOutlineClose)`
   width: 24px;
 
@@ -185,8 +178,9 @@ export const ArrowDropDown = styled.img`
 `;
 
 export const BackgroundMenuOpen = styled.div`
-  position: ${props => (props.$open === 'true' ? 'absolute' : '')};
-  width: ${props => (props.$open === 'true' ? '100vw' : '')};
+  position: ${props => (props.$open === 'true' ? 'absolute' : 'absolute')};
+  width: ${props => (props.$open === 'true' ? '100vw' : '100vw')};
   height: ${props => (props.$open === 'true' ? '100vh' : '')};
-  background: ${props => (props.$open === 'true' ? 'transparent' : '')};
+  background: ${props =>
+    props.$open === 'true' ? 'transparent' : 'transparent'};
 `;
