@@ -1,0 +1,351 @@
+import styled from 'styled-components';
+import { Form as FormikForm, Field } from 'formik';
+import LeftSideBgImgLaptop1x from '../images/form_and_footer_background_1368px_1x.png';
+import LeftSideBgImgDesktop1x from '../images/form_and_footer_background_1920px_1x.png';
+import LeftSideBgImgLaptop2x from '../images/form_and_footer_background_1368px_2x.png';
+import LeftSideBgImgDesktop2x from '../images/form_and_footer_background_1920px_2x.png';
+import { ReactComponent as CloseSvg } from '../images/icons/close-icon.svg';
+
+export const FormSection = styled.section`
+  padding-top: 80px;
+  padding-bottom: 53px;
+
+  @media only screen and (min-width: 768px) {
+    padding-top: 70px;
+    padding-bottom: 83px;
+  }
+
+  @media only screen and (min-width: 1368px) {
+    padding-top: 85px;
+    padding-bottom: 50px;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    padding-top: 100px;
+  }
+`;
+
+export const FormContainer = styled.div`
+  max-width: 480px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 768px) {
+    max-width: 768px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media only screen and (min-width: 1368px) {
+    max-width: 1368px;
+    padding-left: 60px;
+    padding-right: 205px;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    max-width: 1920px;
+    padding-left: 120px;
+    padding-right: 232px;
+  }
+`;
+
+export const PositionWrapper = styled.div`
+  @media only screen and (min-width: 1368px) {
+    display: flex;
+    justify-content: space-between;
+  }
+`;
+
+export const FormSectionHeader = styled.h2`
+  margin-bottom: 40px;
+  width: 247px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.2;
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 56px;
+    width: 555px;
+    font-size: 40px;
+    line-height: 1.8;
+    letter-spacing: -2.4px;
+  }
+
+  @media only screen and (min-width: 1368px) {
+    margin-bottom: 9px;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    width: 878px;
+    font-size: 60px;
+  }
+`;
+
+export const LeftSideBgWrap = styled.div`
+  @media screen and (min-width: 1368px) {
+    width: 272px;
+    height: 462px;
+    margin-top: 60px;
+    background-image: linear-gradient(
+        267deg,
+        #000 2.55%,
+        rgba(0, 0, 0, 0) 80.9%
+      ),
+      url(${LeftSideBgImgLaptop1x});
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0px -50px;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          267deg,
+          #000 2.55%,
+          rgba(0, 0, 0, 0) 80.9%
+        ),
+        url(${LeftSideBgImgLaptop2x});
+    }
+  }
+
+  @media screen and (min-width: 1920px) {
+    width: 460px;
+    height: 550px;
+    background-image: linear-gradient(
+        267deg,
+        #000 2.55%,
+        rgba(0, 0, 0, 0) 80.9%
+      ),
+      url(${LeftSideBgImgDesktop1x});
+
+    background-size: 460px 550px;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          267deg,
+          #000 2.55%,
+          rgba(0, 0, 0, 0) 80.9%
+        ),
+        url(${LeftSideBgImgDesktop2x});
+    }
+  }
+`;
+
+export const Form = styled(FormikForm)`
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: -0.16px;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 22px;
+  }
+
+  @media only screen and (min-width: 1368px) {
+    width: 700px;
+    margin-top: 67px;
+  }
+
+  @media only screen and (min-width: 1920px) {
+  }
+`;
+export const FormikInputWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 24px;
+  margin-bottom: 24px;
+
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 24px;
+    margin-bottom: 30px;
+  }
+  @media only screen and (min-width: 1368px) {
+    column-gap: 16px;
+  }
+`;
+
+export const FormControlWrap = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  @media only screen and (min-width: 768px) {
+    width: 332px;
+    column-gap: 10px;
+  }
+
+  @media only screen and (min-width: 1368px) {
+    width: 342px;
+  }
+`;
+
+export const FormikInput = styled(Field)`
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 17px 24px;
+
+  border: 1px solid #545454;
+  outline: none;
+  background-color: ${({ theme }) => theme.blackColor};
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border: 1px solid #c4f934;
+  }
+
+  @media only screen and (min-width: 768px) {
+    width: 332px;
+  }
+
+  @media only screen and (min-width: 1368px) {
+    width: 342px;
+  }
+`;
+export const StyledErrorMessage = styled.div`
+  position: absolute;
+  top: 55px;
+
+  color: ${({ theme }) => theme.redColor};
+  font-size: 14px;
+
+  @media screen and (min-width: 768px) {
+    top: 64px;
+  }
+`;
+
+export const AttachedFilesList = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+`;
+export const SelectedFilesText = styled.p`
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: ${({ theme }) => theme.lightGreyColor};
+`;
+export const SelectedFilesList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+`;
+
+export const CloseSvgBtn = styled(CloseSvg)`
+  width: 14px;
+  height: 14px;
+  stroke: ${({ theme }) => theme.greyColorPopup};
+
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+`;
+
+export const FileNameText = styled.p`
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: ${({ theme }) => theme.colorText};
+`;
+
+export const SelectedFilesItem = styled.li`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    & ${FileNameText} {
+      color: ${({ theme }) => theme.brandColor};
+    }
+    & ${CloseSvgBtn} {
+      stroke: ${({ theme }) => theme.brandColor};
+    }
+  }
+`;
+
+export const TextareaAndAttachedWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 32px;
+
+  @media only screen and (min-width: 768px) {
+    row-gap: 16px;
+    margin-bottom: 32px;
+  }
+`;
+
+export const FormikTextarea = styled(Field)`
+  width: 100%;
+  padding: 16px 10px 17px 24px;
+  height: 208px;
+  border: 1px solid #545454;
+  outline: none;
+  background-color: ${({ theme }) => theme.blackColor};
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border: 1px solid #c4f934;
+  }
+`;
+
+export const FormikFilePicker = styled(Field)`
+  background-color: ${({ theme }) => theme.brandColor};
+`;
+
+export const ContactUsBtn = styled.button`
+  width: 100%;
+  margin-top: 42px;
+  padding: 16px 40px;
+
+  border: none;
+  background: ${({ theme, disabled }) =>
+    disabled ? theme.greyColor : theme.brandColor};
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.31;
+  letter-spacing: -0.16px;
+  text-transform: uppercase;
+  text-align: left;
+  color: ${({ theme }) => theme.blackColor};
+
+  cursor: pointer;
+  transition: background 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
+    background: ${({ theme }) => theme.hoverBtnGradient};
+  }
+
+  @media only screen and (min-width: 768px) {
+    display: block;
+    max-width: 332px;
+    margin-top: 0px;
+    margin-left: auto;
+  }
+`;
