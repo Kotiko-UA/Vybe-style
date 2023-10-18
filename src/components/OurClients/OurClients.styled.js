@@ -187,7 +187,7 @@ export const TitleH3 = styled.h3`
   line-height: 2.2;
   text-transform: uppercase;
   @media screen and (min-width: 768px) {
-    color: ${({ theme }) => theme.borderColor};
+    // color: ${({ theme }) => theme.borderColor};
     font-size: 64px;
     font-weight: 700;
     line-height: 1.65;
