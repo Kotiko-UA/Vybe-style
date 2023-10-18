@@ -97,10 +97,9 @@ export const ContainerMobileMenu = styled.div`
     width: 200px;
     position: fixed;
     top: 41px;
-    right: 100px;
+    right: 20px;
     background: transparent;
     backdrop-filter: blur(0);
-    right: 0;
     overflow: hidden;
   }
   @media screen and (min-width: 1920px) {

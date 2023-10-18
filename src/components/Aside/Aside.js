@@ -104,7 +104,7 @@ export const Aside = () => {
                 onChange={e => changeLanguage(e.target.value)}
               >
                 <SelectLangOption value="en">English</SelectLangOption>
-                <SelectLangOption value="ua">Ukrainian</SelectLangOption>
+                <SelectLangOption value="ua">Українська</SelectLangOption>
               </SelectLang>
               <ArrowDropDown src={dropDownArrow} alt="arrow" />
             </SelectContainer>
