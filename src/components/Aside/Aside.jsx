@@ -7,7 +7,6 @@ import {
   BurgerMenuBtn,
   ContainerMobileMenu,
   Menu,
-  MenuList,
   MenuItem,
   ContainerMenu,
   SelectContainer,
@@ -111,7 +110,7 @@ export const Aside = () => {
             </SelectContainer>
 
             <ContainerMenu className="container-menu-ua">
-              <MenuList>
+              <ul>
                 {menuList.map(({ nameEn, nameUa, link, id }) => {
                   return (
                     <MenuItem
@@ -128,7 +127,7 @@ export const Aside = () => {
                     </MenuItem>
                   );
                 })}
-              </MenuList>
+              </ul>
               <CloseBtnMenu onClick={toggleMenuBtn} />
             </ContainerMenu>
           </Menu>

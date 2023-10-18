@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { AiOutlineClose } from 'react-icons/ai';
 
 export const Logo = styled.img`
@@ -24,38 +24,20 @@ export const NameCompany = styled.h1`
   }
 `;
 
-const animationMenuOpen = keyframes`
-   from {
-        transform: translateX(100%); }
-
-    to {
-        transform: translateX(0);
-    }
-`;
-const animationMenuClose = keyframes`
-   from {
-        transform: translateX(0); 
-    }
-
-    to {
-        transform: translateX(100%);
-    }
-`;
 export const ContainerMobileMenu = styled.div`
-  animation: ${animationMenuClose} 250ms cubic-bezier(0.61, 0, 0.51, 1);
   width: 50%;
   height: 100%;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 1;
-  display: none;
+  transform: translateX(100%);
   background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
   backdrop-filter: blur(11px);
   overflow: scroll;
+  transition: transform 550ms cubic-bezier(0.4, 0, 0.2, 1);
   &.main-menu.open-menu {
-    display: block;
-    animation: ${animationMenuOpen} 550ms cubic-bezier(0.61, 0, 0.51, 1);
+    transform: translateX(0);
   }
   @media screen and (min-width: 768px) {
     width: 50%;
@@ -71,6 +53,8 @@ export const ContainerMobileMenu = styled.div`
   }
 
   @media screen and (min-width: 1368px) {
+    display: block;
+    transform: translateX(0);
     width: 200px;
     position: fixed;
     top: 41px;
@@ -80,16 +64,10 @@ export const ContainerMobileMenu = styled.div`
     overflow: hidden;
   }
   @media screen and (min-width: 1920px) {
-    width: 200px;
-    position: fixed;
-    top: 41px;
-    background: transparent;
-    backdrop-filter: blur(0);
     right: 0px;
   }
 `;
 export const BurgerMenuBtn = styled.img`
-  animation: ${animationMenuClose} 250ms cubic-bezier(0.61, 0, 0.51, 1);
   max-width: 55px;
   position: absolute;
   right: 5px;
@@ -129,8 +107,6 @@ export const Menu = styled.div`
   flex-direction: column;
   margin: 0 auto;
 `;
-
-export const MenuList = styled.ul``;
 
 export const MenuItem = styled.li`
   & a:hover {
