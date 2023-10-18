@@ -2,7 +2,7 @@
   "name": "vibe-style",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://VladM4526.github.io/VibeStyle/",
+  "homepage": "https://github.com/Kotiko-UA/Vybe-style",
   "dependencies": {
     "@react-hook/media-query": "^1.1.1",
     "@react-icons/all-files": "^4.1.0",
