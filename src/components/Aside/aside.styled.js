@@ -25,12 +25,12 @@ export const NameCompany = styled.h1`
 `;
 
 const animationMenuClose = keyframes`
-    to {
-        transform: translate(100%, 0);
+   from {
+        transform: translateX(0); 
     }
 
-    from {
-        transform: translate(0%, 0%);
+    to {
+        transform: translateX(100%);
     }
 `;
 
@@ -52,16 +52,16 @@ export const BurgerMenuBtn = styled.img`
 `;
 
 const animationMenuOpen = keyframes`
-    to {
-        transform: translate(0%, 0);
-    }
+   from {
+        transform: translateX(100%); }
 
-    from {
-        transform: translate(100%, 0%);
+    to {
+        transform: translateX(0);
     }
 `;
 
 export const ContainerMobileMenu = styled.div`
+  animation: ${animationMenuOpen} 550ms cubic-bezier(0.61, 0, 0.51, 1);
   width: 50%;
   height: 100%;
   position: fixed;
@@ -70,14 +70,12 @@ export const ContainerMobileMenu = styled.div`
   z-index: 1;
   display: none;
   background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
-  animation: ${animationMenuOpen} 550ms cubic-bezier(0.61, 0, 0.51, 1);
   backdrop-filter: blur(11px);
-
+  overflow: scroll;
   &.main-menu.open-menu {
     display: block;
+    animation: ${animationMenuOpen} 550ms cubic-bezier(0.61, 0, 0.51, 1);
   }
-  overflow: scroll;
-
   @media screen and (min-width: 768px) {
     display: none;
     width: 50%;
@@ -190,5 +188,5 @@ export const BackgroundMenuOpen = styled.div`
   position: ${props => (props.$open === 'true' ? 'absolute' : '')};
   width: ${props => (props.$open === 'true' ? '100vw' : '')};
   height: ${props => (props.$open === 'true' ? '100vh' : '')};
-  background: ${props => (props.$open === 'true' ? 'transparent' : '')}; */}
+  background: ${props => (props.$open === 'true' ? 'transparent' : '')};
 `;
