@@ -1,5 +1,4 @@
 import { useState, useEffect, useContext } from 'react';
-import Select from 'react-select';
 import { LanguageContext } from 'components/HookLang/LanguageContext';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import {
@@ -89,27 +88,7 @@ export const Aside = () => {
     }
     setIsOpen(false);
   };
-  const options = [
-    { value: 'en', label: 'English' },
-    { value: 'ua', label: 'Українська' },
-  ];
-  const customStyles = {
-    control: (provided, state) => ({
-      ...provided,
-      backgroundColor: '#000',
-      borderColor: state.isFocused ? 'blue' : 'gray',
-      boxShadow: state.isFocused ? '0 3px 10px rgba(0, 0, 0, 0.1)' : null,
-      '&:hover': {
-        borderColor: 'red',
-      },
-    }),
-    option: (provided, state) => ({
-      ...provided,
-      color: state.isSelected ? 'red' : 'black',
-      backgroundColor: state.isFocused ? '#eee' : null,
-    }),
-    // ...и другие стили
-  };
+
   return (
     <>
       <BurgerMenuBtn src={BurgerMenu} alt="menu" onClick={toggleMenuBtn} />
@@ -120,12 +99,6 @@ export const Aside = () => {
           <Logo src={LogoVibeStyle} alt="logo-company" />
           <NameCompany>VibeStyle</NameCompany>
           <Menu>
-            <Select
-              value={i18n.language}
-              onChange={e => changeLanguage(e.target.value)}
-              options={options}
-              styles={customStyles}
-            />
             <SelectContainer>
               <SelectLang
                 value={i18n.language}
