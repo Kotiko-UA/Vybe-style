@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import bgMobile from '../img/back.png';
 import bgMobile2x from '../img/back2x.png';
-import bgPhoto from '../img/BGphoto.png';
-import bgPhoto2x from '../img/BGphoto2x.png';
+import newBgPhoto from '../img/newBGphoto.png';
+import newBgPhoto2x from '../img/newBGphoto2x.png';
 import { ReactComponent as Ellipse } from '../img/ellipse.svg';
 
 export const Section = styled.section`
@@ -83,8 +83,8 @@ export const Container = styled.div`
  
   @media screen and (min-width: 768px) {
     height: 412px;
-    background-image: url(${bgPhoto}), url(${bgPhoto});
-    background-size: 218px 152px;
+    background-image: url(${newBgPhoto}), url(${newBgPhoto});
+    background-size: 218px 158px;
     background-repeat: no-repeat;
     background-position: left 30px bottom 120px, right 30px top 115px;
     max-width: 768px;
@@ -93,7 +93,7 @@ export const Container = styled.div`
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(${bgPhoto2x}), url(${bgPhoto2x});
+      background-image: url(${newBgPhoto2x}), url(${newBgPhoto2x});
     }
     @media screen and (min-width: 768px) and (max-width: 1367px) {
       ${SvgEllipse}:nth-child(4) {
@@ -115,8 +115,8 @@ export const Container = styled.div`
     padding-top: 140px;
     padding-bottom: 170px;
     height: auto;
-    background-size: 390px 270px;
-    background-position: left 30px bottom 290px, right 0px bottom 323px;
+    background-size: 390px 280px;
+    background-position: left 30px bottom 290px, right 35px bottom 323px;
     max-width: 1368px;
     ${SvgEllipse}:nth-child(4) {
       margin-left: -110px;
@@ -145,8 +145,8 @@ export const Container = styled.div`
     height: 861px;
     padding-top: 0;
     padding-bottom: 0;
-    background-size: 646px 454px;
-    background-position: left -50px bottom 173px, right -100px bottom 223px;
+    background-size: 646px 460px;
+    background-position: left -50px bottom 173px, right -120px bottom 223px;
     max-width: 1920px;
     ${SvgEllipse}:nth-child(4) {
       margin-left: -200px;
