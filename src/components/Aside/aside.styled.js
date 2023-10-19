@@ -138,9 +138,14 @@ export const SelectLang = styled.select`
   -webkit-appearance: none;
   -moz-appearance: none;
   cursor: pointer;
+  &:hover,
+  :focus {
+    color: ${props => props.theme.brandColor};
+  }
 `;
 
 export const SelectLangOption = styled.option`
+  color: #fff;
   background-color: #000;
   border: 1px solid #fff;
 `;
