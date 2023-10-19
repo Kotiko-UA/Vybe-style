@@ -11,7 +11,6 @@ export const LiItem = styled.li`
     align-items: flex-start;
       &:not(:last-child):after {
         content: '';
-        // background-color: ${props => props.$data === "true" ? "#C4F934" : "rgba(175, 175, 175, 0.41)"};
         background-color: rgba(175, 175, 175, 0.41);
         position:absolute;
         bottom: -40px;
@@ -37,6 +36,7 @@ padding: 52px 60px;
                   left: 0;
             }
 }
+
 `
 export const Number = styled.p`
 color: ${({ theme }) => theme.greyFaqColor};
@@ -57,6 +57,7 @@ margin-bottom: 33px;
 `
 export const ContainerBlock = styled.div`
 flex-grow:1;
+
 `
 
 export const InfoBlock = styled.div`
@@ -149,6 +150,7 @@ line-height: 1.4;
   @media screen and (min-width:1920px) {
   max-width: 900px;
 }
+
 `
 
 export const PlusSvg = styled(PlusIcon)`
@@ -158,10 +160,15 @@ ${InfoBlock}:hover & path {
 };
 `
 export const CloseSvg = styled(CloseIcon)`
-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+scale 500ms cubic-bezier(0.4, 0, 0.2, 1),
+transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 @media screen and (min-width:768px){
     ${InfoBlock}:hover & path{
-           fill: #C4F934;
+           fill: ${({ theme }) => theme.brandColor};
 };
+${InfoBlock}:hover & {
+    scale: 1.25;
+    transform: rotate(180deg)
 }
 `

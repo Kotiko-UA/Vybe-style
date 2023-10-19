@@ -15,12 +15,9 @@ export const Overlay = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
   z-index: 1200;
-  overflow-y: scroll;
+
   `
 
 
@@ -30,8 +27,11 @@ position: relative;
   height: 440px;
   padding-top: 24px;
   padding-left: 20px;
- 
-  border: 1px solid ${({ theme }) => theme.brandColor};
+     position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid ${({ theme }) => theme.brandColor};
   background-color: ${({ theme }) => theme.blackColor};
         background-image: url(${bgMobile}), url(${bgMobile2});
      background-repeat: no-repeat;
@@ -120,7 +120,7 @@ transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
         transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1368px) {
     width: 592px;
     height: 604px;
     padding: 24px;
@@ -166,7 +166,7 @@ transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
   } 
   }
 
-  @media screen and (min-width: 1368px) {
+  @media screen and (min-width: 1920px) {
 width: 1124px;
 height: 360px;
 background-size: 200px 153px, 85px 152px;

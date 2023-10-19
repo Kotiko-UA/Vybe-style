@@ -10,7 +10,7 @@ import {
   Thumb,
   Image,
   PlayerWrapper,
-  StyledPlayer
+  StyledPlayer,
 } from './HowWeWork.styled';
 import { useTranslation } from 'react-i18next';
 import defaultPhoto from '../img/hww1Desk-min.jpg';
@@ -46,13 +46,13 @@ export const HowWeWorkSection = () => {
   const handlePhoto = photo => {
     setPhoto(photo);
   };
-  
+
   const handleId = id => {
     setBtnId(id);
   };
 
   return (
-    <Wrapper id='howwework'>
+    <Wrapper id="howwework">
       <Container>
         <Title>{t('how-we-work-title')}</Title>
         <InfoBlock>
@@ -63,25 +63,37 @@ export const HowWeWorkSection = () => {
                   key={item.id}
                   item={item}
                   handlePhoto={handlePhoto}
-                   handleId={handleId}
+                  handleId={handleId}
                   btnId={btnId}
                 />
               );
             })}
           </List>
-          {isNarrowScreen && (
-            btnId === '01' ?
-            <PlayerWrapper>
+          {isNarrowScreen &&
+            (btnId === '01' ? (
+              <PlayerWrapper>
                 <StyledPlayer
-                  url='https://res.cloudinary.com/deqdv9pvd/video/upload/v1697474178/Video%20for%20website/2023-10-16_07.47.10_jzcwnu.mp4'
+                  url="https://res.cloudinary.com/deqdv9pvd/video/upload/v1697474178/Video%20for%20website/2023-10-16_07.47.10_jzcwnu.mp4"
                   controls
+                  config={{
+                    file: {
+                      attributes: {
+                        controlsList: 'nodownload',
+                      },
+                    },
+                  }}
                 />
               </PlayerWrapper>
-              :
-            <Thumb>
-              <Image loading="lazy" $maxphoto={photo.maxPhoto ?? photo} src={photo.desktopPhoto ?? photo} alt="team work"></Image>
+            ) : (
+              <Thumb>
+                <Image
+                  loading="lazy"
+                  $maxphoto={photo.maxPhoto ?? photo}
+                  src={photo.desktopPhoto ?? photo}
+                  alt="team work"
+                ></Image>
               </Thumb>
-                        )}
+            ))}
         </InfoBlock>
       </Container>
     </Wrapper>
