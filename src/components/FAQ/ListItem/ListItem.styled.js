@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import { ReactComponent as PlusIcon } from '../../HowWeWork/img/plus.svg';
 import { ReactComponent as CloseIcon } from '../../HowWeWork/img/close.svg';
 
+
 export const LiItem = styled.li`
 @media screen and (min-width: 768px) {
     position: relative;
@@ -62,15 +63,14 @@ export const InfoBlock = styled.div`
 cursor: pointer;
 display: flex;
 gap: 16px;
-align-items: center;
+align-items: flex-start;
 justify-content: space-between;
 @media screen and (min-width: 768px) {
     // width: 524px;
 }@media screen and (min-width: 1368px) {
     width: 100%;
     flex-grow:1;
-}
-`
+}`
 
 export const Text = styled.p`
 color: ${({ theme }) => theme.colorText};
@@ -80,8 +80,7 @@ font-style: normal;
 font-weight: 300;
 line-height: 1.2;
 transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-color: ${props => props.$focus === "true" ? ({ theme }) => theme.brandColor : ""};
-//  color: ${props => props.$isTextShown === "true" ? "#C4F934" : ""};
+
     ${InfoBlock}:hover & {
     color: ${({ theme }) => theme.brandColor};
   }
@@ -94,11 +93,9 @@ font-size: 32px;
   }
     @media screen and (min-width:1368px) {
      width: 620px;
-
   }
     @media screen and (min-width:1920px) {
      width: 800px;
-
   }
 
 `
@@ -117,8 +114,7 @@ cursor: pointer;
   border-radius: 50%;
     &:focus {
     outline: none;
-    border: 1px solid ${({ theme }) => theme.brandColor};
-  }
+    }
   ${InfoBlock}:hover &{
     color: ${({ theme }) => theme.brandColor};
     border-color: ${({ theme }) => theme.brandColor};
@@ -156,24 +152,16 @@ line-height: 1.4;
 `
 
 export const PlusSvg = styled(PlusIcon)`
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 ${InfoBlock}:hover & path {
            fill: #C4F934;
 };
- :focus & path {
-    fill: #c4f934;
-  }
-
 `
 export const CloseSvg = styled(CloseIcon)`
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 @media screen and (min-width:768px){
     ${InfoBlock}:hover & path{
            fill: #C4F934;
 };
 }
- :focus & path {
-    fill: #c4f934;
-  }
-path{
-  // fill:${props => props.$data === "true" ? "#C4F934" : ""};
-} 
 `

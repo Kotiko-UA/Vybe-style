@@ -5,8 +5,7 @@ import { ListLi, Wrapper, Number, ContainerBlock, InfoBlock, Text, HiddenText, B
 export const ListItem = ({ item: {id, text, textUa, hiddenText, hiddenTextUa, video, photo, retinaPhoto,photoTab,retinaPhotoTab,photoDesk,retinaPhotoDesk,photoMax,retinaPhotoMax}, handlePhoto, handleId, btnId }) => {
   const { currentLanguage } = useContext(LanguageContext);
   const [isTextShown, setIsTextShown] = useState(true);
-  const [isFocusBtn, setIsFocusBtn] = useState(false);
-  const [isVideo, setIsVideo] = useState(true);
+   const [isVideo, setIsVideo] = useState(true);
     const [isNarrowScreen, setIsNarrowScreen] = useState(false);
         const isRetina = window.devicePixelRatio > 1.1;
     const mobilePhoto = isRetina ? retinaPhoto : photo;
@@ -59,14 +58,12 @@ export const ListItem = ({ item: {id, text, textUa, hiddenText, hiddenTextUa, vi
               handleSetVideo(id)}
                 }> 
               <Text $isTextShown={`${isTextShown}`}
-                    $focus={`${isFocusBtn}`}
-              >{currentLanguage === 'en' ? text : textUa}</Text>
+                                  >{currentLanguage === 'en' ? text : textUa}</Text>
               <Button
                 id={id}
                 type="button"
                 $data={`${!isTextShown}`}
-                onBlur={()=>  setIsFocusBtn(!isFocusBtn)}
-                onFocus={()=>  setIsFocusBtn(!isFocusBtn)}>
+               >
                                  {!isTextShown ? <PlusSvg />
                                                : <CloseSvg $data={`${isTextShown}`}/>}
                     </Button>

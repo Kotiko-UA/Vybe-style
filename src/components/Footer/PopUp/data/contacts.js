@@ -23,15 +23,6 @@ export const data = [
   },
   {
     id: '3',
-    image: lesyaPhoto,
-    teamRole: 'developer',
-    teamRoleUA: 'розробник',
-    teamNameUA: 'Леся Соловйова',
-    teamName: 'Lesia Soloviova',
-    projectUrl: 'https://www.linkedin.com/in/lesia-soloviova/',
-  },
-  {
-    id: '4',
     image: stasPhoto,
     teamRole: 'developer',
     teamRoleUA: 'розробник',
@@ -39,4 +30,13 @@ export const data = [
     teamName: 'Stanislav Khrebtan',
     projectUrl: 'https://linkedin.com/in/stanislav-khrebtan/',
   },
-];
+  {
+    id: '4',
+    image: lesyaPhoto,
+    teamRole: 'developer',
+    teamRoleUA: 'розробник',
+    teamNameUA: 'Леся Соловйова',
+    teamName: 'Lesia Soloviova',
+    projectUrl: 'https://www.linkedin.com/in/lesia-soloviova/',
+  },
+  ];

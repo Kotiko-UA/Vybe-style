@@ -86,7 +86,6 @@ export const Container = styled.div`
 export const Logo = styled.img`
   max-width: 77px;
   margin: 0 auto;
-  padding-top: 44px;
 `;
 
 export const NameCompany = styled.h1`
@@ -97,7 +96,6 @@ export const NameCompany = styled.h1`
   text-align: center;
   margin-bottom: 60px;
   @media screen and (min-width: 768px) {
-    margin-top: 30px;
     margin-bottom: 144px;
     font-size: 16px;
   }
