@@ -40,7 +40,7 @@ export const FormContainer = styled.div`
   @media only screen and (min-width: 1368px) {
     max-width: 1368px;
     padding-left: 60px;
-    padding-right: 205px;
+    padding-right: 245px;
   }
 
   @media only screen and (min-width: 1920px) {
@@ -301,7 +301,7 @@ export const FormikTextarea = styled(Field)`
   padding: 16px 10px 17px 24px;
   height: 208px;
   border: 1px solid #545454;
-  outline: none;
+  resize: none;
   background-color: ${({ theme }) => theme.blackColor};
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -320,26 +320,50 @@ export const ContactUsBtn = styled.button`
   width: 100%;
   margin-top: 42px;
   padding: 16px 40px;
-
+  position: relative;
   border: none;
   background: ${({ theme, disabled }) =>
     disabled ? theme.greyColor : theme.brandColor};
 
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.31;
-  letter-spacing: -0.16px;
-  text-transform: uppercase;
-  text-align: left;
   color: ${({ theme }) => theme.blackColor};
 
   cursor: pointer;
-  transition: background 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  // transition: background 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover:not(:disabled),
-  &:focus:not(:disabled) {
+  // &:hover,
+  // &:focus{
+  //   background: ${({ theme }) => theme.hoverBtnGradient};
+  // }
+  .btn-text {
+    color: ${({ theme }) => theme.blackColor};
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.31;
+    letter-spacing: -0.16px;
+    text-transform: uppercase;
+    text-align: left;
+    position: relative;
+    z-index: 333;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
     background: ${({ theme }) => theme.hoverBtnGradient};
+    opacity: 0;
+    transition: opacity 300ms linear;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+  &:focus::after {
+    opacity: 1;
   }
 
   @media only screen and (min-width: 768px) {

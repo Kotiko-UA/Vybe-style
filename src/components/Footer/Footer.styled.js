@@ -4,6 +4,7 @@ import { ReactComponent as IconDribble } from './icons/dribbble.svg';
 import { ReactComponent as IconInstagram } from './icons/instagram.svg';
 import { ReactComponent as IconBehance } from './icons/behance.svg';
 import { ReactComponent as IconCopyright } from './icons/copyright.svg';
+import { ReactComponent as IconUaFlag } from './icons/uaflag.svg';
 
 export const FooterBlock = styled.footer`
   padding-top: 38px;
@@ -46,17 +47,17 @@ export const FooterContainer = styled.div`
     gap: 0px;
     align-items: center;
     max-width: 1368px;
-    padding-left: 104px;
-    padding-right: 201px;
+    padding-left: 60px;
+    padding-right: 245px;
 
     > *:first-child {
-      margin-right: 86px;
+      margin-right: 93px;
     }
     > :nth-child(2) {
       margin-right: 15px;
     }
     > :nth-child(3) {
-      margin-right: 87px;
+      margin-right: 101px;
     }
   }
 
@@ -64,25 +65,30 @@ export const FooterContainer = styled.div`
     max-width: 1920px;
 
     padding-left: 120px;
-    padding-right: 120px;
+    padding-right: 232px;
 
     > *:first-child {
-      margin-right: 403px;
+      margin-right: 292px;
     }
 
     > :nth-child(3) {
-      margin-right: 371px;
+      margin-right: 329px;
     }
   }
 `;
+export const UaFlagSvg = styled(IconUaFlag)``;
 
 export const Address = styled.address`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
   @media only screen and (min-width: 1368px) {
+    gap: 24px;
     margin: 0px;
     order: 3;
   }
 `;
-
 export const AddressLink = styled.a`
   text-align: center;
   display: block;
@@ -93,11 +99,16 @@ export const AddressLink = styled.a`
   font-weight: 400;
   line-height: 1.92;
   letter-spacing: 0.032;
+  text-transform: uppercase;
 
   color: ${({ theme }) => theme.textColor};
   @media only screen and (min-width: 1368px) {
-    width: 447px;
     margin: 0px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  @media only screen and (min-width: 1920px) {
     font-size: 21px;
   }
 `;
@@ -208,7 +219,13 @@ export const CreatedByLink = styled.p`
 
   @media only screen and (min-width: 1368px) {
     text-align: left;
+    white-space: nowrap;
     margin: 0px;
     order: 2;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    width: 130px;
+    font-size: 16px;
   }
 `;

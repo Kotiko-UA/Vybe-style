@@ -15,6 +15,7 @@ import {
   CreatedByLink,
   DribbleSvg,
   BehanceSvg,
+  UaFlagSvg,
 } from './Footer.styled';
 
 export const Footer = () => {
@@ -36,12 +37,13 @@ export const Footer = () => {
     <FooterBlock>
       <FooterContainer>
         <Address>
+          <UaFlagSvg width="29px" height="18px" />
           <AddressLink
-            href="https://maps.app.goo.gl/WYx2kVtniSVQLyBd9"
+            href="https://maps.app.goo.gl/6haXRa5Jv8jBtiwJ9"
             target="_blank"
             rel="noopener noreferrer"
           >
-            629 N. HIGH STREET COLUMBUS, OH 43215
+            Kyiv, Ukraine Regeneratorna 4 Str. 16
           </AddressLink>
         </Address>
         <SocialsList>

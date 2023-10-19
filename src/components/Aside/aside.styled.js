@@ -1,6 +1,6 @@
-import styled, { keyframes } from 'styled-components';
-import { AiOutlineClose } from 'react-icons/ai';
-
+import styled from 'styled-components';
+import { ReactComponent as BurgerIcon } from './images/burger.svg';
+import { ReactComponent as CloseIcon } from './images/close.svg';
 export const Logo = styled.img`
   max-width: 77px;
   margin: 0 auto;
@@ -24,69 +24,28 @@ export const NameCompany = styled.h1`
   }
 `;
 
-const animationMenuClose = keyframes`
-    to {
-        transform: translate(100%, 0);
-    }
-
-    from {
-        transform: translate(0%, 0%);
-    }
-`;
-
-export const BurgerMenuBtn = styled.img`
-  animation: ${animationMenuClose} 250ms cubic-bezier(0.61, 0, 0.51, 1);
-  max-width: 55px;
-  position: absolute;
-  right: 5px;
-  @media screen and (min-width: 768px) {
-    margin-top: 30px;
-    margin-right: 10px;
-  }
-  @media screen and (min-width: 1368px) {
-    display: none;
-  }
-  @media screen and (min-width: 1920px) {
-    display: none;
-  }
-`;
-
-const animationMenuOpen = keyframes`
-    to {
-        transform: translate(0%, 0);
-    }
-
-    from {
-        transform: translate(100%, 0%);
-    }
-`;
-
 export const ContainerMobileMenu = styled.div`
   width: 50%;
   height: 100%;
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1;
-  display: none;
+  z-index: 999;
+  transform: translateX(100%);
   background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
-  animation: ${animationMenuOpen} 550ms cubic-bezier(0.61, 0, 0.51, 1);
   backdrop-filter: blur(11px);
-
+  overflow-y: scroll;
+  transition: transform 550ms cubic-bezier(0.4, 0, 0.2, 1);
   &.main-menu.open-menu {
-    display: block;
+    transform: translateX(0);
   }
-  overflow: scroll;
-
   @media screen and (min-width: 768px) {
-    display: none;
     width: 50%;
     right: 0;
     z-index: 999;
     background-color: ${props => props.theme.colorBlack};
     background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
     backdrop-filter: blur(11px);
-    overflow: scroll;
   }
   @media screen and (max-width: 1367px) {
     z-index: 999;
@@ -94,6 +53,7 @@ export const ContainerMobileMenu = styled.div`
 
   @media screen and (min-width: 1368px) {
     display: block;
+    transform: translateX(0);
     width: 200px;
     position: fixed;
     top: 41px;
@@ -103,19 +63,29 @@ export const ContainerMobileMenu = styled.div`
     overflow: hidden;
   }
   @media screen and (min-width: 1920px) {
-    display: block;
-    width: 200px;
-    position: fixed;
-    top: 41px;
-    background: transparent;
-    backdrop-filter: blur(0);
     right: 0px;
   }
 `;
-
-export const CloseBtnMenu = styled(AiOutlineClose)`
+export const BurgerMenuBtn = styled(BurgerIcon)`
+  position: fixed;
+  z-index: 997;
+  right: 5px;
+  @media screen and (min-width: 768px) {
+    top: 30px;
+    right: 10px;
+  }
+  @media screen and (min-width: 1368px) {
+    display: none;
+  }
+  @media screen and (min-width: 1920px) {
+    display: none;
+  }
+`;
+export const CloseBtnMenu = styled(CloseIcon)`
   width: 24px;
-
+  &path {
+    fill: white;
+  }
   @media screen and (min-width: 1368px) {
     display: none;
   }
@@ -123,7 +93,7 @@ export const CloseBtnMenu = styled(AiOutlineClose)`
 
 export const ContainerMenu = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0 auto;
   margin-top: 39px;
   @media screen and (min-width: 1368px) {
@@ -133,13 +103,11 @@ export const ContainerMenu = styled.div`
 `;
 
 export const Menu = styled.div`
-  width: 105px;
+  width: 140px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
 `;
-
-export const MenuList = styled.ul``;
 
 export const MenuItem = styled.li`
   & a:hover {
@@ -155,16 +123,15 @@ export const MenuItem = styled.li`
 `;
 
 export const SelectContainer = styled.div`
-  max-width: 100px;
-  display: flex;
+  max-width: 100%;
   cursor: pointer;
   position: relative;
+  border: 1px solid #fff;
 `;
 
 export const SelectLang = styled.select`
-  max-width: 109px;
-  border: 1px solid #fff;
-  background: #000;
+  width: 138px;
+  background-color: transparent;
   color: #fff;
   padding: 10px 16px;
   appearance: none;
@@ -182,13 +149,18 @@ export const ArrowDropDown = styled.img`
   width: 20px;
   position: absolute;
   top: 10px;
-  left: 75px;
+  left: 108px;
   cursor: pointer;
+  z-index: -1;
 `;
 
 export const BackgroundMenuOpen = styled.div`
-  position: ${props => (props.$open === 'true' ? 'absolute' : '')};
+  position: ${props => (props.$open === 'true' ? 'fixed' : 'absolute')};
+  z-index: 998;
+  top: 0;
+  right: 0;
   width: ${props => (props.$open === 'true' ? '100vw' : '')};
   height: ${props => (props.$open === 'true' ? '100vh' : '')};
-  background: ${props => (props.$open === 'true' ? 'transparent' : '')}; */}
+  background: ${props =>
+    props.$open === 'true' ? 'transparent' : 'transparent'};
 `;
