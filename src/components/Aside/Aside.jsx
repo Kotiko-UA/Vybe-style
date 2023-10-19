@@ -51,14 +51,11 @@ export const Aside = () => {
   useEffect(() => {
     if (isNarrowScreen) {
       enableBodyScroll(document.body);
-      setIsOpen(false);
       return;
     }
-
     if (!isNarrowScreen && isOpen) {
       disableBodyScroll(document.body);
     }
-
     return () => {
       enableBodyScroll(document.body);
     };
@@ -67,7 +64,7 @@ export const Aside = () => {
   useEffect(() => {
     const handleKeydown = e => {
       if (e.code === 'Escape') {
-        setIsOpen(false);
+        closeMenu();
       }
     };
     window.addEventListener('keydown', handleKeydown);
@@ -75,7 +72,7 @@ export const Aside = () => {
   });
 
   const toggleMenuBtn = () => {
-    setIsOpen(open => !open);
+    setIsOpen(!isOpen);
   };
 
   const closeMenu = () => {
@@ -85,7 +82,7 @@ export const Aside = () => {
     if (e.target !== e.currentTarget) {
       return;
     }
-    setIsOpen(false);
+    closeMenu();
   };
 
   return (
