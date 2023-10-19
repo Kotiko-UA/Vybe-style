@@ -36,7 +36,7 @@ const { currentLanguage } = useContext(LanguageContext);
         <ul className="list">
           {data.map(({ id, image, teamRole,teamRoleUA, teamNameUA, teamName, projectUrl }) => (
             <li className="li-item" key={id}>
-              <a href={projectUrl} target="_blank" rel="noreferrer noopener">
+              <a className="link" href={projectUrl} target="_blank" rel="noreferrer noopener">
                 <div className="thumb">
                   <img className='image' src={image} alt={teamName}></img>
                 </div>

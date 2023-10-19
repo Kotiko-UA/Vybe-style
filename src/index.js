@@ -15,7 +15,7 @@ const colors = {
   hiddenText: '#e2e2e2',
   borderColor: '#bbb',
   borderAlphaColor: 'rgba(255, 255, 255, 0.15)',
-  normalСolor: 'rgba(255, 255, 255, 0.5)',
+  normalColor: 'rgba(255, 255, 255, 0.5)',
   errorColor: '#d80027',
   redColor: 'red',
   hoverBtnGradient: 'linear-gradient(234deg, #F4F90F 25.54%, #0FF9C0 73.38%)',
