@@ -9,7 +9,7 @@ const modal = document.querySelector('#teampopup');
 export const PopUp = ({ isModalOpen, onCloseModal }) => {
 const { currentLanguage } = useContext(LanguageContext);
   const { t } = useTranslation();
-  
+
     useEffect(() => {
            const handleKeydown = e => {
         if (e.code === 'Escape') {

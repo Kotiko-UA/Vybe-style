@@ -1,0 +1,18 @@
+.alert-enter {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+.alert-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms;
+}
+.alert-exit {
+  transform: translateY(0);
+  opacity: 1;
+}
+.alert-exit-active {
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: opacity 500ms, transform 500ms;
+}

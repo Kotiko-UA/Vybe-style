@@ -35,7 +35,7 @@ export const data = [
   {
     id: '05',
     text: 'Does your team make design improvements after the website prototype has been approved and finalized by the customer?',
-    textUa: "ЧЧи вдосконалює ваша команда дизайн після того, як прототип веб-сайту було схвалено та завершено клієнтом?",
+    textUa: "Чи вдосконалює ваша команда дизайн після того, як прототип веб-сайту було схвалено та завершено клієнтом?",
     hiddenText:
       'Yes, we are ready to make additional design changes after the prototype is approved, if the client has additional wishes or requirements. We are set up for long-term work with our clients and strive to ensure that our clients remain fully satisfied.',
     hiddenTextUa: "Так, ми готові зробити додаткові дизайн-зміни після затвердження прототипу, якщо клієнт виявляє додаткові побажання або вимоги. Ми налаштовані на довготривалу роботу з нашими клієнтами і прагнемо, щоб наші клієнти залишалися повністю задоволені."
