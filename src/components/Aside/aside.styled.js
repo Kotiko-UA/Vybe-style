@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { ReactComponent as BurgerIcon } from './images/burger.svg';
-import {ReactComponent as CloseIcon} from './images/close.svg'
+import { ReactComponent as CloseIcon } from './images/close.svg';
 export const Logo = styled.img`
   max-width: 77px;
   margin: 0 auto;
@@ -46,7 +46,7 @@ export const ContainerMobileMenu = styled.div`
     background-color: ${props => props.theme.colorBlack};
     background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
     backdrop-filter: blur(11px);
-      }
+  }
   @media screen and (max-width: 1367px) {
     z-index: 999;
   }
@@ -60,7 +60,7 @@ export const ContainerMobileMenu = styled.div`
     right: 20px;
     background: transparent;
     backdrop-filter: blur(0);
-    overflow: hidden; 
+    overflow: hidden;
   }
   @media screen and (min-width: 1920px) {
     right: 0px;
@@ -84,8 +84,8 @@ export const BurgerMenuBtn = styled(BurgerIcon)`
 export const CloseBtnMenu = styled(CloseIcon)`
   width: 24px;
   &path {
-  fill: white;
- }
+    fill: white;
+  }
   @media screen and (min-width: 1368px) {
     display: none;
   }
@@ -157,11 +157,10 @@ export const ArrowDropDown = styled.img`
 export const BackgroundMenuOpen = styled.div`
   position: ${props => (props.$open === 'true' ? 'fixed' : 'absolute')};
   z-index: 998;
-  top:0;
-  right:0;
+  top: 0;
+  right: 0;
   width: ${props => (props.$open === 'true' ? '100vw' : '')};
   height: ${props => (props.$open === 'true' ? '100vh' : '')};
   background: ${props =>
     props.$open === 'true' ? 'transparent' : 'transparent'};
 `;
-
