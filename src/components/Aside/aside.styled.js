@@ -69,7 +69,7 @@ export const ContainerMobileMenu = styled.div`
 export const BurgerMenuBtn = styled.img`
   max-width: 55px;
   position: fixed;
-  index: 2000;
+  z-index: 2000;
   right: 5px;
   @media screen and (min-width: 768px) {
     top: 30px;
@@ -154,7 +154,8 @@ export const ArrowDropDown = styled.img`
 `;
 
 export const BackgroundMenuOpen = styled.div`
-  position: ${props => (props.$open === 'true' ? 'absolute' : 'absolute')};
+  position: ${props => (props.$open === 'true' ? 'fixed' : 'absolute')};
+  z-index: 998;
   top:0;
   right:0;
   width: ${props => (props.$open === 'true' ? '100vw' : '')};
