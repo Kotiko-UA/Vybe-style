@@ -30,11 +30,11 @@ export const ContainerMobileMenu = styled.div`
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1;
+  z-index: 999;
   transform: translateX(100%);
   background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
   backdrop-filter: blur(11px);
-  overflow: scroll;
+  overflow-y: scroll;
   transition: transform 550ms cubic-bezier(0.4, 0, 0.2, 1);
   &.main-menu.open-menu {
     transform: translateX(0);
@@ -46,8 +46,7 @@ export const ContainerMobileMenu = styled.div`
     background-color: ${props => props.theme.colorBlack};
     background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
     backdrop-filter: blur(11px);
-    overflow: scroll;
-  }
+      }
   @media screen and (max-width: 1367px) {
     z-index: 999;
   }
@@ -61,7 +60,7 @@ export const ContainerMobileMenu = styled.div`
     right: 20px;
     background: transparent;
     backdrop-filter: blur(0);
-    overflow: hidden;
+    overflow: hidden; 
   }
   @media screen and (min-width: 1920px) {
     right: 0px;
@@ -69,11 +68,12 @@ export const ContainerMobileMenu = styled.div`
 `;
 export const BurgerMenuBtn = styled.img`
   max-width: 55px;
-  position: absolute;
+  position: fixed;
+  index: 2000;
   right: 5px;
   @media screen and (min-width: 768px) {
-    margin-top: 30px;
-    margin-right: 10px;
+    top: 30px;
+    right: 10px;
   }
   @media screen and (min-width: 1368px) {
     display: none;
@@ -155,8 +155,11 @@ export const ArrowDropDown = styled.img`
 
 export const BackgroundMenuOpen = styled.div`
   position: ${props => (props.$open === 'true' ? 'absolute' : 'absolute')};
-  width: ${props => (props.$open === 'true' ? '100vw' : '100vw')};
+  top:0;
+  right:0;
+  width: ${props => (props.$open === 'true' ? '100vw' : '')};
   height: ${props => (props.$open === 'true' ? '100vh' : '')};
   background: ${props =>
     props.$open === 'true' ? 'transparent' : 'transparent'};
 `;
+
