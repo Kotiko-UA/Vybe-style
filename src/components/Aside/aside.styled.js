@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { AiOutlineClose } from 'react-icons/ai';
-
+import { ReactComponent as BurgerIcon } from './images/burger.svg';
+import {ReactComponent as CloseIcon} from './images/close.svg'
 export const Logo = styled.img`
   max-width: 77px;
   margin: 0 auto;
@@ -66,10 +66,9 @@ export const ContainerMobileMenu = styled.div`
     right: 0px;
   }
 `;
-export const BurgerMenuBtn = styled.img`
-  max-width: 55px;
+export const BurgerMenuBtn = styled(BurgerIcon)`
   position: fixed;
-  z-index: 2000;
+  z-index: 997;
   right: 5px;
   @media screen and (min-width: 768px) {
     top: 30px;
@@ -82,9 +81,11 @@ export const BurgerMenuBtn = styled.img`
     display: none;
   }
 `;
-export const CloseBtnMenu = styled(AiOutlineClose)`
+export const CloseBtnMenu = styled(CloseIcon)`
   width: 24px;
-
+  &path {
+  fill: white;
+ }
   @media screen and (min-width: 1368px) {
     display: none;
   }
