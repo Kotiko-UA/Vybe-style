@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/Vybe-style/static/css/main.9cfbd5ee.css",
-    "main.js": "/Vybe-style/static/js/main.bf86cec8.js",
+    "main.js": "/Vybe-style/static/js/main.2ffc4793.js",
+    "static/media/s-likhoded.jpg": "/Vybe-style/static/media/s-likhoded.851d37d0300218ed4c1b.jpg",
     "static/media/girlwithwords2x.jpg": "/Vybe-style/static/media/girlwithwords2x.5f39b7cdd9eebd2c7d19.jpg",
-    "static/media/BGphoto2x.png": "/Vybe-style/static/media/BGphoto2x.2c273c2151c6136c190c.png",
+    "static/media/newBGphoto2x.png": "/Vybe-style/static/media/newBGphoto2x.b7c22285087ab048d426.png",
     "static/media/sadgirl2x.png": "/Vybe-style/static/media/sadgirl2x.e668809db3bc8de1d585.png",
     "static/media/girlwithwords.jpg": "/Vybe-style/static/media/girlwithwords.7b07aa01cb064e6cdfaf.jpg",
     "static/media/v-img.png": "/Vybe-style/static/media/v-img.aa4f668be85c5415a3cc.png",
@@ -17,7 +18,7 @@
     "static/media/Inter-Thin.ttf": "/Vybe-style/static/media/Inter-Thin.97a5cc3ca8d3b35a4239.ttf",
     "static/media/Inter-Light.ttf": "/Vybe-style/static/media/Inter-Light.02850f28027788580733.ttf",
     "static/media/Inter-Regular.ttf": "/Vybe-style/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
-    "static/media/BGphoto.png": "/Vybe-style/static/media/BGphoto.5267e9482a39ef0c4f41.png",
+    "static/media/newBGphoto.png": "/Vybe-style/static/media/newBGphoto.b1d572c47603d217d372.png",
     "static/media/back2x.png": "/Vybe-style/static/media/back2x.7e29814ba6ff438ba286.png",
     "static/media/styledgirl2x.jpg": "/Vybe-style/static/media/styledgirl2x.741979160dd39c772429.jpg",
     "static/media/hww2Max@2x-min.jpg": "/Vybe-style/static/media/hww2Max@2x-min.c9375b65165a9c607462.jpg",
@@ -67,7 +68,6 @@
     "static/media/hww5Max-min.jpg": "/Vybe-style/static/media/hww5Max-min.1eadfd4e21f337cf1cbf.jpg",
     "static/media/hww1Max@2x-min.jpg": "/Vybe-style/static/media/hww1Max@2x-min.984d6e7bfc24fc6b9b94.jpg",
     "static/media/styledgirl.jpg": "/Vybe-style/static/media/styledgirl.84ba7bc7b004b30673f7.jpg",
-    "static/media/photo_2023-10-17_08-37-56.jpg": "/Vybe-style/static/media/photo_2023-10-17_08-37-56.c66deac7af9629247bb4.jpg",
     "static/media/hww5Mob@2x-min.jpg": "/Vybe-style/static/media/hww5Mob@2x-min.5a4a916edbf9a0a37cb4.jpg",
     "static/media/hww1Mob@2x-min.jpg": "/Vybe-style/static/media/hww1Mob@2x-min.daa471a9d1806dc50651.jpg",
     "static/media/back.png": "/Vybe-style/static/media/back.ae05e7f271c3d5c205c9.png",
@@ -106,7 +106,6 @@
     "static/media/bgLogoMobile.jpg": "/Vybe-style/static/media/bgLogoMobile.76c8a4a973d3df8e2eb8.jpg",
     "static/media/hww3Desk-min.jpg": "/Vybe-style/static/media/hww3Desk-min.a07afd7222f2f673efa2.jpg",
     "static/media/hww4Desk-min.jpg": "/Vybe-style/static/media/hww4Desk-min.479eb005a14e37fcc263.jpg",
-    "static/media/s-likhoded.jpg": "/Vybe-style/static/media/s-likhoded.4b648c8629ddc983473b.jpg",
     "static/media/bgWebMax2x.jpg": "/Vybe-style/static/media/bgWebMax2x.4c7bef1c93b724ae27b5.jpg",
     "static/media/bgCrmMobile.jpg": "/Vybe-style/static/media/bgCrmMobile.f1ea334add066eb1229b.jpg",
     "static/media/form_and_footer_background_1368px_1x.png": "/Vybe-style/static/media/form_and_footer_background_1368px_1x.ee074b14ef0c713d98ae.png",
@@ -141,19 +140,21 @@
     "static/media/linkedin.svg": "/Vybe-style/static/media/linkedin.656eba4cda68fb96d52a9718aebafff1.svg",
     "index.html": "/Vybe-style/index.html",
     "static/media/3-lines-svg.svg": "/Vybe-style/static/media/3-lines-svg.681e1e691baf28555bdc60dfe600f035.svg",
+    "static/media/uaflag.svg": "/Vybe-style/static/media/uaflag.06e2ff32273dd1aff679c44a3d5cf81f.svg",
     "static/media/play-svg.svg": "/Vybe-style/static/media/play-svg.9518c2b6566bb5f5397720ab38b8b4ea.svg",
-    "static/media/close.svg": "/Vybe-style/static/media/close.3ee85c666f9a0d44c88ab4b5087a065d.svg",
+    "static/media/close.svg": "/Vybe-style/static/media/close.55a3d82bb693c3c1769caff362cb7cba.svg",
     "static/media/3994413_above_arrow_navigation_top_up_icon.svg": "/Vybe-style/static/media/3994413_above_arrow_navigation_top_up_icon.b18e9e216c506b72736095f699a33735.svg",
     "static/media/arrorR.svg": "/Vybe-style/static/media/arrorR.54d71b57617218280e0e770ebed19ab3.svg",
     "static/media/arrorL.svg": "/Vybe-style/static/media/arrorL.ddbe9e0b798665a6ca8bb224183e1e2e.svg",
     "static/media/ellipse.svg": "/Vybe-style/static/media/ellipse.0f71f56e400edfc77d65c11d25f4b51f.svg",
+    "static/media/burger.svg": "/Vybe-style/static/media/burger.f500da283c21e60d5c0fa4b5ad77f524.svg",
     "static/media/plus.svg": "/Vybe-style/static/media/plus.62aa920e29d06cc58b3c3bb6fb89dff8.svg",
     "static/media/close-icon.svg": "/Vybe-style/static/media/close-icon.fec7c356a8b8c8bf7ab2537f6a1e1d5f.svg",
     "main.9cfbd5ee.css.map": "/Vybe-style/static/css/main.9cfbd5ee.css.map",
-    "main.bf86cec8.js.map": "/Vybe-style/static/js/main.bf86cec8.js.map"
+    "main.2ffc4793.js.map": "/Vybe-style/static/js/main.2ffc4793.js.map"
   },
   "entrypoints": [
     "static/css/main.9cfbd5ee.css",
-    "static/js/main.bf86cec8.js"
+    "static/js/main.2ffc4793.js"
   ]
 }
