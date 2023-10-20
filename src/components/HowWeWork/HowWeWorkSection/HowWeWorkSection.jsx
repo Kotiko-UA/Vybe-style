@@ -73,7 +73,7 @@ export const HowWeWorkSection = () => {
             (btnId === '01' ? (
               <PlayerWrapper>
                 <StyledPlayer
-                  url="https://res.cloudinary.com/deqdv9pvd/video/upload/v1697474178/Video%20for%20website/2023-10-16_07.47.10_jzcwnu.mp4"
+                  url="https://res.cloudinary.com/deqdv9pvd/video/upload/v1697817423/Video%20for%20website/desktop_video_akrowl.mp4"
                   controls
                   config={{
                     file: {
