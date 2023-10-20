@@ -11,8 +11,11 @@ export const Button = styled.button`
   border: 1px solid transparent;
   border-radius: 10px;
   background-color: ${({ theme }) => theme.colorText};
-  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: background-color ${({ theme }) => theme.animationStyles};
+
   z-index: 999;
+
   &:hover {
     background-color: ${({ theme }) => theme.brandColor};
   }

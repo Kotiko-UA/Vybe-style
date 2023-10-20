@@ -1,4 +1,3 @@
-import { useField } from 'formik';
 import { useTranslation } from 'react-i18next';
 
 import {
@@ -11,19 +10,12 @@ import {
 
 export const FilePicker = ({ label, ...props }) => {
   const { t } = useTranslation();
-  const [field] = useField(props);
 
   return (
     <>
-      <FilePickerInput
-        {...field}
-        {...props}
-        type="file"
-        name="multiple_files"
-        id="multiple_files"
-      />
+      <FilePickerInput {...props} type="file" name="files" id="files" />
 
-      <ClipLabel htmlFor="multiple_files">
+      <ClipLabel htmlFor="files">
         <IconEWrap>
           <ClipSvg />
         </IconEWrap>

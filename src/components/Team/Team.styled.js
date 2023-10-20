@@ -166,8 +166,7 @@ export const PrevButton = styled.button`
   background-color: #171717;
   border: none;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all ${({ theme }) => theme.animationStyles};
   &:hover,
   :focus {
     stroke: ${props => props.theme.brandColor};
@@ -180,8 +179,7 @@ export const NextButton = styled.button`
   background-color: #171717;
   border: none;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all ${({ theme }) => theme.animationStyles};
   &:hover,
   :focus {
     stroke: ${props => props.theme.brandColor};

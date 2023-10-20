@@ -143,6 +143,11 @@ export const SocialsList = styled.ul`
   }
 `;
 
+export const LinkedinSvg = styled(IconLinkedin)``;
+export const DribbleSvg = styled(IconDribble)``;
+export const InstagramSvg = styled(IconInstagram)``;
+export const BehanceSvg = styled(IconBehance)``;
+
 export const SocialsLink = styled.a`
   display: flex;
   justify-content: center;
@@ -153,42 +158,19 @@ export const SocialsLink = styled.a`
   border-radius: 50%;
   background: transparent;
   color: ${({ theme }) => theme.colorText};
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all ${({ theme }) => theme.animationStyles};
 
   &:hover {
     background-color: ${({ theme }) => theme.brandColor};
     border: none;
-  }
-`;
-export const LinkedinSvg = styled(IconLinkedin)`
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  ${SocialsLink}:hover & path {
-    fill: #c4f934;
-    stroke: ${({ theme }) => theme.blackColor};
-  }
-`;
-export const DribbleSvg = styled(IconDribble)`
-  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  ${SocialsLink}:hover & path {
-    stroke: ${({ theme }) => theme.blackColor};
-  }
-`;
-export const InstagramSvg = styled(IconInstagram)`
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  ${SocialsLink}:hover & path {
-    fill: ${({ theme }) => theme.brandColor};
-    stroke: ${({ theme }) => theme.blackColor};
-  }
-`;
-export const BehanceSvg = styled(IconBehance)`
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  ${SocialsLink}:hover & path {
-    fill: ${({ theme }) => theme.brandColor};
-    stroke: ${({ theme }) => theme.blackColor};
+
+    ${LinkedinSvg}, ${DribbleSvg}, ${InstagramSvg}, ${BehanceSvg} {
+      transition: all ${({ theme }) => theme.animationStyles};
+      path {
+        fill: ${({ theme }) => theme.brandColor};
+        stroke: ${({ theme }) => theme.blackColor};
+      }
+    }
   }
 `;
 

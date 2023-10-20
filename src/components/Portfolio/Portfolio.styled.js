@@ -128,7 +128,7 @@ export const SlideImg = styled.img`
 
   @media screen and (min-width: 1368px) {
     opacity: 0.1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity ${({ theme }) => theme.animationStyles};
     .slide-wrap:hover & {
       opacity: 1;
     }
@@ -274,9 +274,7 @@ export const PrevButton = styled.button`
   background-color: #171717;
   border: none;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
+  transition: background-color ${({ theme }) => theme.animationStyles};
   :focus {
     stroke: ${props => props.theme.brandColor};
     background-color: ${props => props.theme.borderAlphaColor};
@@ -288,8 +286,8 @@ export const NextButton = styled.button`
   background-color: #171717;
   border: none;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color ${({ theme }) => theme.animationStyles};
+  
   &:hover,
   :focus {
     stroke: ${props => props.theme.brandColor};
