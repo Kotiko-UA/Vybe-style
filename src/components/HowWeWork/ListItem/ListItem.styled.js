@@ -98,7 +98,6 @@ export const Text = styled.p`
   font-weight: 300;
   line-height: 1.2;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
   ${InfoBlock}:hover & {
     color: ${({ theme }) => theme.brandColor};
   }
@@ -146,11 +145,11 @@ export const Button = styled.button`
   }
   &:focus {
     outline: none;
-  }
+     }
 `;
 
 export const PlusSvg = styled(PlusIcon)`
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   ${InfoBlock}:hover & path {
     fill: ${({ theme }) => theme.brandColor};
   }
