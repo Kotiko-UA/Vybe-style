@@ -54,7 +54,7 @@ export const ContainerBlock = styled.div`
 export const InfoBlock = styled.div`
   cursor: pointer;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
   vertical-align: middle;
@@ -97,10 +97,8 @@ export const Text = styled.p`
   font-style: normal;
   font-weight: 300;
   line-height: 1.2;
-  transition: all ${({ theme }) => theme.animationStyles};
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  color: ${props => (props.$focus === 'true' ? '#C4F934' : '')};
-  // color: ${props => (props.$isTextShown === 'true' ? '#C4F934' : '')};
   ${InfoBlock}:hover & {
     color: ${({ theme }) => theme.brandColor};
   }
@@ -148,28 +146,28 @@ export const Button = styled.button`
   }
   &:focus {
     outline: none;
-    border: 1px solid ${({ theme }) => theme.brandColor};
   }
 `;
 
 export const PlusSvg = styled(PlusIcon)`
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   ${InfoBlock}:hover & path {
-    fill: ${({ theme }) => theme.brandColor};
-  }
-  :focus & path {
     fill: ${({ theme }) => theme.brandColor};
   }
 `;
+
 export const CloseSvg = styled(CloseIcon)`
-  ${InfoBlock}:hover & path {
-    fill: ${({ theme }) => theme.brandColor};
-  }
-  :focus & path {
-    fill: ${({ theme }) => theme.brandColor};
-  }
-  path {
-    // fill: ${props => (props.$data === 'true' ? '#C4F934' : '')};
-  }
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+scale 500ms cubic-bezier(0.4, 0, 0.2, 1),
+transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+@media screen and (min-width:768px){
+    ${InfoBlock}:hover & path{
+           fill: ${({ theme }) => theme.brandColor};
+};
+${InfoBlock}:hover & {
+    scale: 1.25;
+    transform: rotate(180deg)
+}
 `;
 
 export const Thumb = styled.div`

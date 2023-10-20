@@ -260,16 +260,16 @@ export const Buttons = styled.div`
 
   border-radius: 7px;
   background: #171717;
-  padding: 14px 20px 14px 8px;
+  padding: 4px 20px 4px 8px;
   width: 140px;
 
   @media screen and (min-width: 1920px) {
-    padding: 14px 20px 14px 56px;
+    padding: 4px 20px 4px 56px;
     width: 188px;
   }
 `;
 export const PrevButton = styled.button`
-  padding: 0 28px;
+  padding: 8px 20px;
   stroke: #f7f7f7;
   background-color: #171717;
   border: none;
@@ -281,7 +281,7 @@ export const PrevButton = styled.button`
   }
 `;
 export const NextButton = styled.button`
-  padding: 0 12px;
+  padding: 8px 20px;
   stroke: #f7f7f7;
   background-color: #171717;
   border: none;

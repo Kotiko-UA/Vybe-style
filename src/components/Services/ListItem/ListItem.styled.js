@@ -1,67 +1,93 @@
 import { styled } from 'styled-components';
 
 export const LiItem = styled.li`
-  padding-left: 20px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
+padding-left: 20px;
+position: relative;
+display: flex;
+flex-direction:column;
+width:100%;
+max-width: 480px;
+transition: width 400ms cubic-bezier(0.4, 0, 0.2, 1);
+@media screen and (max-width: 767px) {
+height: calc(100% / 4);
+&::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 480px;
+  height: 100%;
+ background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.25) 100%), 
+     linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%),
+     url(${props => props.$mobilephoto}),
+    #c4f934;
+    background-blend-mode: luminosity;
+    background-repeat:no-repeat;
+    background-size: cover;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+}
+@media screen and (min-width: 768px){
+ width: calc(100% / 4);
+ padding-top: 39px;
+ padding-left: 22px;
+ padding-right: 12px;
+}
+@media screen and (min-width: 768px) and (max-width: 1367px){
+  &::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.25) 100%), 
+     linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%),
+     url(${props => props.$tabletphoto}),
+    #c4f934;
+    background-blend-mode: luminosity;
+    background-repeat:no-repeat;
+    background-size: cover;
+    border-right: 1px solid #fff;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+}
 
-  @media screen and (max-width: 767px) {
-    height: calc(100% / 4);
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0) 0%,
-          rgba(0, 0, 0, 0.25) 100%
-        ),
-        linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%),
-        url(${props => props.$mobilephoto}), #c4f934;
-      background-blend-mode: luminosity;
-      background-repeat: no-repeat;
-      background-size: cover;
+@media screen and (min-width: 1368px) {
+ 
+  padding-right: 30px;
+ 
+     &:nth-child(n + 2)::before {
+        content: '';
+        background-color: ${({ theme }) => theme.colorText};
+        position:absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 2px;
+            };
+            &::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.25) 100%), 
+     linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%),
+     url(${props => props.$desktopphoto}),
+    #c4f934;
+    background-blend-mode: luminosity;
+    background-repeat:no-repeat;
+    background-size: cover;
       z-index: 0;
-      opacity: 0;
-      transition: opacity ${({ theme }) => theme.animationStyles};
-    }
-  }
-  @media screen and (min-width: 768px) {
-    width: calc(100% / 4);
-    padding-top: 39px;
-    padding-left: 22px;
-    padding-right: 12px;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1367px) {
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0) 0%,
-          rgba(0, 0, 0, 0.25) 100%
-        ),
-        linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%),
-        url(${props => props.$tabletphoto}), #c4f934;
-      background-blend-mode: luminosity;
-      background-repeat: no-repeat;
-      background-size: cover;
-      border-right: 1px solid #fff;
-      z-index: 0;
-      opacity: 0;
-      transition: opacity ${({ theme }) => theme.animationStyles};
-    }
-  }
+  opacity: 0;
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
 
   @media screen and (min-width: 1368px) {
     padding-right: 30px;

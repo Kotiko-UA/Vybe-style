@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Button } from "./Btntottop.styled";
-import {ReactComponent as IconUp} from './3994413_above_arrow_navigation_top_up_icon.svg'
+import { Button, ArrowUp} from "./Btntottop.styled";
 
 export const Btntotop = () => {
     const [scroll, setScroll] = useState(false)
@@ -16,7 +15,7 @@ export const Btntotop = () => {
         onClick={() => {
                window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
             }} >
-            <IconUp />
+            <ArrowUp />
         </Button>
     )
 }

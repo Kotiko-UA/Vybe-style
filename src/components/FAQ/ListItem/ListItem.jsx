@@ -1,32 +1,62 @@
-import { LiItem, Number, ContainerBlock,InfoBlock, Text, Button, HiddenText,PlusSvg,CloseSvg } from "./ListItem.styled";
-import { useState, useContext } from "react";
-import { LanguageContext } from "components/HookLang/LanguageContext";
- 
-export const ListItem = ({ item: { id, text, textUa, hiddenText, hiddenTextUa } }) => {
-    const [isTextShown, setIsTextShown] = useState(false);
-    const [isFocusBtn, setIsFocusBtn] = useState(false);
-    const { currentLanguage } = useContext(LanguageContext);
+import { useState, useContext, useRef} from 'react';
+import { CSSTransition } from 'react-transition-group';
+import { LanguageContext } from 'components/HookLang/LanguageContext';
+import {
+  LiItem,
+  Number,
+  ContainerBlock,
+  InfoBlock,
+  Text,
+  Button,
+  HiddenText,
+  PlusSvg,
+  CloseSvg,
+} from './ListItem.styled';
+import '../../../transition.css';
+
+export const ListItem = ({item: { id, text, textUa, hiddenText, hiddenTextUa }}) => {
+  const [isTextShown, setIsTextShown] = useState(false);
+  const { currentLanguage } = useContext(LanguageContext);
+ const nodeRef = useRef(null);
+  return (
     
-    return (
-        <LiItem $data={`${isTextShown}`}>
-        <Number>{id}</Number>
-            <ContainerBlock>
-                <InfoBlock onClick={() => setIsTextShown(!isTextShown)}> 
-                    <Text $isTextShown={`${isTextShown}`}
-                          $focus={`${isFocusBtn}`}
-                    >{currentLanguage === 'en' ? text : textUa}</Text>
-                    <Button type="button"
-                        onBlur={()=>  setIsFocusBtn(!isFocusBtn)}
-                        onFocus={()=>  setIsFocusBtn(!isFocusBtn)}
-                        onClick={() => setIsTextShown(!isTextShown)}
-                        
-                        $data={`${!isTextShown}`}>
-                                 {!isTextShown ? <PlusSvg $data={`${isTextShown}`}/>
-                                               : <CloseSvg $data={`${isTextShown}`}/>}
-                    </Button>
-                </InfoBlock>
-                {isTextShown && <HiddenText>{currentLanguage === 'en' ? hiddenText : hiddenTextUa}</HiddenText>}
-            </ContainerBlock>
-        </LiItem>
-    )
-}
+     
+         <LiItem $data={`${isTextShown}`}>
+      <Number>{id}</Number>
+      <ContainerBlock>
+        <InfoBlock onClick={() => setIsTextShown(!isTextShown)}>
+          <Text $isTextShown={`${isTextShown}`}>
+            {currentLanguage === 'en' ? text : textUa}
+          </Text>
+          <Button
+            type="button"
+            onClick={() => setIsTextShown(!isTextShown)}
+            $data={`${!isTextShown}`}
+          >
+            {!isTextShown ? (
+              <PlusSvg $data={`${isTextShown}`} />
+            ) : (
+              <CloseSvg $data={`${isTextShown}`} />
+            )}
+          </Button>
+        </InfoBlock>
+       
+          <CSSTransition
+            nodeRef={nodeRef}
+      in={isTextShown}
+      timeout={300}
+      classNames="alert"
+      unmountOnExit
+>
+      <HiddenText  ref={nodeRef}>
+      {currentLanguage === 'en' ? hiddenText : hiddenTextUa}
+    </HiddenText>
+          </CSSTransition>
+       
+                
+      </ContainerBlock>
+      </LiItem>
+         
+     
+  );
+};

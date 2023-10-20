@@ -10,21 +10,12 @@ export const LiItem = styled.li`
     align-items: flex-start;
     &:not(:last-child):after {
       content: '';
-      // background-color: ${props =>
-        props.$data === 'true' ? '#C4F934' : 'rgba(175, 175, 175, 0.41)'};
       background-color: rgba(175, 175, 175, 0.41);
       position: absolute;
       bottom: -40px;
       left: -35px;
       height: 2px;
       width: 688px;
-    }
-  }
-  @media screen and (min-width: 1368px) {
-    &:not(:last-child):after {
-      left: -5px;
-      bottom: -5px;
-      width: 100%;
     }
     width: 872px;
     padding: 40px 36px;
@@ -61,7 +52,7 @@ export const InfoBlock = styled.div`
   cursor: pointer;
   display: flex;
   gap: 16px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   @media screen and (min-width: 768px) {
     // width: 524px;
@@ -79,10 +70,8 @@ export const Text = styled.p`
   font-style: normal;
   font-weight: 300;
   line-height: 1.2;
-  transition: all ${({ theme }) => theme.animationStyles};
-  color: ${props =>
-    props.$focus === 'true' ? ({ theme }) => theme.brandColor : ''};
-  //  color: ${props => (props.$isTextShown === 'true' ? '#C4F934' : '')};
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   ${InfoBlock}:hover & {
     color: ${({ theme }) => theme.brandColor};
   }
@@ -115,7 +104,6 @@ export const Button = styled.button`
   border-radius: 50%;
   &:focus {
     outline: none;
-    border: 1px solid ${({ theme }) => theme.brandColor};
   }
   ${InfoBlock}:hover & {
     color: ${({ theme }) => theme.brandColor};
@@ -138,42 +126,27 @@ export const HiddenText = styled.p`
   @media screen and (min-width: 480px) {
     max-width: 380px;
   }
-  @media screen and (min-width: 768px) {
-    max-width: 445px;
-    color: rgba(255, 255, 255, 0.58);
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.4;
-  }
-  @media screen and (min-width: 1368px) {
-    max-width: 630px;
-  }
   @media screen and (min-width: 1920px) {
     max-width: 900px;
   }
 `;
 
 export const PlusSvg = styled(PlusIcon)`
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   ${InfoBlock}:hover & path {
-    fill: #c4f934;
-  }
-  :focus & path {
     fill: #c4f934;
   }
 `;
 export const CloseSvg = styled(CloseIcon)`
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  @media screen and (min-width: 768px) {
-    ${InfoBlock}:hover & path {
-      fill: #c4f934;
-    }
-  }
-  :focus & path {
-    fill: #c4f934;
-  }
-  path {
-    // fill:${props => (props.$data === 'true' ? '#C4F934' : '')};
-  }
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+scale 500ms cubic-bezier(0.4, 0, 0.2, 1),
+transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+@media screen and (min-width:768px){
+    ${InfoBlock}:hover & path{
+           fill: ${({ theme }) => theme.brandColor};
+};
+${InfoBlock}:hover & {
+    scale: 1.25;
+    transform: rotate(180deg)
+}
 `;
