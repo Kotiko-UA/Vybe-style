@@ -57,7 +57,7 @@ height: calc(100% / 4);
 }
 }
 
-@media screen and (min-width: 1368px) {
+@media screen and (min-width: 768px) {
  
   padding-right: 30px;
  
@@ -99,7 +99,7 @@ height: calc(100% / 4);
       bottom: 0;
       left: 0;
       height: 100%;
-      width: 2px;
+      width: 1px;
     }
     &::after {
       content: '';
@@ -180,6 +180,7 @@ height: calc(100% / 4);
   @media screen and (min-width: 768px) {
     height: auto;
   }
+}
 `;
 
 export const Number = styled.p`
