@@ -191,7 +191,6 @@ export const ContactForm = () => {
                     value={props.values.message}
                     onBlur={props.handleBlur}
                   />
-
                   <FormikFilePicker
                     type="file"
                     name="files"

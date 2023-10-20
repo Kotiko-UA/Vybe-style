@@ -35,7 +35,7 @@ export const ContainerMobileMenu = styled.div`
   background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
   backdrop-filter: blur(11px);
   overflow-y: scroll;
-  transition: transform 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform ${({ theme }) => theme.animationTransform};
   &.main-menu.open-menu {
     transform: translateX(0);
   }

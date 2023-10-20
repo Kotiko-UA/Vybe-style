@@ -271,7 +271,7 @@ export const CloseSvgBtn = styled(CloseSvg)`
   height: 14px;
   stroke: ${({ theme }) => theme.greyColorPopup};
 
-  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke ${({ theme }) => theme.animationStyles};
 `;
 
 export const FileNameText = styled.p`
