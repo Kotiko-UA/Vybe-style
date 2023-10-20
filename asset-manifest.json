@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Vybe-style/static/css/main.9cfbd5ee.css",
-    "main.js": "/Vybe-style/static/js/main.a409bcce.js",
+    "main.css": "/Vybe-style/static/css/main.07e615fd.css",
+    "main.js": "/Vybe-style/static/js/main.567e64b3.js",
     "static/media/s-likhoded.jpg": "/Vybe-style/static/media/s-likhoded.851d37d0300218ed4c1b.jpg",
     "static/media/v-img.png": "/Vybe-style/static/media/v-img.aa4f668be85c5415a3cc.png",
     "static/media/form_and_footer_background_1368px_2x.png": "/Vybe-style/static/media/form_and_footer_background_1368px_2x.71a3e1d2cabecf574a35.png",
@@ -80,7 +80,6 @@
     "static/media/hww2Mob@2x-min.jpg": "/Vybe-style/static/media/hww2Mob@2x-min.3b10a2cb0084aa7131f5.jpg",
     "static/media/form_and_footer_background_1920px_1x.png": "/Vybe-style/static/media/form_and_footer_background_1920px_1x.6415faed00507fd0d49c.png",
     "static/media/bgAppTablet.jpg": "/Vybe-style/static/media/bgAppTablet.aa01aa88dfe77c29fda6.jpg",
-    "static/media/l-mazur.jpg": "/Vybe-style/static/media/l-mazur.67c93e5342cc219502f3.jpg",
     "static/media/bgLogoTablet.jpg": "/Vybe-style/static/media/bgLogoTablet.dbfd8e3814dc6e1b92af.jpg",
     "static/media/hww6Tab-min.jpg": "/Vybe-style/static/media/hww6Tab-min.0dce66d99f0c6798ea73.jpg",
     "static/media/hww3Mob@2x-min.jpg": "/Vybe-style/static/media/hww3Mob@2x-min.b21dd39f90c4d0eef291.jpg",
@@ -104,6 +103,7 @@
     "static/media/hww4Desk-min.jpg": "/Vybe-style/static/media/hww4Desk-min.479eb005a14e37fcc263.jpg",
     "static/media/bgWebMax2x.jpg": "/Vybe-style/static/media/bgWebMax2x.4c7bef1c93b724ae27b5.jpg",
     "static/media/bgCrmMobile.jpg": "/Vybe-style/static/media/bgCrmMobile.f1ea334add066eb1229b.jpg",
+    "static/media/l-mazur.jpg": "/Vybe-style/static/media/l-mazur.1dd6841016a757522a4d.jpg",
     "static/media/form_and_footer_background_1368px_1x.png": "/Vybe-style/static/media/form_and_footer_background_1368px_1x.ee074b14ef0c713d98ae.png",
     "static/media/sadgirl.png": "/Vybe-style/static/media/sadgirl.7f497df6acb012e520ad.png",
     "static/media/mobileBG2x.png": "/Vybe-style/static/media/mobileBG2x.61a62cfcda994b9c1225.png",
@@ -148,11 +148,11 @@
     "static/media/burger.svg": "/Vybe-style/static/media/burger.f500da283c21e60d5c0fa4b5ad77f524.svg",
     "static/media/plus.svg": "/Vybe-style/static/media/plus.62aa920e29d06cc58b3c3bb6fb89dff8.svg",
     "static/media/close-icon.svg": "/Vybe-style/static/media/close-icon.fec7c356a8b8c8bf7ab2537f6a1e1d5f.svg",
-    "main.9cfbd5ee.css.map": "/Vybe-style/static/css/main.9cfbd5ee.css.map",
-    "main.a409bcce.js.map": "/Vybe-style/static/js/main.a409bcce.js.map"
+    "main.07e615fd.css.map": "/Vybe-style/static/css/main.07e615fd.css.map",
+    "main.567e64b3.js.map": "/Vybe-style/static/js/main.567e64b3.js.map"
   },
   "entrypoints": [
-    "static/css/main.9cfbd5ee.css",
-    "static/js/main.a409bcce.js"
+    "static/css/main.07e615fd.css",
+    "static/js/main.567e64b3.js"
   ]
 }
