@@ -17,7 +17,21 @@ export const Overlay = styled.div`
   height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
   z-index: 1200;
+display: flex;
+justify-content:center;
+align-items: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+&.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
 
+&.is-hidden .modal {
+  transform:  scale(0.5);
+}
   `
 
 
@@ -27,11 +41,7 @@ position: relative;
   height: 440px;
   padding-top: 24px;
   padding-left: 20px;
-     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid ${({ theme }) => theme.brandColor};
+      border: 1px solid ${({ theme }) => theme.brandColor};
   background-color: ${({ theme }) => theme.blackColor};
         background-image: url(${bgMobile}), url(${bgMobile2});
      background-repeat: no-repeat;
@@ -42,6 +52,12 @@ position: relative;
    (min-resolution: 2dppx) {
     background-image: url(${bgMobile2x}), url(${bgMobile2x2});
    }
+
+transform:  scale(1);
+ transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+
 .title {
     margin-bottom: 10px;
     color:${({ theme }) => theme.colorText};
@@ -54,7 +70,7 @@ position: relative;
 .text {
     color: ${({ theme }) => theme.greyColorPopup};
     font-family: Inter;
-    font-size: ${props => props.data === 'en' ? "16px" : "12px"}  ;
+    font-size: ${props => props.data === 'en' ? "16px" : "12px"} ;
     font-style: normal;
     font-weight: 300;
     line-height: normal;    

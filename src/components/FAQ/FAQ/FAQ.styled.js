@@ -19,7 +19,7 @@ export const Section = styled.section`
   }
 `;
 
-export const Container = styled.section`
+export const Container = styled.div`
   max-width: 480px;
   padding-left: 20px;
   padding-right: 20px;
@@ -41,6 +41,26 @@ export const Container = styled.section`
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+  }
+
+  .button {
+    cursor: pointer;
+    display:flex;
+    aligh-items:center;
+    color: ${({ theme }) => theme.brandColor};
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 1.92px;
+    margin-left: auto;
+    margin-right: 220px;
+
+    .svg-arrow{
+      transform: rotate(180deg);
+    }
   }
 `;
 
@@ -70,7 +90,7 @@ export const List = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 80px;
-
+   
   @media screen and (min-width: 768px) {
     padding-left: 40px;
     padding-right: 40px;

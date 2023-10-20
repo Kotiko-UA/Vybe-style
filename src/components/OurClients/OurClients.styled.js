@@ -570,7 +570,8 @@ export const GirlWithWordsPhoto = styled.img`
   }
 `;
 
-export const QuestionText = styled.p`
+export const QuestionText = styled.a`
+cursor: pointer;
   padding: 49px 42px 50px;
   width: 375px;
   border: 0.1px solid ${({ theme }) => theme.colorText};
@@ -585,7 +586,14 @@ export const QuestionText = styled.p`
   font-weight: 300;
   line-height: 1.21;
   letter-spacing: 0.32px;
-
+  
+  .link-text{
+transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+ &:hover .link-text {
+  color: ${({ theme }) => theme.brandColor};
+  transform: scale(1.2);
+   }
   @media screen and (min-width: 768px) {
     border-color: ${({ theme }) => theme.borderColor};
     width: 213px;

@@ -5,15 +5,16 @@ import { LanguageContext } from 'components/HookLang/LanguageContext';
 import { createPortal } from 'react-dom';
 import { Overlay, Modal, CloseSvgBtn } from './PopUp.styled';
 import { data } from './data/contacts';
-import './styles.css';
 
 const modal = document.querySelector('#teampopup');
 
 export const PopUp = ({ isModalOpen, onCloseModal }) => {
+   
   const { currentLanguage } = useContext(LanguageContext);
   const { t } = useTranslation();
-  
+ 
   useEffect(() => {
+    
     const handleKeydown = e => {
       if (e.code === 'Escape') {
         onCloseModal();
@@ -33,8 +34,8 @@ export const PopUp = ({ isModalOpen, onCloseModal }) => {
   };
 
   return createPortal(
-    <Overlay onClick={handleBackdropClick}>
-             <Modal  $modal={`${isModalOpen}`}>
+    <Overlay onClick={handleBackdropClick} className={`${isModalOpen ? '' : 'is-hidden'}`}>
+             <Modal className='modal'>
           <CloseSvgBtn onClick={onCloseModal} />
           <h2 className="title">{t('modal-title')}</h2>
           <p data={currentLanguage} className="text">

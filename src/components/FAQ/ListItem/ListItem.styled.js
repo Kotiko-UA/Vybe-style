@@ -9,6 +9,7 @@ export const LiItem = styled.li`
     display:flex;
     gap: 52px;
     align-items: flex-start;
+ 
       &:not(:last-child):after {
         content: '';
         background-color: rgba(175, 175, 175, 0.41);
@@ -134,15 +135,16 @@ font-style: normal;
 font-weight: 300;
 line-height: 1.33;
 margin-top: 31px;
+  
 @media screen and (min-width:480px) {
 max-width: 380px;
 }
 @media screen and (min-width:768px) {
   max-width: 445px;
-    color: rgba(255, 255, 255, 0.58);
-font-size: 20px;
-font-weight: 400;
-line-height: 1.4;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
 }
 @media screen and (min-width:1368px) {
   max-width: 630px;

@@ -53,5 +53,4 @@ img {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
 `;
