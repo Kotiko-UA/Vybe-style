@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 import { ReactComponent as PlusIcon } from '../img/plus.svg';
 import { ReactComponent as CloseIcon } from '../img/close.svg';
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
 
 export const ListLi = styled.li`
   position: relative;
@@ -17,7 +17,7 @@ export const ListLi = styled.li`
   @media screen and (min-width: 1368px) and (max-width: 1919px) {
     width: 511px;
   }
-  @media screen and (min-width: 1920px){
+  @media screen and (min-width: 1920px) {
     width: 100%;
   }
 `;
@@ -27,8 +27,8 @@ export const Wrapper = styled.div`
     align-items: center;
     gap: 32px;
   }
-   @media screen and (min-width: 1368px) {
-    width:100%;
+  @media screen and (min-width: 1368px) {
+    width: 100%;
   }
 `;
 
@@ -47,7 +47,7 @@ export const ContainerBlock = styled.div`
   flex-grow: 1;
 
   @media screen and (min-width: 1368px) and (max-width: 1919px) {
-    width: 100%;  
+    width: 100%;
   }
 `;
 
@@ -64,7 +64,6 @@ export const InfoBlock = styled.div`
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
     width: 100%;
-   
   }
 `;
 
@@ -88,7 +87,7 @@ export const HiddenText = styled.p`
   @media screen and (min-width: 1368px) and (max-width: 1919px) {
     max-width: 403px;
   }
-   @media screen and (min-width: 1920px) {
+  @media screen and (min-width: 1920px) {
     max-width: 595px;
   }
 `;
@@ -99,7 +98,6 @@ export const Text = styled.p`
   font-weight: 300;
   line-height: 1.2;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
- 
   ${InfoBlock}:hover & {
     color: ${({ theme }) => theme.brandColor};
   }
@@ -116,15 +114,15 @@ export const Text = styled.p`
   }
   @media screen and (min-width: 1368px) and (max-width: 1919px) {
     width: 312px;
-font-size: 32px;
-font-style: normal;
-font-weight: 400;
-line-height: 1.25;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.25;
     flex-grow: 1;
   }
   @media screen and (min-width: 1920px) {
-          width: 590px;
-      }
+    width: 590px;
+  }
 `;
 
 export const Button = styled.button`
@@ -139,7 +137,7 @@ export const Button = styled.button`
   height: 40px;
   border: ${props => (props.$data === 'true' ? '1px solid white' : '')};
   border-radius: 50%;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all ${({ theme }) => theme.animationStyles};
   ${InfoBlock}:hover & {
     color: ${({ theme }) => theme.brandColor};
     border-color: ${({ theme }) => theme.brandColor};
@@ -155,7 +153,6 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   ${InfoBlock}:hover & path {
     fill: ${({ theme }) => theme.brandColor};
   }
-
 `;
 
 export const CloseSvg = styled(CloseIcon)`
@@ -193,22 +190,22 @@ export const Image = styled.img`
   width: 100%;
   object-fit: center;
 
-  @media screen and (min-width:768px) and (max-width: 1367px) {
-    content: url(${props => props.$tabletphoto})
+  @media screen and (min-width: 768px) and (max-width: 1367px) {
+    content: url(${props => props.$tabletphoto});
   }
 `;
 
 export const PlayerWrapper = styled.div`
-position: relative;
+  position: relative;
   padding-top: 56.25%;
   width: 100%;
   height: 383px;
-`
+`;
 
 export const StyledPlayer = styled(ReactPlayer)`
-position: absolute;
+  position: absolute;
   top: 0;
   left: 0;
   height: 383px !important;
   width: 100% !important;
-`
+`;

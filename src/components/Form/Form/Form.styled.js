@@ -202,7 +202,7 @@ export const FormikInput = styled(Field)`
   outline: none;
   background-color: ${({ theme }) => theme.blackColor};
 
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border ${({ theme }) => theme.animationStyles};
 
   &:hover,
   &:focus {
@@ -219,7 +219,7 @@ export const FormikInput = styled(Field)`
 `;
 export const StyledErrorMessage = styled.div`
   position: absolute;
-  top: 55px;
+  bottom: 10px;
 
   color: ${({ theme }) => theme.redColor};
   font-size: 14px;
@@ -229,13 +229,21 @@ export const StyledErrorMessage = styled.div`
   }
 `;
 
+export const FilePickerWrap = styled.div``;
+
+export const FormikFilePicker = styled(Field)`
+  background-color: ${({ theme }) => theme.brandColor};
+`;
+
 export const AttachedFilesList = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 10px;
   width: 100%;
 `;
+
 export const SelectedFilesText = styled.p`
   font-size: 14px;
   font-style: normal;
@@ -248,6 +256,14 @@ export const SelectedFilesList = styled.ul`
   flex-direction: column;
   width: 100%;
   gap: 10px;
+`;
+
+export const FilePickerError = styled.div`
+  position: relative;
+  top: 10px;
+
+  color: ${({ theme }) => theme.redColor};
+  font-size: 14px;
 `;
 
 export const CloseSvgBtn = styled(CloseSvg)`
@@ -271,7 +287,7 @@ export const SelectedFilesItem = styled.li`
   flex-direction: row;
   justify-content: space-between;
 
-  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke ${({ theme }) => theme.animationStyles};
   &:hover,
   &:focus {
     & ${FileNameText} {
@@ -304,16 +320,12 @@ export const FormikTextarea = styled(Field)`
   resize: none;
   background-color: ${({ theme }) => theme.blackColor};
 
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border ${({ theme }) => theme.animationStyles};
 
   &:hover,
   &:focus {
     border: 1px solid #c4f934;
   }
-`;
-
-export const FormikFilePicker = styled(Field)`
-  background-color: ${({ theme }) => theme.brandColor};
 `;
 
 export const ContactUsBtn = styled.button`
@@ -328,12 +340,7 @@ export const ContactUsBtn = styled.button`
   color: ${({ theme }) => theme.blackColor};
 
   cursor: pointer;
-  // transition: background 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  // &:hover,
-  // &:focus{
-  //   background: ${({ theme }) => theme.hoverBtnGradient};
-  // }
   .btn-text {
     color: ${({ theme }) => theme.blackColor};
     font-size: 16px;
@@ -356,7 +363,7 @@ export const ContactUsBtn = styled.button`
     z-index: 1;
     background: ${({ theme }) => theme.hoverBtnGradient};
     opacity: 0;
-    transition: opacity 300ms linear;
+    transition: opacity ${({ theme }) => theme.animationTransform};
   }
 
   &:hover::after {

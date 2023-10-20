@@ -53,7 +53,7 @@
   "form-request": "Your request successfully sent!",
   "form-contact": "We will contact you as soon as possible.",
   "form-perfect": "Perfect",
-  "form-name-error-1": "Name should be at least 3 characters long",
+  "form-name-error-1": "Please enter at least 3 characters A-z/А-я",
   "form-name-error-2": "Name should only contain letters and numbers",
   "form-name-error-3": "Name is a required field",
   "form-email-error-1": "Enter a valid email",

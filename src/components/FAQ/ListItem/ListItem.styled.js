@@ -1,15 +1,15 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 import { ReactComponent as PlusIcon } from '../../HowWeWork/img/plus.svg';
 import { ReactComponent as CloseIcon } from '../../HowWeWork/img/close.svg';
 
 
 export const LiItem = styled.li`
-@media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     position: relative;
-    display:flex;
+    display: flex;
     gap: 52px;
     align-items: flex-start;
- 
+
       &:not(:last-child):after {
         content: '';
         background-color: rgba(175, 175, 175, 0.41);
@@ -18,20 +18,14 @@ export const LiItem = styled.li`
         left: -35px;
         height: 2px;
         width: 688px;
+
     }
-}
-@media screen and (min-width: 1368px) {
-     &:not(:last-child):after {
-        left: -5px;
-                  bottom: -5px;
-                  width: 100%;
-            }
     width: 872px;
     padding: 40px 36px;
-  
-}
-@media screen and (min-width: 1920px) {
+  }
+  @media screen and (min-width: 1920px) {
     width: 1180px;
+
 padding: 52px 60px;
  &:not(:last-child):after {
                   left: 0;
@@ -40,23 +34,23 @@ padding: 52px 60px;
 
 `
 export const Number = styled.p`
-color: ${({ theme }) => theme.greyFaqColor};
-font-family: Inter;
-font-size: 32px;
-font-style: normal;
-font-weight: 700;
-line-height: 1.2;
-margin-bottom: 33px;
+  color: ${({ theme }) => theme.greyFaqColor};
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 33px;
 
-@media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     color: rgba(175, 175, 175, 0.41);
     font-size: 48px;
     letter-spacing: 0.25px;
     margin-bottom: 0;
-}
-
-`
+  }
+`;
 export const ContainerBlock = styled.div`
+
 flex-grow:1;
 
 `
@@ -69,8 +63,10 @@ align-items: flex-start;
 justify-content: space-between;
 @media screen and (min-width: 768px) {
     // width: 524px;
-}@media screen and (min-width: 1368px) {
+  }
+  @media screen and (min-width: 1368px) {
     width: 100%;
+
     flex-grow:1;
 }`
 
@@ -86,23 +82,23 @@ transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
     ${InfoBlock}:hover & {
     color: ${({ theme }) => theme.brandColor};
   }
-    ${InfoBlock}:focus & {
+  ${InfoBlock}:focus & {
     color: ${({ theme }) => theme.brandColor};
   }
-    @media screen and (min-width:768px) {
-     width: 403px;
-font-size: 32px;
+  @media screen and (min-width: 768px) {
+    width: 403px;
+    font-size: 32px;
   }
+
     @media screen and (min-width:1368px) {
      width: 620px;
   }
     @media screen and (min-width:1920px) {
      width: 800px;
   }
-
-`
+`;
 export const Button = styled.button`
-cursor: pointer;
+  cursor: pointer;
   flex-shrink: 0;
   background-color: transparent;
   border: none;
@@ -112,17 +108,18 @@ cursor: pointer;
   width: 40px;
   height: 40px;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  border: ${props => props.$data === "true" ? "1px solid white" : ""};
+  border: ${props => (props.$data === 'true' ? '1px solid white' : '')};
   border-radius: 50%;
-    &:focus {
+  &:focus {
     outline: none;
+
     }
   ${InfoBlock}:hover &{
     color: ${({ theme }) => theme.brandColor};
     border-color: ${({ theme }) => theme.brandColor};
-    outline:none;
-    }
-      `
+    outline: none;
+  }
+`;
 
 export const HiddenText = styled.p`
 white-space: pre-line;  
