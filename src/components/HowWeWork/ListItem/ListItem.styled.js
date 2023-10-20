@@ -159,11 +159,17 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 `;
 
 export const CloseSvg = styled(CloseIcon)`
-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  ${InfoBlock}:hover & path {
-    fill: ${({ theme }) => theme.brandColor};
-  }
-
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+scale 500ms cubic-bezier(0.4, 0, 0.2, 1),
+transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+@media screen and (min-width:768px){
+    ${InfoBlock}:hover & path{
+           fill: ${({ theme }) => theme.brandColor};
+};
+${InfoBlock}:hover & {
+    scale: 1.25;
+    transform: rotate(180deg)
+}
 `;
 
 export const Thumb = styled.div`

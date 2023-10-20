@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { CSSTransition } from 'react-transition-group';
 import { PopUp } from './PopUp/PopUp';
 import {
   FooterBlock,
@@ -17,10 +18,10 @@ import {
   BehanceSvg,
   UaFlagSvg,
 } from './Footer.styled';
-
+import './PopUp/styles.css'
 export const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+const nodeRef = useRef(null);
   const handleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
@@ -87,9 +88,15 @@ export const Footer = () => {
         <CreatedByLink onClick={handleModal}>
           created <br /> by GoIT students
         </CreatedByLink>
-        {isModalOpen && (
-          <PopUp isModalOpen={isModalOpen} onCloseModal={handleModal} />
-        )}
+         <CSSTransition
+        nodeRef={nodeRef}
+        in={isModalOpen}
+        timeout={300}
+        classNames="modal"
+        unmountOnExit
+      >
+          <PopUp ref={nodeRef} isModalOpen={isModalOpen} onCloseModal={handleModal} />
+         </CSSTransition>
         <CopyrightWrap>
           <CopyrightSvg width="16px" height="16px" />
           <FooterText>2023</FooterText>

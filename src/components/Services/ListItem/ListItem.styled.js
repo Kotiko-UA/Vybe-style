@@ -7,7 +7,7 @@ display: flex;
 flex-direction:column;
 width:100%;
 max-width: 480px;
-
+transition: width 400ms cubic-bezier(0.4, 0, 0.2, 1);
 @media screen and (max-width: 767px) {
 height: calc(100% / 4);
 &::after {
@@ -26,7 +26,7 @@ height: calc(100% / 4);
     background-size: cover;
   z-index: 0;
   opacity: 0;
-  transition: opacity 0.3s; /* Додамо анімацію для зміни прозорості */
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 }
 @media screen and (min-width: 768px){
@@ -53,7 +53,7 @@ height: calc(100% / 4);
     border-right: 1px solid #fff;
   z-index: 0;
   opacity: 0;
-  transition: opacity 0.3s linear; /* Додамо анімацію для зміни прозорості */
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 }
 
@@ -86,7 +86,7 @@ height: calc(100% / 4);
     background-size: cover;
       z-index: 0;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
 }
