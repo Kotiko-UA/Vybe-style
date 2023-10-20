@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {ReactComponent as ArrowUpSvg} from './arrowUp.svg'
+import { ReactComponent as ArrowUpSvg } from './arrowUp.svg';
 
 export const Button = styled.button`
   display: ${props => (props.$scroll === 'false' ? 'none' : 'block')};
@@ -11,18 +11,18 @@ export const Button = styled.button`
   height: 49px;
   border: 1px solid ${({ theme }) => theme.colorText};
   border-radius: 50%;
-  background-color: transparent;
+  background-color: #000;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 999;
   &:hover {
     background-color: ${({ theme }) => theme.brandColor};
-    border-color: transparent
+    border-color: transparent;
   }
 `;
 
 export const ArrowUp = styled(ArrowUpSvg)`
-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-${Button}:hover & path {
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  ${Button}:hover & path {
     stroke: ${({ theme }) => theme.blackColor};
   }
-`
+`;
