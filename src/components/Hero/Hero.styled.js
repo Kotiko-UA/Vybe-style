@@ -88,15 +88,14 @@ export const Logo = styled.img`
 `;
 
 export const NameCompany = styled.h1`
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 2.3;
+  line-height: 2.4;
   letter-spacing: 1.296px;
   text-align: center;
   margin-bottom: 60px;
   @media screen and (min-width: 768px) {
     margin-bottom: 144px;
-    font-size: 16px;
   }
   @media screen and (min-width: 1368px) {
     margin-bottom: 84px;

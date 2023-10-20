@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 import { ReactComponent as CloseSvg } from '../images/icons/close-icon.svg';
 
+export const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+`;
+
 export const PopUpSuccessContainer = styled.div`
   position: fixed;
   top: 50%;
@@ -67,7 +77,7 @@ export const CloseSvgBtn = styled(CloseSvg)`
   right: 24px;
   stroke: ${({ theme }) => theme.greyColorPopup};
 
-  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke ${({ theme }) => theme.animationTransform};
 
   &:hover,
   &:focus {

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { ReactComponent as CloseSvg} from '../../HowWeWork/img/close.svg';
 import bgMobile from './data/mobileBG.png';
 import bgMobile2x from './data/mobileBG2x.png';
@@ -15,6 +16,7 @@ export const Overlay = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
+
     background-color: rgba(0, 0, 0, 0.8);
   z-index: 1200;
 
@@ -22,7 +24,7 @@ export const Overlay = styled.div`
 
 
 export const Modal = styled.div`
-position: relative;
+  position: relative;
   width: 352px;
   height: 440px;
   padding-top: 24px;
@@ -33,14 +35,15 @@ position: relative;
     transform: translate(-50%, -50%);
     border: 1px solid ${({ theme }) => theme.brandColor};
   background-color: ${({ theme }) => theme.blackColor};
-        background-image: url(${bgMobile}), url(${bgMobile2});
-     background-repeat: no-repeat;
-     background-size: 111px, 40px;
-     background-position: left -5px bottom 150px, right 0px top 200px;
-    @media (min-device-pixel-ratio: 2),
-   (min-resolution: 192dpi),
-   (min-resolution: 2dppx) {
+  background-image: url(${bgMobile}), url(${bgMobile2});
+  background-repeat: no-repeat;
+  background-size: 111px, 40px;
+  background-position: left -5px bottom 150px, right 0px top 200px;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
     background-image: url(${bgMobile2x}), url(${bgMobile2x2});
+
    }
 .title {
     margin-bottom: 10px;
@@ -50,18 +53,18 @@ position: relative;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-.text {
+  }
+  .text {
     color: ${({ theme }) => theme.greyColorPopup};
     font-family: Inter;
-    font-size: ${props => props.data === 'en' ? "16px" : "12px"}  ;
+    font-size: ${props => (props.data === 'en' ? '16px' : '12px')};
     font-style: normal;
     font-weight: 300;
     line-height: normal;    
     margin-bottom: 10px;
 }
 
-.list {
+  .list {
     width: 296px;
     height: 307px;
     display: flex;
@@ -89,14 +92,12 @@ cursor: pointer;
     height: 120px;
     flex-shrink: 0;
   }
-  .image{
+  .image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-
+    transition: transform ${({ theme }) => theme.animationTransform};
+  }
 
   .team-role {
 color: ${({ theme }) => theme.normalColor};
@@ -161,9 +162,38 @@ transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
     color: ${({ theme }) => theme.colorText};
     transform: translate(30px, 15px) scale(1.2);
   }
-  .li-item:hover .image{
-  transform: scale(1.2);
-  } 
+
+  @media screen and (min-width: 1920px) {
+    width: 1124px;
+    height: 360px;
+    background-size: 200px 153px, 85px 152px;
+    background-position: left -26px bottom 75px, right -25px top 200px;
+    .list {
+      margin: 0 auto;
+      width: 1060px;
+      height: 240px;
+      flex-wrap: nowrap;
+      padding: 10px;
+      gap: 40px;
+    }
+    .li-item {
+      width: calc((100% - 30px) / 2);
+    }
+    .thumb {
+      width: 100%;
+      height: 190px;
+    }
+    .li-item:hover .team-name {
+      color: ${({ theme }) => theme.brandColor};
+      transform: translateY(15px) scale(1.2);
+    }
+    .li-item:hover .team-role {
+      color: ${({ theme }) => theme.colorText};
+      transform: translate(30px, 15px) scale(1.2);
+    }
+    .li-item:hover .image {
+      transform: scale(1.2);
+    }
   }
 
   @media screen and (min-width: 1920px) {
@@ -180,11 +210,10 @@ background-position: left -26px bottom 75px, right -25px top 200px;
         gap:40px;
     }
     .li-item {
-        width: calc((100% - 160px) / 5)
+      width: calc((100% - 160px) / 5);
     }
   }
-  
-`
+`;
 
 export const CloseSvgBtn = styled(CloseSvg)`
 cursor: pointer;
@@ -206,6 +235,6 @@ transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 &:hover {
     scale: 1.25;
-    transform: rotate(180deg)
-}
-`
+    transform: rotate(180deg);
+  }
+`;

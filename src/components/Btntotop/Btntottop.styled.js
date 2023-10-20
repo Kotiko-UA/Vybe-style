@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import {ReactComponent as ArrowUpSvg} from './arrowUp.svg'
 
 export const Button = styled.button`
@@ -14,8 +15,10 @@ export const Button = styled.button`
   background-color: transparent;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 999;
+
   &:hover {
     background-color: ${({ theme }) => theme.brandColor};
+
     border-color: transparent
   }
 `;

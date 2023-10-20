@@ -24,6 +24,7 @@ import {
   SelectedFilesList,
   CloseSvgBtn,
   FileNameText,
+  FilePickerError,
 } from './Form.styled';
 import { FilePicker } from '../FilePicker/FilePicker';
 import { PopUpSuccess } from '../PopUpSuccess/PopUpSuccess';
@@ -47,10 +48,11 @@ export const ContactForm = () => {
     setShowSuccessPopup(false);
   };
 
-  const handleAddFiles = e => {
-    const selectedFiles = e.target.files;
+  const handleAddFiles = props => e => {
+    const selectedFiles = Array.from(e.target.files);
     const newFiles = [...files];
-
+    console.log('selectedFiles', selectedFiles);
+    console.log('newFiles', newFiles);
     for (let i = 0; i < selectedFiles.length; i++) {
       const isFileAlreadySelected = newFiles.some(
         existingFile => existingFile.name === selectedFiles[i].name
@@ -63,15 +65,20 @@ export const ContactForm = () => {
 
     setFiles(newFiles);
     e.target.value = null;
+
+    props.setFieldValue('files', newFiles);
   };
-  const handleRemoveFile = index => {
-    const updatedFiles = [...files];
+
+  const handleRemoveFile = (props, index) => {
+    const updatedFiles = [...props.values.files];
     updatedFiles.splice(index, 1);
-    setFiles(updatedFiles);
+
+    props.setFieldValue('files', updatedFiles);
   };
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
-    const { name, email, phone, company, message } = values;
+    const { name, email, phone, company, message, files } = values;
+    console.log(files);
 
     const formData = new FormData();
 
@@ -81,9 +88,11 @@ export const ContactForm = () => {
       formData.append('phone', phone);
       formData.append('company', company);
       formData.append('message', message);
-      files.forEach(file => {
-        formData.append('multiple_files', file);
-      });
+      if (files && files.length > 0) {
+        files.forEach(file => {
+          formData.append('multiple_files', file);
+        });
+      }
 
       await axios.post(
         `https://vibestyle-backend.onrender.com/api/contacts`,
@@ -99,7 +108,7 @@ export const ContactForm = () => {
       setSubmitting(false);
     }
   };
-
+  const someText = t('form-name-error-1');
   return (
     <FormSection id="contactus">
       <FormContainer>
@@ -109,7 +118,7 @@ export const ContactForm = () => {
           <Formik
             initialValues={initialValues}
             onSubmit={handleSubmit}
-            validationSchema={validationSchema}
+            validationSchema={validationSchema(t, someText)}
           >
             {props => (
               <Form autoComplete="off">
@@ -182,42 +191,47 @@ export const ContactForm = () => {
                     value={props.values.message}
                     onBlur={props.handleBlur}
                   />
+
                   <FormikFilePicker
                     type="file"
-                    name="multiple_files"
+                    name="files"
                     as={FilePicker}
                     multiple
-                    onChange={handleAddFiles}
+                    onChange={handleAddFiles(props)}
                     onBlur={props.handleBlur}
-                    value={props.values.multiple_files}
                   />
-                  {files.length > 0 && (
+                  {props?.values?.files?.length > 0 && (
                     <AttachedFilesList>
                       <SelectedFilesText>Selected files:</SelectedFilesText>
                       <SelectedFilesList>
-                        {files.map((file, index) => (
-                          <SelectedFilesItem key={index}>
-                            <FileNameText>{file.name}</FileNameText>
-                            <CloseSvgBtn
-                              type="button"
-                              onClick={() => handleRemoveFile(index)}
-                            >
-                              Delete
-                            </CloseSvgBtn>
-                          </SelectedFilesItem>
-                        ))}
+                        {props.values.files.map((file, index) => {
+                          return (
+                            <SelectedFilesItem key={index}>
+                              <FileNameText>{file.name}</FileNameText>
+                              <CloseSvgBtn
+                                type="button"
+                                onClick={() => handleRemoveFile(props, index)}
+                              >
+                                Delete
+                              </CloseSvgBtn>
+                            </SelectedFilesItem>
+                          );
+                        })}
                       </SelectedFilesList>
+                      {props.errors.files && (
+                        <FilePickerError name="files">
+                          {props.errors.files}
+                        </FilePickerError>
+                      )}
                     </AttachedFilesList>
                   )}
-                  {props.touched.multiple_files &&
-                  props.errors.multiple_files ? (
-                    <StyledErrorMessage>
-                      {props.errors.multiple_files}
-                    </StyledErrorMessage>
-                  ) : null}
                 </TextareaAndAttachedWrap>
                 <ContactUsBtn type="submit" disabled={props.isSubmitting}>
-                  <p className='btn-text'>{props.isSubmitting ? t('form-sumbitting') : t('form-submit')}</p>
+                  <p className="btn-text">
+                    {props.isSubmitting
+                      ? t('form-sumbitting')
+                      : t('form-submit')}
+                  </p>
                 </ContactUsBtn>
                 {showSuccessPopup && <PopUpSuccess handlePopUp={handlePopUp} />}
               </Form>
