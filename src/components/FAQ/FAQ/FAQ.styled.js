@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import { ReactComponent as ArrowUp } from '../arrowup.svg';
 
 export const Section = styled.section`
   background-color: ${({ theme }) => theme.blackColor};
@@ -19,7 +20,7 @@ export const Section = styled.section`
   }
 `;
 
-export const Container = styled.section`
+export const Container = styled.div`
   max-width: 480px;
   padding-left: 20px;
   padding-right: 20px;
@@ -38,11 +39,50 @@ export const Container = styled.section`
     max-width: 1920px;
     padding-left: 120px;
     padding-right: 198px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
+    position: relative;
+   }
+
+ 
+
 `;
+
+export const ButtonFaq = styled.button`
+     position:relative;
+    cursor: pointer;
+    display:flex;
+    align-items:center;
+      border: none;
+    background-color: transparent;
+     margin-left: auto;
+    
+     
+  .btn-span{
+      color: ${({ theme }) => theme.brandColor};
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 1.92px;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+    &:hover .btn-span {
+        background: linear-gradient(235deg, #F4F90F -1.28%, #0FF9C0 115.55%);
+        -webkit-background-clip: text; 
+        background-clip: text;
+        color: transparent;
+            }
+            @media screen and (min-width:1368px){
+              margin-right: 190px;
+            }
+             @media screen and (min-width:1920px){
+              margin-right: 420px;
+            }
+`
+
+export const SvgArrow = styled(ArrowUp)`
+   transform: ${ props => props.$data === 'true' ? 'rotate(180deg)' : ''};
+  `
 
 export const Title = styled.h2`
   color: ${({ theme }) => theme.colorText};
@@ -61,6 +101,9 @@ export const Title = styled.h2`
     margin-bottom: -40px;
   }
   @media screen and (min-width: 1920px) {
+    position: absolute;
+    top: 0;
+    right: 200px;
     margin-bottom: 0;
     font-size: 90px;
   }
@@ -70,7 +113,7 @@ export const List = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 80px;
-
+   
   @media screen and (min-width: 768px) {
     padding-left: 40px;
     padding-right: 40px;

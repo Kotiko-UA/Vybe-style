@@ -122,18 +122,29 @@ export const Button = styled.button`
 `;
 
 export const HiddenText = styled.p`
-  white-space: pre-line;
-  vertical-align: bottom;
-  max-width: 300px;
-  color: rgba(255, 255, 255, 0.45);
-  font-family: Inter;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 1.33;
-  margin-top: 31px;
-  @media screen and (min-width: 480px) {
-    max-width: 380px;
+white-space: pre-line;  
+vertical-align: bottom;
+max-width: 300px;
+color: rgba(255, 255, 255, 0.45);
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 300;
+line-height: 1.33;
+margin-top: 31px;
+  
+@media screen and (min-width:480px) {
+max-width: 380px;
+}
+@media screen and (min-width:768px) {
+  max-width: 445px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+@media screen and (min-width:1368px) {
+  max-width: 630px;
   }
   @media screen and (min-width:1920px) {
   max-width: 900px;
