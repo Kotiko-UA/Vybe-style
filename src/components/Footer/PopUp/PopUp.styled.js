@@ -174,6 +174,39 @@ export const Modal = styled.div`
       gap: 40px;
     }
     .li-item {
+      width: calc((100% - 30px) / 2);
+    }
+    .thumb {
+      width: 100%;
+      height: 190px;
+    }
+    .li-item:hover .team-name {
+      color: ${({ theme }) => theme.brandColor};
+      transform: translateY(15px) scale(1.2);
+    }
+    .li-item:hover .team-role {
+      color: ${({ theme }) => theme.colorText};
+      transform: translate(30px, 15px) scale(1.2);
+    }
+    .li-item:hover .image {
+      transform: scale(1.2);
+    }
+  }
+
+  @media screen and (min-width: 1920px) {
+    width: 1124px;
+    height: 360px;
+    background-size: 200px 153px, 85px 152px;
+    background-position: left -26px bottom 75px, right -25px top 200px;
+    .list {
+      margin: 0 auto;
+      width: 1060px;
+      height: 240px;
+      flex-wrap: nowrap;
+      padding: 10px;
+      gap: 40px;
+    }
+    .li-item {
       width: calc((100% - 160px) / 5);
     }
   }
