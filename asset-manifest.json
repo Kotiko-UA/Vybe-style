@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Vybe-style/static/css/main.07e615fd.css",
-    "main.js": "/Vybe-style/static/js/main.567e64b3.js",
+    "main.js": "/Vybe-style/static/js/main.792d0261.js",
     "static/media/s-likhoded.jpg": "/Vybe-style/static/media/s-likhoded.851d37d0300218ed4c1b.jpg",
     "static/media/v-img.png": "/Vybe-style/static/media/v-img.aa4f668be85c5415a3cc.png",
     "static/media/form_and_footer_background_1368px_2x.png": "/Vybe-style/static/media/form_and_footer_background_1368px_2x.71a3e1d2cabecf574a35.png",
@@ -149,10 +149,10 @@
     "static/media/plus.svg": "/Vybe-style/static/media/plus.62aa920e29d06cc58b3c3bb6fb89dff8.svg",
     "static/media/close-icon.svg": "/Vybe-style/static/media/close-icon.fec7c356a8b8c8bf7ab2537f6a1e1d5f.svg",
     "main.07e615fd.css.map": "/Vybe-style/static/css/main.07e615fd.css.map",
-    "main.567e64b3.js.map": "/Vybe-style/static/js/main.567e64b3.js.map"
+    "main.792d0261.js.map": "/Vybe-style/static/js/main.792d0261.js.map"
   },
   "entrypoints": [
     "static/css/main.07e615fd.css",
-    "static/js/main.567e64b3.js"
+    "static/js/main.792d0261.js"
   ]
 }
