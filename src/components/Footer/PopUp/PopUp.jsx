@@ -14,7 +14,7 @@ export const PopUp = ({ isModalOpen, onCloseModal }) => {
   const { t } = useTranslation();
  
   useEffect(() => {
-    
+    if (!isModalOpen) return;
     const handleKeydown = e => {
       if (e.code === 'Escape') {
         onCloseModal();
@@ -25,7 +25,7 @@ export const PopUp = ({ isModalOpen, onCloseModal }) => {
     return () => {
       window.removeEventListener('keydown', handleKeydown);
     };
-  }, [onCloseModal]);
+  }, [onCloseModal,isModalOpen]);
 
   const handleBackdropClick = e => {
     if (e.target === e.currentTarget) {

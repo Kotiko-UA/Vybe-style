@@ -101,7 +101,11 @@ export const Title = styled.h2`
   font-weight: 300;
   line-height: 1.2;
   margin-bottom: 78px;
- 
+   transition: color  ${({ theme }) => theme.animationStyles};
+
+  &:hover {
+    color: ${({ theme }) => theme.brandColor};
+  }
   @media screen and (min-width: 768px) {
     font-size: 40px;
   }
@@ -587,19 +591,20 @@ cursor: pointer;
   line-height: 1.21;
   letter-spacing: 0.32px;
   
-  .link-text{
-transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
- &:hover .link-text {
-  color: ${({ theme }) => theme.brandColor};
-  transform: scale(1.2);
-   }
+
   @media screen and (min-width: 768px) {
     border-color: ${({ theme }) => theme.borderColor};
     width: 213px;
     padding: 35.5px 27px;
     margin-left: 20px;
     text-align: left;
+      .link-text{
+transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+ &:hover .link-text {
+  color: ${({ theme }) => theme.brandColor};
+  transform: scale(1.2);
+   }
   }
   @media screen and (min-width: 1368px) {
     width: 256px;
