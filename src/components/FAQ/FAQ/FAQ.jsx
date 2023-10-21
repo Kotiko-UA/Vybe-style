@@ -18,13 +18,11 @@ export const Faq = () => {
         <List ref={currentRef}>
           {data
           .filter((item, index) => isShownAll || index < 4)
-          .map((item) => (
-          <ListItem key={item.id} item={item} />
-          ))}
+          .map((item) => <ListItem key={item.id} item={item} />)}
         </List>
         <ButtonFaq className='button' type="button" onClick={() => {
           setIsShownAll(!isShownAll);
-        scrollToBottom()
+          scrollToBottom()
         }}><span className='btn-span'>&#123; {`${isShownAll ? t('faq-less') : t('faq-more')}`}.//</span><SvgArrow className='svg-arrow' $data={`${isShownAll}`} /></ButtonFaq>
       </Container>
     </Section>

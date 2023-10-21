@@ -68,7 +68,7 @@ height: calc(100% / 4);
         bottom: 0;
         left: 0;
         height: 100%;
-        width: 1px;
+        width: 0.5px;
             };
             &::after {
   content: "";
