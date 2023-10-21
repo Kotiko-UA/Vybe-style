@@ -147,7 +147,6 @@ export const Buttons = styled.div`
   margin-left: auto;
   justify-content: flex-end;
 
-  border-radius: 7px;
   background: #171717;
   padding: 4px 20px 4px 56px;
   width: 188px;

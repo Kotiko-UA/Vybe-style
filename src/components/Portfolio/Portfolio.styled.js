@@ -258,7 +258,6 @@ export const Buttons = styled.div`
   margin-left: auto;
   justify-content: flex-end;
 
-  border-radius: 7px;
   background: #171717;
   padding: 4px 20px 4px 8px;
   width: 140px;
@@ -287,7 +286,7 @@ export const NextButton = styled.button`
   border: none;
   cursor: pointer;
   transition: background-color ${({ theme }) => theme.animationStyles};
-  
+
   &:hover,
   :focus {
     stroke: ${props => props.theme.brandColor};
