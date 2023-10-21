@@ -34,13 +34,16 @@ export function Portfolio({ projectCarts }) {
       <Container>
         <H2>{t('portfolio-title')}</H2>
         {!isNarrowScreen ? (
-          <Ul>
-            <PortfolioCarts projectCarts={projectCarts} />
-          </Ul>
+          <>
+            <Ul>
+              <PortfolioCarts projectCarts={projectCarts} />
+            </Ul>
+            <ControlingSwiper slideCount={1} projectCarts={projectCarts} />
+          </>
         ) : (
           <>
             <AutomaticSwiper projectCarts={projectCarts} />
-            <ControlingSwiper projectCarts={projectCarts} />
+            <ControlingSwiper slideCount={3} projectCarts={projectCarts} />
           </>
         )}
       </Container>

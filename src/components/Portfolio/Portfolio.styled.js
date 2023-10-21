@@ -67,8 +67,10 @@ export const Ul = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 40px 0;
+  margin-bottom: 40px;
   @media screen and (min-width: 768px) {
     gap: 44px 0;
+    margin-bottom: 44px;
   }
 `;
 export const Li = styled.li`
@@ -239,28 +241,37 @@ export const ProjectServises = styled.p`
   }
 `;
 export const SliderSecondWrap = styled.div`
-  position: relative;
-  padding-right: 164px;
+  @media screen and (min-width: 1680px) {
+    padding-right: 164px;
+    position: relative;
+  }
+
   @media screen and (min-width: 1920px) {
     padding-right: 208px;
   }
 `;
 
 export const SwiperEl = styled(Swiper)`
-  margin-top: 86px;
-  position: static;
+  @media screen and (min-width: 1680px) {
+    margin-top: 86px;
+    position: static;
+  }
 `;
 export const Buttons = styled.div`
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  margin-left: auto;
-  justify-content: flex-end;
-
   background: #171717;
-  padding: 4px 20px 4px 8px;
-  width: 140px;
+  padding: 4px 20px 4px 56px;
+  width: 188px;
+  margin-left: auto;
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+  @media screen and (min-width: 1680px) {
+    width: 140px;
+    padding: 4px 20px 4px 8px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
 
   @media screen and (min-width: 1920px) {
     padding: 4px 20px 4px 56px;
