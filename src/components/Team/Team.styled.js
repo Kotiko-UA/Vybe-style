@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Swiper } from 'swiper/react';
+import { ReactComponent as IconLinkedin } from './icons/linkedin.svg';
 
 export const Wrapper = styled.section`
   padding: 52px 0;
@@ -72,6 +73,14 @@ export const SlideWrapper = styled.div`
   display: block;
   width: 100%;
   height: 100%;
+  border-bottom: 1px solid transparent;
+  transform: opacity;
+  .swiper-slide:hover & {
+    border-bottom: 1px solid #c4f934;
+  }
+  .swiper-slide:focus & {
+    border-bottom: 1px solid #c4f934;
+  }
 `;
 export const SlideLink = styled.a`
   display: block;
@@ -99,6 +108,40 @@ export const SlideImg = styled.img`
   width: 100%;
   height: 380px;
   object-position: 50% 50%;
+  z-index: 2;
+  opacity: 1;
+  transform: opacity;
+  .swiper-slide:hover & {
+    opacity: 0;
+  }
+  .swiper-slide:focus & {
+    opacity: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    height: 326px;
+  }
+  @media screen and (min-width: 1368px) {
+    width: 100%;
+    height: 336px;
+  }
+  @media screen and (min-width: 1920px) {
+    width: 100%;
+    height: 380px;
+  }
+`;
+export const SlideImg2 = styled.img`
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 380px;
+  object-position: 50% 50%;
+  z-index: 1;
+  border-top: 1px solid #c4f934;
+  border-bottom: 1px solid #c4f934;
 
   @media screen and (min-width: 768px) {
     width: 100%;
@@ -147,7 +190,6 @@ export const Buttons = styled.div`
   margin-left: auto;
   justify-content: flex-end;
 
-  border-radius: 7px;
   background: #171717;
   padding: 4px 20px 4px 56px;
   width: 188px;
@@ -184,5 +226,29 @@ export const NextButton = styled.button`
   :focus {
     stroke: ${props => props.theme.brandColor};
     background-color: ${props => props.theme.borderAlphaColor};
+  }
+`;
+export const LinkedinSvg = styled(IconLinkedin)``;
+export const SocialsLink = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  bottom: 8px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid ${({ theme }) => theme.brandColor};
+  border-radius: 50%;
+  background: transparent;
+  fill: ${({ theme }) => theme.brandColor};
+  z-index: 3;
+  opacity: 0;
+  transform: opacity;
+  .swiper-slide:hover & {
+    opacity: 1;
+  }
+  .swiper-slide:focus & {
+    opacity: 1;
   }
 `;
