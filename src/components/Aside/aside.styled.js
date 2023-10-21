@@ -42,8 +42,7 @@ export const ContainerMobileMenu = styled.div`
   @media screen and (min-width: 768px) {
     width: 50%;
     right: 0;
-    z-index: 999;
-    background-color: ${props => props.theme.colorBlack};
+    background-color: ${({ theme }) => theme.blackColor};
     background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
     backdrop-filter: blur(11px);
   }
@@ -98,7 +97,6 @@ export const ContainerMenu = styled.div`
   margin-top: 39px;
   @media screen and (min-width: 1368px) {
     margin: 0;
-    margin-top: 39px;
   }
 `;
 
@@ -110,8 +108,9 @@ export const Menu = styled.div`
 `;
 
 export const MenuItem = styled.li`
+  transition: color ${({ theme }) => theme.animationStyles};
   & a:hover {
-    color: ${props => props.theme.brandColor};
+    color: ${({ theme }) => theme.brandColor};
     cursor: pointer;
   }
 

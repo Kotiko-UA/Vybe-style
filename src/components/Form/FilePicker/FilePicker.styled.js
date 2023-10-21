@@ -30,8 +30,7 @@ export const IconEWrap = styled.div`
   border-radius: 50%;
   background-color: ${({ theme }) => theme.greyColor};
 
-  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all ${({ theme }) => theme.animationStyles};
 
   &:hover,
   &:focus {

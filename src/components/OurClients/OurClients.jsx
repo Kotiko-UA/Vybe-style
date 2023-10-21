@@ -91,7 +91,7 @@ export const OurClients = () => {
             loading="lazy"
             alt="girl with pink words"
           ></GirlWithWordsPhoto>
-          <QuestionText className={currentLanguage === 'ua' ? 'uk-question-text' : ''} >{t('our-cliectc-text-6')}</QuestionText>
+          <QuestionText href='#contactus' className={currentLanguage === 'ua' ? 'uk-question-text' : ''} ><p className="link-text">{t('our-cliectc-text-6')}</p></QuestionText>
         </MainBlock>
       </Container>
     </Section>

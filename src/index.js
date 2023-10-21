@@ -19,6 +19,8 @@ const colors = {
   errorColor: '#d80027',
   redColor: 'red',
   hoverBtnGradient: 'linear-gradient(234deg, #F4F90F 25.54%, #0FF9C0 73.38%)',
+  animationTransform: '500ms cubic-bezier(0.4, 0, 0.2, 1)',
+  animationStyles: '250ms cubic-bezier(0.4, 0, 0.2, 1)',
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(

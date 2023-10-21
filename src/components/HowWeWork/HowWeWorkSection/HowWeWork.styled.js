@@ -131,7 +131,7 @@ position: relative;
   padding-top: 56.25%;
    @media screen and (min-width: 1368px) {
        width: 100%;
-       
+       height: 100%;
       }
   @media screen and (min-width: 1920px) {
     width: 100%;
@@ -146,9 +146,9 @@ width: 100% !important;
   top: 0;
   left: 0;
    @media screen and (min-width: 1368px) {
-       height: 320px !important;
+       height: 100% !important;
              }
               @media screen and (min-width: 1920px) {
-    height: 500px !important;   
+    height: 100% !important;   
      }
 `

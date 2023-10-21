@@ -18,9 +18,8 @@ export const ListItem = ({item: { id, text, textUa, hiddenText, hiddenTextUa }})
   const [isTextShown, setIsTextShown] = useState(false);
   const { currentLanguage } = useContext(LanguageContext);
  const nodeRef = useRef(null);
+
   return (
-    
-     
          <LiItem $data={`${isTextShown}`}>
       <Number>{id}</Number>
       <ContainerBlock>
@@ -46,17 +45,13 @@ export const ListItem = ({item: { id, text, textUa, hiddenText, hiddenTextUa }})
       in={isTextShown}
       timeout={300}
       classNames="alert"
-      unmountOnExit
->
-      <HiddenText  ref={nodeRef}>
+      unmountOnExit>
+      <HiddenText  ref={nodeRef} >
       {currentLanguage === 'en' ? hiddenText : hiddenTextUa}
-    </HiddenText>
+      </HiddenText>
           </CSSTransition>
-       
-                
+                      
       </ContainerBlock>
       </LiItem>
-         
-     
   );
 };
