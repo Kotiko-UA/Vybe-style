@@ -115,7 +115,7 @@ export const SlideLink = styled.a`
   }
   @media screen and (min-width: 1368px) {
     width: 100%;
-    height: 502px;
+    height: 324px;
   }
   @media screen and (min-width: 1920px) {
     width: 100%;
@@ -213,7 +213,7 @@ export const Services = styled.p`
   }
   @media screen and (min-width: 1368px) {
     left: 8px;
-    bottom: 58px;
+    bottom: 40px;
   }
   @media screen and (min-width: 1920px) {
     bottom: 40px;
