@@ -1,4 +1,5 @@
-import { styled } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { ReactComponent as ArrowRight } from './img/arrow-right.svg';
 
 export const Section = styled.section`
   box-sizing: border-box;
@@ -27,7 +28,7 @@ export const Section = styled.section`
 
  @media screen and (min-width: 1368px) and (max-width: 1919px) {
   .uk-question-text {
-      padding: 60px 36px;
+      padding: 40px 36px;
           }
   .uk-awards-block {
       padding-top: 85px;
@@ -49,7 +50,7 @@ export const Section = styled.section`
 
 @media screen and (min-width: 1920px){
   .uk-question-text {
-      padding: 82px 52px;
+      padding: 64px 52px;
           }
   .uk-awards-5mil-text{
     width: 300px;
@@ -131,7 +132,7 @@ export const OneMilBlock = styled.div`
   box-sizing: border-box;
   width: 180px;
   height: 186px;
-  border: 0.1px solid ${({ theme }) => theme.colorText};
+  border: 0.1px solid ${({ theme }) => theme.borderColor};
   border-bottom: none;
   padding-top: 26px;
   padding-left: 20px;
@@ -242,7 +243,7 @@ export const Block5mil = styled.div`
   height: 186px;
   padding-top: 26px;
   padding-left: 20px;
-  border: 0.1px solid ${({ theme }) => theme.colorText};
+  border: 0.1px solid ${({ theme }) => theme.borderColor};
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 768px) {
@@ -284,7 +285,7 @@ export const PeopleOnBoard = styled.div`
   height: 163px;
   padding-top: 21px;
   padding-left: 21px;
-  border-right: 0.1px solid #fff;
+  border-right: 0.1px solid ${({ theme }) => theme.borderColor};
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 768px) {
@@ -353,7 +354,7 @@ export const YearsBlock = styled.div`
   padding-top: 19px;
   padding-left: 21px;
   margin-left: 119px;
-  border: 0.1px solid ${({ theme }) => theme.colorText};
+  border: 0.1px solid ${({ theme }) => theme.borderColor};
   border-left: none;
   display: flex;
   flex-direction: column;
@@ -406,6 +407,7 @@ export const ProjectsBlock = styled.div`
   }
   @media screen and (min-width: 768px) and (max-width: 1367px) {
     border-bottom: none;
+    height: 162px;
   }
   @media screen and (min-width: 1368px) {
     position: absolute;
@@ -462,7 +464,7 @@ export const AwardsBlock = styled.div`
   height: 187px;
   padding-top: 21px;
   padding-left: 21px;
-  border: 0.1px solid ${({ theme }) => theme.colorText};
+  border: 0.1px solid ${({ theme }) => theme.borderColor};
   border-left: none;
   margin-left: 143px;
   display: flex;
@@ -507,7 +509,7 @@ export const VisitsBlock = styled.div`
   padding-top: 21px;
   padding-left: 21px;
   margin-left: 143px;
-  border-right: 0.1px solid #fff;
+  border-right: 0.1px solid ${({ theme }) => theme.borderColor};
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 768px) {
@@ -576,9 +578,9 @@ export const GirlWithWordsPhoto = styled.img`
 
 export const QuestionText = styled.a`
 cursor: pointer;
-  padding: 49px 42px 50px;
+  padding: 40px 42px;
   width: 375px;
-  border: 0.1px solid ${({ theme }) => theme.colorText};
+  border: 0.1px solid ${({ theme }) => theme.borderColor};
   position: absolute;
   left: -20px;
   background-color: ${({ theme }) => theme.blackColor};
@@ -612,7 +614,7 @@ transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
     font-family: Inter;
     font-size: 24px;
     line-height: 1.69;
-    padding: 82px 36px;
+    padding: 62px 36px;
     margin-left: 20px;
     top: 721px;
     border: 1px solid ${({ theme }) => theme.borderAlphaColor};
@@ -621,7 +623,7 @@ transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media screen and (min-width: 1920px) {
     width: 373px;
-    padding: 93px 50px 111px 53px;
+    padding: 80px 50px 80px 53px;
     margin-left: 0;
     top: 950px;
     left: 0;
@@ -631,3 +633,180 @@ transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
     line-height: 1.25;
   }
 `;
+
+
+const ArrowContainer = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width:100px;
+  margin: 0 auto;
+`;
+
+const ArrowSvg = styled(ArrowRight)`
+  // width: 30px;
+  // height: 30px;
+`;
+
+const runOnSpot = keyframes`
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  25% {
+    left: 20px;
+    opacity: 1;
+  }
+  50% {
+    left: 0;
+    opacity: 0;
+  }
+  75% {
+    left: -20px;
+    opacity: 1;
+  }
+  100% {
+    left: 0;
+    opacity: 0;
+  }
+  `
+
+const AnimatedArrow = styled.div`
+  position: relative;
+  left: 0;
+  animation: ${runOnSpot} 2s linear infinite;
+
+`;
+// const ArrowContainer = styled.div`
+// width: 130px;
+//   display: flex;
+//   justify-content: space-between;
+//   // overflow: hidden;
+// `;
+
+// const ArrowSvg = styled(ArrowRight)`
+//   width: 30px;
+//   height: 30px;
+// `;
+
+// const moveRightKeyframes = keyframes`
+//   0% {
+//     transform: translateX(-40px);
+//   }
+//   100% {
+//     transform: translateX(80px);
+//   }
+// `;
+
+// const AnimatedArrow = styled.div`
+//   position: relative;
+//   animation: ${moveRightKeyframes} 1.5s linear infinite;
+// `;
+
+const ArrowAnimation = () => {
+  return (
+    <ArrowContainer>
+      <AnimatedArrow>
+        <ArrowSvg />
+      </AnimatedArrow>
+      <AnimatedArrow>
+        <ArrowSvg />
+      </AnimatedArrow>
+      <AnimatedArrow>
+        <ArrowSvg />
+      </AnimatedArrow>
+    
+    </ArrowContainer>
+  );
+};
+
+export default ArrowAnimation;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// export const ArrowSvg = styled(ArrowRight)`
+//   position: relative;
+//   left: 0;
+//   animation: runOnSpot 2s linear infinite;
+
+//   @keyframes runOnSpot {
+//     0% {
+//       left: 0;
+//     }
+//     25% {
+//       left: 20px;
+//     }
+//     50% {
+//       left: 0;
+//     }
+//     75% {
+//       left: -20px;
+//     }
+//     100% {
+//       left: 0;
+//     }
+//   }
+  
+// `
+
+
+
+
+// export const ArrowSvg = styled(ArrowRight)`
+//  &:nth-child(1) {
+//      opacity: 0;
+//     animation: opacity 2s ease-out forwards infinite;
+//     animation-delay: 0s;
+//   }
+
+
+//   &:nth-child(2) {
+//      opacity: 0;
+//     animation: opacity 2s ease-out forwards infinite;
+//     animation-delay: 0.5s;
+//   }
+
+//   &:nth-child(3) {
+//      opacity: 0;
+//     animation: opacity 2s ease-out forwards infinite;
+//     animation-delay: 1s;
+//   }
+
+//   @keyframes opacity {
+   
+//     to {
+//       opacity: 1;
+//     }
+// `
+
+// export const ArrowSvg = styled(ArrowRight)`
+// animation: moveArrow 4s linear infinite;
+// @keyframes moveArrow {
+//     0% {
+//       transform: translateX(0);
+//     }
+//     100% {
+//       transform: translateX(180px);
+//     }
+//   }
+// `
+
+// <!-- <svg width="31" height="20" viewBox="0 0 31 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+//     <path d="M8.00111 10.2235L19.7501 10.2216M19.7501 10.2216L15.1819 15.4442M19.7501 10.2216L15.1802 5.00062" stroke="#C4F934" stroke-width="1.56653" />
+//   <polygon points="190,45 190,55 200,50" fill="red" />
+//   <animateMotion repeatCount="indefinite">
+//     <mpath href="#arrowPath" />
+//   </animateMotion>
+// </svg> -->
