@@ -241,7 +241,7 @@ export const ProjectServises = styled.p`
   }
 `;
 export const SliderSecondWrap = styled.div`
-  @media screen and (min-width: 1680px) {
+  @media screen and (min-width: 1380px) {
     padding-right: 164px;
     position: relative;
   }
@@ -252,7 +252,7 @@ export const SliderSecondWrap = styled.div`
 `;
 
 export const SwiperEl = styled(Swiper)`
-  @media screen and (min-width: 1680px) {
+  @media screen and (min-width: 1380px) {
     margin-top: 86px;
     position: static;
   }
@@ -265,7 +265,7 @@ export const Buttons = styled.div`
   margin-top: 16px;
   display: flex;
   justify-content: flex-end;
-  @media screen and (min-width: 1680px) {
+  @media screen and (min-width: 1380px) {
     width: 140px;
     padding: 4px 20px 4px 8px;
     position: absolute;

@@ -99,6 +99,37 @@ export const SlideImg = styled.img`
   width: 100%;
   height: 380px;
   object-position: 50% 50%;
+  opacity: 1;
+  z-index: 2;
+  .swiper-slide:hover & {
+    opacity: 0;
+  }
+  .swiper-slide:focus & {
+    opacity: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    height: 326px;
+  }
+  @media screen and (min-width: 1368px) {
+    width: 100%;
+    height: 336px;
+  }
+  @media screen and (min-width: 1920px) {
+    width: 100%;
+    height: 380px;
+  }
+`;
+export const SlideImg2 = styled.img`
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 380px;
+  object-position: 50% 50%;
+  z-index: 1;
 
   @media screen and (min-width: 768px) {
     width: 100%;

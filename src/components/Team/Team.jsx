@@ -15,6 +15,7 @@ import {
   NextButton,
   PrevButton,
   SlideImg,
+  SlideImg2,
   SlideLink,
   SlideWrapper,
   SwiperEl,
@@ -74,6 +75,7 @@ export const Team = ({ teamCarts }) => {
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
+            reverseDirection: true,
           }}
           modules={[Autoplay]}
         >
@@ -83,6 +85,7 @@ export const Team = ({ teamCarts }) => {
               teamName,
               teamRole,
               teamFotoUrl,
+              teamFotoUrl2,
               projectUrl,
               teamRoleUa,
               teamNameUa,
@@ -105,6 +108,11 @@ export const Team = ({ teamCarts }) => {
                       <SlideImg
                         loading="lazy"
                         src={teamFotoUrl}
+                        alt={teamName}
+                      />
+                      <SlideImg2
+                        loading="lazy"
+                        src={teamFotoUrl2}
                         alt={teamName}
                       />
                     </SlideLink>
