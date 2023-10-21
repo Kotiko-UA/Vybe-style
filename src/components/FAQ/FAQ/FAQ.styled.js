@@ -66,7 +66,7 @@ export const ButtonFaq = styled.button`
     font-weight: 400;
     line-height: 1.2;
     letter-spacing: 1.92px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color  ${({ theme }) => theme.animationStyles};
   }
     &:hover .btn-span {
       color: transparent;
@@ -92,6 +92,11 @@ export const Title = styled.h2`
   font-weight: 300;
   line-height: 1.2;
   margin-bottom: 64px;
+  transition: color  ${({ theme }) => theme.animationStyles};
+
+  &:hover {
+    color: ${({ theme }) => theme.brandColor};
+  }
   @media screen and (min-width: 768px) {
     margin-bottom: 62px;
     font-size: 40px;

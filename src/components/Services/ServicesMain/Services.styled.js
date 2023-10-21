@@ -36,6 +36,11 @@ font-style: normal;
 font-weight: 300;
 line-height: 1.2;
 margin-bottom: 32px;
+ transition: color  ${({ theme }) => theme.animationStyles};
+
+  &:hover {
+    color: ${({ theme }) => theme.brandColor};
+  }
 @media screen and (min-width: 768px){
   
 margin-bottom: 39px;

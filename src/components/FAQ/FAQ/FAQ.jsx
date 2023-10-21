@@ -23,7 +23,7 @@ export const Faq = () => {
         <ButtonFaq className='button' type="button" onClick={() => {
           setIsShownAll(!isShownAll);
           scrollToBottom()
-        }}><span className='btn-span'>&#123; {`${isShownAll ? t('faq-less') : t('faq-more')}`}.//</span><SvgArrow className='svg-arrow' $data={`${isShownAll}`} /></ButtonFaq>
+        }}><span className='btn-span'>&#123; {`${isShownAll ? t('faq-less') : t('faq-more')}`}.&#47;&#47;</span><SvgArrow className='svg-arrow' $data={`${isShownAll}`} /></ButtonFaq>
       </Container>
     </Section>
   );
