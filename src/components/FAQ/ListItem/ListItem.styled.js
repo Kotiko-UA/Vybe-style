@@ -2,7 +2,6 @@ import { styled } from 'styled-components';
 import { ReactComponent as PlusIcon } from '../../HowWeWork/img/plus.svg';
 import { ReactComponent as CloseIcon } from '../../HowWeWork/img/close.svg';
 
-
 export const LiItem = styled.li`
   @media screen and (min-width: 768px) {
     position: relative;
@@ -10,15 +9,17 @@ export const LiItem = styled.li`
     gap: 52px;
     align-items: flex-start;
 
-      &:not(:last-child):after {
+    &:not(:last-child):after {
         content: '';
         background-color: rgba(175, 175, 175, 0.41);
         position:absolute;
-        bottom: -40px;
-        left: -35px;
+        bottom: 0;
+        left: 0;
         height: 2px;
         width: 688px;
-
+        @media screen and (min-width:1368px) {
+          width: 100%;
+        }
     }
     width: 872px;
     padding: 40px 36px;
@@ -62,7 +63,7 @@ gap: 16px;
 align-items: flex-start;
 justify-content: space-between;
 @media screen and (min-width: 768px) {
-    // width: 524px;
+    width: 524px;
   }
   @media screen and (min-width: 1368px) {
     width: 100%;

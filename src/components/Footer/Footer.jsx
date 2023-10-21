@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { PopUp } from './PopUp/PopUp';
 import {
   FooterBlock,
@@ -20,7 +20,7 @@ import {
 
 export const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-const nodeRef = useRef(null);
+
   const handleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
@@ -88,7 +88,7 @@ const nodeRef = useRef(null);
           created <br /> by GoIT students
         </CreatedByLink>
         
-       <PopUp ref={nodeRef} isModalOpen={isModalOpen} onCloseModal={handleModal} />
+       <PopUp isModalOpen={isModalOpen} onCloseModal={handleModal} />
          
         <CopyrightWrap>
           <CopyrightSvg width="16px" height="16px" />

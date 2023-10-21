@@ -112,17 +112,12 @@ export const Title = styled.h2`
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 40px;
    
   @media screen and (min-width: 768px) {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  @media screen and (min-width: 1368px) {
     gap: 0;
-    padding-left: 0;
-    padding-right: 0;
   }
+ 
   @media screen and (min-width: 1920px) {
     flex-grow: 1;
   }
