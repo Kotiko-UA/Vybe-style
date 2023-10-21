@@ -28,6 +28,9 @@ height: calc(100% / 4);
   opacity: 0;
   transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+ &:hover::after {
+    opacity: 1;
+  }
 }
 @media screen and (min-width: 768px){
  width: calc(100% / 4);
@@ -90,7 +93,7 @@ height: calc(100% / 4);
  }
 
   @media screen and (min-width: 1368px) {
-    padding-right: 30px;
+    padding-right: 15px;
 
     &:nth-child(n + 2)::before {
       content: '';
@@ -194,11 +197,12 @@ export const Number = styled.p`
   text-transform: uppercase;
   z-index: 2;
   ${LiItem}:hover & {
-    font-size: 102px;
+    font-size: 80px;
     line-height: 1.05;
     letter-spacing: -4.285px;
     @media screen and (min-width: 768px) {
       line-height: 1.5;
+      font-size: 102px;
     }
     @media screen and (min-width: 1368px) {
       font-size: 124px;
@@ -275,8 +279,8 @@ export const HiddenText = styled.p`
   font-weight: 200;
   line-height: 1.67;
   letter-spacing: 0.24px;
-  max-width: 243px;
-  margin-top: 63px;
+  max-width: 290px;
+  margin-top: 40px;
   z-index: 2;
   @media screen and (min-width: 768px) {
     max-width: 199px;
@@ -284,9 +288,9 @@ export const HiddenText = styled.p`
   @media screen and (min-width: 1368px) {
     max-width: 243px;
     color: ${({ theme }) => theme.hiddenText};
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.4;
-    letter-spacing: -2px;
+    letter-spacing: 0px;
     margin-top: 93px;
     &${LiItem}:nth-child(2) {
       margin-top: 0px;

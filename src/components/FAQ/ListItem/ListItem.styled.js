@@ -3,8 +3,25 @@ import { ReactComponent as PlusIcon } from '../../HowWeWork/img/plus.svg';
 import { ReactComponent as CloseIcon } from '../../HowWeWork/img/close.svg';
 
 export const LiItem = styled.li`
+ position: relative;
+  &:not(:last-child):after {
+        content: '';
+        background-color: rgba(175, 175, 175, 0.41);
+        position:absolute;
+        bottom: -20px;
+        left: 0;
+        height: 1px;
+        width: 100%;
+         @media screen and (min-width: 768px) {
+          width: 688px;
+          bottom: 0px;
+         }
+        @media screen and (min-width:1368px) {
+          width: 100%;
+        }
+    }
   @media screen and (min-width: 768px) {
-    position: relative;
+   
     display: flex;
     gap: 52px;
     align-items: flex-start;
@@ -15,7 +32,7 @@ export const LiItem = styled.li`
         position:absolute;
         bottom: 0;
         left: 0;
-        height: 2px;
+        height: 1px;
         width: 688px;
         @media screen and (min-width:1368px) {
           width: 100%;
@@ -172,3 +189,37 @@ ${InfoBlock}:hover & {
     transform: rotate(180deg)
 }
 `
+
+// export const LiItem = styled.li`
+
+//   @media screen and (min-width: 768px) {
+//     position: relative;
+//     display: flex;
+//     gap: 52px;
+//     align-items: flex-start;
+
+//     &:not(:last-child):after {
+//         content: '';
+//         background-color: rgba(175, 175, 175, 0.41);
+//         position:absolute;
+//         bottom: 0;
+//         left: 0;
+//         height: 1px;
+//         width: 688px;
+//         @media screen and (min-width:1368px) {
+//           width: 100%;
+//         }
+//     }
+//     width: 872px;
+//     padding: 40px 36px;
+//   }
+//   @media screen and (min-width: 1920px) {
+//     width: 1180px;
+
+// padding: 52px 60px;
+//  &:not(:last-child):after {
+//                   left: 0;
+//             }
+// }
+
+// `

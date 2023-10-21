@@ -91,7 +91,7 @@ export const Aside = () => {
         <BurgerMenuBtn src={BurgerMenu} alt="menu" onClick={toggleMenuBtn} />
       )}
       <BackgroundMenuOpen
-        $opBackgroundMenuOpenen={`${isOpen}`}
+        $open={`${isOpen}`}
         onClick={handleBackdropClick}
       >
         <ContainerMobileMenu
