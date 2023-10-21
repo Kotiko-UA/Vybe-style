@@ -97,6 +97,7 @@ export const ContainerMenu = styled.div`
   margin-top: 39px;
   @media screen and (min-width: 1368px) {
     margin: 0;
+    margin-top: 39px;
   }
 `;
 
@@ -105,6 +106,7 @@ export const Menu = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  
 `;
 
 export const MenuItem = styled.li`
