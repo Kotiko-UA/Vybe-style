@@ -12,12 +12,14 @@ import {
   Buttons,
   Container,
   H2,
+  LinkedinSvg,
   NextButton,
   PrevButton,
   SlideImg,
   SlideImg2,
   SlideLink,
   SlideWrapper,
+  SocialsLink,
   SwiperEl,
   TeamName,
   TeamRole,
@@ -89,6 +91,7 @@ export const Team = ({ teamCarts }) => {
               projectUrl,
               teamRoleUa,
               teamNameUa,
+              klim,
             }) => {
               return (
                 <SwiperSlide key={id}>
@@ -104,6 +107,15 @@ export const Team = ({ teamCarts }) => {
                       <TeamName>
                         {currentLanguage === 'en' ? teamName : teamNameUa}
                       </TeamName>
+                      {klim && (
+                        <SocialsLink
+                          href="https://www.linkedin.com/company/vibestyle/about/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <LinkedinSvg width="19px" height="18px" />
+                        </SocialsLink>
+                      )}
 
                       <SlideImg
                         loading="lazy"

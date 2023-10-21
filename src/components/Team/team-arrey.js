@@ -11,6 +11,7 @@ import likhodedSv2 from './Team-photo/s2-l.jpg';
 const teamArrey = [
   {
     id: '1',
+    klim: true,
     teamFotoUrl: kYevtushenko,
     teamFotoUrl2: kYevtushenko2,
     teamRole: 'lead designer',
@@ -21,6 +22,7 @@ const teamArrey = [
   },
   {
     id: '2',
+    klim: false,
     teamFotoUrl: nYevtushenko,
     teamFotoUrl2: nYevtushenko2,
     teamRole: 'project manager',
@@ -31,6 +33,7 @@ const teamArrey = [
   },
   {
     id: '3',
+    klim: false,
     teamFotoUrl: vYevtushenko,
     teamFotoUrl2: vYevtushenko2,
     teamRole: 'designer',
@@ -41,6 +44,7 @@ const teamArrey = [
   },
   {
     id: '4',
+    klim: false,
     teamFotoUrl: mazurLi,
     teamFotoUrl2: mazurLi2,
     teamRole: 'project manager',
@@ -51,6 +55,7 @@ const teamArrey = [
   },
   {
     id: '5',
+    klim: false,
     teamFotoUrl: likhodedSv,
     teamFotoUrl2: likhodedSv2,
     teamRole: 'designer',
@@ -61,6 +66,7 @@ const teamArrey = [
   },
   {
     id: '6',
+    klim: true,
     teamFotoUrl: kYevtushenko,
     teamFotoUrl2: kYevtushenko2,
     teamRole: 'lead designer',
@@ -71,6 +77,7 @@ const teamArrey = [
   },
   {
     id: '7',
+    klim: false,
     teamFotoUrl: nYevtushenko,
     teamFotoUrl2: nYevtushenko2,
     teamRole: 'project manager',
@@ -81,6 +88,7 @@ const teamArrey = [
   },
   {
     id: '8',
+    klim: false,
     teamFotoUrl: vYevtushenko,
     teamFotoUrl2: vYevtushenko2,
     teamRole: 'designer',
@@ -91,6 +99,7 @@ const teamArrey = [
   },
   {
     id: '9',
+    klim: false,
     teamFotoUrl: mazurLi,
     teamFotoUrl2: mazurLi2,
     teamRole: 'project manager',
@@ -101,6 +110,7 @@ const teamArrey = [
   },
   {
     id: '10',
+    klim: false,
     teamFotoUrl: likhodedSv,
     teamFotoUrl2: likhodedSv2,
     teamRole: 'designer',
