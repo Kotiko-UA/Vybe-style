@@ -28,8 +28,9 @@ export const Section = styled.section`
     background-image: url(${bgV}),
       linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 47.46%, #000 100%),
       url(${bgImg});
-    background-size: 306px 312px, 900px 900px, 900px 900px;
-    background-position: 0 50%, top 100px left -280px, top 100px left -280px;
+    background-size: 220px 225px, 900px 900px, 900px 900px;
+    background-position: top 230px left 0, top 100px left -280px,
+      top 100px left -280px;
   }
   @media screen and (min-width: 1368px) {
     padding: 28px 0 83px 0;
@@ -235,6 +236,7 @@ export const TitleWrapper = styled.div`
   margin-top: 33px;
   margin-bottom: 126px;
   display: flex;
+  justify-content: center;
   gap: 8px;
   @media screen and (min-width: 768px) {
     gap: 60px;
