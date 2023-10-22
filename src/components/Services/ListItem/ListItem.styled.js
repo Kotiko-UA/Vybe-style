@@ -28,9 +28,11 @@ height: calc(100% / 4);
   opacity: 0;
   transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
- &:hover::after {
+ &:hover::after,
+   &:focus::after {
     opacity: 1;
   }
+
 }
 @media screen and (min-width: 768px){
  width: calc(100% / 4);
@@ -134,7 +136,8 @@ height: calc(100% / 4);
     flex-shrink: 0;
   }
 
-  &:hover::after {
+  &:hover::after,
+   &:focus::after {
     opacity: 1;
   }
 
@@ -196,7 +199,8 @@ export const Number = styled.p`
   letter-spacing: -2.532px;
   text-transform: uppercase;
   z-index: 2;
-  ${LiItem}:hover & {
+   ${LiItem}:hover &,
+  ${LiItem}:focus & {
     font-size: 80px;
     line-height: 1.05;
     letter-spacing: -4.285px;
@@ -236,7 +240,8 @@ export const Text = styled.p`
   letter-spacing: -0.736px;
   text-transform: uppercase;
   z-index: 2;
-  ${LiItem}:hover & {
+  ${LiItem}:hover &,
+  ${LiItem}:focus &{
     font-size: 32px;
     line-height: 1;
     letter-spacing: -1.17px;
@@ -281,7 +286,13 @@ export const HiddenText = styled.p`
   letter-spacing: 0.24px;
   max-width: 290px;
   margin-top: 40px;
+  opacity: 0;
   z-index: 2;
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  ${LiItem}:hover &,
+  ${LiItem}:focus & {
+    opacity: 1;
+  }
   @media screen and (min-width: 768px) {
     max-width: 199px;
   }

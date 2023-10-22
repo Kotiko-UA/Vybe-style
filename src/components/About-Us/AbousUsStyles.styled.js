@@ -278,7 +278,7 @@ line-height: 1.67;
   }
 `;
 
-const ArrowContainer = styled.div`
+const ArrowContainer = styled.span`
 @media screen and (max-width: 767px){
 position: absolute;
 left: 235px;
@@ -326,7 +326,7 @@ const runOnSpot = keyframes`
   }
   `;
 
-const AnimatedArrow = styled.div`
+const AnimatedArrow = styled.span`
   position: relative;
   left: 0;
   display:flex;

@@ -29,7 +29,7 @@ export const Section = styled.section`
       linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 47.46%, #000 100%),
       url(${bgImg});
     background-size: 220px 225px, 900px 900px, 900px 900px;
-    background-position: top 230px left 0, top 100px left -280px,
+    background-position: top 230px left -40px, top 100px left -280px,
       top 100px left -280px;
   }
   @media screen and (min-width: 1368px) {
