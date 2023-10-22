@@ -68,10 +68,11 @@ export const ContainerMobileMenu = styled.div`
 export const BurgerMenuBtn = styled(BurgerIcon)`
   position: fixed;
   z-index: 997;
-  right: 5px;
+  top: 18px;
+  right: 10px;
   @media screen and (min-width: 768px) {
-    top: 30px;
-    right: 10px;
+    top: 48px;
+    right: 40px;
   }
   @media screen and (min-width: 1368px) {
     display: none;
@@ -106,7 +107,6 @@ export const Menu = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  
 `;
 
 export const MenuItem = styled.li`
