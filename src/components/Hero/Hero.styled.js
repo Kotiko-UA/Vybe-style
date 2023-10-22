@@ -34,26 +34,26 @@ export const Section = styled.section`
   @media screen and (min-width: 1368px) {
     padding: 28px 0 83px 0;
     background-image: url(${bgV}),
-      linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%, #000 100%),
+      linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 47.46%, #000 100%),
       url(${bgImg}),
-      linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%, #000 100%),
+      linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 47.46%, #000 100%),
       url(${bgImg});
     background-size: 292px 298px, 496px 348px, 496px 348px, 432px 304px,
       432px 304px;
-    background-position: top 120px left 80px, top 780px left -150px,
-      top 780px left -150px, top 640px right 0, top 640px right 0;
+    background-position: top 120px left 80px, top 450px left -110px,
+      top 450px left -110px, top 400px right 0, top 400px right 0;
   }
   @media screen and (min-width: 1920px) {
     padding: 28px 0 148px 0;
     background-image: url(${bgV}),
-      linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%, #000 100%),
+      linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 47%, #000 100%),
       url(${bgImg}),
-      linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%, #000 100%),
+      linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 47%, #000 100%),
       url(${bgImg});
     background-size: 416px 425px, 646px 454px, 646px 454px, 646px 454px,
       646px 454px;
-    background-position: top 110px left 50px, top 1000px left -323px,
-      top 1000px left -323px, top 640px right 40px, top 640px right 40px;
+    background-position: top 110px left 50px, top 600px left -323px,
+      top 600px left -323px, top 500px right 40px, top 500px right 40px;
   }
 `;
 export const Container = styled.div`
@@ -286,8 +286,8 @@ export const TitleSvg = styled.div`
     height: 42px;
   }
   @media screen and (min-width: 1920px) {
-    width: 344px;
-    height: 52px;
+    width: 351px;
+    height: 74px;
   }
 `;
 
