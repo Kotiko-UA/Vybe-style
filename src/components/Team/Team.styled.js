@@ -183,9 +183,7 @@ export const TeamName = styled.h3`
 `;
 
 export const Buttons = styled.div`
-  position: absolute;
-  top: 88px;
-  left: 20px;
+  margin-top: 24px;
   display: flex;
   margin-left: auto;
   justify-content: flex-end;
@@ -194,11 +192,13 @@ export const Buttons = styled.div`
   padding: 4px 20px 4px 56px;
   width: 188px;
   @media screen and (min-width: 768px) {
-    top: 0;
-    right: 40px;
+    margin-top: 40px;
   }
   @media screen and (min-width: 1368px) {
-    display: none;
+    margin-top: 0;
+  }
+  @media screen and (min-width: 1920px) {
+    margin-top: 9px;
   }
 `;
 

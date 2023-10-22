@@ -4,9 +4,10 @@ import round from '../../icons/round.svg';
 import bgImg from './img/g-img.png';
 import bgImg2 from './img/g-img-mobile-bot.png';
 import bgV from './img/v-img.png';
+import { ReactComponent as PlaySvg } from '../../icons/play-svg.svg';
 
 export const Section = styled.section`
-  padding: 86px 0 75px 0;
+  padding: 40px 0 75px 0;
   width: 100%;
   background-image: linear-gradient(
       180deg,
@@ -23,7 +24,7 @@ export const Section = styled.section`
   background-position: top 0px right -100px, top 0px right -100px,
     right 0px bottom -60px, right 0px bottom -60px;
   @media screen and (min-width: 768px) {
-    padding: 8px 0 58px 0;
+    padding: 28px 0 58px 0;
     background-image: url(${bgV}),
       linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 47.46%, #000 100%),
       url(${bgImg});
@@ -31,7 +32,7 @@ export const Section = styled.section`
     background-position: 0 50%, top 100px left -280px, top 100px left -280px;
   }
   @media screen and (min-width: 1368px) {
-    padding: 52px 0 83px 0;
+    padding: 28px 0 83px 0;
     background-image: url(${bgV}),
       linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%, #000 100%),
       url(${bgImg}),
@@ -43,7 +44,7 @@ export const Section = styled.section`
       top 640px right 0, top 640px right 0;
   }
   @media screen and (min-width: 1920px) {
-    padding: 62px 0 148px 0;
+    padding: 28px 0 148px 0;
     background-image: url(${bgV}),
       linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%, #000 100%),
       url(${bgImg}),
@@ -81,29 +82,35 @@ export const Container = styled.div`
     max-width: 1920px;
   }
 `;
-
-export const Logo = styled.img`
+export const LogoContainer = styled.div`
   width: 71px;
   height: 94px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 87px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 144px;
+  }
+  @media screen and (min-width: 1368px) {
+    margin-bottom: 112px;
+  }
+  @media screen and (min-width: 1920px) {
+    margin-bottom: 51px;
+  }
+`;
+export const Logo = styled.img`
+  width: 65px;
+  height: 68px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const NameCompany = styled.h1`
   font-size: 16px;
   font-weight: 400;
   line-height: 2.4;
-  letter-spacing: 1.296px;
   text-align: center;
-  margin-bottom: 60px;
-  @media screen and (min-width: 768px) {
-    margin-bottom: 144px;
-  }
-  @media screen and (min-width: 1368px) {
-    margin-bottom: 84px;
-  }
-  @media screen and (min-width: 1920px) {
-    margin-bottom: 124px;
-  }
 `;
 
 export const ButtonWraper = styled.div`
@@ -163,13 +170,38 @@ export const PlayWrapper = styled.span`
   transform: rotate(132deg) translate(-50%, -50%);
   border-radius: 32.5px;
   border: 1px solid #fff;
+  transform: border;
+  .heroButton:hover & {
+    border: 1px solid #c4f934;
+  }
+  .heroButton:focus & {
+    border: 1px solid #c4f934;
+  }
 `;
 
 export const ButtonSpan = styled.span`
   display: block;
   width: 40px;
+  color: #fff;
+  transform: color;
+  .heroButton:hover & {
+    color: #c4f934;
+  }
+  .heroButton:focus & {
+    color: #c4f934;
+  }
   @media screen and (min-width: 768px) {
     width: 60px;
+  }
+`;
+export const PlaySvgImg = styled(PlaySvg)`
+  fill: #fff;
+  transform: fill;
+  .heroButton:hover & {
+    fill: #c4f934;
+  }
+  .heroButton:focus & {
+    fill: #c4f934;
   }
 `;
 export const TextButton = styled.p`
@@ -205,14 +237,16 @@ export const TitleWrapper = styled.div`
   margin-bottom: 120px;
   display: flex;
   gap: 8px;
-
+  @media screen and (min-width: 768px) {
+    gap: 60px;
+  }
   @media screen and (min-width: 1368px) {
-    gap: 108px;
+    gap: 110px;
     margin-top: 28px;
     margin-bottom: 146px;
   }
   @media screen and (min-width: 1920px) {
-    gap: 68px;
+    gap: 29px;
     margin-top: 40px;
     margin-bottom: 172px;
   }
@@ -240,17 +274,21 @@ export const HeroTitle = styled.h1`
 `;
 export const TitleSvg = styled.div`
   display: block;
-  width: 176px;
-  height: 36px;
+  width: 124px;
+  height: 31px;
   background-image: url(${lines});
   background-size: cover;
+  @media screen and (min-width: 768px) {
+    width: 171px;
+    height: 35px;
+  }
   @media screen and (min-width: 1368px) {
-    width: 212px;
-    height: 44px;
+    width: 209px;
+    height: 42px;
   }
   @media screen and (min-width: 1920px) {
     width: 344px;
-    height: 74px;
+    height: 52px;
   }
 `;
 
