@@ -638,8 +638,13 @@ const ArrowContainer = styled.div`
 `;
 
 const ArrowSvg = styled(ArrowRight)`
-  // width: 30px;
-  // height: 30px;
+  width: 30px;
+  height: 30px;
+  @media screen and (min-width:1368px){
+     width: 44px;
+height: 40px;
+  }
+ 
 `;
 
 const runOnSpot = keyframes`
