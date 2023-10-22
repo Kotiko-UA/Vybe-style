@@ -77,14 +77,14 @@ export const Ul = styled.ul`
 export const Li = styled.li`
   position: relative;
   display: block;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  transition: border-top border-bottom;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  transition: border-top, border-bottom;
 
   &:hover,
   :focus {
-    border-top: 1px solid #c4f934;
-    border-bottom: 1px solid #c4f934;
+    border-top: 3px solid #c4f934;
+    border-bottom: 3px solid #c4f934;
   }
 
   &:nth-child(n + 6) {
@@ -282,13 +282,14 @@ export const SwiperEl = styled(Swiper)`
   }
 `;
 export const Buttons = styled.div`
-  background: #171717;
-  padding: 4px 20px 4px 56px;
-  width: 188px;
-  margin-left: auto;
   margin-top: 16px;
   display: flex;
+  margin-left: auto;
   justify-content: flex-end;
+  background: #171717;
+
+  padding: 4px 20px 4px 56px;
+  width: 188px;
   @media screen and (min-width: 1380px) {
     width: 140px;
     padding: 4px 20px 4px 8px;
@@ -309,8 +310,8 @@ export const PrevButton = styled.button`
   border: none;
   cursor: pointer;
   transition: all ${({ theme }) => theme.animationStyles};
-  :focus,
-  :hover {
+  &:hover,
+  :focus {
     stroke: ${props => props.theme.brandColor};
     background-color: ${props => props.theme.borderAlphaColor};
   }
@@ -322,8 +323,8 @@ export const NextButton = styled.button`
   border: none;
   cursor: pointer;
   transition: all ${({ theme }) => theme.animationStyles};
-  :focus,
-  :hover {
+  &:hover,
+  :focus {
     stroke: ${props => props.theme.brandColor};
     background-color: ${props => props.theme.borderAlphaColor};
   }
