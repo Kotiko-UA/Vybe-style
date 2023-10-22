@@ -1,7 +1,6 @@
 import { LanguageContext } from 'components/HookLang/LanguageContext';
 import { useContext } from 'react';
 import {
-  DarkImgEl,
   Li,
   ProjectName,
   ProjectServises,
@@ -33,7 +32,6 @@ export const PortfolioCarts = ({ projectCarts }) => {
           target="_blank"
           rel="noreferrer noopener nofollow"
         >
-          <DarkImgEl />
           <SlideImg loading="lazy" src={projectFotoUrl} alt={projectName} />
           <ProjectName>
             {currentLanguage === 'en' ? projectName : projectNameUa}

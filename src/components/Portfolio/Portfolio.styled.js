@@ -79,20 +79,17 @@ export const Li = styled.li`
   display: block;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
+  transition: border-top border-bottom;
+
+  &:hover,
+  :focus {
+    border-top: 1px solid #c4f934;
+    border-bottom: 1px solid #c4f934;
+  }
 
   &:nth-child(n + 6) {
     display: none;
   }
-`;
-export const DarkImgEl = styled.span`
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(12 16 1 / 30%);
-  z-index: 5;
 `;
 
 export const SliderFirstWrap = styled.div`
@@ -107,13 +104,12 @@ export const SlideWrapper = styled.div`
   display: block;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
+  transition: border-top, border-bottom;
 
-  .swiper-slide-active & {
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-  }
-  .swiper-slide-next & {
-    border: 1px solid #fff;
+  &:hover,
+  :focus {
+    border-top: 1px solid #c4f934;
+    border-bottom: 1px solid #c4f934;
   }
 `;
 export const SlideLink = styled.a`
@@ -133,6 +129,26 @@ export const SlideLink = styled.a`
     height: 502px;
   }
 `;
+export const DarkImgEl = styled.span`
+  @media screen and (min-width: 1380px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(12 16 1 / 30%);
+    z-index: 5;
+  }
+
+  transition: background-color;
+  .slide-wrap:hover & {
+    background-color: transparent;
+  }
+  .slide-wrap:focus & {
+    background-color: transparent;
+  }
+`;
 export const SlideImg = styled.img`
   position: absolute;
   top: 0;
@@ -142,17 +158,6 @@ export const SlideImg = styled.img`
   height: 100%;
   object-position: 50% 50%;
   z-index: 1;
-
-  @media screen and (min-width: 1368px) {
-    opacity: 0.1;
-    transition: opacity ${({ theme }) => theme.animationStyles};
-    .slide-wrap:hover & {
-      opacity: 1;
-    }
-    .slide-wrap:focus & {
-      opacity: 1;
-    }
-  }
 `;
 export const ProjectName = styled.h3`
   position: absolute;
@@ -303,8 +308,9 @@ export const PrevButton = styled.button`
   background-color: #171717;
   border: none;
   cursor: pointer;
-  transition: background-color ${({ theme }) => theme.animationStyles};
-  :focus {
+  transition: all ${({ theme }) => theme.animationStyles};
+  :focus,
+  :hover {
     stroke: ${props => props.theme.brandColor};
     background-color: ${props => props.theme.borderAlphaColor};
   }
@@ -315,10 +321,9 @@ export const NextButton = styled.button`
   background-color: #171717;
   border: none;
   cursor: pointer;
-  transition: background-color ${({ theme }) => theme.animationStyles};
-
-  &:hover,
-  :focus {
+  transition: all ${({ theme }) => theme.animationStyles};
+  :focus,
+  :hover {
     stroke: ${props => props.theme.brandColor};
     background-color: ${props => props.theme.borderAlphaColor};
   }

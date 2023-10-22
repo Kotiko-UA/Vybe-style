@@ -6,6 +6,7 @@ import { ReactComponent as ArrorR } from '../../icons/arrorR.svg';
 import 'swiper/css';
 import {
   Buttons,
+  DarkImgEl,
   NextButton,
   PrevButton,
   ProjectName,
@@ -74,6 +75,7 @@ export const ControlingSwiper = ({ projectCarts, slideCount }) => {
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                 >
+                  <DarkImgEl />
                   <SlideImg
                     loading="lazy"
                     src={projectFotoUrl}
