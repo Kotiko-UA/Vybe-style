@@ -77,7 +77,6 @@ export const Team = ({ teamCarts }) => {
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
-            reverseDirection: true,
           }}
           modules={[Autoplay]}
         >

@@ -49,6 +49,7 @@ export const ControlingSwiper = ({ projectCarts, slideCount }) => {
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
+          reverseDirection: true,
         }}
         modules={[Autoplay]}
       >

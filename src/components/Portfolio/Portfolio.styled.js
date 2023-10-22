@@ -73,15 +73,26 @@ export const Ul = styled.ul`
     margin-bottom: 44px;
   }
 `;
+
 export const Li = styled.li`
   position: relative;
   display: block;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
 
-  &:nth-child(n + 5) {
+  &:nth-child(n + 6) {
     display: none;
   }
+`;
+export const DarkImgEl = styled.span`
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(12 16 1 / 30%);
+  z-index: 5;
 `;
 
 export const SliderFirstWrap = styled.div`
@@ -123,10 +134,14 @@ export const SlideLink = styled.a`
   }
 `;
 export const SlideImg = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
   width: 100%;
   height: 100%;
   object-position: 50% 50%;
+  z-index: 1;
 
   @media screen and (min-width: 1368px) {
     opacity: 0.1;
@@ -151,6 +166,7 @@ export const ProjectName = styled.h3`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  z-index: 2;
   @media screen and (min-width: 768px) {
     left: 16px;
 
@@ -178,6 +194,7 @@ export const ProjectYear = styled.span`
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  z-index: 2;
   @media screen and (min-width: 768px) {
     right: 16px;
 
@@ -206,6 +223,7 @@ export const Services = styled.p`
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  z-index: 2;
   @media screen and (min-width: 768px) {
     bottom: 40px;
     left: 16px;
@@ -213,7 +231,7 @@ export const Services = styled.p`
   }
   @media screen and (min-width: 1368px) {
     left: 8px;
-    bottom: 40px;
+    bottom: 52px;
   }
   @media screen and (min-width: 1920px) {
     bottom: 40px;
@@ -231,6 +249,7 @@ export const ProjectServises = styled.p`
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  z-index: 2;
   @media screen and (min-width: 768px) {
     bottom: 12px;
     left: 16px;
