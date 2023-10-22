@@ -38,10 +38,10 @@ export const Section = styled.section`
       url(${bgImg}),
       linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%, #000 100%),
       url(${bgImg});
-    background-size: 464px 474px, 496px 348px, 496px 348px, 432px 304px,
+    background-size: 292px 298px, 496px 348px, 496px 348px, 432px 304px,
       432px 304px;
-    background-position: 0 98px, top 780px left -150px, top 780px left -150px,
-      top 640px right 0, top 640px right 0;
+    background-position: top 120px left 80px, top 780px left -150px,
+      top 780px left -150px, top 640px right 0, top 640px right 0;
   }
   @media screen and (min-width: 1920px) {
     padding: 28px 0 148px 0;
