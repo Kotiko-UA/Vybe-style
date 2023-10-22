@@ -30,6 +30,8 @@ export const Container = styled.div`
     padding-right: 40px;
   }
   @media screen and (min-width: 1368px) {
+    display: flex;
+    gap: 90px;
     max-width: 1368px;
     padding-left: 60px;
     padding-right: 204px;
@@ -42,17 +44,20 @@ export const Container = styled.div`
 `;
 
 export const AbousUsTitle = styled.h1`
-  font-size: 32px;
-  font-weight: 300;
-  line-height: 1.18;
+font-size: 40px;
+font-style: normal;
+font-weight: 300;
+line-height: 1.2;
+  margin-bottom: 48px;
   @media screen and (min-width: 768px) {
-    font-size: 35px;
-    line-height: 1.2;
-    letter-spacing: 3.2px;
+    margin-bottom: 0px;
+    position: absolute;
   }
   @media screen and (min-width: 1368px) {
-    font-size: 35px;
-    letter-spacing: 3.2px;
+    position: static;
+    flex-shrink: 0;
+ font-weight: 400;
+
   }
   @media screen and (min-width: 1920px) {
     font-size: 60px;
@@ -60,56 +65,53 @@ export const AbousUsTitle = styled.h1`
   }
 `;
 
-export const AboutUsContainerFirst = styled.div`
-  @media screen and (min-width: 1368px) {
-    display: flex;
-  }
-`;
 
-export const ContainerText = styled.div`
+export const MainTextContainer = styled.div`
+display: flex;
+flex-direction: column;
+gap: 64px;
   @media screen and (min-width: 768px) {
-    max-width: 758px;
-    display: flex;
+    gap: 59px;
+    
+  }
+    @media screen and (min-width: 1368px) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
   }
   @media screen and (min-width: 1920px) {
     max-width: 1601px;
   }
 `;
 
-export const AboutUsContainerSecond = styled.div`
-  max-width: 264px;
+export const FirstContainer = styled.div`
+width: 263px;
+margin-left: auto;
+display: flex;
+flex-direction: column;
+gap:32px;
   @media screen and (min-width: 768px) {
-    max-width: 398px;
-    margin-left: 25px;
+    width: 398px;
   }
-  @media screen and (min-width: 1368px) {
-    max-width: 338px;
-    margin-left: 60px;
+   @media screen and (min-width: 1368px) {
+    width: 320px;
+    margin:0;
+    gap: 120px;
   }
-  @media screen and (min-width: 1920px) {
-    max-width: 512px;
-  }
+ 
 `;
-
 export const AboutUsDescriptionText1 = styled.p`
   font-size: 16px;
-  font-weight: 400;
-  line-height: 1.18;
-  margin-top: 48px;
+  font-weight: 700;
+  line-height: 1.33;
+  letter-spacing: 0.48px;
+  color: ${({theme})=> theme.hiddenText};
   @media screen and (min-width: 768px) {
-    margin-top: 0px;
-    text-align: justify;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 1.2;
-    letter-spacing: -0.02px;
-  }
+        font-weight: 400;
+    line-height: 1.75;
+     }
   @media screen and (min-width: 1368px) {
-    font-style: normal;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.66;
-    letter-spacing: 0.48px;
+
   }
   @media screen and (min-width: 1920px) {
     font-size: 24px;
@@ -118,23 +120,17 @@ export const AboutUsDescriptionText1 = styled.p`
 `;
 
 export const AboutUsDescriptionText2 = styled.p`
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 1.18;
-  letter-spacing: 0.48px;
+ color: ${({theme})=> theme.hiddenText};
+font-size: 16px;
+font-weight: 200;
+line-height: 1,5;
+letter-spacing: 0.48px;
   @media screen and (min-width: 768px) {
-    margin-top: 0px;
-    text-align: justify;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 1.2;
-    letter-spacing: -0.02px;
+  line-height: 1.75;
+
   }
   @media screen and (min-width: 1368px) {
-    font-style: normal;
-    font-size: 20px;
-    line-height: 1.66;
-    letter-spacing: 0.48px;
+   
   }
   @media screen and (min-width: 1920px) {
     font-size: 24px;
@@ -143,64 +139,65 @@ export const AboutUsDescriptionText2 = styled.p`
   }
 `;
 
-export const AboutUsDescriptionTextBoth = styled.p`
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.18;
-  margin-top: 30px;
-  letter-spacing: 0.48px;
+export const SecondContainer = styled.div`
+  width: 246px;
+  display: flex;
+  flex-direction: column;
+  gap:32px;
   @media screen and (min-width: 768px) {
-    margin-top: 40px;
-    margin-left: 0;
-    font-size: 18px;
-    line-height: 1.61;
-    text-align: justify;
+    width: 573px;
+    
   }
   @media screen and (min-width: 1368px) {
-    margin-top: 0px;
-    font-size: 20px;
-    text-align: justify;
-  }
-  @media screen and (min-width: 1920px) {
-    font-size: 24px;
-  }
-`;
-
-export const AboutUsDescriptionTextBothWeight = styled.p`
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 1.18;
-  letter-spacing: 0.48px;
-  @media screen and (min-width: 768px) {
-    margin-left: 0;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 1.6;
-    text-align: justify;
-  }
-  @media screen and (min-width: 1368px) {
-    font-size: 20px;
-    text-align: justify;
-    line-height: 1.4;
-  }
-  @media screen and (min-width: 1920px) {
-    font-size: 24px;
-    line-height: 1.6;
-  }
-`;
-
-export const DescriptionContainer = styled.div`
-  margin-left: 88px;
-  @media screen and (min-width: 768px) {
-    max-width: 573px;
-    margin-left: 0px;
-  }
-  @media screen and (min-width: 1368px) {
-    max-width: 356px;
-    margin-left: 60px;
+    width: 356px;
+    
   }
   @media screen and (min-width: 1920px) {
     max-width: 524px;
-    margin-left: 56px;
+   
   }
 `;
+
+export const AboutUsDescriptionTextThird = styled.p`
+  color: ${({theme})=> theme.hiddenText};
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.48px;
+  @media screen and (min-width: 768px) {
+ line-height: 1.75;
+  }
+  @media screen and (min-width: 1368px) {
+     }
+  @media screen and (min-width: 1920px) {
+    font-size: 24px;
+  }
+`;
+
+export const AboutUsDescriptionTextForth = styled.p`
+ color: ${({theme})=> theme.hiddenText};
+font-size: 16px;
+font-weight: 200;
+line-height: 1.5;
+letter-spacing: 0.48px;
+  .link-to-contactus {
+    font-weight: 400;
+   font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.48px;
+    color: ${({theme})=> theme.brandColor};
+  }
+  @media screen and (min-width: 768px) {
+  line-height: 1.75;
+ .link-to-contactus {
+ line-height: 1.75;
+ }
+  }
+  @media screen and (min-width: 1368px) {
+   }
+  @media screen and (min-width: 1920px) {
+    font-size: 24px;
+    line-height: 1.6;
+  }
+`;
+
+

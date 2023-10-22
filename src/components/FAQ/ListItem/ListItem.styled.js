@@ -38,9 +38,11 @@ export const LiItem = styled.li`
           width: 100%;
         }
     }
-    width: 872px;
+   
     padding: 40px 36px;
   }
+  @media screen and (min-width: 1368px) {
+    width: 872px;
   @media screen and (min-width: 1920px) {
     width: 1180px;
 
