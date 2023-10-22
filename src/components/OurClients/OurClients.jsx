@@ -59,7 +59,7 @@ export const OurClients = () => {
             className={currentLanguage === 'en' ? '' : 'uk-awards-5mil'}
           >
             <Text
-              className={currentLanguage === 'en' ? '' : 'uk-awards-5mil-text'}
+              className={currentLanguage === 'en' ? 'en-awards-5mil-text' : 'uk-awards-5mil-text'}
             >
               {t('our-clients-text-2')}
             </Text>
@@ -79,7 +79,7 @@ export const OurClients = () => {
             <TitleH3>7</TitleH3>
           </YearsBlock>
           <ProjectsBlock>
-            <Text>{t('our-cliects-text-5')}</Text>
+            <Text className="projects-text">{t('our-cliects-text-5')}</Text>
             <TitleH3>500+</TitleH3>
           </ProjectsBlock>
           <GirlInStylePhoto
@@ -96,7 +96,7 @@ export const OurClients = () => {
           <VisitsBlock
             className={currentLanguage === 'en' ? '' : 'uk-visits-block'}
           >
-            <Text>{t('our-clients-text-8')}</Text>
+            <Text className="visits-text">{t('our-clients-text-8')}</Text>
             <TitleH3>25M</TitleH3>
           </VisitsBlock>
           <GirlWithWordsPhoto

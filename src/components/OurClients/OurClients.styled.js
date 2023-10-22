@@ -40,7 +40,10 @@ export const Section = styled.section`
       gap: 15px;
     }
     .uk-awards-5mil-text {
-      width: 300px;
+      width: 310px;
+    }
+    .en-awards-5mil-text {
+      width: 310px;
     }
     .uk-awards-1mil {
       padding-right: 10px;
@@ -405,6 +408,9 @@ export const ProjectsBlock = styled.div`
   @media screen and (min-width: 768px) and (max-width: 1367px) {
     border-bottom: none;
     height: 162px;
+    .projects-text{
+      width:300px;
+    }
   }
   @media screen and (min-width: 1368px) {
     position: absolute;
@@ -417,6 +423,9 @@ export const ProjectsBlock = styled.div`
     border: none;
     border-bottom: 1px solid ${({ theme }) => theme.borderAlphaColor};
     gap: 40px;
+    .projects-text{
+      width:300px;
+    }
   }
 
   @media screen and (min-width: 1920px) {
@@ -530,7 +539,7 @@ export const VisitsBlock = styled.div`
     @media screen and (min-width: 1368px) and (max-width: 1919px) {
       gap: 40px;
       ${Text} {
-        width: 147px;
+        width: 160px;
       }
     }
   }
@@ -593,6 +602,7 @@ export const QuestionText = styled.a`
     border-color: ${({ theme }) => theme.borderColor};
     width: 213px;
     padding: 35.5px 27px;
+    
     margin-left: 20px;
     text-align: left;
     .link-text {
@@ -603,6 +613,9 @@ export const QuestionText = styled.a`
       transform: scale(1.2);
     }
   }
+@media screen and (min-width: 768px) and (max-width: 1367px){
+  bottom:-170px;
+}
   @media screen and (min-width: 1368px) {
     width: 256px;
     color: ${({ theme }) => theme.colorText};
@@ -614,6 +627,7 @@ export const QuestionText = styled.a`
     top: 721px;
     border: 1px solid ${({ theme }) => theme.borderAlphaColor};
     border-bottom: none;
+    
   }
 
   @media screen and (min-width: 1920px) {
