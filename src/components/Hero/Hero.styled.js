@@ -260,7 +260,7 @@ export const HeroTitle = styled.h1`
 
   @media screen and (min-width: 768px) {
     text-align: center;
-    font-size: 80px;
+    font-size: 72px;
     letter-spacing: -6px;
   }
   @media screen and (min-width: 1368px) {
