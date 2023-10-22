@@ -50,10 +50,10 @@ export const Section = styled.section`
       url(${bgImg}),
       linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%, #000 100%),
       url(${bgImg});
-    background-size: 668px 682px, 646px 454px, 646px 454px, 646px 454px,
+    background-size: 416px 425px, 646px 454px, 646px 454px, 646px 454px,
       646px 454px;
-    background-position: 0 140px, top 1000px left -323px, top 1000px left -323px,
-      top 640px right 40px, top 640px right 40px;
+    background-position: top 110px left 50px, top 1000px left -323px,
+      top 1000px left -323px, top 640px right 40px, top 640px right 40px;
   }
 `;
 export const Container = styled.div`
