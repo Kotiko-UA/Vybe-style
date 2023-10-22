@@ -29,7 +29,7 @@ const teamArrey = [
     teamName: 'Nadia Y.',
     teamRoleUa: 'керівник проекту',
     teamNameUa: 'Надія Є.',
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: '#',
   },
   {
     id: '3',
@@ -40,7 +40,7 @@ const teamArrey = [
     teamName: 'Violetta Y.',
     teamRoleUa: 'дизайнер',
     teamNameUa: 'Віолетта Є.',
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: '#',
   },
   {
     id: '4',
@@ -51,7 +51,7 @@ const teamArrey = [
     teamName: 'Lilia M.',
     teamRoleUa: 'керівник проекту',
     teamNameUa: 'Лілія М.',
-    projectUrl: 'https://www.linkedin.com/in/lilma7891/',
+    projectUrl: '#',
   },
   {
     id: '5',
@@ -62,7 +62,7 @@ const teamArrey = [
     teamName: 'Snezhana L.',
     teamRoleUa: 'дизайнер',
     teamNameUa: 'Сніжана Л.',
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: '#',
   },
   {
     id: '6',
@@ -84,7 +84,7 @@ const teamArrey = [
     teamName: 'Nadia Y.',
     teamRoleUa: 'керівник проекту',
     teamNameUa: 'Надія Є.',
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: '#',
   },
   {
     id: '8',
@@ -95,7 +95,7 @@ const teamArrey = [
     teamName: 'Violetta Y.',
     teamRoleUa: 'дизайнер',
     teamNameUa: 'Віолетта Є.',
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: '#',
   },
   {
     id: '9',
@@ -106,7 +106,7 @@ const teamArrey = [
     teamName: 'Lilia M.',
     teamRoleUa: 'керівник проекту',
     teamNameUa: 'Лілія М.',
-    projectUrl: 'https://www.linkedin.com/in/lilma7891/',
+    projectUrl: '#',
   },
   {
     id: '10',
@@ -117,7 +117,7 @@ const teamArrey = [
     teamName: 'Snezhana L.',
     teamRoleUa: 'дизайнер',
     teamNameUa: 'Сніжана Л.',
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: '#',
   },
 ];
 
