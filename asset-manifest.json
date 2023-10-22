@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Vybe-style/static/css/main.c5c2f6d7.css",
-    "main.js": "/Vybe-style/static/js/main.638994c1.js",
+    "main.js": "/Vybe-style/static/js/main.3050da44.js",
     "static/media/form_and_footer_background_1368px_2x.png": "/Vybe-style/static/media/form_and_footer_background_1368px_2x.71a3e1d2cabecf574a35.png",
     "static/media/Inter-ExtraBold.ttf": "/Vybe-style/static/media/Inter-ExtraBold.4164cfba15dbca5f37aa.ttf",
     "static/media/Inter-Black.ttf": "/Vybe-style/static/media/Inter-Black.83d81b169bedf85385f2.ttf",
@@ -156,10 +156,10 @@
     "static/media/plus.svg": "/Vybe-style/static/media/plus.62aa920e29d06cc58b3c3bb6fb89dff8.svg",
     "static/media/close-icon.svg": "/Vybe-style/static/media/close-icon.fec7c356a8b8c8bf7ab2537f6a1e1d5f.svg",
     "main.c5c2f6d7.css.map": "/Vybe-style/static/css/main.c5c2f6d7.css.map",
-    "main.638994c1.js.map": "/Vybe-style/static/js/main.638994c1.js.map"
+    "main.3050da44.js.map": "/Vybe-style/static/js/main.3050da44.js.map"
   },
   "entrypoints": [
     "static/css/main.c5c2f6d7.css",
-    "static/js/main.638994c1.js"
+    "static/js/main.3050da44.js"
   ]
 }
