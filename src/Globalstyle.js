@@ -47,6 +47,7 @@ img {
 ::-webkit-scrollbar-thumb {
   height: 20px;
   background:  ${props => props.theme.greyFaqColor};
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
