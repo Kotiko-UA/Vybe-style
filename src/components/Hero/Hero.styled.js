@@ -256,7 +256,7 @@ export const HeroTitle = styled.h1`
   display: block;
   color: ${props => props.theme.colorText};
   font-family: 'Inter';
-  font-size: 48px;
+  font-size: 50px;
   text-align: start;
   font-weight: 400;
 
