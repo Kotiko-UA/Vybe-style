@@ -227,7 +227,7 @@ export const TextButton = styled.p`
       font-size: 52px;
     }
     @media screen and (min-width: 1920px) {
-      font-size: 84px;
+      font-size: 80px;
     }
   }
 `;
@@ -342,7 +342,7 @@ export const Slogan = styled.h2`
       font-size: 67px;
     }
     @media screen and (min-width: 1920px) {
-      font-size: 88px;
+      font-size: 80px;
     }
   }
 `;
