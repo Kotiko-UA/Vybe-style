@@ -110,8 +110,8 @@ export const ContactForm = () => {
   };
   const someText = t('form-name-error-1');
   return (
-    <FormSection id="contactus">
-      <FormContainer>
+    <FormSection>
+      <FormContainer id="contactus">
         <FormSectionHeader>&#47;&#47;: {t('form-title')}</FormSectionHeader>
         <PositionWrapper>
           <LeftSideBgWrap />

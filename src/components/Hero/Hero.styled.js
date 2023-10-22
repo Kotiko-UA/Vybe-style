@@ -38,10 +38,10 @@ export const Section = styled.section`
       url(${bgImg}),
       linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%, #000 100%),
       url(${bgImg});
-    background-size: 464px 474px, 496px 348px, 496px 348px, 432px 304px,
+    background-size: 292px 298px, 496px 348px, 496px 348px, 432px 304px,
       432px 304px;
-    background-position: 0 98px, top 780px left -150px, top 780px left -150px,
-      top 640px right 0, top 640px right 0;
+    background-position: top 120px left 80px, top 780px left -150px,
+      top 780px left -150px, top 640px right 0, top 640px right 0;
   }
   @media screen and (min-width: 1920px) {
     padding: 28px 0 148px 0;
@@ -93,7 +93,7 @@ export const LogoContainer = styled.div`
     margin-bottom: 144px;
   }
   @media screen and (min-width: 1368px) {
-    margin-bottom: 112px;
+    margin-bottom: 48px;
   }
   @media screen and (min-width: 1920px) {
     margin-bottom: 51px;
@@ -117,7 +117,6 @@ export const ButtonWraper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin-bottom: 8px;
   gap: 16px;
   align-items: center;
   @media screen and (min-width: 768px) {
@@ -217,7 +216,7 @@ export const TextButton = styled.p`
   }
   @media screen and (min-width: 1368px) {
     font-size: 56px;
-    height: 48px;
+    height: 56px;
   }
   @media screen and (min-width: 1920px) {
     font-size: 88px;
@@ -233,8 +232,8 @@ export const TextButton = styled.p`
   }
 `;
 export const TitleWrapper = styled.div`
-  margin-top: 12px;
-  margin-bottom: 120px;
+  margin-top: 33px;
+  margin-bottom: 126px;
   display: flex;
   gap: 8px;
   @media screen and (min-width: 768px) {
@@ -243,12 +242,12 @@ export const TitleWrapper = styled.div`
   @media screen and (min-width: 1368px) {
     gap: 110px;
     margin-top: 28px;
-    margin-bottom: 146px;
+    margin-bottom: 64px;
   }
   @media screen and (min-width: 1920px) {
     gap: 29px;
-    margin-top: 40px;
-    margin-bottom: 172px;
+    margin-top: 9px;
+    margin-bottom: 189px;
   }
 `;
 export const HeroTitle = styled.h1`
@@ -303,12 +302,12 @@ export const AnimationWrapper = styled.div`
     height: 244px;
   }
   @media screen and (min-width: 1368px) {
-    width: 495px;
-    height: 315px;
+    width: 432px;
+    height: 276px;
   }
   @media screen and (min-width: 1920px) {
-    width: 818px;
-    height: 486px;
+    width: 535px;
+    height: 339px;
   }
 `;
 export const Slogan = styled.h2`
@@ -326,13 +325,13 @@ export const Slogan = styled.h2`
     letter-spacing: -3px;
   }
   @media screen and (min-width: 1368px) {
-    font-size: 92px;
-    line-height: 114%;
+    font-size: 72px;
+    line-height: 128%;
     letter-spacing: -6px;
   }
   @media screen and (min-width: 1920px) {
-    font-size: 144px;
-    line-height: 112%;
+    font-size: 88px;
+    line-height: 128%;
   }
   &.hero-ua {
     font-size: 36px;
@@ -340,10 +339,10 @@ export const Slogan = styled.h2`
       font-size: 58px;
     }
     @media screen and (min-width: 1368px) {
-      font-size: 75px;
+      font-size: 67px;
     }
     @media screen and (min-width: 1920px) {
-      font-size: 118px;
+      font-size: 88px;
     }
   }
 `;
@@ -388,38 +387,38 @@ const animation2 = keyframes`
 const animation3 = keyframes`
 
   0% {
-    transform: translate(0, -20%);
+    transform: translate(-10%, -20%);
   }
   25% {
-    transform: translate(-180%, 40%);
+    transform: translate(-150%, 30%);
   }
   50% {
-    transform: translate(-100%, 110%);
+    transform: translate(-80%, 80%);
   }
   75% {
-    transform: translate(35%, 50%);
+    transform: translate(45%, 40%);
   }
   100% {
-    transform: translate(0%, -20%);
+    transform: translate(-10%, -20%);
   }
 
 `;
 const animation4 = keyframes`
 
   0% {
-    transform: translate(-20%, -20%);
+    transform: translate(-20%, -40%);
   }
   25% {
-    transform: translate(-220%, 50%);
+    transform: translate(-150%, 35%);
   }
   50% {
-    transform: translate(-100%, 110%);
+    transform: translate(-80%, 100%);
   }
   75% {
-    transform: translate(35%, 50%);
+    transform: translate(35%, 40%);
   }
   100% {
-    transform: translate(-20%, -20%);
+    transform: translate(-20%, -40%);
   }
 
 `;
@@ -457,8 +456,8 @@ export const AnimatedRound = styled.div`
     animation: ${animation3} 8s cubic-bezier(0.3, -0.7, 0.8, 1.7) infinite;
   }
   @media screen and (min-width: 1920px) {
-    width: 272px;
-    height: 272px;
+    width: 240px;
+    height: 240px;
     animation: ${animation4} 8s cubic-bezier(0.3, -0.7, 0.8, 1.7) infinite;
   }
 `;
