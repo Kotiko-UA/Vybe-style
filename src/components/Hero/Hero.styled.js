@@ -286,8 +286,8 @@ export const TitleSvg = styled.div`
     height: 42px;
   }
   @media screen and (min-width: 1920px) {
-    width: 344px;
-    height: 52px;
+    width: 351px;
+    height: 74px;
   }
 `;
 
