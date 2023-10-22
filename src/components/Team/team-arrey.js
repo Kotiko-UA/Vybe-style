@@ -18,7 +18,7 @@ const teamArrey = [
     teamName: 'Klym Y.',
     teamRoleUa: 'старший дизайнер',
     teamNameUa: 'Клим Є.',
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://www.linkedin.com/in/klym-yevtushenko/',
   },
   {
     id: '2',
@@ -73,7 +73,7 @@ const teamArrey = [
     teamName: 'Klym Y.',
     teamRoleUa: 'старший дизайнер',
     teamNameUa: 'Клим Є.',
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://www.linkedin.com/in/klym-yevtushenko/',
   },
   {
     id: '7',

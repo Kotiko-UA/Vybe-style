@@ -74,7 +74,7 @@ export const SlideWrapper = styled.div`
   width: 100%;
   height: 100%;
   border-bottom: 1px solid transparent;
-  transform: opacity;
+  transition: opacity;
   .swiper-slide:hover & {
     border-bottom: 1px solid #c4f934;
   }
@@ -110,7 +110,7 @@ export const SlideImg = styled.img`
   object-position: 50% 50%;
   z-index: 2;
   opacity: 1;
-  transform: opacity;
+  transition: opacity;
   .swiper-slide:hover & {
     opacity: 0;
   }
@@ -183,9 +183,7 @@ export const TeamName = styled.h3`
 `;
 
 export const Buttons = styled.div`
-  position: absolute;
-  top: 88px;
-  left: 20px;
+  margin-top: 24px;
   display: flex;
   margin-left: auto;
   justify-content: flex-end;
@@ -194,11 +192,13 @@ export const Buttons = styled.div`
   padding: 4px 20px 4px 56px;
   width: 188px;
   @media screen and (min-width: 768px) {
-    top: 0;
-    right: 40px;
+    margin-top: 40px;
   }
   @media screen and (min-width: 1368px) {
-    display: none;
+    margin-top: 0;
+  }
+  @media screen and (min-width: 1920px) {
+    margin-top: 9px;
   }
 `;
 
@@ -244,7 +244,7 @@ export const SocialsLink = styled.div`
   fill: ${({ theme }) => theme.brandColor};
   z-index: 3;
   opacity: 0;
-  transform: opacity;
+  transition: opacity;
   .swiper-slide:hover & {
     opacity: 1;
   }

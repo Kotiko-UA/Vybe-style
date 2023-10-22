@@ -4,9 +4,10 @@ import round from '../../icons/round.svg';
 import bgImg from './img/g-img.png';
 import bgImg2 from './img/g-img-mobile-bot.png';
 import bgV from './img/v-img.png';
+import { ReactComponent as PlaySvg } from '../../icons/play-svg.svg';
 
 export const Section = styled.section`
-  padding: 86px 0 75px 0;
+  padding: 40px 0 75px 0;
   width: 100%;
   background-image: linear-gradient(
       180deg,
@@ -23,36 +24,37 @@ export const Section = styled.section`
   background-position: top 0px right -100px, top 0px right -100px,
     right 0px bottom -60px, right 0px bottom -60px;
   @media screen and (min-width: 768px) {
-    padding: 8px 0 58px 0;
+    padding: 28px 0 58px 0;
     background-image: url(${bgV}),
       linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 47.46%, #000 100%),
       url(${bgImg});
-    background-size: 306px 312px, 900px 900px, 900px 900px;
-    background-position: 0 50%, top 100px left -280px, top 100px left -280px;
+    background-size: 220px 225px, 900px 900px, 900px 900px;
+    background-position: top 230px left 0, top 100px left -280px,
+      top 100px left -280px;
   }
   @media screen and (min-width: 1368px) {
-    padding: 52px 0 83px 0;
+    padding: 28px 0 83px 0;
     background-image: url(${bgV}),
-      linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%, #000 100%),
+      linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 47.46%, #000 100%),
       url(${bgImg}),
-      linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%, #000 100%),
+      linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 47.46%, #000 100%),
       url(${bgImg});
-    background-size: 464px 474px, 496px 348px, 496px 348px, 432px 304px,
+    background-size: 292px 298px, 496px 348px, 496px 348px, 432px 304px,
       432px 304px;
-    background-position: 0 98px, top 780px left -150px, top 780px left -150px,
-      top 640px right 0, top 640px right 0;
+    background-position: top 120px left 80px, top 450px left -110px,
+      top 450px left -110px, top 400px right 0, top 400px right 0;
   }
   @media screen and (min-width: 1920px) {
-    padding: 62px 0 148px 0;
+    padding: 28px 0 148px 0;
     background-image: url(${bgV}),
-      linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%, #000 100%),
+      linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 47%, #000 100%),
       url(${bgImg}),
-      linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%, #000 100%),
+      linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 47%, #000 100%),
       url(${bgImg});
-    background-size: 668px 682px, 646px 454px, 646px 454px, 646px 454px,
+    background-size: 416px 425px, 646px 454px, 646px 454px, 646px 454px,
       646px 454px;
-    background-position: 0 140px, top 1000px left -323px, top 1000px left -323px,
-      top 640px right 40px, top 640px right 40px;
+    background-position: top 110px left 50px, top 600px left -323px,
+      top 600px left -323px, top 500px right 40px, top 500px right 40px;
   }
 `;
 export const Container = styled.div`
@@ -81,36 +83,41 @@ export const Container = styled.div`
     max-width: 1920px;
   }
 `;
-
-export const Logo = styled.img`
+export const LogoContainer = styled.div`
   width: 71px;
   height: 94px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 87px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 144px;
+  }
+  @media screen and (min-width: 1368px) {
+    margin-bottom: 48px;
+  }
+  @media screen and (min-width: 1920px) {
+    margin-bottom: 51px;
+  }
+`;
+export const Logo = styled.img`
+  width: 65px;
+  height: 68px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const NameCompany = styled.h1`
   font-size: 16px;
   font-weight: 400;
   line-height: 2.4;
-  letter-spacing: 1.296px;
   text-align: center;
-  margin-bottom: 60px;
-  @media screen and (min-width: 768px) {
-    margin-bottom: 144px;
-  }
-  @media screen and (min-width: 1368px) {
-    margin-bottom: 84px;
-  }
-  @media screen and (min-width: 1920px) {
-    margin-bottom: 124px;
-  }
 `;
 
 export const ButtonWraper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin-bottom: 8px;
   gap: 16px;
   align-items: center;
   @media screen and (min-width: 768px) {
@@ -163,13 +170,38 @@ export const PlayWrapper = styled.span`
   transform: rotate(132deg) translate(-50%, -50%);
   border-radius: 32.5px;
   border: 1px solid #fff;
+  transform: border;
+  .heroButton:hover & {
+    border: 1px solid #c4f934;
+  }
+  .heroButton:focus & {
+    border: 1px solid #c4f934;
+  }
 `;
 
 export const ButtonSpan = styled.span`
   display: block;
   width: 40px;
+  color: #fff;
+  transform: color;
+  .heroButton:hover & {
+    color: #c4f934;
+  }
+  .heroButton:focus & {
+    color: #c4f934;
+  }
   @media screen and (min-width: 768px) {
     width: 60px;
+  }
+`;
+export const PlaySvgImg = styled(PlaySvg)`
+  fill: #fff;
+  transform: fill;
+  .heroButton:hover & {
+    fill: #c4f934;
+  }
+  .heroButton:focus & {
+    fill: #c4f934;
   }
 `;
 export const TextButton = styled.p`
@@ -185,7 +217,7 @@ export const TextButton = styled.p`
   }
   @media screen and (min-width: 1368px) {
     font-size: 56px;
-    height: 48px;
+    height: 56px;
   }
   @media screen and (min-width: 1920px) {
     font-size: 88px;
@@ -196,25 +228,28 @@ export const TextButton = styled.p`
       font-size: 52px;
     }
     @media screen and (min-width: 1920px) {
-      font-size: 84px;
+      font-size: 80px;
     }
   }
 `;
 export const TitleWrapper = styled.div`
-  margin-top: 12px;
-  margin-bottom: 120px;
+  margin-top: 33px;
+  margin-bottom: 126px;
   display: flex;
+  justify-content: center;
   gap: 8px;
-
+  @media screen and (min-width: 768px) {
+    gap: 60px;
+  }
   @media screen and (min-width: 1368px) {
-    gap: 108px;
+    gap: 110px;
     margin-top: 28px;
-    margin-bottom: 146px;
+    margin-bottom: 64px;
   }
   @media screen and (min-width: 1920px) {
-    gap: 68px;
-    margin-top: 40px;
-    margin-bottom: 172px;
+    gap: 29px;
+    margin-top: 9px;
+    margin-bottom: 189px;
   }
 `;
 export const HeroTitle = styled.h1`
@@ -227,7 +262,7 @@ export const HeroTitle = styled.h1`
 
   @media screen and (min-width: 768px) {
     text-align: center;
-    font-size: 80px;
+    font-size: 72px;
     letter-spacing: -6px;
   }
   @media screen and (min-width: 1368px) {
@@ -240,16 +275,20 @@ export const HeroTitle = styled.h1`
 `;
 export const TitleSvg = styled.div`
   display: block;
-  width: 176px;
-  height: 36px;
+  width: 124px;
+  height: 31px;
   background-image: url(${lines});
   background-size: cover;
+  @media screen and (min-width: 768px) {
+    width: 171px;
+    height: 35px;
+  }
   @media screen and (min-width: 1368px) {
-    width: 212px;
-    height: 44px;
+    width: 209px;
+    height: 42px;
   }
   @media screen and (min-width: 1920px) {
-    width: 344px;
+    width: 351px;
     height: 74px;
   }
 `;
@@ -265,12 +304,12 @@ export const AnimationWrapper = styled.div`
     height: 244px;
   }
   @media screen and (min-width: 1368px) {
-    width: 495px;
-    height: 315px;
+    width: 432px;
+    height: 276px;
   }
   @media screen and (min-width: 1920px) {
-    width: 818px;
-    height: 486px;
+    width: 535px;
+    height: 339px;
   }
 `;
 export const Slogan = styled.h2`
@@ -288,13 +327,13 @@ export const Slogan = styled.h2`
     letter-spacing: -3px;
   }
   @media screen and (min-width: 1368px) {
-    font-size: 92px;
-    line-height: 114%;
+    font-size: 72px;
+    line-height: 128%;
     letter-spacing: -6px;
   }
   @media screen and (min-width: 1920px) {
-    font-size: 144px;
-    line-height: 112%;
+    font-size: 88px;
+    line-height: 128%;
   }
   &.hero-ua {
     font-size: 36px;
@@ -302,10 +341,10 @@ export const Slogan = styled.h2`
       font-size: 58px;
     }
     @media screen and (min-width: 1368px) {
-      font-size: 75px;
+      font-size: 67px;
     }
     @media screen and (min-width: 1920px) {
-      font-size: 118px;
+      font-size: 80px;
     }
   }
 `;
@@ -350,38 +389,38 @@ const animation2 = keyframes`
 const animation3 = keyframes`
 
   0% {
-    transform: translate(0, -20%);
+    transform: translate(-10%, -20%);
   }
   25% {
-    transform: translate(-180%, 40%);
+    transform: translate(-150%, 30%);
   }
   50% {
-    transform: translate(-100%, 110%);
+    transform: translate(-80%, 80%);
   }
   75% {
-    transform: translate(35%, 50%);
+    transform: translate(45%, 40%);
   }
   100% {
-    transform: translate(0%, -20%);
+    transform: translate(-10%, -20%);
   }
 
 `;
 const animation4 = keyframes`
 
   0% {
-    transform: translate(-20%, -20%);
+    transform: translate(-20%, -40%);
   }
   25% {
-    transform: translate(-220%, 50%);
+    transform: translate(-150%, 35%);
   }
   50% {
-    transform: translate(-100%, 110%);
+    transform: translate(-80%, 100%);
   }
   75% {
-    transform: translate(35%, 50%);
+    transform: translate(35%, 40%);
   }
   100% {
-    transform: translate(-20%, -20%);
+    transform: translate(-20%, -40%);
   }
 
 `;
@@ -419,8 +458,8 @@ export const AnimatedRound = styled.div`
     animation: ${animation3} 8s cubic-bezier(0.3, -0.7, 0.8, 1.7) infinite;
   }
   @media screen and (min-width: 1920px) {
-    width: 272px;
-    height: 272px;
+    width: 240px;
+    height: 240px;
     animation: ${animation4} 8s cubic-bezier(0.3, -0.7, 0.8, 1.7) infinite;
   }
 `;

@@ -4,6 +4,7 @@ import { LanguageContext } from 'components/HookLang/LanguageContext';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import {
+  DarkImgEl,
   ProjectName,
   ProjectServises,
   ProjectYear,
@@ -25,7 +26,6 @@ export const AutomaticSwiper = ({ projectCarts }) => {
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
-          reverseDirection: true,
         }}
         modules={[Autoplay]}
       >
@@ -50,6 +50,7 @@ export const AutomaticSwiper = ({ projectCarts }) => {
                   target="_blank"
                   rel="noreferrer noopener nofollow"
                 >
+                  <DarkImgEl />
                   <SlideImg
                     loading="lazy"
                     src={projectFotoUrl}

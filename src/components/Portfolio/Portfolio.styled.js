@@ -73,13 +73,21 @@ export const Ul = styled.ul`
     margin-bottom: 44px;
   }
 `;
+
 export const Li = styled.li`
   position: relative;
   display: block;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  transition: border-top, border-bottom;
 
-  &:nth-child(n + 5) {
+  &:hover,
+  :focus {
+    border-top: 3px solid #c4f934;
+    border-bottom: 3px solid #c4f934;
+  }
+
+  &:nth-child(n + 6) {
     display: none;
   }
 `;
@@ -96,13 +104,12 @@ export const SlideWrapper = styled.div`
   display: block;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
+  transition: border-top, border-bottom;
 
-  .swiper-slide-active & {
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-  }
-  .swiper-slide-next & {
-    border: 1px solid #fff;
+  &:hover,
+  :focus {
+    border-top: 1px solid #c4f934;
+    border-bottom: 1px solid #c4f934;
   }
 `;
 export const SlideLink = styled.a`
@@ -122,22 +129,35 @@ export const SlideLink = styled.a`
     height: 502px;
   }
 `;
+export const DarkImgEl = styled.span`
+  @media screen and (min-width: 1380px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(12 16 1 / 30%);
+    z-index: 5;
+  }
+
+  transition: background-color;
+  .slide-wrap:hover & {
+    background-color: transparent;
+  }
+  .slide-wrap:focus & {
+    background-color: transparent;
+  }
+`;
 export const SlideImg = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
   width: 100%;
   height: 100%;
   object-position: 50% 50%;
-
-  @media screen and (min-width: 1368px) {
-    opacity: 0.1;
-    transition: opacity ${({ theme }) => theme.animationStyles};
-    .slide-wrap:hover & {
-      opacity: 1;
-    }
-    .slide-wrap:focus & {
-      opacity: 1;
-    }
-  }
+  z-index: 1;
 `;
 export const ProjectName = styled.h3`
   position: absolute;
@@ -151,6 +171,7 @@ export const ProjectName = styled.h3`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  z-index: 2;
   @media screen and (min-width: 768px) {
     left: 16px;
 
@@ -178,6 +199,7 @@ export const ProjectYear = styled.span`
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  z-index: 2;
   @media screen and (min-width: 768px) {
     right: 16px;
 
@@ -206,6 +228,7 @@ export const Services = styled.p`
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  z-index: 2;
   @media screen and (min-width: 768px) {
     bottom: 40px;
     left: 16px;
@@ -213,7 +236,7 @@ export const Services = styled.p`
   }
   @media screen and (min-width: 1368px) {
     left: 8px;
-    bottom: 40px;
+    bottom: 52px;
   }
   @media screen and (min-width: 1920px) {
     bottom: 40px;
@@ -231,6 +254,7 @@ export const ProjectServises = styled.p`
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  z-index: 2;
   @media screen and (min-width: 768px) {
     bottom: 12px;
     left: 16px;
@@ -258,13 +282,14 @@ export const SwiperEl = styled(Swiper)`
   }
 `;
 export const Buttons = styled.div`
-  background: #171717;
-  padding: 4px 20px 4px 56px;
-  width: 188px;
-  margin-left: auto;
   margin-top: 16px;
   display: flex;
+  margin-left: auto;
   justify-content: flex-end;
+  background: #171717;
+
+  padding: 4px 20px 4px 56px;
+  width: 188px;
   @media screen and (min-width: 1380px) {
     width: 140px;
     padding: 4px 20px 4px 8px;
@@ -284,7 +309,8 @@ export const PrevButton = styled.button`
   background-color: #171717;
   border: none;
   cursor: pointer;
-  transition: background-color ${({ theme }) => theme.animationStyles};
+  transition: all ${({ theme }) => theme.animationStyles};
+  &:hover,
   :focus {
     stroke: ${props => props.theme.brandColor};
     background-color: ${props => props.theme.borderAlphaColor};
@@ -296,8 +322,7 @@ export const NextButton = styled.button`
   background-color: #171717;
   border: none;
   cursor: pointer;
-  transition: background-color ${({ theme }) => theme.animationStyles};
-
+  transition: all ${({ theme }) => theme.animationStyles};
   &:hover,
   :focus {
     stroke: ${props => props.theme.brandColor};
