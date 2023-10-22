@@ -26,8 +26,8 @@ export const Hero = () => {
   const { t } = useTranslation();
   const { currentLanguage } = useContext(LanguageContext);
   return (
-    <Section id="home">
-      <Container>
+    <Section>
+      <Container id="home">
         <LogoContainer>
           <Logo src={LogoVibeStyle} alt="logo-company" />
           <NameCompany>VibeStyle</NameCompany>

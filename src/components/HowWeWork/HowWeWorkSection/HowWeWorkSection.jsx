@@ -52,8 +52,8 @@ export const HowWeWorkSection = () => {
   };
 
   return (
-    <Wrapper id="howwework">
-      <Container>
+    <Wrapper>
+      <Container id="howwework">
         <Title>{t('how-we-work-title')}</Title>
         <InfoBlock>
           <List>

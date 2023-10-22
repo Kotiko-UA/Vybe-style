@@ -30,8 +30,8 @@ export function Portfolio({ projectCarts }) {
   }, [isNarrowScreen]);
 
   return (
-    <Wrapper id="portfolio">
-      <Container>
+    <Wrapper>
+      <Container id="portfolio">
         <H2>{t('portfolio-title')}</H2>
         {!isNarrowScreen ? (
           <>

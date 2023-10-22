@@ -62,8 +62,8 @@ export const Team = ({ teamCarts }) => {
   }, []);
 
   return (
-    <Wrapper id="team">
-      <Container>
+    <Wrapper>
+      <Container id="team">
         <H2>{t('team-title')}</H2>
         <SwiperEl
           spaceBetween={8}
