@@ -9,18 +9,14 @@ import {
   Menu,
   MenuItem,
   ContainerMenu,
-  SelectContainer,
   CloseBtnMenu,
-  ArrowDropDown,
-  SelectLang,
-  SelectLangOption,
-  BackgroundMenuOpen,
+   BackgroundMenuOpen,
 } from './aside.styled';
 import LogoVibeStyle from './images/logo-vibe-style.png';
 import BurgerMenu from './images/burger-menu.png';
 import { useTranslation } from 'react-i18next';
 import { menuList } from './menu-list';
-import dropDownArrow from './images/chevron-down.png';
+import { MySelect } from './Select/Select';
 
 export const Aside = () => {
   const { i18n } = useTranslation();
@@ -85,13 +81,17 @@ export const Aside = () => {
     closeMenu();
   };
 
+     const handleTypeSelect = e => {
+         changeLanguage(e.value)
+  };
+
   return (
     <>
       {!isOpen && (
         <BurgerMenuBtn src={BurgerMenu} alt="menu" onClick={toggleMenuBtn} />
       )}
       <BackgroundMenuOpen
-        $opBackgroundMenuOpenen={`${isOpen}`}
+        $open={`${isOpen}`}
         onClick={handleBackdropClick}
       >
         <ContainerMobileMenu
@@ -100,17 +100,19 @@ export const Aside = () => {
           <Logo src={LogoVibeStyle} alt="logo-company" />
           <NameCompany>VibeStyle</NameCompany>
           <Menu>
-            <SelectContainer>
-              <SelectLang
+            <MySelect
+            className="custom-select"
+              dataFunc={handleTypeSelect}
+              lang={i18n.language}
+                          />
+                           {/* <SelectLang
                 value={i18n.language}
                 onChange={e => changeLanguage(e.target.value)}
               >
                 <SelectLangOption value="en">English</SelectLangOption>
                 <SelectLangOption value="ua">Українська</SelectLangOption>
-              </SelectLang>
-              <ArrowDropDown src={dropDownArrow} alt="arrow" />
-            </SelectContainer>
-
+              </SelectLang> */}
+            
             <ContainerMenu className="container-menu-ua">
               <ul>
                 {menuList.map(({ nameEn, nameUa, link, id }) => {

@@ -18,6 +18,7 @@ import {
   SliderSecondWrap,
   SwiperEl,
 } from './Portfolio.styled';
+import { Autoplay } from 'swiper/modules';
 
 const SwiperButtonPrev = ({ children }) => {
   const swiper = useSwiper();
@@ -37,11 +38,20 @@ const SwiperButtonNext = ({ children }) => {
   );
 };
 
-export const ControlingSwiper = ({ projectCarts }) => {
+export const ControlingSwiper = ({ projectCarts, slideCount }) => {
   const { currentLanguage } = useContext(LanguageContext);
   return (
     <SliderSecondWrap>
-      <SwiperEl spaceBetween={0} slidesPerView={3} loop={true}>
+      <SwiperEl
+        spaceBetween={0}
+        slidesPerView={slideCount}
+        loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay]}
+      >
         {projectCarts.map(
           ({
             projectName,

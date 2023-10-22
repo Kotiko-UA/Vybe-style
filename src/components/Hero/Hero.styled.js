@@ -83,7 +83,8 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.img`
-  max-width: 77px;
+  width: 71px;
+  height: 94px;
   margin: 0 auto;
 `;
 
@@ -122,7 +123,7 @@ export const ButtonWraper = styled.div`
     align-items: center;
   }
 `;
-export const Button = styled.button`
+export const Button = styled.a`
   display: flex;
   align-items: center;
   background-color: transparent;

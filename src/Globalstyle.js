@@ -15,7 +15,8 @@ export const GlobalStyles = createGlobalStyle`
 }
 html {
     scrollbar-width: thin;
-    scrollbar-color: ${props => props.theme.greyFaqColor} ${props => props.theme.brandColor} ;
+    scrollbar-color: ${props => props.theme.greyFaqColor} ${props =>
+  props.theme.brandColor} ;
 }
 body {
   background: #000;
@@ -41,13 +42,11 @@ img {
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
   background: ${props => props.theme.brandColor};
-  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb {
   height: 20px;
   background:  ${props => props.theme.greyFaqColor};
-  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

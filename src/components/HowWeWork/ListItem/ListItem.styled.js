@@ -5,9 +5,29 @@ import ReactPlayer from 'react-player';
 
 export const ListLi = styled.li`
   position: relative;
+  &:not(:last-child):after {
+        content: '';
+        background-color: rgba(175, 175, 175, 0.41);
+        position:absolute;
+        bottom: -20px;
+        left: 0;
+        height: 1px;
+        width: 100%;
+         @media screen and (min-width: 768px) {
+          width: 688px;
+          
+         }
+        @media screen and (min-width:1368px) {
+          width: 100%;
+        }
+         @media screen and (min-width:1920px) {
+          bottom: -40px; 
+        }
+    }
   display: flex;
   flex-direction: column;
   gap: 40px;
+  
   @media screen and (min-width: 768px) {
     align-items: center;
   }

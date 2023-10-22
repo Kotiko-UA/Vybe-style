@@ -47,31 +47,31 @@ export const Container = styled.div`
 `;
 
 export const ButtonFaq = styled.button`
-     position:relative;
+    position:relative;
     cursor: pointer;
     display:flex;
     align-items:center;
-      border: none;
+    border: none;
     background-color: transparent;
-     margin-left: auto;
+    margin-left: auto;
     
      
   .btn-span{
-      color: ${({ theme }) => theme.brandColor};
+    color: ${({ theme }) => theme.brandColor};
+    background-image: linear-gradient(235deg, #F4F90F -1.28%, #0FF9C0 115.55%);
+    -webkit-background-clip: text; 
+    background-clip: text;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: 1.2;
     letter-spacing: 1.92px;
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color  ${({ theme }) => theme.animationStyles};
   }
     &:hover .btn-span {
-        background: linear-gradient(235deg, #F4F90F -1.28%, #0FF9C0 115.55%);
-        -webkit-background-clip: text; 
-        background-clip: text;
-        color: transparent;
-            }
+      color: transparent;
+    }
+  
             @media screen and (min-width:1368px){
               margin-right: 190px;
             }
@@ -92,6 +92,11 @@ export const Title = styled.h2`
   font-weight: 300;
   line-height: 1.2;
   margin-bottom: 64px;
+  transition: color  ${({ theme }) => theme.animationStyles};
+
+  &:hover {
+    color: ${({ theme }) => theme.brandColor};
+  }
   @media screen and (min-width: 768px) {
     margin-bottom: 62px;
     font-size: 40px;

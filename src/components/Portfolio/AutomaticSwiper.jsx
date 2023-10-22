@@ -25,6 +25,7 @@ export const AutomaticSwiper = ({ projectCarts }) => {
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
+          reverseDirection: true,
         }}
         modules={[Autoplay]}
       >

@@ -17,7 +17,7 @@ import {
   VisitsBlock,
   GirlWithWordsPhoto,
   QuestionText,
-} from './OurClients.styled';
+ } from './OurClients.styled';
 import sadgirl from './img/sadgirl.png';
 import sadgirl2x from './img/sadgirl2x.png';
 import manwithbag from './img/manwithbag.jpg';
@@ -29,6 +29,7 @@ import girlwithwords2x from './img/girlwithwords2x.jpg';
 import { useContext } from "react";
 import { LanguageContext } from "components/HookLang/LanguageContext";
 import { useTranslation } from 'react-i18next';
+import ArrowAnimation from './OurClients.styled';
 
 export const OurClients = () => {
   const { currentLanguage } = useContext(LanguageContext);
@@ -91,7 +92,7 @@ export const OurClients = () => {
             loading="lazy"
             alt="girl with pink words"
           ></GirlWithWordsPhoto>
-          <QuestionText href='#contactus' className={currentLanguage === 'ua' ? 'uk-question-text' : ''} ><p className="link-text">{t('our-cliectc-text-6')}</p></QuestionText>
+          <QuestionText href='#contactus' className={currentLanguage === 'ua' ? 'uk-question-text' : ''} ><p className="link-text">{t('our-cliectc-text-6')}</p>{ArrowAnimation()}</QuestionText>
         </MainBlock>
       </Container>
     </Section>

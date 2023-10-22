@@ -29,8 +29,8 @@ export const Hero = () => {
       <Container>
         <Logo src={LogoVibeStyle} alt="logo-company" />
         <NameCompany>VibeStyle</NameCompany>
-        <ButtonWraper>
-          <Button>
+        <ButtonWraper className="heroButton">
+          <Button href="#howwework">
             <SvgSpan>
               <PlayWrapper />
               <PlaySvg />
