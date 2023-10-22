@@ -7,61 +7,60 @@ export const Section = styled.section`
   background-color: ${({ theme }) => theme.blackColor};
   padding-top: 121px;
   padding-bottom: 81px;
-   @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     padding-top: 140px;
-  padding-bottom: 140px;
+    padding-bottom: 140px;
   }
-   @media screen and (min-width: 1368px) {
+  @media screen and (min-width: 1368px) {
     padding-top: 170px;
-  padding-bottom: 70px;
+    padding-bottom: 70px;
   }
-   @media screen and (min-width: 1920px) {
+  @media screen and (min-width: 1920px) {
     padding-top: 200px;
-  padding-bottom: 0;
+    padding-bottom: 0;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1367px) {
-  .uk-question-text {
+    .uk-question-text {
       padding: 24px;
-          }
-}
+    }
+  }
 
- @media screen and (min-width: 1368px) and (max-width: 1919px) {
-  .uk-question-text {
+  @media screen and (min-width: 1368px) and (max-width: 1919px) {
+    .uk-question-text {
       padding: 40px 36px;
-          }
-  .uk-awards-block {
-      padding-top: 85px;
-     }
-     .uk-visits-block{
-      gap: 18px;
-     }
-     .uk-awards-5mil{
-    gap: 15px;
-  }
-  .uk-awards-5mil-text{
-    width: 300px;
-  }
-  .uk-awards-1mil {
-    padding-right:10px;
-  }
- 
-}
-
-@media screen and (min-width: 1920px){
-  .uk-question-text {
-      padding: 64px 52px;
-          }
-  .uk-awards-5mil-text{
-    width: 300px;
-  }
-  .uk-awards-5mil{
-    gap: 78px;
-  }
+    }
     .uk-awards-block {
-       gap: 135px;
-     }
-}
+      padding-top: 85px;
+    }
+    .uk-visits-block {
+      gap: 18px;
+    }
+    .uk-awards-5mil {
+      gap: 15px;
+    }
+    .uk-awards-5mil-text {
+      width: 300px;
+    }
+    .uk-awards-1mil {
+      padding-right: 10px;
+    }
+  }
+
+  @media screen and (min-width: 1920px) {
+    .uk-question-text {
+      padding: 64px 52px;
+    }
+    .uk-awards-5mil-text {
+      width: 300px;
+    }
+    .uk-awards-5mil {
+      gap: 78px;
+    }
+    .uk-awards-block {
+      gap: 135px;
+    }
+  }
 `;
 
 export const Container = styled.div`
@@ -70,7 +69,7 @@ export const Container = styled.div`
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-  @media screen and (min-width: 425px) and (max-width: 767px){
+  @media screen and (min-width: 425px) and (max-width: 767px) {
     padding-left: 40px;
   }
   @media screen and (min-width: 768px) {
@@ -102,7 +101,7 @@ export const Title = styled.h2`
   font-weight: 300;
   line-height: 1.2;
   margin-bottom: 78px;
-   transition: color  ${({ theme }) => theme.animationStyles};
+  transition: color ${({ theme }) => theme.animationStyles};
 
   &:hover {
     color: ${({ theme }) => theme.brandColor};
@@ -142,7 +141,7 @@ export const OneMilBlock = styled.div`
     width: 213px;
     height: 258px;
     border-color: ${({ theme }) => theme.borderColor};
-      }
+  }
 
   @media screen and (min-width: 1368px) {
     position: absolute;
@@ -164,7 +163,6 @@ export const OneMilBlock = styled.div`
     height: 326px;
     padding-left: 53px;
     top: 300px;
-      
   }
 `;
 
@@ -316,7 +314,6 @@ export const PeopleOnBoard = styled.div`
     top: 624px;
     padding-top: 40px;
     padding-left: 53px;
-    
   }
 `;
 
@@ -532,11 +529,10 @@ export const VisitsBlock = styled.div`
     padding-right: 36px;
     @media screen and (min-width: 1368px) and (max-width: 1919px) {
       gap: 40px;
-    ${Text} {
-      width: 147px;
+      ${Text} {
+        width: 147px;
+      }
     }
-    }
-    
   }
   @media screen and (min-width: 1920px) {
     gap: 75px;
@@ -577,7 +573,7 @@ export const GirlWithWordsPhoto = styled.img`
 `;
 
 export const QuestionText = styled.a`
-cursor: pointer;
+  cursor: pointer;
   padding: 40px 42px;
   width: 375px;
   border: 0.1px solid ${({ theme }) => theme.borderColor};
@@ -592,7 +588,6 @@ cursor: pointer;
   font-weight: 300;
   line-height: 1.21;
   letter-spacing: 0.32px;
-  
 
   @media screen and (min-width: 768px) {
     border-color: ${({ theme }) => theme.borderColor};
@@ -600,13 +595,13 @@ cursor: pointer;
     padding: 35.5px 27px;
     margin-left: 20px;
     text-align: left;
-      .link-text{
-transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
- &:hover .link-text {
-  color: ${({ theme }) => theme.brandColor};
-  transform: scale(1.2);
-   }
+    .link-text {
+      transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &:hover .link-text {
+      color: ${({ theme }) => theme.brandColor};
+      transform: scale(1.2);
+    }
   }
   @media screen and (min-width: 1368px) {
     width: 256px;
@@ -634,12 +629,11 @@ transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 `;
 
-
 const ArrowContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: space-between;
-  width:100px;
+  width: 100px;
   margin: 0 auto;
 `;
 
@@ -651,31 +645,25 @@ const ArrowSvg = styled(ArrowRight)`
 const runOnSpot = keyframes`
   0% {
     left: 0;
-    opacity: 0;
   }
   25% {
     left: 20px;
-    opacity: 1;
   }
   50% {
     left: 0;
-    opacity: 0;
   }
   75% {
     left: -20px;
-    opacity: 1;
   }
   100% {
     left: 0;
-    opacity: 0;
   }
-  `
+  `;
 
 const AnimatedArrow = styled.div`
   position: relative;
   left: 0;
   animation: ${runOnSpot} 2s linear infinite;
-
 `;
 // const ArrowContainer = styled.div`
 // width: 130px;
@@ -715,26 +703,11 @@ const ArrowAnimation = () => {
       <AnimatedArrow>
         <ArrowSvg />
       </AnimatedArrow>
-    
     </ArrowContainer>
   );
 };
 
 export default ArrowAnimation;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // export const ArrowSvg = styled(ArrowRight)`
 //   position: relative;
@@ -758,11 +731,8 @@ export default ArrowAnimation;
 //       left: 0;
 //     }
 //   }
-  
+
 // `
-
-
-
 
 // export const ArrowSvg = styled(ArrowRight)`
 //  &:nth-child(1) {
@@ -770,7 +740,6 @@ export default ArrowAnimation;
 //     animation: opacity 2s ease-out forwards infinite;
 //     animation-delay: 0s;
 //   }
-
 
 //   &:nth-child(2) {
 //      opacity: 0;
@@ -785,7 +754,7 @@ export default ArrowAnimation;
 //   }
 
 //   @keyframes opacity {
-   
+
 //     to {
 //       opacity: 1;
 //     }

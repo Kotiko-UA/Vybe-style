@@ -83,7 +83,8 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.img`
-  max-width: 77px;
+  width: 71px;
+  height: 94px;
   margin: 0 auto;
 `;
 
