@@ -28,6 +28,7 @@ export const Hero = () => {
   return (
     <Section>
       <Container id="home">
+
         <LogoContainer>
           <Logo src={LogoVibeStyle} alt="logo-company" />
           <NameCompany>VibeStyle</NameCompany>
