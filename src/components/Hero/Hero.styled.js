@@ -123,7 +123,7 @@ export const ButtonWraper = styled.div`
     align-items: center;
   }
 `;
-export const Button = styled.button`
+export const Button = styled.a`
   display: flex;
   align-items: center;
   background-color: transparent;
