@@ -7,6 +7,7 @@ import {
   Container,
   HeroTitle,
   Logo,
+  LogoContainer,
   NameCompany,
   PlayWrapper,
   Section,
@@ -27,8 +28,10 @@ export const Hero = () => {
   return (
     <Section id="home">
       <Container>
-        <Logo src={LogoVibeStyle} alt="logo-company" />
-        <NameCompany>VibeStyle</NameCompany>
+        <LogoContainer>
+          <Logo src={LogoVibeStyle} alt="logo-company" />
+          <NameCompany>VibeStyle</NameCompany>
+        </LogoContainer>
         <ButtonWraper className="heroButton">
           <Button href="#howwework">
             <SvgSpan>

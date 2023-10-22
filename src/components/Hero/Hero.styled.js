@@ -81,19 +81,12 @@ export const Container = styled.div`
     max-width: 1920px;
   }
 `;
-
-export const Logo = styled.img`
+export const LogoContainer = styled.div`
   width: 71px;
   height: 94px;
-  margin: 0 auto;
-`;
-
-export const NameCompany = styled.h1`
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 2.4;
-  letter-spacing: 1.296px;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
   margin-bottom: 60px;
   @media screen and (min-width: 768px) {
     margin-bottom: 144px;
@@ -104,6 +97,19 @@ export const NameCompany = styled.h1`
   @media screen and (min-width: 1920px) {
     margin-bottom: 124px;
   }
+`;
+export const Logo = styled.img`
+  width: 65px;
+  height: 68px;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
+export const NameCompany = styled.h1`
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2.4;
+  text-align: center;
 `;
 
 export const ButtonWraper = styled.div`
