@@ -125,10 +125,10 @@ line-height: 1.43;
 text-transform: lowercase;
 margin-top: 4px;
 margin-bottom: 4px; 
-transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: all ${({ theme }) => theme.animationTransform};
   }
   .team-name{
-    color: #FFF;
+    color: ${({ theme }) => theme.colorText};
     font-family: Inter;
     font-size: 14px;
     font-style: normal;
@@ -171,12 +171,12 @@ transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
     }
       .li-item:hover .team-name {
     color:${({ theme }) => theme.brandColor};
-    transform: translateY(15px) scale(1.2);
+    transform: translate(60px,10px) scale(1.2);
     
   }
 .li-item:hover .team-role {
     color: ${({ theme }) => theme.colorText};
-    transform: translate(30px, 15px) scale(1.2);
+    transform: translate(85px, 10px) scale(1.2);
   }
 
   @media screen and (min-width: 1920px) {
@@ -201,11 +201,11 @@ transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .li-item:hover .team-name {
       color: ${({ theme }) => theme.brandColor};
-      transform: translateY(15px) scale(1.2);
+      transform: translate(25px, 15px) scale(1.2);
     }
     .li-item:hover .team-role {
       color: ${({ theme }) => theme.colorText};
-      transform: translate(30px, 15px) scale(1.2);
+      transform: translate(60px, 15px) scale(1.2);
     }
     .li-item:hover .image {
       transform: scale(1.2);

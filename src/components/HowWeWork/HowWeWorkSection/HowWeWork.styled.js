@@ -60,7 +60,7 @@ export const Title = styled.h2`
     font-size: 40px;
   }
   @media screen and (min-width: 1920px) {
-    font-size: 90px;
+    font-size: 70px;
   }
 `;
 

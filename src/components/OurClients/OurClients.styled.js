@@ -70,8 +70,8 @@ export const Container = styled.div`
   max-width: 480px;
   height: 1578px;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  // padding-left: 20px;
+  // padding-right: 20px;
   @media screen and (min-width: 425px) and (max-width: 767px) {
     padding-left: 40px;
   }
@@ -116,7 +116,7 @@ export const Title = styled.h2`
     text-align: center;
   }
   @media screen and (min-width: 1920px) {
-    font-size: 90px;
+    font-size: 70px;
   }
 `;
 
@@ -132,7 +132,7 @@ export const MainBlock = styled.div`
 
 export const OneMilBlock = styled.div`
   box-sizing: border-box;
-  width: 180px;
+  width: 197px;
   height: 186px;
   border: 0.1px solid ${({ theme }) => theme.borderColor};
   border-bottom: none;
@@ -211,9 +211,10 @@ export const TitleH3 = styled.h3`
 export const SadGirlPhoto = styled.img`
   position: absolute;
   top: 0;
-  left: 184px;
-  width: 150px;
+  left: 220px;
+  width: 129px;
   height: 186px;
+  border-radius: 86.985px;
   @media screen and (min-width: 768px) {
     top: -80px;
     left: 230px;
@@ -240,7 +241,7 @@ export const SadGirlPhoto = styled.img`
 
 export const Block5mil = styled.div`
   box-sizing: border-box;
-  width: 333px;
+  width: 375px;
   height: 186px;
   padding-top: 26px;
   padding-left: 20px;
@@ -282,14 +283,16 @@ export const Block5mil = styled.div`
 export const PeopleOnBoard = styled.div`
   box-sizing: border-box;
   margin-left: 120px;
-  width: 213px;
+  width: 255px;
   height: 163px;
   padding-top: 21px;
-  padding-left: 21px;
+  padding-left: 41px;
   border-right: 0.1px solid ${({ theme }) => theme.borderColor};
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 768px) {
+    width: 213px;
+    padding-left: 21px;
     padding-top: 26px;
     position: absolute;
     left: 349px;
@@ -324,7 +327,7 @@ export const ManWithBagPhoto = styled.img`
   position: absolute;
   width: 141px;
   height: 343px;
-  left: -20px;
+  left: 0px;
   top: 371px;
 
   @media screen and (min-width: 768px) {
@@ -349,16 +352,17 @@ export const ManWithBagPhoto = styled.img`
 
 export const YearsBlock = styled.div`
   box-sizing: border-box;
-  width: 214px;
+  width: 256px;
   height: 179px;
   padding-top: 19px;
-  padding-left: 21px;
+  padding-left: 41px;
   margin-left: 119px;
   border: 0.1px solid ${({ theme }) => theme.borderColor};
   border-left: none;
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 768px) {
+    padding-left: 21px;
     position: absolute;
     left: 350px;
     top: 258px;
@@ -398,6 +402,8 @@ export const ProjectsBlock = styled.div`
   padding-top: 26px;
   display: flex;
   flex-direction: column;
+  padding-left: 20px;
+  border-left: 0.1px solid ${({ theme }) => theme.borderColor};
   @media screen and (min-width: 768px) {
     width: 213px;
     margin-top: 96px;
@@ -441,8 +447,8 @@ export const ProjectsBlock = styled.div`
 `;
 export const GirlInStylePhoto = styled.img`
   position: absolute;
-  top: 713px;
-  left: 207px;
+  top: 714px;
+  left: 227px;
   width: 148px;
   height: 186px;
 
@@ -466,16 +472,17 @@ export const GirlInStylePhoto = styled.img`
 
 export const AwardsBlock = styled.div`
   box-sizing: border-box;
-  width: 212px;
+  width: 232px;
   height: 187px;
   padding-top: 21px;
-  padding-left: 21px;
+  padding-left: 41px;
   border: 0.1px solid ${({ theme }) => theme.borderColor};
   border-left: none;
   margin-left: 143px;
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 768px) {
+    padding-left: 21px;
     height: 242px;
     width: 213px;
     position: absolute;
@@ -510,15 +517,16 @@ export const AwardsBlock = styled.div`
 
 export const VisitsBlock = styled.div`
   box-sizing: border-box;
-  width: 212px;
+  width: 232px;
   height: 187px;
   padding-top: 21px;
-  padding-left: 21px;
+  padding-left: 41px;
   margin-left: 143px;
   border-right: 0.1px solid ${({ theme }) => theme.borderColor};
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 768px) {
+    padding-left: 21px;
     width: 213px;
     position: absolute;
     left: 326px;
@@ -556,7 +564,7 @@ export const VisitsBlock = styled.div`
 
 export const GirlWithWordsPhoto = styled.img`
   position: absolute;
-  left: -20px;
+  left: 0px;
   top: 900px;
   width: 163px;
   height: 372px;
@@ -587,7 +595,8 @@ export const QuestionText = styled.a`
   width: 375px;
   border: 0.1px solid ${({ theme }) => theme.borderColor};
   position: absolute;
-  left: -20px;
+  left: 0px;
+  bottom: -163px;
   background-color: ${({ theme }) => theme.blackColor};
   color: ${({ theme }) => theme.borderColor};
   text-align: center;
@@ -599,24 +608,32 @@ export const QuestionText = styled.a`
   letter-spacing: 0.32px;
 
   @media screen and (min-width: 768px) {
+    left: -20px;
     border-color: ${({ theme }) => theme.borderColor};
     width: 213px;
     padding: 35.5px 27px;
-    
     margin-left: 20px;
     text-align: left;
     .link-text {
-      transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+      color: ${({ theme }) => theme.brandColor};
+    
+     background-image: linear-gradient(235deg, #F4F90F -1.28%, #0FF9C0 115.55%);
+    -webkit-background-clip: text; 
+    background-clip: text;
+    transition: color  ${({ theme }) => theme.animationStyles},transform  ${({ theme }) => theme.animationStyles};
     }
     &:hover .link-text {
-      color: ${({ theme }) => theme.brandColor};
+      @media screen and (min-width: 768px) {
+      color: transparent;
       transform: scale(1.2);
+       }
     }
   }
 @media screen and (min-width: 768px) and (max-width: 1367px){
   bottom:-170px;
 }
   @media screen and (min-width: 1368px) {
+    height:328px;
     width: 256px;
     color: ${({ theme }) => theme.colorText};
     font-family: Inter;
@@ -652,6 +669,9 @@ const ArrowContainer = styled.div`
 `;
 
 const ArrowSvg = styled(ArrowRight)`
+.link-text:hover & {
+  transform :rotate(90deg);
+}
   width: 30px;
   height: 30px;
   @media screen and (min-width:1368px){
@@ -678,37 +698,34 @@ const runOnSpot = keyframes`
     left: 0;
   }
   `;
+    const runOnSpotDown = keyframes`
+  0% {
+    top: 0;
+  }
+  25% {
+    top: 10px;
+  }
+  50% {
+    top: 0;
+  }
+  75% {
+    top: -10px;
+  }
+  100% {
+    top: 0;
+  }
+  `;
 
 const AnimatedArrow = styled.div`
   position: relative;
   left: 0;
   animation: ${runOnSpot} 2s linear infinite;
+   .link-text:hover & {
+  animation: ${runOnSpotDown} 1s linear infinite;
+ }
 `;
-// const ArrowContainer = styled.div`
-// width: 130px;
-//   display: flex;
-//   justify-content: space-between;
-//   // overflow: hidden;
-// `;
 
-// const ArrowSvg = styled(ArrowRight)`
-//   width: 30px;
-//   height: 30px;
-// `;
 
-// const moveRightKeyframes = keyframes`
-//   0% {
-//     transform: translateX(-40px);
-//   }
-//   100% {
-//     transform: translateX(80px);
-//   }
-// `;
-
-// const AnimatedArrow = styled.div`
-//   position: relative;
-//   animation: ${moveRightKeyframes} 1.5s linear infinite;
-// `;
 
 const ArrowAnimation = () => {
   return (
@@ -728,73 +745,3 @@ const ArrowAnimation = () => {
 
 export default ArrowAnimation;
 
-// export const ArrowSvg = styled(ArrowRight)`
-//   position: relative;
-//   left: 0;
-//   animation: runOnSpot 2s linear infinite;
-
-//   @keyframes runOnSpot {
-//     0% {
-//       left: 0;
-//     }
-//     25% {
-//       left: 20px;
-//     }
-//     50% {
-//       left: 0;
-//     }
-//     75% {
-//       left: -20px;
-//     }
-//     100% {
-//       left: 0;
-//     }
-//   }
-
-// `
-
-// export const ArrowSvg = styled(ArrowRight)`
-//  &:nth-child(1) {
-//      opacity: 0;
-//     animation: opacity 2s ease-out forwards infinite;
-//     animation-delay: 0s;
-//   }
-
-//   &:nth-child(2) {
-//      opacity: 0;
-//     animation: opacity 2s ease-out forwards infinite;
-//     animation-delay: 0.5s;
-//   }
-
-//   &:nth-child(3) {
-//      opacity: 0;
-//     animation: opacity 2s ease-out forwards infinite;
-//     animation-delay: 1s;
-//   }
-
-//   @keyframes opacity {
-
-//     to {
-//       opacity: 1;
-//     }
-// `
-
-// export const ArrowSvg = styled(ArrowRight)`
-// animation: moveArrow 4s linear infinite;
-// @keyframes moveArrow {
-//     0% {
-//       transform: translateX(0);
-//     }
-//     100% {
-//       transform: translateX(180px);
-//     }
-//   }
-// `
-
-// <!-- <svg width="31" height="20" viewBox="0 0 31 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-//     <path d="M8.00111 10.2235L19.7501 10.2216M19.7501 10.2216L15.1819 15.4442M19.7501 10.2216L15.1802 5.00062" stroke="#C4F934" stroke-width="1.56653" />
-//   <polygon points="190,45 190,55 200,50" fill="red" />
-//   <animateMotion repeatCount="indefinite">
-//     <mpath href="#arrowPath" />
-//   </animateMotion>
-// </svg> -->

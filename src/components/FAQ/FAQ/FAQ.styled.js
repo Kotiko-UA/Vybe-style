@@ -110,7 +110,7 @@ export const Title = styled.h2`
     top: 0;
     right: 200px;
     margin-bottom: 0;
-    font-size: 90px;
+    font-size: 70px;
   }
 `;
 
