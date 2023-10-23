@@ -56,7 +56,7 @@ padding-right: 39px;
 }
 @media screen and (min-width: 1920px){
   margin-bottom: 10px;
-  font-size: 60px;
+  font-size: 70px;
 }
 `
 export const List = styled.ul`

@@ -17,11 +17,14 @@ height: calc(100% / 4);
   left: 0;
   width: 100%;
   height: 100%;
- background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.25) 100%), 
-     linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%),
-     url(${props => props.$mobilephoto}),
-    #c4f934;
-    background-blend-mode: luminosity;
+ background: url(${props => props.$mobilephoto});
+
+
+//  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.95) 100%), 
+//  linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),
+//      url(${props => props.$mobilephoto}),
+//     ${({ theme }) => theme.brandColor};
+//     background-blend-mode: luminosity;
     background-repeat:no-repeat;
     background-size: cover;
   z-index: 0;
@@ -48,14 +51,16 @@ height: calc(100% / 4);
   left: 0;
   width: 100%;
   height: 100%;
- background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.25) 100%), 
-     linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%),
-     url(${props => props.$tabletphoto}),
-    #c4f934;
-    background-blend-mode: luminosity;
+   background: url(${props => props.$tabletphoto});
+   
+//  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.95) 100%), 
+//  linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),
+//      url(${props => props.$tabletphoto}),
+//     ${({ theme }) => theme.brandColor};
+//     background-blend-mode: luminosity;
     background-repeat:no-repeat;
     background-size: cover;
-    border-right: 1px solid #fff;
+    border-right: 0.5px solid ${({ theme }) => theme.colorText};
   z-index: 0;
   opacity: 0;
   transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -82,11 +87,13 @@ height: calc(100% / 4);
   left: 0;
   width: 100%;
   height: 100%;
- background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.25) 100%), 
-     linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%),
-     url(${props => props.$desktopphoto}),
-    #c4f934;
-    background-blend-mode: luminosity;
+  background:     url(${props => props.$desktopphoto});
+   
+//  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.95) 100%), 
+//  linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),
+//      url(${props => props.$desktopphoto}),
+//     ${({ theme }) => theme.brandColor};
+//     background-blend-mode: luminosity;
     background-repeat:no-repeat;
     background-size: cover;
       z-index: 0;
@@ -104,7 +111,7 @@ height: calc(100% / 4);
       bottom: 0;
       left: 0;
       height: 100%;
-      width: 1px;
+      width: 0.5px;
     }
     &::after {
       content: '';
@@ -113,14 +120,12 @@ height: calc(100% / 4);
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0) 0%,
-          rgba(0, 0, 0, 0.25) 100%
-        ),
-        linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%),
-        url(${props => props.$desktopphoto}), #c4f934;
-      background-blend-mode: luminosity;
+       background: url(${props => props.$desktopphoto});
+   
+//       background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.95) 100%), 
+//  linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),
+//         url(${props => props.$desktopphoto}),  ${({ theme }) => theme.brandColor};
+//       background-blend-mode: luminosity;
       background-repeat: no-repeat;
       background-size: cover;
       z-index: 0;

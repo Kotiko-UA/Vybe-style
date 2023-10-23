@@ -61,7 +61,7 @@ line-height: 1.2;
 flex-grow:1;
   }
   @media screen and (min-width: 1920px) {
-    font-size: 60px;
+    font-size: 70px;
     letter-spacing: 4.8px;
   }
 `;
@@ -185,7 +185,7 @@ export const SecondContainer = styled.div`
   width: 246px;
   display: flex;
   flex-direction: column;
-  gap:32px;
+  gap:28px;
   @media screen and (min-width: 768px) {
     width: 573px;
     
@@ -237,6 +237,8 @@ line-height: 1.5;
 letter-spacing: 0.48px;
 
   .link-to-contactus {
+    display:flex;
+    align-items:center;
     font-weight: 400;
    font-size: 16px;
 line-height: 1.5;
@@ -285,27 +287,26 @@ left: 235px;
 }
   position: relative;
   display: flex;
-  align-items:center;
+  align-items:flex-start;
   justify-content: space-between;
   width: 100px;
   margin-left: 20px;
+    @media screen and (min-width: 1368px) {
+margin-left: 10px;
+  }
   @media screen and (min-width: 1920px) {
 margin-left: 20px;
-
   }
 `;
 
 const ArrowSvg = styled(ArrowRight)`
-  @media screen and (min-width: 768px) {
-
-  }
-  @media screen and (min-width: 1368px) {
-   }
-  @media screen and (min-width: 1920px) {
-width: 44px;
+ .link-to-contactus:hover & {
+  transform :rotate(90deg);
+ }
+ 
+  @media screen and (min-width:1368px){
+     width: 44px;
 height: 40px;
-
-  }
 `;
 
 const runOnSpot = keyframes`
@@ -325,13 +326,32 @@ const runOnSpot = keyframes`
     left: 0;
   }
   `;
+  const runOnSpotDown = keyframes`
+  0% {
+    top: 0;
+  }
+  25% {
+    top: 10px;
+  }
+  50% {
+    top: 0;
+  }
+  75% {
+    top: -10px;
+  }
+  100% {
+    top: 0;
+  }
+  `;
 
 const AnimatedArrow = styled.span`
   position: relative;
   left: 0;
   display:flex;
-  align-items: center;
-  animation: ${runOnSpot} 2s linear infinite;
+    animation: ${runOnSpot} 2s linear infinite;
+  .link-to-contactus:hover & {
+  animation: ${runOnSpotDown} 1s linear infinite;
+ }
 `;
 
 const ArrowAnimation = () => {
