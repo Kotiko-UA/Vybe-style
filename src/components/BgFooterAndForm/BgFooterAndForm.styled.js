@@ -6,9 +6,8 @@ import bgFooterTablet2x from './images/form_and_footer_background_tablet_2x.png'
 
 export const BackgroundImage = styled.div`
   width: 100%;
-  /* background-image: linear-gradient(267deg, #000 2.55%, rgba(0, 0, 0, 0) 80.9%),
-    url(${bgFooterMobile1x}); */
-  background-image: url(${bgFooterMobile1x});
+  background-image: linear-gradient(267deg, #000 2.55%, rgba(0, 0, 0, 0) 80.9%),
+    url(${bgFooterMobile1x});
 
   background-size: 516px 500px;
   background-repeat: no-repeat;
