@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useMediaQuery } from '@react-hook/media-query';
 import { PopUp } from './PopUp/PopUp';
 import {
   FooterBlock,
@@ -11,11 +12,14 @@ import {
   LinkedinSvg,
   InstagramSvg,
   CopyrightSvg,
-  CopyrightWrap,
   CreatedByLink,
   DribbleSvg,
   BehanceSvg,
   UaFlagSvg,
+  CopyrightText,
+  CopyrightYearWrap,
+  CopyrightWrap,
+  CopyrightTabletText,
 } from './Footer.styled';
 
 export const Footer = () => {
@@ -33,17 +37,21 @@ export const Footer = () => {
     }
   }, [isModalOpen]);
 
+  const isScreenTablet = useMediaQuery(
+    '(min-width: 768px) and (max-width: 1367px)'
+  );
+
   return (
     <FooterBlock>
       <FooterContainer>
         <Address>
-          <UaFlagSvg width="29px" height="18px" />
+          <UaFlagSvg width="20px" height="12px" />
           <AddressLink
-            href="https://maps.app.goo.gl/6haXRa5Jv8jBtiwJ9"
+            href="https://maps.app.goo.gl/QN7KGJJXFsZkZtjQ7"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Kyiv, Ukraine Regeneratorna 4 Str. 16
+            Reheneratorna Street, 4, Kyiv, Ukraine
           </AddressLink>
         </Address>
         <SocialsList>
@@ -87,12 +95,22 @@ export const Footer = () => {
         <CreatedByLink onClick={handleModal}>
           created <br /> by GoIT students
         </CreatedByLink>
-        
-       <PopUp isModalOpen={isModalOpen} onCloseModal={handleModal} />
-         
+        <PopUp isModalOpen={isModalOpen} onCloseModal={handleModal} />
         <CopyrightWrap>
-          <CopyrightSvg width="16px" height="16px" />
-          <FooterText>2023</FooterText>
+          {isScreenTablet ? (
+            <CopyrightTabletText>
+              VibeStyle design agency. All rights reserved
+            </CopyrightTabletText>
+          ) : (
+            <CopyrightText>
+              VibeStyle design agency All rights reserved
+            </CopyrightText>
+          )}
+
+          <CopyrightYearWrap>
+            <CopyrightSvg width="16px" height="16px" />
+            <FooterText>2023</FooterText>
+          </CopyrightYearWrap>
         </CopyrightWrap>
       </FooterContainer>
     </FooterBlock>

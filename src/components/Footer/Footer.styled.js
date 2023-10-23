@@ -7,16 +7,17 @@ import { ReactComponent as IconCopyright } from './icons/copyright.svg';
 import { ReactComponent as IconUaFlag } from './icons/uaflag.svg';
 
 export const FooterBlock = styled.footer`
-  padding-top: 38px;
-  padding-bottom: 89px;
+  padding-top: 61px;
+  padding-bottom: 30px;
 
   @media only screen and (min-width: 768px) {
-    padding-top: 70px;
+    padding-top: 71px;
+    padding-bottom: 68px;
   }
 
   @media only screen and (min-width: 1368px) {
-    padding-top: 25px;
-    padding-bottom: 66px;
+    padding-top: 40px;
+    padding-bottom: 63px;
   }
   @media only screen and (min-width: 1920px) {
     padding-top: 32px;
@@ -30,15 +31,27 @@ export const FooterContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 23px;
+
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
 
+  > *:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  > *:first-child {
+    margin-bottom: 49px;
+  }
+
   @media only screen and (min-width: 768px) {
     max-width: 768px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 197px;
+    padding-right: 197px;
+
+    > *:first-child {
+      margin-bottom: 40px;
+    }
   }
 
   @media only screen and (min-width: 1368px) {
@@ -48,16 +61,19 @@ export const FooterContainer = styled.div`
     align-items: center;
     max-width: 1368px;
     padding-left: 60px;
-    padding-right: 245px;
+    padding-right: 201px;
 
     > *:first-child {
-      margin-right: 93px;
+      margin-right: 88px;
+      margin-bottom: 0px;
     }
     > :nth-child(2) {
       margin-right: 15px;
+      margin-bottom: 0px;
     }
     > :nth-child(3) {
-      margin-right: 101px;
+      margin-right: 102px;
+      margin-bottom: 0px;
     }
   }
 
@@ -65,14 +81,14 @@ export const FooterContainer = styled.div`
     max-width: 1920px;
 
     padding-left: 120px;
-    padding-right: 232px;
+    padding-right: 195px;
 
     > *:first-child {
-      margin-right: 292px;
+      margin-right: 87px;
     }
 
     > :nth-child(3) {
-      margin-right: 329px;
+      margin-right: 263px;
     }
   }
 `;
@@ -84,7 +100,7 @@ export const Address = styled.address`
   align-items: center;
   gap: 12px;
   @media only screen and (min-width: 1368px) {
-    gap: 24px;
+    gap: 20px;
     margin: 0px;
     order: 3;
   }
@@ -94,7 +110,7 @@ export const AddressLink = styled.a`
   display: block;
   width: 100%;
 
-  font-size: 10px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.92;
@@ -103,41 +119,22 @@ export const AddressLink = styled.a`
 
   color: ${({ theme }) => theme.textColor};
   @media only screen and (min-width: 1368px) {
-    margin: 0px;
-    font-size: 18px;
-    text-transform: uppercase;
+    white-space: nowrap;
   }
 
   @media only screen and (min-width: 1920px) {
-    font-size: 21px;
+    margin: 0px;
+    font-size: 16px;
   }
-`;
-export const CopyrightWrap = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-
-  @media only screen and (min-width: 1368px) {
-    margin-bottom: 0px;
-    order: 4;
-  }
-`;
-
-export const FooterText = styled.p`
-  text-align: center;
-  font-size: 21px;
-  line-height: normal;
-
-  color: ${({ theme }) => theme.textColor};
 `;
 
 export const SocialsList = styled.ul`
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 24px;
 
   @media only screen and (min-width: 1368px) {
+    gap: 15px;
     margin-bottom: 0;
     order: 1;
   }
@@ -172,10 +169,90 @@ export const SocialsLink = styled.a`
       }
     }
   }
+
+  @media only screen and (min-width: 1368px) {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
+export const CopyrightWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @media only screen and (min-width: 480px) {
+    max-width: 480px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  @media only screen and (min-width: 1368px) {
+    max-width: 100%;
+    flex-direction: row;
+    gap: 11px;
+    order: 4;
+  }
+  @media only screen and (min-width: 1920px) {
+    max-width: 273px;
+  }
+`;
+
+export const CopyrightYearWrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+
+  @media only screen and (min-width: 1368px) {
+    margin-bottom: 0px;
+    order: 4;
+  }
+`;
+
+export const CopyrightText = styled.p`
+  display: block;
+  font-size: 12px;
+  max-width: 139px;
+  font-style: normal;
+  font-weight: 300;
+
+  @media only screen and (min-width: 1368px) {
+    max-width: 162px;
+    max-height: 39px;
+    font-size: 14px;
+    text-align: right;
+    white-space: pre-line;
+  }
+`;
+
+export const CopyrightTabletText = styled.p`
+  display: flex;
+  max-width: 100%;
+  text-align: center;
+  font-size: 14px;
+  line-height: normal;
+`;
 export const CopyrightSvg = styled(IconCopyright)`
   fill: ${({ theme }) => theme.textColor};
+`;
+
+export const FooterText = styled.p`
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+
+  color: ${({ theme }) => theme.textColor};
+
+  @media only screen and (min-width: 1920px) {
+    font-size: 20px;
+  }
 `;
 
 export const CreatedByLink = styled.p`
@@ -193,7 +270,7 @@ export const CreatedByLink = styled.p`
     content: '';
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -8px;
     width: 100%;
     height: 1px;
     background-color: ${({ theme }) => theme.brandColor};
@@ -207,7 +284,7 @@ export const CreatedByLink = styled.p`
   }
 
   @media only screen and (min-width: 1920px) {
-    width: 130px;
-    font-size: 16px;
+    width: 146px;
+    font-size: 18px;
   }
 `;
