@@ -112,10 +112,10 @@ export const OurClients = () => {
             href="#contactus"
             className={currentLanguage === 'ua' ? 'uk-question-text' : ''}
           >
-            <p className="link-text">
+            <div className="link-text">
               {t('our-cliectc-text-6')}
               {ArrowAnimation()}
-            </p>
+            </div>
           </QuestionText>
         </MainBlock>
       </Container>
