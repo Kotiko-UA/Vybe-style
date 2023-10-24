@@ -17,20 +17,25 @@ height: calc(100% / 4);
   left: 0;
   width: 100%;
   height: 100%;
- background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.25) 100%), 
-     linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%),
-     url(${props => props.$mobilephoto}),
-    #c4f934;
-    background-blend-mode: luminosity;
+ background: url(${props => props.$mobilephoto});
+
+
+//  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.95) 100%), 
+//  linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),
+//      url(${props => props.$mobilephoto}),
+//     ${({ theme }) => theme.brandColor};
+//     background-blend-mode: luminosity;
     background-repeat:no-repeat;
     background-size: cover;
   z-index: 0;
   opacity: 0;
   transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
- &:hover::after {
+ &:hover::after,
+   &:focus::after {
     opacity: 1;
   }
+
 }
 @media screen and (min-width: 768px){
  width: calc(100% / 4);
@@ -46,14 +51,16 @@ height: calc(100% / 4);
   left: 0;
   width: 100%;
   height: 100%;
- background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.25) 100%), 
-     linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%),
-     url(${props => props.$tabletphoto}),
-    #c4f934;
-    background-blend-mode: luminosity;
+   background: url(${props => props.$tabletphoto});
+   
+//  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.95) 100%), 
+//  linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),
+//      url(${props => props.$tabletphoto}),
+//     ${({ theme }) => theme.brandColor};
+//     background-blend-mode: luminosity;
     background-repeat:no-repeat;
     background-size: cover;
-    border-right: 1px solid #fff;
+    border-right: 0.5px solid ${({ theme }) => theme.colorText};
   z-index: 0;
   opacity: 0;
   transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -80,11 +87,13 @@ height: calc(100% / 4);
   left: 0;
   width: 100%;
   height: 100%;
- background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.25) 100%), 
-     linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%),
-     url(${props => props.$desktopphoto}),
-    #c4f934;
-    background-blend-mode: luminosity;
+  background:     url(${props => props.$desktopphoto});
+   
+//  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.95) 100%), 
+//  linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),
+//      url(${props => props.$desktopphoto}),
+//     ${({ theme }) => theme.brandColor};
+//     background-blend-mode: luminosity;
     background-repeat:no-repeat;
     background-size: cover;
       z-index: 0;
@@ -102,7 +111,7 @@ height: calc(100% / 4);
       bottom: 0;
       left: 0;
       height: 100%;
-      width: 1px;
+      width: 0.5px;
     }
     &::after {
       content: '';
@@ -111,14 +120,12 @@ height: calc(100% / 4);
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0) 0%,
-          rgba(0, 0, 0, 0.25) 100%
-        ),
-        linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%),
-        url(${props => props.$desktopphoto}), #c4f934;
-      background-blend-mode: luminosity;
+       background: url(${props => props.$desktopphoto});
+   
+//       background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.95) 100%), 
+//  linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),
+//         url(${props => props.$desktopphoto}),  ${({ theme }) => theme.brandColor};
+//       background-blend-mode: luminosity;
       background-repeat: no-repeat;
       background-size: cover;
       z-index: 0;
@@ -134,7 +141,8 @@ height: calc(100% / 4);
     flex-shrink: 0;
   }
 
-  &:hover::after {
+  &:hover::after,
+   &:focus::after {
     opacity: 1;
   }
 
@@ -196,7 +204,8 @@ export const Number = styled.p`
   letter-spacing: -2.532px;
   text-transform: uppercase;
   z-index: 2;
-  ${LiItem}:hover & {
+   ${LiItem}:hover &,
+  ${LiItem}:focus & {
     font-size: 80px;
     line-height: 1.05;
     letter-spacing: -4.285px;
@@ -236,7 +245,8 @@ export const Text = styled.p`
   letter-spacing: -0.736px;
   text-transform: uppercase;
   z-index: 2;
-  ${LiItem}:hover & {
+  ${LiItem}:hover &,
+  ${LiItem}:focus &{
     font-size: 32px;
     line-height: 1;
     letter-spacing: -1.17px;
@@ -281,7 +291,13 @@ export const HiddenText = styled.p`
   letter-spacing: 0.24px;
   max-width: 290px;
   margin-top: 40px;
+  opacity: 0;
   z-index: 2;
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  ${LiItem}:hover &,
+  ${LiItem}:focus & {
+    opacity: 1;
+  }
   @media screen and (min-width: 768px) {
     max-width: 199px;
   }

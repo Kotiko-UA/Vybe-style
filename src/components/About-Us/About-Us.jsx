@@ -34,7 +34,7 @@ export const AboutUs = () => {
           </AboutUsDescriptionTextThird>
           <AboutUsDescriptionTextForth>
               <a href='#contactus' className='link-to-contactus'>{t('about-us-text-5')}{ArrowAnimation()}</a>
-            <p>{t('about-us-text-4')}</p>
+            <span>{t('about-us-text-4')}</span>
           </AboutUsDescriptionTextForth>
         </SecondContainer>
         </MainTextContainer>

@@ -3,7 +3,7 @@ import { Swiper } from 'swiper/react';
 import { ReactComponent as IconLinkedin } from './icons/linkedin.svg';
 
 export const Wrapper = styled.section`
-  padding: 52px 0;
+  padding: 56px 0;
   width: 100%;
 
   @media screen and (min-width: 768px) {
@@ -13,7 +13,7 @@ export const Wrapper = styled.section`
     padding: 85px 0;
   }
   @media screen and (min-width: 1920px) {
-    padding: 101px 0 100px 0;
+    padding: 110px 0;
   }
 `;
 export const Container = styled.div`
@@ -44,25 +44,33 @@ export const Container = styled.div`
   }
 `;
 export const H2 = styled.h2`
-  margin-bottom: 128px;
+  margin-bottom: 34px;
   color: ${props => props.theme.colorText};
   font-family: 'Inter', sans-serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 300;
   line-height: 120%;
+  text-align: left;
+  transition: color ${({ theme }) => theme.animationStyles};
+
+  &:hover,
+  :focus {
+    color: ${({ theme }) => theme.brandColor};
+  }
   @media screen and (min-width: 768px) {
-    margin-bottom: 16px;
+    margin-bottom: 41px;
     font-size: 40px;
   }
   @media screen and (min-width: 1368px) {
-    margin-bottom: 24px;
+    margin-bottom: 60px;
+    margin-right: 254px;
     text-align: right;
   }
   @media screen and (min-width: 1920px) {
     margin-bottom: 80px;
+    margin-right: 488px;
     font-size: 90px;
-    text-align: center;
   }
 `;
 export const SwiperEl = styled(Swiper)`

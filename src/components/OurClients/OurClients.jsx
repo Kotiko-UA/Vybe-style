@@ -59,7 +59,11 @@ export const OurClients = () => {
             className={currentLanguage === 'en' ? '' : 'uk-awards-5mil'}
           >
             <Text
-              className={currentLanguage === 'en' ? 'en-awards-5mil-text' : 'uk-awards-5mil-text'}
+              className={
+                currentLanguage === 'en'
+                  ? 'en-awards-5mil-text'
+                  : 'uk-awards-5mil-text'
+              }
             >
               {t('our-clients-text-2')}
             </Text>
@@ -108,8 +112,10 @@ export const OurClients = () => {
             href="#contactus"
             className={currentLanguage === 'ua' ? 'uk-question-text' : ''}
           >
-            <p className="link-text">{t('our-cliectc-text-6')}</p>
-            {ArrowAnimation()}
+            <p className="link-text">
+              {t('our-cliectc-text-6')}
+              {ArrowAnimation()}
+            </p>
           </QuestionText>
         </MainBlock>
       </Container>

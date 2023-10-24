@@ -7,21 +7,22 @@ import LeftSideBgImgDesktop2x from '../images/form_and_footer_background_1920px_
 import { ReactComponent as CloseSvg } from '../images/icons/close-icon.svg';
 
 export const FormSection = styled.section`
-  padding-top: 80px;
-  padding-bottom: 53px;
+  padding-top: 56px;
+  padding-bottom: 56px;
 
   @media only screen and (min-width: 768px) {
     padding-top: 70px;
-    padding-bottom: 83px;
+    padding-bottom: 70px;
   }
 
   @media only screen and (min-width: 1368px) {
     padding-top: 85px;
-    padding-bottom: 50px;
+    padding-bottom: 85px;
   }
 
   @media only screen and (min-width: 1920px) {
-    padding-top: 100px;
+    padding-top: 110px;
+    padding-bottom: 110px;
   }
 `;
 
@@ -63,6 +64,12 @@ export const FormSectionHeader = styled.h2`
   font-size: 24px;
   font-weight: 300;
   line-height: 1.2;
+  transition: color ${({ theme }) => theme.animationStyles};
+
+  &:hover,
+  :focus {
+    color: ${({ theme }) => theme.brandColor};
+  }
 
   @media only screen and (min-width: 768px) {
     margin-bottom: 56px;
@@ -79,6 +86,7 @@ export const FormSectionHeader = styled.h2`
   @media only screen and (min-width: 1920px) {
     width: 878px;
     font-size: 60px;
+    margin-bottom: 80px;
   }
 `;
 

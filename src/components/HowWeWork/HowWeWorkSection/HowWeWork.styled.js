@@ -1,21 +1,24 @@
 import styled from 'styled-components';
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
 
 export const Wrapper = styled.section`
   background-color: ${({ theme }) => theme.blackColor};
   color: ${({ theme }) => theme.colorText};
   margin: 0 auto;
-  padding-top: 106px;
-   @media screen and (min-width: 768px) {
-    padding-top: 140px;
-    }
-     @media screen and (min-width: 1368px) {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  @media screen and (min-width: 768px) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  @media screen and (min-width: 1368px) {
+    padding-top: 85px;
     padding-bottom: 85px;
-    }
-    @media screen and (min-width: 1920px) {
-    padding-top: 0;
-    padding-bottom: 105px;
-    }
+  }
+  @media screen and (min-width: 1920px) {
+    padding-top: 110;
+    padding-bottom: 110px;
+  }
 `;
 
 export const Container = styled.div`
@@ -34,7 +37,7 @@ export const Container = styled.div`
     max-width: 1368px;
     padding-left: 60px;
     padding-right: 245px;
-       margin: 0 auto;
+    margin: 0 auto;
   }
   @media screen and (min-width: 1920px) {
     max-width: 1920px;
@@ -51,16 +54,18 @@ export const Title = styled.h2`
   font-weight: 300;
   line-height: 1.2;
   margin-bottom: 40px;
-   transition: color  ${({ theme }) => theme.animationStyles};
+  transition: color ${({ theme }) => theme.animationStyles};
 
-  &:hover {
+  &:hover,
+  :focus {
     color: ${({ theme }) => theme.brandColor};
   }
   @media screen and (min-width: 768px) {
     font-size: 40px;
   }
   @media screen and (min-width: 1920px) {
-    font-size: 90px;
+    font-size: 70px;
+    margin-bottom: 80px;
   }
 `;
 
@@ -125,34 +130,33 @@ export const Thumb = styled.div`
 export const Image = styled.img`
   width: 100%;
   height: 100%;
-   @media screen and (min-width:1920px){
-    content: url(${props => props.$maxphoto})
+  @media screen and (min-width: 1920px) {
+    content: url(${props => props.$maxphoto});
   }
 `;
 
 export const PlayerWrapper = styled.div`
-position: relative;
+  position: relative;
   padding-top: 56.25%;
-   @media screen and (min-width: 1368px) {
-       width: 100%;
-       height: 100%;
-      }
+  @media screen and (min-width: 1368px) {
+    width: 100%;
+    height: 100%;
+  }
   @media screen and (min-width: 1920px) {
     width: 100%;
-   
-     }
-`
+  }
+`;
 
 export const StyledPlayer = styled(ReactPlayer)`
-position: absolute;
-width: 100% !important;
+  position: absolute;
+  width: 100% !important;
 
   top: 0;
   left: 0;
-   @media screen and (min-width: 1368px) {
-       height: 100% !important;
-             }
-              @media screen and (min-width: 1920px) {
-    height: 100% !important;   
-     }
-`
+  @media screen and (min-width: 1368px) {
+    height: 100% !important;
+  }
+  @media screen and (min-width: 1920px) {
+    height: 100% !important;
+  }
+`;

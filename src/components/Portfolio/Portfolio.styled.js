@@ -2,17 +2,17 @@ import styled from 'styled-components';
 import { Swiper } from 'swiper/react';
 
 export const Wrapper = styled.section`
-  padding: 52px 0;
+  padding: 56px 0;
   width: 100%;
 
   @media screen and (min-width: 768px) {
-    padding: 60px 0;
+    padding: 70px 0;
   }
   @media screen and (min-width: 1368px) {
     padding: 85px 0;
   }
   @media screen and (min-width: 1920px) {
-    padding: 105px 0 100px 0;
+    padding: 110px 0;
   }
 `;
 export const Container = styled.div`
@@ -48,6 +48,12 @@ export const H2 = styled.h2`
   font-style: normal;
   font-weight: 300;
   line-height: 120%;
+  transition: color ${({ theme }) => theme.animationStyles};
+
+  &:hover,
+  :focus {
+    color: ${({ theme }) => theme.brandColor};
+  }
   @media screen and (min-width: 768px) {
     font-size: 40px;
     line-height: 120%;
