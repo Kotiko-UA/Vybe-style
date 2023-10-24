@@ -298,13 +298,14 @@ const ArrowContainer = styled.span`
 `;
 
 const ArrowSvg = styled(ArrowRight)`
- .link-to-contactus:hover & {
-  transform :rotate(90deg);
- }
- 
-  @media screen and (min-width:1368px){
-     width: 44px;
-height: 40px;
+  .link-to-contactus:hover & {
+    transform: rotate(90deg);
+  }
+
+  @media screen and (min-width: 1368px) {
+    width: 44px;
+    height: 40px;
+  }
 `;
 
 const runOnSpot = keyframes`

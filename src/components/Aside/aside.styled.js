@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { ReactComponent as BurgerIcon } from './images/burger.svg';
 import { ReactComponent as CloseIcon } from './images/close.svg';
+import { ReactComponent as ArrowRight } from '../OurClients/img/arrow-right.svg';
 export const Logo = styled.img`
   max-width: 77px;
   margin: 0 auto;
@@ -111,7 +112,8 @@ export const Menu = styled.div`
 
 export const MenuItem = styled.li`
   transition: color ${({ theme }) => theme.animationStyles};
-  & a:hover {
+  & a:hover,
+  a:focus {
     color: ${({ theme }) => theme.brandColor};
     cursor: pointer;
   }
@@ -121,6 +123,22 @@ export const MenuItem = styled.li`
   &:first-child {
     margin-top: 0px;
   }
+  &:last-child a {
+    color: ${({ theme }) => theme.brandColor};
+    scale: 1;
+    transition: scale ${({ theme }) => theme.animationStyles};
+    &:hover,
+    :focus {
+      scale: 1.1;
+    }
+  }
+`;
+export const LinkWrapper = styled.a`
+  display: flex;
+`;
+export const ArrowSvg = styled(ArrowRight)`
+  width: 31px;
+  height: 20px;
 `;
 
 export const SelectContainer = styled.div`

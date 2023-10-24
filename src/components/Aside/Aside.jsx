@@ -10,7 +10,9 @@ import {
   MenuItem,
   ContainerMenu,
   CloseBtnMenu,
-   BackgroundMenuOpen,
+  BackgroundMenuOpen,
+  ArrowSvg,
+  LinkWrapper,
 } from './aside.styled';
 import LogoVibeStyle from './images/logo-vibe-style.png';
 import BurgerMenu from './images/burger-menu.png';
@@ -81,8 +83,8 @@ export const Aside = () => {
     closeMenu();
   };
 
-     const handleTypeSelect = e => {
-         changeLanguage(e.value)
+  const handleTypeSelect = e => {
+    changeLanguage(e.value);
   };
 
   return (
@@ -90,10 +92,7 @@ export const Aside = () => {
       {!isOpen && (
         <BurgerMenuBtn src={BurgerMenu} alt="menu" onClick={toggleMenuBtn} />
       )}
-      <BackgroundMenuOpen
-        $open={`${isOpen}`}
-        onClick={handleBackdropClick}
-      >
+      <BackgroundMenuOpen $open={`${isOpen}`} onClick={handleBackdropClick}>
         <ContainerMobileMenu
           className={`main-menu ${isOpen ? 'open-menu' : ''}`}
         >
@@ -101,22 +100,22 @@ export const Aside = () => {
           <NameCompany>VibeStyle</NameCompany>
           <Menu>
             <MySelect
-            className="custom-select"
+              className="custom-select"
               dataFunc={handleTypeSelect}
               lang={i18n.language}
-                          />
-                           {/* <SelectLang
+            />
+            {/* <SelectLang
                 value={i18n.language}
                 onChange={e => changeLanguage(e.target.value)}
               >
                 <SelectLangOption value="en">English</SelectLangOption>
                 <SelectLangOption value="ua">Українська</SelectLangOption>
               </SelectLang> */}
-            
+
             <ContainerMenu className="container-menu-ua">
               <ul>
                 {menuList.map(({ nameEn, nameUa, link, id }) => {
-                  return (
+                  return id !== 9 ? (
                     <MenuItem
                       key={id}
                       className="menu-items"
@@ -128,6 +127,20 @@ export const Aside = () => {
                       <a href={link}>
                         {currentLanguage === 'en' ? nameEn : nameUa}
                       </a>
+                    </MenuItem>
+                  ) : (
+                    <MenuItem
+                      key={id}
+                      className="menu-items"
+                      onClick={() => {
+                        enableBodyScroll(document.body);
+                        closeMenu();
+                      }}
+                    >
+                      <LinkWrapper href={link}>
+                        {currentLanguage === 'en' ? nameEn : nameUa}
+                        <ArrowSvg />
+                      </LinkWrapper>
                     </MenuItem>
                   );
                 })}
