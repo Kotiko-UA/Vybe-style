@@ -103,12 +103,11 @@ export const ContactForm = () => {
       setShowSuccessPopup(true);
       setFiles([]);
     } catch (error) {
-      console.log('Моя помилка', error.message);
+      console.log(error.message);
     } finally {
       setSubmitting(false);
     }
   };
-  const someText = t('form-name-error-1');
   return (
     <FormSection>
       <FormContainer id="contactus">
@@ -118,7 +117,7 @@ export const ContactForm = () => {
           <Formik
             initialValues={initialValues}
             onSubmit={handleSubmit}
-            validationSchema={validationSchema(t, someText)}
+            validationSchema={validationSchema(t)}
           >
             {props => (
               <Form autoComplete="off">
@@ -191,7 +190,6 @@ export const ContactForm = () => {
                     value={props.values.message}
                     onBlur={props.handleBlur}
                   />
-
                   <FormikFilePicker
                     type="file"
                     name="files"
@@ -202,7 +200,9 @@ export const ContactForm = () => {
                   />
                   {props?.values?.files?.length > 0 && (
                     <AttachedFilesList>
-                      <SelectedFilesText>Selected files:</SelectedFilesText>
+                      <SelectedFilesText>
+                        {t('form-selected-files')}:
+                      </SelectedFilesText>
                       <SelectedFilesList>
                         {props.values.files.map((file, index) => {
                           return (
