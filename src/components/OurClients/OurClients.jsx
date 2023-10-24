@@ -48,7 +48,7 @@ export const OurClients = () => {
             className={currentLanguage === 'en' ? '' : 'uk-awards-1mil'}
           >
             <Text>{t('our-clients-text-1')}</Text>
-            <TitleH3>1M</TitleH3>
+            <TitleH3>200K</TitleH3>
             <SadGirlPhoto
               loading="lazy"
               src={sadGirlPhoto}
@@ -67,11 +67,11 @@ export const OurClients = () => {
             >
               {t('our-clients-text-2')}
             </Text>
-            <TitleH3>$50M</TitleH3>
+            <TitleH3>$100K</TitleH3>
           </Block5mil>
           <PeopleOnBoard>
             <Text>{t('our-clients-text-3')}</Text>
-            <TitleH3>60+</TitleH3>
+            <TitleH3>10+</TitleH3>
           </PeopleOnBoard>
           <ManWithBagPhoto
             src={manWithBagPhoto}
@@ -84,7 +84,7 @@ export const OurClients = () => {
           </YearsBlock>
           <ProjectsBlock>
             <Text className="projects-text">{t('our-cliects-text-5')}</Text>
-            <TitleH3>500+</TitleH3>
+            <TitleH3>100+</TitleH3>
           </ProjectsBlock>
           <GirlInStylePhoto
             src={girlIntylePhoto}
@@ -95,13 +95,13 @@ export const OurClients = () => {
             className={currentLanguage === 'en' ? '' : 'uk-awards-block'}
           >
             <Text>{t('our-clients-text-7')}</Text>
-            <TitleH3>80+</TitleH3>
+            <TitleH3>5+</TitleH3>
           </AwardsBlock>
           <VisitsBlock
             className={currentLanguage === 'en' ? '' : 'uk-visits-block'}
           >
             <Text className="visits-text">{t('our-clients-text-8')}</Text>
-            <TitleH3>25M</TitleH3>
+            <TitleH3>20K</TitleH3>
           </VisitsBlock>
           <GirlWithWordsPhoto
             src={girlWithWordsPhoto}

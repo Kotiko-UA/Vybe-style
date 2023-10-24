@@ -35,7 +35,9 @@ height: calc(100% / 4);
    &:focus::after {
     opacity: 1;
   }
-
+}
+&.is-hovered::after {
+  opacity: 1;
 }
 @media screen and (min-width: 768px){
  width: calc(100% / 4);
@@ -145,7 +147,27 @@ height: calc(100% / 4);
    &:focus::after {
     opacity: 1;
   }
+&.is-hovered{
+  flex-shrink: 0;
+    height: 315px;
 
+    @media screen and (min-width: 768px) {
+      flex-grow: 1;
+      width: 242px;
+      height: 475px;
+    }
+    @media screen and (min-width: 1368px) {
+      &:not(:first-child) {
+        border-left: 1px solid #fff;
+      }
+      width: 295px;
+      height: 656px;
+    }
+    @media screen and (min-width: 1920px) {
+      width: 484px;
+      height: 950px;
+    }
+}
   &:hover {
     flex-shrink: 0;
     height: 315px;
@@ -223,6 +245,24 @@ export const Number = styled.p`
       line-height: 2.05;
     }
   }
+  .is-hovered &{
+    font-size: 80px;
+    line-height: 1.05;
+    letter-spacing: -4.285px;
+    @media screen and (min-width: 768px) {
+      line-height: 1.5;
+      font-size: 102px;
+    }
+    @media screen and (min-width: 1368px) {
+      font-size: 124px;
+      font-weight: 600;
+      line-height: 1.12;
+      letter-spacing: -5.064px;
+    }
+    @media screen and (min-width: 1920px) {
+      line-height: 2.05;
+    }
+  }
   @media screen and (min-width: 1368px) {
     font-size: 92px;
     font-weight: 600;
@@ -247,6 +287,26 @@ export const Text = styled.p`
   z-index: 2;
   ${LiItem}:hover &,
   ${LiItem}:focus &{
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -1.17px;
+    @media screen and (min-width: 768px) {
+      margin-top: 50px;
+    }
+    @media screen and (min-width: 1368px) {
+      font-size: ${props => (props.$lang === 'en' ? '52px' : '44px')};
+      line-height: 1.3;
+      letter-spacing: -2.34px;
+      margin-top: 60px;
+    }
+    @media screen and (min-width: 1920px) {
+      font-size: ${props => (props.$lang === 'en' ? '76px' : '68px')};
+      line-height: 1.5;
+      letter-spacing: -2.34px;
+      margin-top: 0px;
+    }
+  }
+  .is-hovered &{
     font-size: 32px;
     line-height: 1;
     letter-spacing: -1.17px;
@@ -296,6 +356,9 @@ export const HiddenText = styled.p`
   transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
   ${LiItem}:hover &,
   ${LiItem}:focus & {
+    opacity: 1;
+  }
+  .is-hovered &{
     opacity: 1;
   }
   @media screen and (min-width: 768px) {

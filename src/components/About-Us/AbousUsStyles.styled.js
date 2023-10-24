@@ -251,14 +251,14 @@ export const AboutUsDescriptionTextForth = styled.p`
   .link-to-contactus:hover {
     @media screen and (min-width: 768px) {
       color: transparent;
-      transform: scale(1.2) translateX(60px);
+      transform: scale(1.1) translateX(60px);
     }
 
     @media screen and (min-width: 1368px) {
-      transform: scale(1.2) translateX(30px);
+      transform: scale(1.1) translateX(30px);
     }
     @media screen and (min-width: 1920px) {
-      transform: scale(1.2) translateX(45px);
+      transform: scale(1.1) translateX(45px);
     }
   }
   @media screen and (min-width: 768px) {
