@@ -6,7 +6,7 @@ import { useState, useRef, useEffect  } from 'react';
 import { useInView } from 'framer-motion';
 
 export const Services = () => {
-  const [hoverId, setHoverId] = useState(null);
+  const [hoverId, setHoverId] = useState('01');
   const { t } = useTranslation();
   const ref = useRef(null);
   
