@@ -1,7 +1,6 @@
 import { Aside } from './components/Aside/Aside';
 import { useMediaQuery } from '@react-hook/media-query';
 import { Portfolio } from 'components/Portfolio/Portfolio';
-import projectCarts from './components/Services/FakePortfolioData.json';
 import teamCarts from './components/Team/team-arrey';
 import { OurClients } from 'components/OurClients/OurClients';
 import { HowWeWorkSection } from './components/HowWeWork/HowWeWorkSection/HowWeWorkSection';
@@ -23,13 +22,13 @@ export const App = () => {
     <>
       <LanguageProvider>
         <Aside />
-        <Hero/>
+        <Hero />
         <AboutUs />
         <Services />
         <OurClients />
         <AnimationSection />
         <HowWeWorkSection />
-        <Portfolio projectCarts={projectCarts} />
+        <Portfolio />
         <Team teamCarts={teamCarts} />
         <Faq />
         {isScreenWide ? (
@@ -40,7 +39,7 @@ export const App = () => {
         ) : (
           <BgFooterAndForm />
         )}
-        <Btntotop/>
+        <Btntotop />
       </LanguageProvider>
     </>
   );

@@ -12,7 +12,7 @@ export const ListItem = ({item: {id, text, textUa, hiddenText, hiddenTextUa, pho
     
     return (
         <LiItem 
-            className='liwka'
+             className='liwka'
             tabIndex={0}
             $mobilephoto={mobilePhoto}
             $tabletphoto={tabletPhoto}

@@ -1,8 +1,8 @@
 import { SwiperSlide, useSwiper } from 'swiper/react';
 import { useContext } from 'react';
 import { LanguageContext } from 'components/HookLang/LanguageContext';
-import { ReactComponent as ArrorL } from '../../icons/arrorL.svg';
-import { ReactComponent as ArrorR } from '../../icons/arrorR.svg';
+import { ReactComponent as ArrorL } from '../../../icons/arrorL.svg';
+import { ReactComponent as ArrorR } from '../../../icons/arrorR.svg';
 import 'swiper/css';
 import {
   Buttons,
@@ -18,7 +18,7 @@ import {
   SlideWrapper,
   SliderSecondWrap,
   SwiperEl,
-} from './Portfolio.styled';
+} from '../Portfolio.styled';
 import { Autoplay } from 'swiper/modules';
 
 const SwiperButtonPrev = ({ children }) => {

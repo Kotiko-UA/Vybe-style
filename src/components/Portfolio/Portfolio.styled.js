@@ -183,7 +183,6 @@ export const ProjectName = styled.h3`
 
     font-size: 24px;
     font-weight: 300;
-    text-transform: lowercase;
   }
   @media screen and (min-width: 1368px) {
     font-size: 20px;
