@@ -83,14 +83,14 @@ export const Ul = styled.ul`
 export const Li = styled.li`
   position: relative;
   display: block;
-  border-top: 3px solid #fff;
-  border-bottom: 3px solid #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   transition: border-top, border-bottom;
 
   &:hover,
   :focus {
-    border-top: 3px solid #c4f934;
-    border-bottom: 3px solid #c4f934;
+    border-top: 1px solid #c4f934;
+    border-bottom: 1px solid #c4f934;
   }
 
   &:nth-child(n + 6) {
