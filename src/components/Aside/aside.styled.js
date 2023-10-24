@@ -2,31 +2,16 @@ import styled from 'styled-components';
 import { ReactComponent as BurgerIcon } from './images/burger.svg';
 import { ReactComponent as CloseIcon } from './images/close.svg';
 import { ReactComponent as ArrowRight } from '../OurClients/img/arrow-right.svg';
-export const Logo = styled.img`
-  max-width: 77px;
-  margin: 0 auto;
-  padding-top: 44px;
-  @media screen and (min-width: 1368px) {
-    display: none;
-  }
-`;
-
-export const NameCompany = styled.h1`
-  font-size: 21px;
-  font-weight: 400;
-  line-height: 2.3;
-  letter-spacing: 1.296px;
-  text-align: center;
-  @media screen and (min-width: 768px) {
-    margin-top: 30px;
-  }
-  @media screen and (min-width: 1368px) {
-    display: none;
-  }
-`;
+import { ReactComponent as IconLinkedin } from '../Footer/icons/linkedin.svg';
+import { ReactComponent as IconDribble } from '../Footer/icons/dribbble.svg';
+import { ReactComponent as IconInstagram } from '../Footer/icons/instagram.svg';
+import { ReactComponent as IconBehance } from '../Footer/icons/behance.svg';
 
 export const ContainerMobileMenu = styled.div`
-  width: 50%;
+  padding-top: 52px;
+  padding-left: 23px;
+  padding-right: 38px;
+  width: 220px;
   height: 100%;
   position: fixed;
   top: 0;
@@ -41,7 +26,6 @@ export const ContainerMobileMenu = styled.div`
     transform: translateX(0);
   }
   @media screen and (min-width: 768px) {
-    width: 50%;
     right: 0;
     background-color: ${({ theme }) => theme.blackColor};
     background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
@@ -107,7 +91,8 @@ export const Menu = styled.div`
   width: 140px;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-bottom: 183px;
 `;
 
 export const MenuItem = styled.li`
@@ -187,4 +172,46 @@ export const BackgroundMenuOpen = styled.div`
   height: ${props => (props.$open === 'true' ? '100vh' : '')};
   background: ${props =>
     props.$open === 'true' ? 'transparent' : 'transparent'};
+`;
+
+export const SocialsList = styled.ul`
+  width: 140px;
+  margin-right: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+`;
+
+export const LinkedinSvg = styled(IconLinkedin)``;
+export const DribbleSvg = styled(IconDribble)``;
+export const InstagramSvg = styled(IconInstagram)``;
+export const BehanceSvg = styled(IconBehance)``;
+
+export const SocialsLink = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid ${({ theme }) => theme.colorText};
+  border-radius: 50%;
+  background: transparent;
+  color: ${({ theme }) => theme.colorText};
+  transition: all ${({ theme }) => theme.animationStyles};
+
+  &:hover,
+  :focus {
+    background-color: ${({ theme }) => theme.brandColor};
+    border: none;
+
+    ${LinkedinSvg}, ${DribbleSvg}, ${InstagramSvg}, ${BehanceSvg} {
+      transition: all ${({ theme }) => theme.animationStyles};
+      path {
+        fill: ${({ theme }) => theme.brandColor};
+        stroke: ${({ theme }) => theme.blackColor};
+      }
+    }
+  }
 `;
