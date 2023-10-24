@@ -24,6 +24,9 @@ export const Section = styled.section`
     .uk-question-text {
       padding: 24px;
     }
+    .uk-awards-5mil-text {
+      width: 210px;
+    }
   }
 
   @media screen and (min-width: 1368px) and (max-width: 1919px) {
@@ -217,10 +220,10 @@ export const SadGirlPhoto = styled.img`
   height: 186px;
   border-radius: 86.985px;
   @media screen and (min-width: 768px) {
-    top: -80px;
-    left: 230px;
-    width: 215px;
-    height: 357px;
+    top: 0px;
+    left: 269px;
+    width: 142px;
+    height: 236px;
     border-radius: 3372px;
   }
   @media screen and (min-width: 1368px) {
@@ -251,11 +254,13 @@ export const Block5mil = styled.div`
   flex-direction: column;
   @media screen and (min-width: 768px) {
     border-color: ${({ theme }) => theme.borderColor};
-    width: 214px;
+    width: 259px;
     height: 183px;
-    margin-left: 237px;
+    margin-left: 212px;
+    border-right: none;
   }
   @media screen and (min-width: 1368px) {
+     margin-left: 237px;
     width: 795px;
     height: 286px;
     padding-top: 40px;
@@ -363,6 +368,7 @@ export const YearsBlock = styled.div`
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 768px) {
+    
     padding-left: 21px;
     position: absolute;
     left: 350px;
@@ -372,6 +378,7 @@ export const YearsBlock = styled.div`
     padding-top: 24px;
     border: 0.1px solid ${({ theme }) => theme.borderColor};
     border-top: none;
+    gap: 20px;
   }
   @media screen and (min-width: 1368px) {
     padding-top: 40px;
@@ -454,7 +461,10 @@ export const GirlInStylePhoto = styled.img`
   height: 186px;
 
   @media screen and (min-width: 768px) {
-    display: none;
+    top: 256px;
+  left: 600px;
+  width: 83px;
+  height: 186px;
   }
   @media screen and (min-width: 1368px) {
     display: block;
@@ -571,9 +581,9 @@ export const GirlWithWordsPhoto = styled.img`
   height: 372px;
 
   @media screen and (min-width: 768px) {
-    width: 214px;
-    height: 429px;
-    left: 238px;
+    width: 256px;
+    height: 428px;
+    left: 213px;
     top: 441px;
   }
   @media screen and (min-width: 1368px) {
@@ -631,7 +641,7 @@ export const QuestionText = styled.a`
     &:hover .link-text {
       @media screen and (min-width: 768px) {
         color: transparent;
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
     }
   }
@@ -665,7 +675,7 @@ export const QuestionText = styled.a`
   }
 `;
 
-const ArrowContainer = styled.div`
+const ArrowContainer = styled.span`
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -720,7 +730,7 @@ const runOnSpotDown = keyframes`
   }
   `;
 
-const AnimatedArrow = styled.div`
+const AnimatedArrow = styled.span`
   position: relative;
   left: 0;
   animation: ${runOnSpot} 2s linear infinite;
