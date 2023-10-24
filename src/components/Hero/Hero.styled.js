@@ -7,7 +7,7 @@ import bgV from './img/v-img.png';
 import { ReactComponent as PlaySvg } from '../../icons/play-svg.svg';
 
 export const Section = styled.section`
-  padding: 40px 0 75px 0;
+  padding: 40px 0 56px 0;
   width: 100%;
   background-image: linear-gradient(
       180deg,
@@ -24,7 +24,7 @@ export const Section = styled.section`
   background-position: top 0px right -100px, top 0px right -100px,
     right 0px bottom -60px, right 0px bottom -60px;
   @media screen and (min-width: 768px) {
-    padding: 28px 0 58px 0;
+    padding: 28px 0 70px 0;
     background-image: url(${bgV}),
       linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 47.46%, #000 100%),
       url(${bgImg});
@@ -33,7 +33,7 @@ export const Section = styled.section`
       top 100px left -280px;
   }
   @media screen and (min-width: 1368px) {
-    padding: 28px 0 83px 0;
+    padding: 28px 0 85px 0;
     background-image: url(${bgV}),
       linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 47.46%, #000 100%),
       url(${bgImg}),
@@ -45,7 +45,7 @@ export const Section = styled.section`
       top 450px left -110px, top 400px right 0, top 400px right 0;
   }
   @media screen and (min-width: 1920px) {
-    padding: 28px 0 148px 0;
+    padding: 28px 0 110px 0;
     background-image: url(${bgV}),
       linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 47%, #000 100%),
       url(${bgImg}),

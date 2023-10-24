@@ -3,7 +3,7 @@ import { Swiper } from 'swiper/react';
 import { ReactComponent as IconLinkedin } from './icons/linkedin.svg';
 
 export const Wrapper = styled.section`
-  padding: 52px 0;
+  padding: 56px 0;
   width: 100%;
 
   @media screen and (min-width: 768px) {
@@ -13,7 +13,7 @@ export const Wrapper = styled.section`
     padding: 85px 0;
   }
   @media screen and (min-width: 1920px) {
-    padding: 101px 0 100px 0;
+    padding: 110px 0;
   }
 `;
 export const Container = styled.div`

@@ -5,19 +5,19 @@ export const Section = styled.section`
   box-sizing: border-box;
   margin: 0 auto;
   background-color: ${({ theme }) => theme.blackColor};
-  padding-top: 121px;
-  padding-bottom: 81px;
+  padding-top: 56px;
+  padding-bottom: 56px;
   @media screen and (min-width: 768px) {
-    padding-top: 140px;
-    padding-bottom: 140px;
-  }
-  @media screen and (min-width: 1368px) {
-    padding-top: 170px;
+    padding-top: 70px;
     padding-bottom: 70px;
   }
+  @media screen and (min-width: 1368px) {
+    padding-top: 85px;
+    padding-bottom: 85px;
+  }
   @media screen and (min-width: 1920px) {
-    padding-top: 200px;
-    padding-bottom: 0;
+    padding-top: 110px;
+    padding-bottom: 110px;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1367px) {
@@ -414,8 +414,8 @@ export const ProjectsBlock = styled.div`
   @media screen and (min-width: 768px) and (max-width: 1367px) {
     border-bottom: none;
     height: 162px;
-    .projects-text{
-      width:300px;
+    .projects-text {
+      width: 300px;
     }
   }
   @media screen and (min-width: 1368px) {
@@ -429,8 +429,8 @@ export const ProjectsBlock = styled.div`
     border: none;
     border-bottom: 1px solid ${({ theme }) => theme.borderAlphaColor};
     gap: 40px;
-    .projects-text{
-      width:300px;
+    .projects-text {
+      width: 300px;
     }
   }
 
@@ -616,24 +616,29 @@ export const QuestionText = styled.a`
     text-align: left;
     .link-text {
       color: ${({ theme }) => theme.brandColor};
-    
-     background-image: linear-gradient(235deg, #F4F90F -1.28%, #0FF9C0 115.55%);
-    -webkit-background-clip: text; 
-    background-clip: text;
-    transition: color  ${({ theme }) => theme.animationStyles},transform  ${({ theme }) => theme.animationStyles};
+
+      background-image: linear-gradient(
+        235deg,
+        #f4f90f -1.28%,
+        #0ff9c0 115.55%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      transition: color ${({ theme }) => theme.animationStyles},
+        transform ${({ theme }) => theme.animationStyles};
     }
     &:hover .link-text {
       @media screen and (min-width: 768px) {
-      color: transparent;
-      transform: scale(1.2);
-       }
+        color: transparent;
+        transform: scale(1.2);
+      }
     }
   }
-@media screen and (min-width: 768px) and (max-width: 1367px){
-  bottom:-170px;
-}
+  @media screen and (min-width: 768px) and (max-width: 1367px) {
+    bottom: -170px;
+  }
   @media screen and (min-width: 1368px) {
-    height:328px;
+    height: 328px;
     width: 256px;
     color: ${({ theme }) => theme.colorText};
     font-family: Inter;
@@ -644,7 +649,6 @@ export const QuestionText = styled.a`
     top: 721px;
     border: 1px solid ${({ theme }) => theme.borderAlphaColor};
     border-bottom: none;
-    
   }
 
   @media screen and (min-width: 1920px) {
@@ -669,16 +673,15 @@ const ArrowContainer = styled.div`
 `;
 
 const ArrowSvg = styled(ArrowRight)`
-.link-text:hover & {
-  transform :rotate(90deg);
-}
+  .link-text:hover & {
+    transform: rotate(90deg);
+  }
   width: 30px;
   height: 30px;
-  @media screen and (min-width:1368px){
-     width: 44px;
-height: 40px;
+  @media screen and (min-width: 1368px) {
+    width: 44px;
+    height: 40px;
   }
- 
 `;
 
 const runOnSpot = keyframes`
@@ -698,7 +701,7 @@ const runOnSpot = keyframes`
     left: 0;
   }
   `;
-    const runOnSpotDown = keyframes`
+const runOnSpotDown = keyframes`
   0% {
     top: 0;
   }
@@ -720,12 +723,10 @@ const AnimatedArrow = styled.div`
   position: relative;
   left: 0;
   animation: ${runOnSpot} 2s linear infinite;
-   .link-text:hover & {
-  animation: ${runOnSpotDown} 1s linear infinite;
- }
+  .link-text:hover & {
+    animation: ${runOnSpotDown} 1s linear infinite;
+  }
 `;
-
-
 
 const ArrowAnimation = () => {
   return (
@@ -744,4 +745,3 @@ const ArrowAnimation = () => {
 };
 
 export default ArrowAnimation;
-
