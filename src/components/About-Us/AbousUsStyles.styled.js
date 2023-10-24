@@ -50,6 +50,12 @@ export const AbousUsTitle = styled.h1`
   font-weight: 300;
   line-height: 1.2;
   margin-bottom: 48px;
+  transition: color ${({ theme }) => theme.animationStyles};
+
+  &:hover,
+  :focus {
+    color: ${({ theme }) => theme.brandColor};
+  }
   @media screen and (min-width: 768px) {
     margin-bottom: 0px;
     position: absolute;

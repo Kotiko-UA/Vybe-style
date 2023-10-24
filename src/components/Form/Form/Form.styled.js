@@ -64,6 +64,12 @@ export const FormSectionHeader = styled.h2`
   font-size: 24px;
   font-weight: 300;
   line-height: 1.2;
+  transition: color ${({ theme }) => theme.animationStyles};
+
+  &:hover,
+  :focus {
+    color: ${({ theme }) => theme.brandColor};
+  }
 
   @media only screen and (min-width: 768px) {
     margin-bottom: 56px;
@@ -80,6 +86,7 @@ export const FormSectionHeader = styled.h2`
   @media only screen and (min-width: 1920px) {
     width: 878px;
     font-size: 60px;
+    margin-bottom: 80px;
   }
 `;
 

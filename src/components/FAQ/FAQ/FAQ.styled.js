@@ -90,7 +90,8 @@ export const Title = styled.h2`
   margin-bottom: 64px;
   transition: color ${({ theme }) => theme.animationStyles};
 
-  &:hover {
+  &:hover,
+  :focus {
     color: ${({ theme }) => theme.brandColor};
   }
   @media screen and (min-width: 768px) {

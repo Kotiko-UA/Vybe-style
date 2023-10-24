@@ -103,10 +103,11 @@ export const Title = styled.h2`
   font-style: normal;
   font-weight: 300;
   line-height: 1.2;
-  margin-bottom: 78px;
+  margin-bottom: 80px;
   transition: color ${({ theme }) => theme.animationStyles};
 
-  &:hover {
+  &:hover,
+  :focus {
     color: ${({ theme }) => theme.brandColor};
   }
   @media screen and (min-width: 768px) {

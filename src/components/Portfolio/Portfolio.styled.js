@@ -48,6 +48,12 @@ export const H2 = styled.h2`
   font-style: normal;
   font-weight: 300;
   line-height: 120%;
+  transition: color ${({ theme }) => theme.animationStyles};
+
+  &:hover,
+  :focus {
+    color: ${({ theme }) => theme.brandColor};
+  }
   @media screen and (min-width: 768px) {
     font-size: 40px;
     line-height: 120%;
