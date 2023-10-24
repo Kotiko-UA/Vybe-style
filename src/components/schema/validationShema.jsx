@@ -1,5 +1,4 @@
 import * as Yup from 'yup';
-// import { useTranslation } from 'react-i18next';
 
 const allowedMimeTypes = [
   'image/png',
@@ -41,7 +40,6 @@ const validationSchema = t =>
           files => {
             if (!files) return true;
             const fileExtension = files.type;
-            console.log(fileExtension);
             return allowedMimeTypes.includes(fileExtension);
           }
         )
@@ -49,12 +47,10 @@ const validationSchema = t =>
       .test('totalFileSize', t('form-attachedFiles-error-2'), files => {
         if (!files || files.length === 0) return true;
         const totalSize = files.reduce((acc, file) => acc + file.size, 0);
-        console.log(totalSize);
         return totalSize <= MAX_TOTAL_FILE_SIZE;
       })
       .test('maxFiles', t('form-attachedFiles-error-3'), files => {
         if (!files) return true;
-        console.log(files);
         return files?.length <= 6;
       }),
   });
