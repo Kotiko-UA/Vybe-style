@@ -92,7 +92,10 @@ export const Menu = styled.div`
   display: flex;
   flex-direction: column;
   margin-right: auto;
-  margin-bottom: 183px;
+  margin-bottom: 40px;
+  @media screen and (min-width: 1368px) {
+    margin-bottom: 0;
+  }
 `;
 
 export const MenuItem = styled.li`
