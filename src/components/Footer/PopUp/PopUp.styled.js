@@ -150,6 +150,12 @@ transition: all ${({ theme }) => theme.animationTransform};
    (min-resolution: 2dppx) {
     background-image: url(${newBgTablet2x}), url(${bgTablet2x2});
    }
+   .title {
+    text-align:center;
+   }
+    .text {
+    text-align:center;
+   }
     .team-name{
     font-size: 16px;
     }
