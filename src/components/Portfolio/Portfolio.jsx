@@ -2,9 +2,9 @@ import { useTranslation } from 'react-i18next';
 import projectCarts from './PortfolioCarts/CartsArrey';
 import { Container, H2, Ul, Wrapper } from './Portfolio.styled';
 import { useEffect, useState } from 'react';
-import { PortfolioCarts } from './PortfolioCart';
-import { AutomaticSwiper } from './AutomaticSwiper';
-import { ControlingSwiper } from './ControllerSwiper';
+import { PortfolioCarts } from './CartsEl/PortfolioCart';
+import { AutomaticSwiper } from './CartsEl/AutomaticSwiper';
+import { ControlingSwiper } from './CartsEl/ControllerSwiper';
 
 export function Portfolio() {
   const { t } = useTranslation();
