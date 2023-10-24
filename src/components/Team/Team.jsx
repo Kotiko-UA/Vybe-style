@@ -15,6 +15,7 @@ import {
   LinkedinSvg,
   NextButton,
   PrevButton,
+  SlideDiv,
   SlideImg,
   SlideImg2,
   SlideLink,
@@ -92,7 +93,7 @@ export const Team = ({ teamCarts }) => {
               teamNameUa,
               klim,
             }) => {
-              return (
+              return klim ? (
                 <SwiperSlide key={id}>
                   <SlideWrapper>
                     <SlideLink
@@ -127,6 +128,29 @@ export const Team = ({ teamCarts }) => {
                         alt={teamName}
                       />
                     </SlideLink>
+                  </SlideWrapper>
+                </SwiperSlide>
+              ) : (
+                <SwiperSlide key={id}>
+                  <SlideWrapper>
+                    <SlideDiv>
+                      <TeamRole>
+                        {currentLanguage === 'en' ? teamRole : teamRoleUa}
+                      </TeamRole>
+                      <TeamName>
+                        {currentLanguage === 'en' ? teamName : teamNameUa}
+                      </TeamName>
+                      <SlideImg
+                        loading="lazy"
+                        src={teamFotoUrl}
+                        alt={teamName}
+                      />
+                      <SlideImg2
+                        loading="lazy"
+                        src={teamFotoUrl2}
+                        alt={teamName}
+                      />
+                    </SlideDiv>
                   </SlideWrapper>
                 </SwiperSlide>
               );
