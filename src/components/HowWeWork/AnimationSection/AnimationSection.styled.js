@@ -181,7 +181,7 @@ position: absolute;
   letter-spacing: -1.5px;
   text-transform: lowercase;
   animation: ${props =>
-    props.$isInView === 'true' ? '2s top infinite linear' : ''};
+    props.$isInView === 'true' ? '2.5s top infinite linear' : ''};
    @keyframes top {
     0% {
       transform: translateY(0);
@@ -308,7 +308,7 @@ color: ${({ theme }) => theme.textColor};
   letter-spacing: -1.5px;
   text-transform: lowercase;
   animation: ${props =>
-    props.$isInView === 'true' ? '2s left infinite linear' : ''};
+    props.$isInView === 'true' ? '2.5s left infinite linear' : ''};
     @keyframes left {
     0% {
       transform: translateX(0);
@@ -460,7 +460,7 @@ export const Satisfaction = styled.p`
   letter-spacing: -1.5px;
   text-transform: lowercase;
   animation: ${props =>
-    props.$isInView === 'true' ? '2s bottom infinite linear' : ''};
+    props.$isInView === 'true' ? '2.5s bottom infinite linear' : ''};
   @keyframes bottom {
     0% {
       transform: translateY(0);
