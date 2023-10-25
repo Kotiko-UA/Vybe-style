@@ -81,7 +81,7 @@ export const HowWeWorkSection = () => {
                         controlsList: 'nodownload',
                       },
                     },
-                  }}
+                    }}
                 />
               </PlayerWrapper>
             ) : (

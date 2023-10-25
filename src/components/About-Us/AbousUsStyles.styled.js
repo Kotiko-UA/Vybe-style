@@ -251,14 +251,14 @@ export const AboutUsDescriptionTextForth = styled.p`
   .link-to-contactus:hover {
     @media screen and (min-width: 768px) {
       color: transparent;
-      transform: scale(1.1) translateX(60px);
+      transform: scale(1.1) translateX(24px);
     }
 
     @media screen and (min-width: 1368px) {
-      transform: scale(1.1) translateX(30px);
+      transform: scale(1.1) translateX(14px);
     }
     @media screen and (min-width: 1920px) {
-      transform: scale(1.1) translateX(45px);
+      transform: scale(1.1) translateX(25px);
     }
   }
   @media screen and (min-width: 768px) {
@@ -289,8 +289,14 @@ const ArrowContainer = styled.span`
   justify-content: space-between;
   width: 100px;
   margin-left: 20px;
+    .link-to-contactus:hover & {
+      @media screen and (min-width: 1368px) {
+     margin-left: 0px;
+      }
+  }
   @media screen and (min-width: 1368px) {
-    margin-left: 10px;
+    margin-left: 15px;
+  
   }
   @media screen and (min-width: 1920px) {
     margin-left: 20px;
@@ -300,9 +306,13 @@ const ArrowContainer = styled.span`
 const ArrowSvg = styled(ArrowRight)`
   .link-to-contactus:hover & {
     transform: rotate(90deg);
-  }
+    }
 
   @media screen and (min-width: 1368px) {
+    width: 34px;
+    height: 30px;
+  }
+   @media screen and (min-width: 1920px) {
     width: 44px;
     height: 40px;
   }
@@ -350,6 +360,7 @@ const AnimatedArrow = styled.span`
   animation: ${runOnSpot} 2s linear infinite;
   .link-to-contactus:hover & {
     animation: ${runOnSpotDown} 1s linear infinite;
+    
   }
 `;
 
