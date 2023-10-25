@@ -242,7 +242,7 @@ export const AttachedFilesList = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 8px;
   width: 100%;
 `;
 
@@ -262,7 +262,7 @@ export const SelectedFilesList = styled.ul`
 
 export const FilePickerError = styled.div`
   position: relative;
-  top: 10px;
+  bottom: 0;
 
   color: ${({ theme }) => theme.redColor};
   font-size: 14px;
@@ -311,7 +311,7 @@ export const TextareaAndAttachedWrap = styled.div`
 
   @media only screen and (min-width: 768px) {
     row-gap: 16px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
   }
 `;
 
