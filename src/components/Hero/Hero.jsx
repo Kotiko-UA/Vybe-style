@@ -6,8 +6,8 @@ import {
   ButtonWraper,
   Container,
   HeroTitle,
-  Logo,
   LogoContainer,
+  LogoSvg,
   NameCompany,
   PlaySvgImg,
   PlayWrapper,
@@ -18,7 +18,6 @@ import {
   TitleSvg,
   TitleWrapper,
 } from './Hero.styled';
-import LogoVibeStyle from './img/logo-vibe-style.png';
 import { useTranslation } from 'react-i18next';
 import { LanguageContext } from 'components/HookLang/LanguageContext';
 import { useContext } from 'react';
@@ -29,7 +28,7 @@ export const Hero = () => {
     <Section>
       <Container id="home">
         <LogoContainer>
-          <Logo src={LogoVibeStyle} alt="logo-company" />
+          <LogoSvg alt="logo-company" />
           <NameCompany>VibeStyle</NameCompany>
         </LogoContainer>
         <ButtonWraper>

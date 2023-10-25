@@ -3,9 +3,9 @@ import lines from '../../icons/3-lines-svg.svg';
 import round from '../../icons/round.svg';
 import bgImg from './img/g-img.png';
 import bgImg2 from './img/g-img-mobile-bot.png';
-import bgV from './img/v-img.png';
+import bgV from '../../icons/big-logo.svg';
 import { ReactComponent as PlaySvg } from '../../icons/play-svg.svg';
-
+import { ReactComponent as Logo } from '../../icons/logo.svg';
 export const Section = styled.section`
   padding: 40px 0 56px 0;
   width: 100%;
@@ -100,7 +100,7 @@ export const LogoContainer = styled.div`
     margin-bottom: 51px;
   }
 `;
-export const Logo = styled.img`
+export const LogoSvg = styled(Logo)`
   width: 65px;
   height: 68px;
   margin-left: auto;

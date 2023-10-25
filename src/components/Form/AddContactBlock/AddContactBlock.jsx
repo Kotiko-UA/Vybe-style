@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   AboveBlockWrap,
   AddContactWrap,
@@ -12,14 +13,15 @@ import {
 } from './AddContactBlock.styled';
 
 export const AddContactBlock = () => {
+  const { t } = useTranslation();
   return (
     <AddContactWrap>
       <ImageWrap />
       <RightBlockWrap>
         <AboveBlockWrap>
-          <Name>Klym Yevtushenko</Name>
+          <Name>{t('form-klym-name')}</Name>
           <SocialsLink
-            href="https://www.linkedin.com/company/vibestyle/about/"
+            href="https://www.linkedin.com/in/klym-yevtushenko/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -30,7 +32,7 @@ export const AddContactBlock = () => {
         <Email href="mailto:klimevtushenko@gmail.com">
           klimevtushenko@gmail.com
         </Email>
-        <Position>founder / lead designer</Position>
+        <Position>{t('form-klym-position')}</Position>
       </RightBlockWrap>
     </AddContactWrap>
   );
