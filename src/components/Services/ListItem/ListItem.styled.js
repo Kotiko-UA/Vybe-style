@@ -326,7 +326,7 @@ export const HiddenText = styled.p`
   line-height: 1.67;
   letter-spacing: 0.24px;
   max-width: 290px;
-  margin-top: 40px;
+  margin-top: 20px;
   opacity: 0;
   z-index: 2;
   transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
