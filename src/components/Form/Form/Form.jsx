@@ -1,5 +1,6 @@
 import { Formik } from 'formik';
-import { useState } from 'react';
+import { LanguageContext } from 'components/HookLang/LanguageContext';
+import { useState, useContext, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
@@ -47,6 +48,17 @@ export const ContactForm = () => {
   const { t } = useTranslation();
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
   const [files, setFiles] = useState([]);
+  const { currentLanguage } = useContext(LanguageContext);
+  const input = document.querySelector('.focus-input');
+  const inputs = document.querySelectorAll('.focus-input');
+
+  const item = Array.from(inputs).find(item => item.value.length > 0);
+  useEffect(() => {
+    if (item || files.length > 0) {
+      input.focus();
+      input.blur();
+    }
+  }, [currentLanguage, item, input, files.length]);
 
   const handlePopUp = () => {
     setShowSuccessPopup(false);
@@ -134,6 +146,7 @@ export const ContactForm = () => {
                   <FormikInputWrap>
                     <FormControlWrap>
                       <FormikInput
+                        className="focus-input"
                         type="name"
                         name="name"
                         placeholder={t('form-name')}
@@ -142,14 +155,17 @@ export const ContactForm = () => {
                         value={props.values.name}
                         onBlur={props.handleBlur}
                       />
-                      {props.errors.name && props.touched.name && (
-                        <StyledErrorMessage name="name">
-                          {props.errors.name}
-                        </StyledErrorMessage>
-                      )}
+                      {props.errors.name &&
+                        props.touched.name &&
+                        props.values.name && (
+                          <StyledErrorMessage name="name">
+                            {props.errors.name}
+                          </StyledErrorMessage>
+                        )}
                     </FormControlWrap>
                     <FormControlWrap>
                       <FormikInput
+                        className="focus-input"
                         type="email"
                         name="email"
                         placeholder={t('form-email')}
@@ -158,14 +174,17 @@ export const ContactForm = () => {
                         value={props.values.email}
                         onBlur={props.handleBlur}
                       />
-                      {props.touched.email && props.errors.email ? (
-                        <StyledErrorMessage>
-                          {props.errors.email}
-                        </StyledErrorMessage>
-                      ) : null}
+                      {props.touched.email &&
+                        props.errors.email &&
+                        props.values.email && (
+                          <StyledErrorMessage>
+                            {props.errors.email}
+                          </StyledErrorMessage>
+                        )}
                     </FormControlWrap>
                     <FormControlWrap>
                       <FormikInput
+                        className="focus-input"
                         type="tel"
                         name="phone"
                         placeholder={t('form-phone')}
@@ -174,11 +193,13 @@ export const ContactForm = () => {
                         value={props.values.phone}
                         onBlur={props.handleBlur}
                       />
-                      {props.touched.phone && props.errors.phone ? (
-                        <StyledErrorMessage>
-                          {props.errors.phone}
-                        </StyledErrorMessage>
-                      ) : null}
+                      {props.touched.phone &&
+                        props.errors.phone &&
+                        props.values.phone && (
+                          <StyledErrorMessage>
+                            {props.errors.phone}
+                          </StyledErrorMessage>
+                        )}
                     </FormControlWrap>
                     <FormControlWrap>
                       <FormikInput
@@ -201,6 +222,7 @@ export const ContactForm = () => {
                       onBlur={props.handleBlur}
                     />
                     <FormikFilePicker
+                      className="focus-input"
                       type="file"
                       name="files"
                       as={FilePicker}
