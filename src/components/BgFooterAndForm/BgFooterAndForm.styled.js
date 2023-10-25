@@ -11,7 +11,7 @@ export const BackgroundImage = styled.div`
 
   background-size: 516px 500px;
   background-repeat: no-repeat;
-  background-position: center bottom -25px;
+  background-position: center bottom -40px;
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
@@ -31,7 +31,7 @@ export const BackgroundImage = styled.div`
       url(${bgFooterTablet1x});
 
     background-size: 776px 574px;
-
+    background-position: center bottom 0px;
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {

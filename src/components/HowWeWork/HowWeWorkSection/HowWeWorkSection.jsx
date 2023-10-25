@@ -79,9 +79,9 @@ export const HowWeWorkSection = () => {
                     file: {
                       attributes: {
                         controlsList: 'nodownload',
-                      },
+                                            },
                     },
-                  }}
+                    }}
                 />
               </PlayerWrapper>
             ) : (

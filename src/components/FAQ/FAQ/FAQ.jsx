@@ -23,7 +23,7 @@ export const Faq = () => {
     <Section>
       <Container id="faq">
         <Title>&#47;&#47;: faq</Title>
-        <List ref={currentRef}>
+                   <List ref={currentRef}>
           {data
             .filter((item, index) => isShownAll || index < 4)
             .map(item => (

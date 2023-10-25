@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
+import { useContext } from 'react';
+import { LanguageContext } from 'components/HookLang/LanguageContext';
 import { useMediaQuery } from '@react-hook/media-query';
+import { useTranslation } from 'react-i18next';
 import { PopUp } from './PopUp/PopUp';
 import {
   FooterBlock,
@@ -24,7 +27,8 @@ import {
 
 export const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const { currentLanguage } = useContext(LanguageContext);
+  const { t } = useTranslation();
   const handleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
@@ -43,15 +47,17 @@ export const Footer = () => {
 
   return (
     <FooterBlock>
-      <FooterContainer>
-        <Address>
+      <FooterContainer
+        className={currentLanguage === 'en' ? '' : 'uk-footer-container'}
+      >
+        <Address className={currentLanguage === 'en' ? '' : 'uk-address'}>
           <UaFlagSvg width="20px" height="12px" />
           <AddressLink
             href="https://maps.app.goo.gl/QN7KGJJXFsZkZtjQ7"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Reheneratorna Street, 4, Kyiv, Ukraine
+            {t('footer-address')}
           </AddressLink>
         </Address>
         <SocialsList>
@@ -70,7 +76,7 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <DribbleSvg width="24px" height="24px" />
+              <DribbleSvg width="22px" height="22px" />
             </SocialsLink>
           </li>
           <li>
@@ -92,21 +98,26 @@ export const Footer = () => {
             </SocialsLink>
           </li>
         </SocialsList>
-        <CreatedByLink onClick={handleModal}>
-          created <br /> by GoIT students
+        <CreatedByLink
+          onClick={handleModal}
+          className={currentLanguage === 'en' ? '' : 'uk-createdBy'}
+        >
+          {t('footer-createdby-text1')} <br /> {t('footer-createdby-text2')}
         </CreatedByLink>
         <PopUp isModalOpen={isModalOpen} onCloseModal={handleModal} />
         <CopyrightWrap>
           {isScreenTablet ? (
             <CopyrightTabletText>
-              VibeStyle design agency. All rights reserved
+              {t('footer-copyright-text1')}
             </CopyrightTabletText>
           ) : (
-            <CopyrightText>
-              VibeStyle design agency All rights reserved
+            <CopyrightText
+              className={currentLanguage === 'en' ? '' : 'uk-copyright-text'}
+            >
+              {t('footer-copyright-text2-part1')} <br />
+              {t('footer-copyright-text2-part2')}
             </CopyrightText>
           )}
-
           <CopyrightYearWrap>
             <CopyrightSvg width="16px" height="16px" />
             <FooterText>2023</FooterText>

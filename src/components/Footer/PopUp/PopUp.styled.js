@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ReactComponent as CloseSvg} from '../../HowWeWork/img/close.svg';
+import { ReactComponent as CloseSvg } from '../../HowWeWork/img/close.svg';
 import bgMobile from './data/mobileBG.png';
 import bgMobile2x from './data/mobileBG2x.png';
 import bgMobile2 from './data/mobileBG2.png';
@@ -17,25 +17,25 @@ export const Overlay = styled.div`
   width: 100vw;
   height: 100vh;
 
-    background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 1200;
-display: flex;
-justify-content:center;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 1;
   visibility: visible;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-&.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
 
-&.is-hidden .modal {
-  transform:  scale(0.5);
-}
-  `
-
+  &.is-hidden .modal {
+    transform: scale(0.5);
+  }
+`;
 
 export const Modal = styled.div`
   position: relative;
@@ -71,9 +71,9 @@ transform:  scale(1);
     line-height: normal;
   }
   .text {
-    color: ${({ theme }) => theme.greyColorPopup};
+   color: ${({ theme }) => theme.normalColor};
     font-family: Inter;
-    font-size: ${props => props.data === 'en' ? "16px" : "12px"} ;
+    font-size: ${props => (props.data === 'en' ? '16px' : '12px')} ;
     font-style: normal;
     font-weight: 300;
     line-height: normal;    
@@ -184,7 +184,9 @@ transition: all ${({ theme }) => theme.animationTransform};
     color: ${({ theme }) => theme.colorText};
     transform: translate(85px, 10px) scale(1.2);
   }
-
+.li-item:hover .image {
+      transform: scale(1.1);
+    }
   @media screen and (min-width: 1920px) {
     width: 1124px;
     height: 360px;
@@ -238,24 +240,24 @@ background-position: left -26px bottom 75px, right -25px top 200px;
 `;
 
 export const CloseSvgBtn = styled(CloseSvg)`
-cursor: pointer;
-position: absolute;
-width: 14px;
-height: 14px;
-top: 24px;
-right: 24px;
-& path {
-fill: ${({ theme }) => theme.greyColorPopup};
-}
+  cursor: pointer;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 24px;
+  right: 24px;
+  & path {
+    fill: ${({ theme }) => theme.greyColorPopup};
+  }
 
-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-scale 500ms cubic-bezier(0.4, 0, 0.2, 1),
-transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    scale 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
-&:hover path {
+  &:hover path {
     fill: ${({ theme }) => theme.brandColor};
-    }
-&:hover {
+  }
+  &:hover {
     scale: 1.25;
     transform: rotate(180deg);
   }

@@ -65,7 +65,7 @@ export const H2 = styled.h2`
 
   @media screen and (min-width: 1920px) {
     margin-bottom: 80px;
-    font-size: 90px;
+    font-size: 70px;
     line-height: 120%;
   }
 `;
@@ -83,14 +83,14 @@ export const Ul = styled.ul`
 export const Li = styled.li`
   position: relative;
   display: block;
-  border-top: 3px solid #fff;
-  border-bottom: 3px solid #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   transition: border-top, border-bottom;
 
   &:hover,
   :focus {
-    border-top: 3px solid #c4f934;
-    border-bottom: 3px solid #c4f934;
+    border-top: 1px solid #c4f934;
+    border-bottom: 1px solid #c4f934;
   }
 
   &:nth-child(n + 6) {
@@ -169,9 +169,11 @@ export const ProjectName = styled.h3`
   position: absolute;
   left: 8px;
   top: 12px;
+  display: block;
+  width: 300px;
 
   color: ${props => props.theme.colorText};
-  text-align: center;
+  text-align: left;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -180,15 +182,17 @@ export const ProjectName = styled.h3`
   z-index: 2;
   @media screen and (min-width: 768px) {
     left: 16px;
-
+    width: 400px;
     font-size: 24px;
     font-weight: 300;
   }
   @media screen and (min-width: 1368px) {
-    font-size: 20px;
+    font-size: 16px;
+    width: 200px;
   }
   @media screen and (min-width: 1920px) {
     font-size: 24px;
+    width: 300px;
   }
 `;
 export const ProjectYear = styled.span`
@@ -213,7 +217,7 @@ export const ProjectYear = styled.span`
     text-transform: lowercase;
   }
   @media screen and (min-width: 1368px) {
-    font-size: 20px;
+    font-size: 16px;
     right: 8px;
   }
   @media screen and (min-width: 1920px) {

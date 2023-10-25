@@ -70,7 +70,7 @@ export const H2 = styled.h2`
   @media screen and (min-width: 1920px) {
     margin-bottom: 80px;
     margin-right: 488px;
-    font-size: 90px;
+    font-size: 70px;
   }
 `;
 export const SwiperEl = styled(Swiper)`

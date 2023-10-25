@@ -153,14 +153,7 @@ export const Container = styled.div`
       background-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 47.46%, #000 100%);
     }
     ${SvgEllipse}:nth-child(n + 5) {
-    //   background-image: linear-gradient(
-    //       90deg,
-    //       #000 0%,
-    //       rgba(0, 0, 0, 0) 49.05%,
-    //       #000 100%
-    //     ),
-    //     linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 49.05%, #000 100%);
-   margin-left: -160px;
+       margin-left: -160px;
     }
     ${SvgEllipse}:nth-child(6) {
 
@@ -181,7 +174,7 @@ position: absolute;
   letter-spacing: -1.5px;
   text-transform: lowercase;
   animation: ${props =>
-    props.$isInView === 'true' ? '2s top infinite linear' : ''};
+    props.$isInView === 'true' ? '4s top infinite linear' : ''};
    @keyframes top {
     0% {
       transform: translateY(0);
@@ -308,7 +301,7 @@ color: ${({ theme }) => theme.textColor};
   letter-spacing: -1.5px;
   text-transform: lowercase;
   animation: ${props =>
-    props.$isInView === 'true' ? '2s left infinite linear' : ''};
+    props.$isInView === 'true' ? '4s left infinite linear' : ''};
     @keyframes left {
     0% {
       transform: translateX(0);
@@ -460,7 +453,7 @@ export const Satisfaction = styled.p`
   letter-spacing: -1.5px;
   text-transform: lowercase;
   animation: ${props =>
-    props.$isInView === 'true' ? '2s bottom infinite linear' : ''};
+    props.$isInView === 'true' ? '4s bottom infinite linear' : ''};
   @keyframes bottom {
     0% {
       transform: translateY(0);

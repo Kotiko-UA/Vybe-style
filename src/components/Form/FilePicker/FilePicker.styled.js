@@ -24,9 +24,9 @@ export const IconEWrap = styled.div`
   justify-content: center;
   align-items: center;
 
-  width: 40px;
-  height: 40px;
-  padding: 10px;
+  width: 32px;
+  height: 32px;
+  padding: 8px;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.greyColor};
 
