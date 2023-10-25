@@ -184,7 +184,9 @@ transition: all ${({ theme }) => theme.animationTransform};
     color: ${({ theme }) => theme.colorText};
     transform: translate(85px, 10px) scale(1.2);
   }
-
+.li-item:hover .image {
+      transform: scale(1.1);
+    }
   @media screen and (min-width: 1920px) {
     width: 1124px;
     height: 360px;

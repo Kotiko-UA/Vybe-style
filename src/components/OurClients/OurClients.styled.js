@@ -102,7 +102,7 @@ export const Container = styled.div`
 export const Title = styled.h2`
   color: ${({ theme }) => theme.colorText};
   font-family: Inter;
-  font-size: 32px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 300;
   line-height: 1.2;
@@ -138,7 +138,7 @@ export const OneMilBlock = styled.div`
   box-sizing: border-box;
   width: 197px;
   height: 186px;
-  border: 0.1px solid ${({ theme }) => theme.borderColor};
+  border: 0.1px solid ${({ theme }) => theme.borderAlphaColor};
   border-bottom: none;
   padding-top: 26px;
   padding-left: 20px;
@@ -147,7 +147,7 @@ export const OneMilBlock = styled.div`
   @media screen and (min-width: 768px) {
     width: 213px;
     height: 258px;
-    border-color: ${({ theme }) => theme.borderColor};
+    border-color: ${({ theme }) => theme.borderAlphaColor};
   }
 
   @media screen and (min-width: 1368px) {
@@ -197,7 +197,7 @@ export const TitleH3 = styled.h3`
   line-height: 2.2;
   text-transform: uppercase;
   @media screen and (min-width: 768px) {
-    // color: ${({ theme }) => theme.borderColor};
+    // color: ${({ theme }) => theme.borderAlphaColor};
     font-size: 64px;
     font-weight: 700;
     line-height: 1.65;
@@ -249,11 +249,11 @@ export const Block5mil = styled.div`
   height: 186px;
   padding-top: 26px;
   padding-left: 20px;
-  border: 0.1px solid ${({ theme }) => theme.borderColor};
+  border: 0.1px solid ${({ theme }) => theme.borderAlphaColor};
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 768px) {
-    border-color: ${({ theme }) => theme.borderColor};
+    border-color: ${({ theme }) => theme.borderAlphaColor};
     width: 259px;
     height: 183px;
     margin-left: 212px;
@@ -293,7 +293,7 @@ export const PeopleOnBoard = styled.div`
   height: 163px;
   padding-top: 21px;
   padding-left: 41px;
-  border-right: 0.1px solid ${({ theme }) => theme.borderColor};
+  border-right: 0.1px solid ${({ theme }) => theme.borderAlphaColor};
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 768px) {
@@ -304,7 +304,7 @@ export const PeopleOnBoard = styled.div`
     left: 349px;
     top: 0;
     gap: 16px;
-    border: 0.1px solid ${({ theme }) => theme.borderColor};
+    border: 0.1px solid ${({ theme }) => theme.borderAlphaColor};
     height: 258px;
   }
   @media screen and (min-width: 1368px) {
@@ -363,7 +363,7 @@ export const YearsBlock = styled.div`
   padding-top: 19px;
   padding-left: 41px;
   margin-left: 119px;
-  border: 0.1px solid ${({ theme }) => theme.borderColor};
+  border: 0.1px solid ${({ theme }) => theme.borderAlphaColor};
   border-left: none;
   display: flex;
   flex-direction: column;
@@ -376,7 +376,7 @@ export const YearsBlock = styled.div`
     height: 183px;
     width: 213px;
     padding-top: 24px;
-    border: 0.1px solid ${({ theme }) => theme.borderColor};
+    border: 0.1px solid ${({ theme }) => theme.borderAlphaColor};
     border-top: none;
     gap: 20px;
   }
@@ -411,11 +411,11 @@ export const ProjectsBlock = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 20px;
-  border-left: 0.1px solid ${({ theme }) => theme.borderColor};
+  border-left: 0.1px solid ${({ theme }) => theme.borderAlphaColor};
   @media screen and (min-width: 768px) {
     width: 213px;
     margin-top: 96px;
-    border: 0.1px solid ${({ theme }) => theme.borderColor};
+    border: 0.1px solid ${({ theme }) => theme.borderAlphaColor};
     padding-left: 20px;
     border-top: none;
   }
@@ -430,7 +430,7 @@ export const ProjectsBlock = styled.div`
     position: absolute;
     top: 395px;
     left: 511px;
-    width: 265px;
+    width: 284px;
     height: 272px;
     margin-top: 55px;
     padding-left: 36px;
@@ -487,7 +487,7 @@ export const AwardsBlock = styled.div`
   height: 187px;
   padding-top: 21px;
   padding-left: 41px;
-  border: 0.1px solid ${({ theme }) => theme.borderColor};
+  border: 0.1px solid ${({ theme }) => theme.borderAlphaColor};
   border-left: none;
   margin-left: 143px;
   display: flex;
@@ -499,14 +499,14 @@ export const AwardsBlock = styled.div`
     position: absolute;
     left: 326px;
     top: 441px;
-    border: 0.1px solid ${({ theme }) => theme.borderColor};
+    border: 0.1px solid ${({ theme }) => theme.borderAlphaColor};
     border-top: none;
     gap: 54px;
   }
   @media screen and (min-width: 1368px) {
     padding-top: 40px;
     padding-left: 36px;
-    height: 325px;
+    height: 315px;
     width: 256px;
     left: 113px;
     top: 721px;
@@ -533,7 +533,7 @@ export const VisitsBlock = styled.div`
   padding-top: 21px;
   padding-left: 41px;
   margin-left: 143px;
-  border-right: 0.1px solid ${({ theme }) => theme.borderColor};
+  border-right: 0.1px solid ${({ theme }) => theme.borderAlphaColor};
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 768px) {
@@ -542,7 +542,7 @@ export const VisitsBlock = styled.div`
     position: absolute;
     left: 326px;
     top: 683px;
-    border: 0.1px solid ${({ theme }) => theme.borderColor};
+    border: 0.1px solid ${({ theme }) => theme.borderAlphaColor};
     border-top: none;
   }
   @media screen and (min-width: 1368px) {
@@ -587,10 +587,10 @@ export const GirlWithWordsPhoto = styled.img`
     top: 441px;
   }
   @media screen and (min-width: 1368px) {
-    width: 296px;
-    height: 395px;
-    left: 750px;
-    top: 648px;
+    width: 256px;
+    height: 595px;
+    left: 794px;
+    top: 436px;
   }
   @media screen and (min-width: 1920px) {
     width: 483px;
@@ -604,12 +604,12 @@ export const QuestionText = styled.a`
   cursor: pointer;
   padding: 40px 42px;
   width: 375px;
-  border: 0.1px solid ${({ theme }) => theme.borderColor};
+  border: 0.1px solid ${({ theme }) => theme.borderAlphaColor};
   position: absolute;
   left: 0px;
   bottom: -163px;
   background-color: ${({ theme }) => theme.blackColor};
-  color: ${({ theme }) => theme.borderColor};
+  color: ${({ theme }) => theme.borderAlphaColor};
   text-align: center;
   font-family: Inter;
   font-size: 20px;
@@ -617,10 +617,12 @@ export const QuestionText = styled.a`
   font-weight: 300;
   line-height: 1.21;
   letter-spacing: 0.32px;
-
+.link-text {
+      color: ${({ theme }) => theme.brandColor};
+      }
   @media screen and (min-width: 768px) {
     left: -20px;
-    border-color: ${({ theme }) => theme.borderColor};
+    border-color: ${({ theme }) => theme.borderAlphaColor};
     width: 213px;
     padding: 35.5px 27px;
     margin-left: 20px;
@@ -649,7 +651,7 @@ export const QuestionText = styled.a`
     bottom: -170px;
   }
   @media screen and (min-width: 1368px) {
-    height: 328px;
+    height: 318px;
     width: 256px;
     color: ${({ theme }) => theme.colorText};
     font-family: Inter;

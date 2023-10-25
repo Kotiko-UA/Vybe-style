@@ -44,7 +44,7 @@ export const Container = styled.div`
   }
 `;
 
-export const AbousUsTitle = styled.h1`
+export const AbousUsTitle = styled.h2`
   font-size: 40px;
   font-style: normal;
   font-weight: 300;
