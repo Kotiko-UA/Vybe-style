@@ -7,12 +7,12 @@ import { ReactComponent as IconCopyright } from './icons/copyright.svg';
 import { ReactComponent as IconUaFlag } from './icons/uaflag.svg';
 
 export const FooterBlock = styled.footer`
-  padding-top: 61px;
+  padding-top: 56px;
   padding-bottom: 30px;
 
   @media only screen and (min-width: 768px) {
-    padding-top: 71px;
-    padding-bottom: 68px;
+    padding-top: 70px;
+    padding-bottom: 52px;
   }
 
   @media only screen and (min-width: 1368px) {
@@ -38,6 +38,9 @@ export const FooterContainer = styled.div`
 
   > *:not(:last-child) {
     margin-bottom: 40px;
+  }
+  > :nth-child(3) {
+    margin-bottom: 49px;
   }
 
   > *:first-child {
@@ -75,24 +78,41 @@ export const FooterContainer = styled.div`
       margin-right: 102px;
       margin-bottom: 0px;
     }
+
+    &.uk-footer-container {
+      > :nth-child(3) {
+        margin-right: 60px;
+        margin-bottom: 0px;
+      }
+    }
   }
 
   @media only screen and (min-width: 1920px) {
     max-width: 1920px;
 
     padding-left: 120px;
-    padding-right: 195px;
+    padding-right: 201px;
 
     > *:first-child {
-      margin-right: 87px;
+      margin-right: 258px;
     }
 
     > :nth-child(3) {
-      margin-right: 263px;
+      margin-right: 274px;
+    }
+    &.uk-footer-container {
+      > :nth-child(3) {
+        margin-right: 227px;
+      }
     }
   }
 `;
-export const UaFlagSvg = styled(IconUaFlag)``;
+export const UaFlagSvg = styled(IconUaFlag)`
+  @media only screen and (min-width: 1920px) {
+    width: 29px;
+    height: 18px;
+  }
+`;
 
 export const Address = styled.address`
   display: flex;
@@ -103,6 +123,16 @@ export const Address = styled.address`
     gap: 20px;
     margin: 0px;
     order: 3;
+
+    &.uk-address {
+      margin-right: 57px;
+    }
+  }
+
+  @media only screen and (min-width: 1920px) {
+    &.uk-address {
+      margin-right: 224px;
+    }
   }
 `;
 export const AddressLink = styled.a`
@@ -118,13 +148,19 @@ export const AddressLink = styled.a`
   text-transform: uppercase;
 
   color: ${({ theme }) => theme.textColor};
+  @media only screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
   @media only screen and (min-width: 1368px) {
+    font-size: 14px;
     white-space: nowrap;
   }
 
   @media only screen and (min-width: 1920px) {
     margin: 0px;
     font-size: 16px;
+    line-height: normal;
   }
 `;
 
@@ -132,7 +168,9 @@ export const SocialsList = styled.ul`
   display: flex;
   justify-content: center;
   gap: 24px;
-
+  @media only screen and (min-width: 768px) {
+    gap: 48px;
+  }
   @media only screen and (min-width: 1368px) {
     gap: 15px;
     margin-bottom: 0;
@@ -174,6 +212,11 @@ export const SocialsLink = styled.a`
     width: 40px;
     height: 40px;
   }
+
+  @media only screen and (min-width: 1920px) {
+    width: 49px;
+    height: 49px;
+  }
 `;
 
 export const CopyrightWrap = styled.div`
@@ -199,7 +242,7 @@ export const CopyrightWrap = styled.div`
     order: 4;
   }
   @media only screen and (min-width: 1920px) {
-    max-width: 273px;
+    max-width: 100%;
   }
 `;
 
@@ -222,12 +265,30 @@ export const CopyrightText = styled.p`
   font-style: normal;
   font-weight: 300;
 
+  &.uk-copyright-text {
+    max-width: 194px;
+    white-space: nowrap;
+  }
+
   @media only screen and (min-width: 1368px) {
     max-width: 162px;
     max-height: 39px;
     font-size: 14px;
     text-align: right;
     white-space: pre-line;
+    &.uk-copyright-text {
+      max-width: 228px;
+      white-space: nowrap;
+    }
+  }
+
+  @media only screen and (min-width: 1920px) {
+    max-width: 238px;
+    font-size: 16px;
+    &.uk-copyright-text {
+      max-width: 267px;
+      white-space: nowrap;
+    }
   }
 `;
 
@@ -274,6 +335,28 @@ export const CreatedByLink = styled.p`
     width: 100%;
     height: 1px;
     background-color: ${({ theme }) => theme.brandColor};
+  }
+
+  &.uk-createdBy {
+    width: 126px;
+
+    &::after {
+      content: '';
+      width: 114px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @media only screen and (min-width: 1368px) {
+        left: 0;
+        transform: translateX(0%);
+      }
+    }
+    @media only screen and (min-width: 1920px) {
+      width: 161px;
+      &::after {
+        width: 146px;
+      }
+    }
   }
 
   @media only screen and (min-width: 1368px) {
