@@ -1,9 +1,10 @@
 import { Formik } from 'formik';
-import { useState } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import validationSchema from '../../schema/validationShema';
+import { LanguageContext } from 'components/HookLang/LanguageContext';
 
 import {
   FormContainer,
@@ -47,6 +48,15 @@ export const ContactForm = () => {
   const { t } = useTranslation();
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
   const [files, setFiles] = useState([]);
+  const { currentLanguage } = useContext(LanguageContext);
+  const input = document.querySelector('.focus-input');
+
+  useEffect(() => {
+    if (input) {
+      input.focus();
+      input.blur();
+    }
+  }, [currentLanguage, input]);
 
   const handlePopUp = () => {
     setShowSuccessPopup(false);
@@ -134,6 +144,7 @@ export const ContactForm = () => {
                   <FormikInputWrap>
                     <FormControlWrap>
                       <FormikInput
+                        className="focus-input"
                         type="name"
                         name="name"
                         placeholder={t('form-name')}
