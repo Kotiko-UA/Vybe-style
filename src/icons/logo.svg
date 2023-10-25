@@ -5,7 +5,7 @@
 <path d="M25.2812 40.3123L36.9671 27.6416C39.3314 25.0781 43.3743 25.0727 45.9971 27.6296C48.6199 30.1864 48.8295 34.3373 46.4652 36.9008L34.7793 49.5715C32.415 52.135 28.3722 52.1404 25.7494 49.5835C23.1265 47.0267 22.917 42.8758 25.2812 40.3123Z" fill="url(#paint0_linear_1962_15790)"/>
 </g>
 <g filter="url(#filter1_diiii_1962_15790)">
-<path d="M40.9071 43.8166L40.9072 43.8166C42.8127 41.7821 45.9865 41.6967 47.9962 43.6258L48.1401 43.764C50.1498 45.6931 50.2342 48.9063 48.3286 50.9408L48.3286 50.9408C46.4231 52.9753 43.2492 53.0608 41.2396 51.1316L41.0956 50.9934C39.086 49.0643 39.0016 45.8511 40.9071 43.8166Z" fill="url(#paint1_linear_1962_15790)"/>
+<path d="M41.25 45.6798L41.2501 45.6797C42.9144 43.8341 45.6627 43.7328 47.3886 45.4535L47.5122 45.5767C49.2381 47.2974 49.2879 50.1885 47.6235 52.0342L47.6235 52.0342C45.9591 53.8799 43.2108 53.9812 41.485 52.2605L41.3613 52.1372C39.6355 50.4165 39.5857 47.5254 41.25 45.6798Z" fill="url(#paint1_linear_1962_15790)"/>
 </g>
 <g filter="url(#filter2_diiiii_1962_15790)">
 <path d="M24.5 48C30.1196 43.5795 31.1699 35.3389 26.8459 29.5938L14.6895 13.4426C9.06995 17.8631 8.01967 26.1038 12.3437 31.8487L24.5 48Z" fill="url(#paint2_linear_1962_15790)"/>
@@ -46,7 +46,7 @@
 <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0"/>
 <feBlend mode="normal" in2="effect4_innerShadow_1962_15790" result="effect5_innerShadow_1962_15790"/>
 </filter>
-<filter id="filter1_diiii_1962_15790" x="38.708" y="41.8218" width="11.8203" height="11.9375" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter1_diiii_1962_15790" x="39.21" y="43.815" width="10.4531" height="10.9072" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feOffset dy="0.411612"/>
@@ -124,7 +124,7 @@
 <stop stop-color="white" stop-opacity="0.01"/>
 <stop offset="1" stop-color="white"/>
 </linearGradient>
-<linearGradient id="paint1_linear_1962_15790" x1="40.9072" y1="43.8166" x2="48.415" y2="50.8485" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint1_linear_1962_15790" x1="41.2501" y1="45.6797" x2="47.9254" y2="51.6994" gradientUnits="userSpaceOnUse">
 <stop stop-color="#F4F90F"/>
 <stop offset="1" stop-color="#8CF960"/>
 </linearGradient>
