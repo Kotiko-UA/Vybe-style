@@ -53,8 +53,7 @@ export const ContactForm = () => {
   const handleAddFiles = props => e => {
     const selectedFiles = Array.from(e.target.files);
     const newFiles = [...files];
-    console.log('selectedFiles', selectedFiles);
-    console.log('newFiles', newFiles);
+
     for (let i = 0; i < selectedFiles.length; i++) {
       const isFileAlreadySelected = newFiles.some(
         existingFile => existingFile.name === selectedFiles[i].name
@@ -80,7 +79,6 @@ export const ContactForm = () => {
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     const { name, email, phone, company, message, files } = values;
-    console.log(files);
 
     const formData = new FormData();
 
