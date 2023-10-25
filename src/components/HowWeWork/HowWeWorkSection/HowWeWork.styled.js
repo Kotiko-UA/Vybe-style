@@ -49,7 +49,7 @@ export const Container = styled.div`
 
 export const Title = styled.h2`
   color: ${({ theme }) => theme.colorText};
-  font-size: 24px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 300;
   line-height: 1.2;

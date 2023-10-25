@@ -83,7 +83,7 @@ export const SvgArrow = styled(ArrowUp)`
 export const Title = styled.h2`
   color: ${({ theme }) => theme.colorText};
   font-family: Inter;
-  font-size: 32px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 300;
   line-height: 1.2;

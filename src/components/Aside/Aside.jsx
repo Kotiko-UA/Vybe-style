@@ -2,17 +2,22 @@ import { useState, useEffect, useContext } from 'react';
 import { LanguageContext } from 'components/HookLang/LanguageContext';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import {
-  Logo,
-  NameCompany,
   BurgerMenuBtn,
   ContainerMobileMenu,
   Menu,
   MenuItem,
   ContainerMenu,
   CloseBtnMenu,
-   BackgroundMenuOpen,
+  BackgroundMenuOpen,
+  ArrowSvg,
+  LinkWrapper,
+  SocialsList,
+  SocialsLink,
+  LinkedinSvg,
+  DribbleSvg,
+  InstagramSvg,
+  BehanceSvg,
 } from './aside.styled';
-import LogoVibeStyle from './images/logo-vibe-style.png';
 import BurgerMenu from './images/burger-menu.png';
 import { useTranslation } from 'react-i18next';
 import { menuList } from './menu-list';
@@ -81,8 +86,8 @@ export const Aside = () => {
     closeMenu();
   };
 
-     const handleTypeSelect = e => {
-         changeLanguage(e.value)
+  const handleTypeSelect = e => {
+    changeLanguage(e.value);
   };
 
   return (
@@ -90,33 +95,20 @@ export const Aside = () => {
       {!isOpen && (
         <BurgerMenuBtn src={BurgerMenu} alt="menu" onClick={toggleMenuBtn} />
       )}
-      <BackgroundMenuOpen
-        $open={`${isOpen}`}
-        onClick={handleBackdropClick}
-      >
+      <BackgroundMenuOpen $open={`${isOpen}`} onClick={handleBackdropClick}>
         <ContainerMobileMenu
           className={`main-menu ${isOpen ? 'open-menu' : ''}`}
         >
-          <Logo src={LogoVibeStyle} alt="logo-company" />
-          <NameCompany>VibeStyle</NameCompany>
           <Menu>
             <MySelect
-            className="custom-select"
+              className="custom-select"
               dataFunc={handleTypeSelect}
               lang={i18n.language}
-                          />
-                           {/* <SelectLang
-                value={i18n.language}
-                onChange={e => changeLanguage(e.target.value)}
-              >
-                <SelectLangOption value="en">English</SelectLangOption>
-                <SelectLangOption value="ua">Українська</SelectLangOption>
-              </SelectLang> */}
-            
+            />
             <ContainerMenu className="container-menu-ua">
               <ul>
                 {menuList.map(({ nameEn, nameUa, link, id }) => {
-                  return (
+                  return id !== 9 ? (
                     <MenuItem
                       key={id}
                       className="menu-items"
@@ -129,12 +121,66 @@ export const Aside = () => {
                         {currentLanguage === 'en' ? nameEn : nameUa}
                       </a>
                     </MenuItem>
+                  ) : (
+                    <MenuItem
+                      key={id}
+                      className="menu-items"
+                      onClick={() => {
+                        enableBodyScroll(document.body);
+                        closeMenu();
+                      }}
+                    >
+                      <LinkWrapper href={link}>
+                        {currentLanguage === 'en' ? nameEn : nameUa}
+                        <ArrowSvg />
+                      </LinkWrapper>
+                    </MenuItem>
                   );
                 })}
               </ul>
               <CloseBtnMenu onClick={toggleMenuBtn} />
             </ContainerMenu>
           </Menu>
+          {!isNarrowScreen && (
+            <SocialsList>
+              <li>
+                <SocialsLink
+                  href="https://www.linkedin.com/company/vibestyle/about/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkedinSvg width="19px" height="18px" />
+                </SocialsLink>
+              </li>
+              <li>
+                <SocialsLink
+                  href="https://dribbble.com/klimevtushenko"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <DribbleSvg width="24px" height="24px" />
+                </SocialsLink>
+              </li>
+              <li>
+                <SocialsLink
+                  href="https://www.instagram.com/uxui_evtushenkoklim/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <InstagramSvg width="19px" height="19px" />
+                </SocialsLink>
+              </li>
+              <li>
+                <SocialsLink
+                  href="https://www.behance.net/klymevtushenko"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <BehanceSvg width="23px" height="15px" />
+                </SocialsLink>
+              </li>
+            </SocialsList>
+          )}
         </ContainerMobileMenu>
       </BackgroundMenuOpen>
     </>

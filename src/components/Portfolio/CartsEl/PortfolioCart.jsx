@@ -8,7 +8,7 @@ import {
   Services,
   SlideImg,
   SlideLink,
-} from './Portfolio.styled';
+} from '../Portfolio.styled';
 
 export const PortfolioCarts = ({ projectCarts }) => {
   const { currentLanguage } = useContext(LanguageContext);

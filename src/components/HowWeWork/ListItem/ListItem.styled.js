@@ -198,7 +198,6 @@ export const Thumb = styled.div`
   flex-shrink: 0;
   border: 1px solid #c4f934;
   @media screen and (min-width: 768px) {
-    // position: static;
     left: -16px;
     max-width: 688px;
     height: 669px;

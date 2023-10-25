@@ -84,7 +84,7 @@ export const FormSectionHeader = styled.h2`
 
   @media only screen and (min-width: 1920px) {
     width: 878px;
-    font-size: 60px;
+    font-size: 70px;
     margin-bottom: 80px;
   }
 `;

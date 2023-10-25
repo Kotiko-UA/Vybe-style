@@ -70,7 +70,7 @@ export const H2 = styled.h2`
   @media screen and (min-width: 1920px) {
     margin-bottom: 80px;
     margin-right: 488px;
-    font-size: 90px;
+    font-size: 70px;
   }
 `;
 export const SwiperEl = styled(Swiper)`
@@ -91,6 +91,24 @@ export const SlideWrapper = styled.div`
   }
 `;
 export const SlideLink = styled.a`
+  display: block;
+  width: 100%;
+  height: 444px;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    height: 382px;
+  }
+  @media screen and (min-width: 1368px) {
+    width: 100%;
+    height: 392px;
+  }
+  @media screen and (min-width: 1920px) {
+    width: 100%;
+    height: 444px;
+  }
+`;
+export const SlideDiv = styled.div`
   display: block;
   width: 100%;
   height: 444px;

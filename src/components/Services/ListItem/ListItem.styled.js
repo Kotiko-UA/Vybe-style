@@ -18,13 +18,6 @@ height: calc(100% / 4);
   width: 100%;
   height: 100%;
  background: url(${props => props.$mobilephoto});
-
-
-//  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.95) 100%), 
-//  linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),
-//      url(${props => props.$mobilephoto}),
-//     ${({ theme }) => theme.brandColor};
-//     background-blend-mode: luminosity;
     background-repeat:no-repeat;
     background-size: cover;
   z-index: 0;
@@ -54,12 +47,6 @@ height: calc(100% / 4);
   width: 100%;
   height: 100%;
    background: url(${props => props.$tabletphoto});
-   
-//  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.95) 100%), 
-//  linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),
-//      url(${props => props.$tabletphoto}),
-//     ${({ theme }) => theme.brandColor};
-//     background-blend-mode: luminosity;
     background-repeat:no-repeat;
     background-size: cover;
     border-right: 0.5px solid ${({ theme }) => theme.colorText};
@@ -90,12 +77,6 @@ height: calc(100% / 4);
   width: 100%;
   height: 100%;
   background:     url(${props => props.$desktopphoto});
-   
-//  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.95) 100%), 
-//  linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),
-//      url(${props => props.$desktopphoto}),
-//     ${({ theme }) => theme.brandColor};
-//     background-blend-mode: luminosity;
     background-repeat:no-repeat;
     background-size: cover;
       z-index: 0;
@@ -123,11 +104,6 @@ height: calc(100% / 4);
       width: 100%;
       height: 100%;
        background: url(${props => props.$desktopphoto});
-   
-//       background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.95) 100%), 
-//  linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%),
-//         url(${props => props.$desktopphoto}),  ${({ theme }) => theme.brandColor};
-//       background-blend-mode: luminosity;
       background-repeat: no-repeat;
       background-size: cover;
       z-index: 0;

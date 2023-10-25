@@ -13,7 +13,7 @@ import {
   SlideLink,
   SlideWrapper,
   SliderFirstWrap,
-} from './Portfolio.styled';
+} from '../Portfolio.styled';
 
 export const AutomaticSwiper = ({ projectCarts }) => {
   const { currentLanguage } = useContext(LanguageContext);
