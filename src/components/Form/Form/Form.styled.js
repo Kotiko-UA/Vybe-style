@@ -372,10 +372,10 @@ export const ContactUsBtn = styled.button`
     transition: opacity ${({ theme }) => theme.animationTransform};
   }
 
-  &:hover::after {
+  &:not([disabled]):hover::after {
     opacity: 1;
   }
-  &:focus::after {
+  &:not([disabled]):focus::after {
     opacity: 1;
   }
 

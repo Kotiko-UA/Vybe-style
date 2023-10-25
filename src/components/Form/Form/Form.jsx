@@ -1,5 +1,7 @@
 import { Formik } from 'formik';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import validationSchema from '../../schema/validationShema';
 
@@ -104,6 +106,12 @@ export const ContactForm = () => {
       setFiles([]);
     } catch (error) {
       console.log(error.message);
+      if (error.response?.status === 500) {
+        toast.error('Server error', {
+          position: 'top-right',
+          autoClose: 3000,
+        });
+      }
     } finally {
       setSubmitting(false);
     }
@@ -132,7 +140,7 @@ export const ContactForm = () => {
                         required
                         onChange={props.handleChange}
                         value={props.values.name}
-                        onBlur={props.handleBlur}
+                        // onBlur={props.handleBlur}
                       />
                       {props.errors.name && props.touched.name && (
                         <StyledErrorMessage name="name">
@@ -148,7 +156,7 @@ export const ContactForm = () => {
                         required
                         onChange={props.handleChange}
                         value={props.values.email}
-                        onBlur={props.handleBlur}
+                        // onBlur={props.handleBlur}
                       />
                       {props.touched.email && props.errors.email ? (
                         <StyledErrorMessage>
@@ -164,7 +172,7 @@ export const ContactForm = () => {
                         required
                         onChange={props.handleChange}
                         value={props.values.phone}
-                        onBlur={props.handleBlur}
+                        // onBlur={props.handleBlur}
                       />
                       {props.touched.phone && props.errors.phone ? (
                         <StyledErrorMessage>
@@ -190,7 +198,7 @@ export const ContactForm = () => {
                       placeholder={t('form-message')}
                       onChange={props.handleChange}
                       value={props.values.message}
-                      onBlur={props.handleBlur}
+                      // onBlur={props.handleBlur}
                     />
                     <FormikFilePicker
                       type="file"
@@ -198,7 +206,7 @@ export const ContactForm = () => {
                       as={FilePicker}
                       multiple
                       onChange={handleAddFiles(props)}
-                      onBlur={props.handleBlur}
+                      // onBlur={props.handleBlur}
                     />
                     {props?.values?.files?.length > 0 && (
                       <AttachedFilesList>
