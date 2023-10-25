@@ -67,5 +67,11 @@
   "form-attachedFiles-error-2": "Загальний розмір файлів повинен бути ≤ 20 Мб",
   "form-attachedFiles-error-3": "Максимальна кількість файлів – 6",
   "modal-title": "Хто розробив наш веб сайт?",
-  "modal-text": "Люди, які забезпечують нашу онлайн-присутність"
+  "modal-text": "Люди, які забезпечують нашу онлайн-присутність",
+  "footer-createdby-text1": "сайт розроблений",
+  "footer-createdby-text2": "студентами GoIT",
+  "footer-address": "вул. Регенераторна, 4, м. Київ, Україна",
+  "footer-copyright-text1": "VibeStyle дизайнерське агенство. Усі права захищені",
+  "footer-copyright-text2-part1": "VibeStyle дизайнерське агенство",
+  "footer-copyright-text2-part2": "Усі права захищені"
 }

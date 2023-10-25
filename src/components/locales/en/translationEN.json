@@ -70,5 +70,11 @@
   "form-attachedFiles-error-2": "Total file size must be less than or equal to 20 MB",
   "form-attachedFiles-error-3": "The maximum number of files is 6",
   "modal-title": "Who's Behind Our Website?",
-  "modal-text": "The People Powering Our Online Presence"
+  "modal-text": "The People Powering Our Online Presence",
+  "footer-createdby-text1": "created",
+  "footer-createdby-text2": "by GoIT students",
+  "footer-address": "Reheneratorna Street, 4, Kyiv, Ukraine",
+  "footer-copyright-text1": "VibeStyle design agency. All rights reserved",
+  "footer-copyright-text2-part1": "VibeStyle design agency",
+  "footer-copyright-text2-part2": " All rights reserved"
 }

@@ -40,14 +40,13 @@ export const FormContainer = styled.div`
 
   @media only screen and (min-width: 1368px) {
     max-width: 1368px;
-    padding-left: 60px;
-    padding-right: 245px;
+    padding-left: 0px;
+    padding-right: 201px;
   }
 
   @media only screen and (min-width: 1920px) {
     max-width: 1920px;
     padding-left: 120px;
-    padding-right: 232px;
   }
 `;
 
@@ -92,9 +91,8 @@ export const FormSectionHeader = styled.h2`
 
 export const LeftSideBgWrap = styled.div`
   @media screen and (min-width: 1368px) {
-    width: 272px;
+    width: 338px;
     height: 462px;
-    margin-top: 60px;
     background-image: linear-gradient(
         267deg,
         #000 2.55%,
@@ -104,7 +102,6 @@ export const LeftSideBgWrap = styled.div`
 
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: 0px -50px;
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -119,7 +116,7 @@ export const LeftSideBgWrap = styled.div`
   }
 
   @media screen and (min-width: 1920px) {
-    width: 460px;
+    width: 580px;
     height: 550px;
     background-image: linear-gradient(
         267deg,
@@ -127,8 +124,6 @@ export const LeftSideBgWrap = styled.div`
         rgba(0, 0, 0, 0) 80.9%
       ),
       url(${LeftSideBgImgDesktop1x});
-
-    background-size: 460px 550px;
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -142,21 +137,22 @@ export const LeftSideBgWrap = styled.div`
     }
   }
 `;
+export const FormAndContactBlockWrap = styled.div``;
 
 export const Form = styled(FormikForm)`
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.43;
+  line-height: 1.64;
   letter-spacing: -0.16px;
 
   @media only screen and (min-width: 768px) {
-    font-size: 22px;
+    font-size: 16px;
+    line-height: 1.43;
   }
 
   @media only screen and (min-width: 1368px) {
     width: 700px;
-    margin-top: 67px;
   }
 
   @media only screen and (min-width: 1920px) {
@@ -200,11 +196,8 @@ export const FormControlWrap = styled.div`
 `;
 
 export const FormikInput = styled(Field)`
-  display: flex;
-  justify-content: center;
-  gap: 10px;
   width: 100%;
-  padding: 17px 24px;
+  padding: 13px 24px;
 
   border: 1px solid #545454;
   outline: none;
@@ -219,6 +212,7 @@ export const FormikInput = styled(Field)`
 
   @media only screen and (min-width: 768px) {
     width: 332px;
+    padding: 18px 24px;
   }
 
   @media only screen and (min-width: 1368px) {
@@ -227,13 +221,13 @@ export const FormikInput = styled(Field)`
 `;
 export const StyledErrorMessage = styled.div`
   position: absolute;
-  bottom: 10px;
+  top: 44px;
 
   color: ${({ theme }) => theme.redColor};
   font-size: 14px;
 
   @media screen and (min-width: 768px) {
-    top: 64px;
+    top: 56px;
   }
 `;
 
@@ -312,18 +306,19 @@ export const TextareaAndAttachedWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 32px;
+  row-gap: 16px;
+  margin-bottom: 42px;
 
   @media only screen and (min-width: 768px) {
     row-gap: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 8px;
   }
 `;
 
 export const FormikTextarea = styled(Field)`
   width: 100%;
   padding: 16px 10px 17px 24px;
-  height: 208px;
+  height: 139px;
   border: 1px solid #545454;
   resize: none;
   background-color: ${({ theme }) => theme.blackColor};
@@ -334,11 +329,14 @@ export const FormikTextarea = styled(Field)`
   &:focus {
     border: 1px solid #c4f934;
   }
+
+  @media only screen and (min-width: 768px) {
+    height: 104px;
+  }
 `;
 
 export const ContactUsBtn = styled.button`
   width: 100%;
-  margin-top: 42px;
   padding: 16px 40px;
   position: relative;
   border: none;
