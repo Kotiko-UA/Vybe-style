@@ -76,7 +76,7 @@ export const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <DribbleSvg width="24px" height="24px" />
+              <DribbleSvg width="22px" height="22px" />
             </SocialsLink>
           </li>
           <li>

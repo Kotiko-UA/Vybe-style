@@ -178,10 +178,30 @@ export const SocialsList = styled.ul`
   }
 `;
 
-export const LinkedinSvg = styled(IconLinkedin)``;
-export const DribbleSvg = styled(IconDribble)``;
-export const InstagramSvg = styled(IconInstagram)``;
-export const BehanceSvg = styled(IconBehance)``;
+export const LinkedinSvg = styled(IconLinkedin)`
+  @media only screen and (min-width: 1368px) {
+    width: 16px;
+    height: 15px;
+  }
+`;
+export const DribbleSvg = styled(IconDribble)`
+  @media only screen and (min-width: 1368px) {
+    width: 19px;
+    height: 19px;
+  }
+`;
+export const InstagramSvg = styled(IconInstagram)`
+  @media only screen and (min-width: 1368px) {
+    width: 16px;
+    height: 16px;
+  }
+`;
+export const BehanceSvg = styled(IconBehance)`
+  @media only screen and (min-width: 1368px) {
+    width: 20px;
+    height: 12px;
+  }
+`;
 
 export const SocialsLink = styled.a`
   display: flex;
