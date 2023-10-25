@@ -59,8 +59,7 @@ export const PositionWrapper = styled.div`
 
 export const FormSectionHeader = styled.h2`
   margin-bottom: 40px;
-  width: 247px;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 300;
   line-height: 1.2;
   transition: color ${({ theme }) => theme.animationStyles};
@@ -72,18 +71,17 @@ export const FormSectionHeader = styled.h2`
 
   @media only screen and (min-width: 768px) {
     margin-bottom: 56px;
-    width: 555px;
+
     font-size: 40px;
     line-height: 1.8;
     letter-spacing: -2.4px;
   }
 
   @media only screen and (min-width: 1368px) {
-    margin-bottom: 9px;
+    margin-bottom: 60px;
   }
 
   @media only screen and (min-width: 1920px) {
-    width: 878px;
     font-size: 70px;
     margin-bottom: 80px;
   }
@@ -327,7 +325,7 @@ export const FormikTextarea = styled(Field)`
 
   &:hover,
   &:focus {
-    border: 1px solid #c4f934;
+    border: 1px solid ${({ theme }) => theme.brandColor};
   }
 
   @media only screen and (min-width: 768px) {

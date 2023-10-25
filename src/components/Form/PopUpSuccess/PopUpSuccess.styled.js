@@ -42,6 +42,7 @@ export const ContactMessage = styled.p`
   color: ${({ theme }) => theme.greyColorPopup};
 `;
 export const SuccessBtn = styled.button`
+  position: relative;
   width: 246px;
   padding: 16px 39px 18px 40px;
 
@@ -58,10 +59,37 @@ export const SuccessBtn = styled.button`
   color: ${({ theme }) => theme.blackColor};
 
   cursor: pointer;
-  transition: background-color 1000ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
+
+  .btn-text {
+    color: ${({ theme }) => theme.blackColor};
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.31;
+    letter-spacing: -0.16px;
+    text-transform: uppercase;
+    text-align: left;
+    position: relative;
+    z-index: 333;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
     background: ${({ theme }) => theme.hoverBtnGradient};
+    opacity: 0;
+    transition: opacity ${({ theme }) => theme.animationTransform};
+  }
+
+  &:not([disabled]):hover::after {
+    opacity: 1;
+  }
+  &:not([disabled]):focus::after {
+    opacity: 1;
   }
 
   @media only screen and (min-width: 1368px) {

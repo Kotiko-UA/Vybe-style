@@ -48,7 +48,7 @@ export const PopUpSuccess = ({ handlePopUp }) => {
           <SuccessMessage>{t('form-request')}</SuccessMessage>
           <ContactMessage>{t('form-contact')}</ContactMessage>
           <SuccessBtn type="button" onClick={handleClosePopup}>
-            {t('form-perfect')}
+            <p className="btn-text">{t('form-perfect')}</p>
           </SuccessBtn>
         </PopUpSuccessContainer>
       </>
