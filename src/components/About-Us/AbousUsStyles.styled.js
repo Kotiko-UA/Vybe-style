@@ -32,7 +32,6 @@ export const Container = styled.div`
   }
   @media screen and (min-width: 1368px) {
     display: flex;
-    // gap: 90px;
     max-width: 1368px;
     padding-left: 60px;
     padding-right: 204px;

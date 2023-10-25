@@ -73,8 +73,7 @@ export const Container = styled.div`
   max-width: 480px;
   height: 1578px;
   margin: 0 auto;
-  // padding-left: 20px;
-  // padding-right: 20px;
+ 
   @media screen and (min-width: 425px) and (max-width: 767px) {
     padding-left: 40px;
   }
@@ -197,8 +196,7 @@ export const TitleH3 = styled.h3`
   line-height: 2.2;
   text-transform: uppercase;
   @media screen and (min-width: 768px) {
-    // color: ${({ theme }) => theme.borderAlphaColor};
-    font-size: 64px;
+     font-size: 64px;
     font-weight: 700;
     line-height: 1.65;
   }
