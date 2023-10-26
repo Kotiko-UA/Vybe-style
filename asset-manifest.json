@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Vybe-style/static/css/main.1d8c66d8.css",
-    "main.js": "/Vybe-style/static/js/main.950f9bf8.js",
+    "main.js": "/Vybe-style/static/js/main.3904914e.js",
     "static/media/Frame-1000005822.jpg": "/Vybe-style/static/media/Frame-1000005822.aa009cd471404d6dd51d.jpg",
     "static/media/Frame-1000005829.jpg": "/Vybe-style/static/media/Frame-1000005829.2a491813d904a8d6a88d.jpg",
     "static/media/Frame-1000005818.jpg": "/Vybe-style/static/media/Frame-1000005818.bcae927e0229ccba011a.jpg",
@@ -111,7 +111,6 @@
     "static/media/hww6Desk-min.jpg": "/Vybe-style/static/media/hww6Desk-min.8010d551a60e8308eb5e.jpg",
     "static/media/manwithbag2x.jpg": "/Vybe-style/static/media/manwithbag2x.f99da6234b20b18589b9.jpg",
     "static/media/tabletBG2x2.png": "/Vybe-style/static/media/tabletBG2x2.4ac92f464c52f31a131d.png",
-    "static/media/g-img-mobile-bot.png": "/Vybe-style/static/media/g-img-mobile-bot.60bb0004a77d2b2ba858.png",
     "static/media/hww1Desk-min.jpg": "/Vybe-style/static/media/hww1Desk-min.2e0d9f001d0ad0632db9.jpg",
     "static/media/hww2Desk-min.jpg": "/Vybe-style/static/media/hww2Desk-min.f6cf6912dfdb7d031b70.jpg",
     "static/media/form_and_footer_background_1368px_1x.png": "/Vybe-style/static/media/form_and_footer_background_1368px_1x.01e0a18731fc7bc33ca5.png",
@@ -186,10 +185,10 @@
     "static/media/plus.svg": "/Vybe-style/static/media/plus.62aa920e29d06cc58b3c3bb6fb89dff8.svg",
     "static/media/close-icon.svg": "/Vybe-style/static/media/close-icon.fec7c356a8b8c8bf7ab2537f6a1e1d5f.svg",
     "main.1d8c66d8.css.map": "/Vybe-style/static/css/main.1d8c66d8.css.map",
-    "main.950f9bf8.js.map": "/Vybe-style/static/js/main.950f9bf8.js.map"
+    "main.3904914e.js.map": "/Vybe-style/static/js/main.3904914e.js.map"
   },
   "entrypoints": [
     "static/css/main.1d8c66d8.css",
-    "static/js/main.950f9bf8.js"
+    "static/js/main.3904914e.js"
   ]
 }
