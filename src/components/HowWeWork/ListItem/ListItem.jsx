@@ -49,7 +49,7 @@ export const ListItem = ({
   const desktopPhoto = isRetina ? retinaPhotoDesk : photoDesk;
   const maxPhoto = isRetina ? retinaPhotoMax : photoMax;
   const nodeRef = useRef(null);
-  
+
   useEffect(() => {
     const mediaWatcher = window.matchMedia('(max-width: 1367px)');
     setIsNarrowScreen(mediaWatcher.matches);
@@ -105,17 +105,17 @@ export const ListItem = ({
               )}
             </Button>
           </InfoBlock>
-           <CSSTransition
+          <CSSTransition
             nodeRef={nodeRef}
-      in={isTextShown}
-      timeout={300}
-      classNames="alert"
-            unmountOnExit>
+            in={isTextShown}
+            timeout={300}
+            classNames="alert"
+            unmountOnExit
+          >
             <HiddenText ref={nodeRef}>
-      {currentLanguage === 'en' ? hiddenText : hiddenTextUa}
-    </HiddenText>
+              {currentLanguage === 'en' ? hiddenText : hiddenTextUa}
+            </HiddenText>
           </CSSTransition>
-               
         </ContainerBlock>
       </Wrapper>
 
@@ -124,7 +124,7 @@ export const ListItem = ({
         (isVideo ? (
           <PlayerWrapper>
             <StyledPlayer
-              url="https://res.cloudinary.com/deqdv9pvd/video/upload/v1697474178/Video%20for%20website/2023-10-16_07.47.10_jzcwnu.mp4"
+              url="https://res.cloudinary.com/deqdv9pvd/video/upload/v1698312530/Video%20for%20website/horizontal_e7586p.mp4"
               controls
               config={{
                 file: {
