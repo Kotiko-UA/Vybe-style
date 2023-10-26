@@ -57,10 +57,10 @@ export const H2 = styled.h2`
   @media screen and (min-width: 768px) {
     font-size: 40px;
     line-height: 120%;
+    text-align: right;
   }
   @media screen and (min-width: 1368px) {
     margin-bottom: 24px;
-    text-align: right;
   }
 
   @media screen and (min-width: 1920px) {
