@@ -62,7 +62,6 @@ export const Title = styled.h2`
   @media screen and (min-width: 1368px) {
     padding-right: 0px;
     margin-bottom: 22px;
-    text-align: left;
     letter-spacing: 4.8px;
   }
   @media screen and (min-width: 1920px) {
