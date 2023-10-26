@@ -57,10 +57,10 @@ export const H2 = styled.h2`
   @media screen and (min-width: 768px) {
     font-size: 40px;
     line-height: 120%;
+    text-align: right;
   }
   @media screen and (min-width: 1368px) {
     margin-bottom: 24px;
-    text-align: right;
   }
 
   @media screen and (min-width: 1920px) {
@@ -228,7 +228,7 @@ export const ProjectYear = styled.span`
 export const Services = styled.p`
   position: absolute;
   left: 8px;
-  bottom: 64px;
+  bottom: 40px;
 
   color: ${props => props.theme.normalСolor};
 
@@ -239,16 +239,13 @@ export const Services = styled.p`
   line-height: normal;
   z-index: 2;
   @media screen and (min-width: 768px) {
-    bottom: 40px;
     left: 16px;
     text-transform: lowercase;
   }
   @media screen and (min-width: 1368px) {
     left: 8px;
-    bottom: 52px;
   }
   @media screen and (min-width: 1920px) {
-    bottom: 40px;
   }
 `;
 export const ProjectServises = styled.p`
