@@ -2,7 +2,6 @@ import styled, { keyframes } from 'styled-components';
 import lines from '../../icons/3-lines-svg.svg';
 import round from '../../icons/round.svg';
 import bgImg from './img/g-img.png';
-import bgImg2 from './img/g-img-mobile-bot.png';
 import bgV from '../../icons/big-logo.svg';
 import { ReactComponent as PlaySvg } from '../../icons/play-svg.svg';
 import { ReactComponent as Logo } from '../../icons/logo.svg';
@@ -15,14 +14,11 @@ export const Section = styled.section`
       rgba(0, 0, 0, 0) 100%,
       #000 100%
     ),
-    url(${bgImg}),
-    linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 47.46%, #000 100%),
-    url(${bgImg2});
+    url(${bgImg});
 
-  background-size: 640px 640px, 640px 640px, 200px 278px, 200px 278px;
+  background-size: 640px 640px, 640px 640px;
   background-repeat: no-repeat;
-  background-position: top 0px right -100px, top 0px right -100px,
-    right 0px bottom -60px, right 0px bottom -60px;
+  background-position: top 0px right -100px, top 0px right -100px;
   @media screen and (min-width: 768px) {
     padding: 28px 0 70px 0;
     background-image: url(${bgV}),
@@ -110,7 +106,7 @@ export const LogoSvg = styled(Logo)`
 export const NameCompany = styled.h1`
   font-size: 16px;
   font-weight: 400;
-  line-height: 2.4;
+  line-height: 1;
   text-align: center;
 `;
 
