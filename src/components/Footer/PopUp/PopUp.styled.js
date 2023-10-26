@@ -11,6 +11,8 @@ import newBgTablet from '../../HowWeWork/img/newBGphoto.png';
 import newBgTablet2x from '../../HowWeWork/img/newBGphoto2x.png';
 
 export const Overlay = styled.div`
+  overflow-y: auto;
+  overflow-x: auto;
   position: fixed;
   top: 0;
   left: 0;
@@ -41,8 +43,7 @@ export const Modal = styled.div`
   position: relative;
   width: 352px;
   height: 440px;
-  padding-top: 24px;
-  padding-left: 20px;
+  padding: 24px 20px;
       border: 1px solid ${({ theme }) => theme.brandColor};
   background-color: ${({ theme }) => theme.blackColor};
   background-image: url(${bgMobile}), url(${bgMobile2});
