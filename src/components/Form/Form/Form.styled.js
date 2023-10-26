@@ -319,6 +319,7 @@ export const FormikTextarea = styled(Field)`
   height: 139px;
   border: 1px solid #545454;
   resize: none;
+  outline: none;
   background-color: ${({ theme }) => theme.blackColor};
 
   transition: border ${({ theme }) => theme.animationStyles};
