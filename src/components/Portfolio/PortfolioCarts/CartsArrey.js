@@ -31,7 +31,7 @@ const portfolioArrey = [
   {
     id: '1',
     projectFotoUrl: cart1,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://www.behance.net/gallery/147986895/GS4B',
     projectYear: '2023',
     projectName: 'WEB DESIGN AGENCY',
     projectServises: 'design, UX/UI',
@@ -43,7 +43,7 @@ const portfolioArrey = [
   {
     id: '2',
     projectFotoUrl: cart2,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/shots/14111494-English-course',
     projectYear: '2023',
     projectName: 'DASHBOARD FOR CRM',
     projectServises: 'design, UX/UI',
@@ -55,7 +55,7 @@ const portfolioArrey = [
   {
     id: '3',
     projectFotoUrl: cart3,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'LOGISTICS',
     projectServises: 'design, UX/UI',
@@ -67,7 +67,7 @@ const portfolioArrey = [
   {
     id: '4',
     projectFotoUrl: cart4,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'ELYS',
     projectServises: 'design, UX/UI',
@@ -79,7 +79,7 @@ const portfolioArrey = [
   {
     id: '5',
     projectFotoUrl: cart5,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'ROYAL CLUB',
     projectServises: 'design, UX/UI',
@@ -91,7 +91,7 @@ const portfolioArrey = [
   {
     id: '6',
     projectFotoUrl: cart6,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'TRAPP',
     projectServises: 'design, UX/UI',
@@ -103,7 +103,7 @@ const portfolioArrey = [
   {
     id: '7',
     projectFotoUrl: cart7,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'PAMELA LEARNING CENTRE',
     projectServises: 'design, UX/UI',
@@ -115,7 +115,7 @@ const portfolioArrey = [
   {
     id: '8',
     projectFotoUrl: cart8,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://www.behance.net/gallery/110724883/VITUS-online-store',
     projectYear: '2023',
     projectName: 'VITUS',
     projectServises: 'design, UX/UI',
@@ -127,7 +127,7 @@ const portfolioArrey = [
   {
     id: '9',
     projectFotoUrl: cart9,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'PASTEL',
     projectServises: 'design, UX/UI',
@@ -139,7 +139,7 @@ const portfolioArrey = [
   {
     id: '10',
     projectFotoUrl: cart10,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'UNLOCK YOUR PHONE',
     projectServises: 'design, UX/UI',
@@ -151,7 +151,7 @@ const portfolioArrey = [
   {
     id: '11',
     projectFotoUrl: cart11,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'ZINA LOGISTICS LTD',
     projectServises: 'design, UX/UI',
@@ -163,7 +163,8 @@ const portfolioArrey = [
   {
     id: '12',
     projectFotoUrl: cart12,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl:
+      'https://dribbble.com/shots/21877364-Landing-page-for-ICS-systems-store',
     projectYear: '2023',
     projectName: 'HIGHER PERFOMANCE',
     projectServises: 'design, UX/UI',
@@ -175,7 +176,7 @@ const portfolioArrey = [
   {
     id: '13',
     projectFotoUrl: cart13,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'BAKERS KITCHEN',
     projectServises: 'design, UX/UI',
@@ -187,7 +188,7 @@ const portfolioArrey = [
   {
     id: '14',
     projectFotoUrl: cart14,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'LOGISTICS',
     projectServises: 'design, UX/UI',
@@ -199,7 +200,7 @@ const portfolioArrey = [
   {
     id: '15',
     projectFotoUrl: cart15,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'MOODBOARD',
     projectServises: 'design, UX/UI',
@@ -211,7 +212,7 @@ const portfolioArrey = [
   {
     id: '16',
     projectFotoUrl: cart16,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'MOODBOARD',
     projectServises: 'design, UX/UI',
@@ -223,7 +224,7 @@ const portfolioArrey = [
   {
     id: '17',
     projectFotoUrl: cart17,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'СODESQUAD',
     projectServises: 'design, UX/UI',
@@ -235,7 +236,7 @@ const portfolioArrey = [
   {
     id: '18',
     projectFotoUrl: cart18,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'FOOD LOVERS',
     projectServises: 'design, UX/UI',
@@ -247,7 +248,7 @@ const portfolioArrey = [
   {
     id: '19',
     projectFotoUrl: cart19,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'YOUNG FOOTBALL CLUB',
     projectServises: 'design, UX/UI',
@@ -259,7 +260,7 @@ const portfolioArrey = [
   {
     id: '20',
     projectFotoUrl: cart20,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'PALATINO',
     projectServises: 'design, UX/UI',
@@ -271,7 +272,7 @@ const portfolioArrey = [
   {
     id: '21',
     projectFotoUrl: cart21,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'MEDICINE APP',
     projectServises: 'design, UX/UI',
@@ -283,7 +284,7 @@ const portfolioArrey = [
   {
     id: '22',
     projectFotoUrl: cart22,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'ROYAL GAME',
     projectServises: 'design, UX/UI',
@@ -295,7 +296,7 @@ const portfolioArrey = [
   {
     id: '23',
     projectFotoUrl: cart23,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'IGAMING',
     projectServises: 'design, UX/UI',
@@ -307,7 +308,7 @@ const portfolioArrey = [
   {
     id: '24',
     projectFotoUrl: cart24,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://www.behance.net/gallery/142778089/AID-media-tech',
     projectYear: '2023',
     projectName: 'CRM AID MEDIA',
     projectServises: 'design, UX/UI',
@@ -319,7 +320,8 @@ const portfolioArrey = [
   {
     id: '25',
     projectFotoUrl: cart25,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl:
+      'https://www.behance.net/gallery/115302775/Digital-studio-The-42-',
     projectYear: '2023',
     projectName: 'THE 42 WEB SITE',
     projectServises: 'design, UX/UI',
@@ -331,7 +333,7 @@ const portfolioArrey = [
   {
     id: '26',
     projectFotoUrl: cart26,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'OWL CHAT',
     projectServises: 'design, UX/UI',
@@ -343,7 +345,7 @@ const portfolioArrey = [
   {
     id: '27',
     projectFotoUrl: cart27,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'WEB STUDIO',
     projectServises: 'design, UX/UI',
@@ -355,7 +357,7 @@ const portfolioArrey = [
   {
     id: '28',
     projectFotoUrl: cart28,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'FINANCE APP',
     projectServises: 'design, UX/UI',
@@ -367,7 +369,7 @@ const portfolioArrey = [
   {
     id: '29',
     projectFotoUrl: cart29,
-    projectUrl: 'https://www.behance.net/klymevtushenko',
+    projectUrl: 'https://dribbble.com/klimevtushenko',
     projectYear: '2023',
     projectName: 'VIBESTYLE',
     projectServises: 'design, UX/UI',
