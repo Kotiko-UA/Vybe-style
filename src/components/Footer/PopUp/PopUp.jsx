@@ -1,4 +1,4 @@
-import { useEffect, useContext} from 'react';
+import { useState, useEffect, useContext} from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { LanguageContext } from 'components/HookLang/LanguageContext';
@@ -12,6 +12,23 @@ export const PopUp = ({ isModalOpen, onCloseModal }) => {
    
   const { currentLanguage } = useContext(LanguageContext);
   const { t } = useTranslation();
+   const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+  const [horizontal, setHorizontal] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setScreenHeight(window.innerHeight);
+    }
+
+    window.addEventListener("resize", handleResize);
+    console.log(screenHeight)
+    if (screenHeight < 440) {
+      setHorizontal(true)
+    } else { setHorizontal(false)}
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [screenHeight]);
  
   useEffect(() => {
     if (!isModalOpen) return;
@@ -35,13 +52,13 @@ export const PopUp = ({ isModalOpen, onCloseModal }) => {
 
   return createPortal(
     <Overlay onClick={handleBackdropClick} className={`${isModalOpen ? '' : 'is-hidden'}`}>
-             <Modal className='modal'>
+             <Modal className={`modal ${horizontal ? 'horizontal' : ''}`}>
           <CloseSvgBtn onClick={onCloseModal} />
           <h2 className="title">{t('modal-title')}</h2>
           <p data={currentLanguage} className="text">
             {t('modal-text')}
           </p>
-          <ul className="list">
+          <ul className={`list ${horizontal ? 'list-horizontal' : ''}`}>
             {data.map(
               ({
                 id,
@@ -52,20 +69,20 @@ export const PopUp = ({ isModalOpen, onCloseModal }) => {
                 teamName,
                 projectUrl,
               }) => (
-                <li className="li-item" key={id}>
+                <li className={`li-item ${horizontal ? 'li-item-horizontal' : ''}`} key={id}>
                   <a
                     className="link"
                     href={projectUrl}
                     target="_blank"
                     rel="noreferrer noopener"
                   >
-                    <div className="thumb">
+                    <div className={`thumb ${horizontal ? 'thumb-horizontal' : ''}`}>
                       <img className="image" src={image} alt={teamName}></img>
                     </div>
                     <p className="team-role">
                       {currentLanguage === 'en' ? teamRole : teamRoleUA}
                     </p>
-                    <p className="team-name">
+                    <p className={`team-name ${horizontal ? 'team-name-horizontal' : ''}`}>
                       {currentLanguage === 'en' ? teamName : teamNameUA}
                     </p>
                   </a>

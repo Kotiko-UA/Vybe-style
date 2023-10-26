@@ -37,6 +37,29 @@ export const Overlay = styled.div`
   &.is-hidden .modal {
     transform: scale(0.5);
   }
+  & .horizontal {
+  height: calc(100vh - 20%);
+  width: calc(100vw - 20%);
+}
+
+& .list-horizontal {
+  flex-wrap: nowrap !important;
+  width: calc(100% - 20px) !important;
+ 
+}
+
+& .li-item-horizontal {
+  width: calc((100% - 54px) / 4) !important;
+  height: 120px !important;
+}
+
+& .thumb-horizontal {
+  height: 100px !important;
+}
+
+& .team-name-horizontal {
+  font-size: 16px !important;
+}
 `;
 
 export const Modal = styled.div`
@@ -59,7 +82,9 @@ export const Modal = styled.div`
 
 transform:  scale(1);
  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+& .horizontal {
+  height: 300px;
+}
 
 
 .title {
