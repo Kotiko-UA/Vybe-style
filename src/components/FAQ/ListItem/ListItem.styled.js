@@ -39,7 +39,9 @@ export const LiItem = styled.li`
         }
     }
    
-    padding: 40px 36px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left:  36px;
   }
   @media screen and (min-width: 1368px) {
     width: 872px;
@@ -67,7 +69,9 @@ export const Number = styled.p`
     font-size: 48px;
     letter-spacing: 0.25px;
     margin-bottom: 0;
+     width: 63.5px;
   }
+ 
 `;
 export const ContainerBlock = styled.div`
 
