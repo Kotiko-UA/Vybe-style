@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import bgMobile from '../img/back.png';
 import bgMobile2x from '../img/back2x.png';
+import bgNewMobile from '../img/newMobile.png';
+import bgNewMobile2x from '../img/newMobile2x.png';
 import newBgPhoto from '../img/newBGphoto.png';
 import newBgPhoto2x from '../img/newBGphoto2x.png';
 import { ReactComponent as Ellipse } from '../img/ellipse.svg';
@@ -40,36 +42,42 @@ export const Container = styled.div`
   align-items: center;
   flex-wrap: nowrap;
   overflow: hidden;
+ 
+
  @media screen and (max-width: 380px) {
   ${SvgEllipse}:nth-child(4) {
-    margin-left: -96px;
+     margin-left: -96px;
+
   }
   ${SvgEllipse}:nth-child(n + 5) {
     margin-left: -40px;
   }
  }
   @media screen and (max-width: 767px) {
-    background-image: linear-gradient(
-        180deg,
-        #000 0%,
-        rgba(0, 0, 0, 0) 349.05%,
-        #000 100%
-      ),
-      url(${bgMobile});
+    background-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 47.46%, #000 100%), url(${bgMobile});
     background-repeat: no-repeat;
-    background-size: 330px 325px;
-    background-position: left -15px bottom -20px;
+    background-size: 170px 185px;
+    background-position: left -15px bottom 50px; 
     @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-    background-image: linear-gradient(
-        180deg,
-        #000 0%,
-        rgba(0, 0, 0, 0) 349.05%,
-        #000 100%
-      ),url(${bgMobile2x});
+    background-image:  linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 47.46%, #000 100%),url(${bgMobile2x});
  
 }
+${SvgEllipse}:nth-child(6) {
+ 
+    background-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 47.46%, #000 100%), url(${bgNewMobile});
+    background-repeat: no-repeat;
+    background-size: 150px 155px;
+    background-position: right 50px bottom 40px; 
+   (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 47.46%, #000 100%),url(${bgNewMobile2x});
+ }
+  }
+  ${SvgEllipse}:nth-child(5) {
+    z-index: 5;
+    }
   }
   @media screen and (min-width: 381px) and (max-width: 767px){
      ${SvgEllipse}:nth-child(4) {

@@ -1,6 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
 import { LanguageContext } from 'components/HookLang/LanguageContext';
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import {
   BurgerMenuBtn,
   ContainerMobileMenu,
@@ -28,6 +27,14 @@ export const Aside = () => {
   const { changeLanguage, currentLanguage } = useContext(LanguageContext);
   const [isOpen, setIsOpen] = useState(false);
   const [isNarrowScreen, setIsNarrowScreen] = useState(false);
+  const disableBodyScroll = () => {
+    document.body.style.overflowX = 'hidden';
+    document.body.style.overflowY = 'hidden';
+  };
+  const enableBodyScroll = () => {
+    document.body.style.overflowX = 'auto';
+    document.body.style.overflowY = 'auto';
+  };
 
   useEffect(() => {
     const mediaWatcher = window.matchMedia('(min-width: 1368px)');
@@ -51,14 +58,14 @@ export const Aside = () => {
 
   useEffect(() => {
     if (isNarrowScreen) {
-      enableBodyScroll(document.body);
+      enableBodyScroll();
       return;
     }
     if (!isNarrowScreen && isOpen) {
-      disableBodyScroll(document.body);
+      disableBodyScroll();
     }
     return () => {
-      enableBodyScroll(document.body);
+      enableBodyScroll();
     };
   }, [isNarrowScreen, isOpen]);
 
@@ -113,7 +120,7 @@ export const Aside = () => {
                       key={id}
                       className="menu-items"
                       onClick={() => {
-                        enableBodyScroll(document.body);
+                        enableBodyScroll();
                         closeMenu();
                       }}
                     >
@@ -126,7 +133,7 @@ export const Aside = () => {
                       key={id}
                       className="menu-items"
                       onClick={() => {
-                        enableBodyScroll(document.body);
+                        enableBodyScroll();
                         closeMenu();
                       }}
                     >
