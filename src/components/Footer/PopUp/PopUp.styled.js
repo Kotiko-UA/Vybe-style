@@ -11,6 +11,8 @@ import newBgTablet from '../../HowWeWork/img/newBGphoto.png';
 import newBgTablet2x from '../../HowWeWork/img/newBGphoto2x.png';
 
 export const Overlay = styled.div`
+  overflow-y: auto;
+  overflow-x: auto;
   position: fixed;
   top: 0;
   left: 0;
@@ -35,14 +37,36 @@ export const Overlay = styled.div`
   &.is-hidden .modal {
     transform: scale(0.5);
   }
+  & .horizontal {
+  height: calc(100vh - 20%);
+  width: calc(100vw - 20%);
+}
+
+& .list-horizontal {
+  flex-wrap: nowrap !important;
+  width: calc(100% - 20px) !important;
+ 
+}
+
+& .li-item-horizontal {
+  width: calc((100% - 54px) / 4) !important;
+  height: 120px !important;
+}
+
+& .thumb-horizontal {
+  height: 100px !important;
+}
+
+& .team-name-horizontal {
+  font-size: 16px !important;
+}
 `;
 
 export const Modal = styled.div`
   position: relative;
   width: 352px;
   height: 440px;
-  padding-top: 24px;
-  padding-left: 20px;
+  padding: 24px 20px;
       border: 1px solid ${({ theme }) => theme.brandColor};
   background-color: ${({ theme }) => theme.blackColor};
   background-image: url(${bgMobile}), url(${bgMobile2});
@@ -58,7 +82,9 @@ export const Modal = styled.div`
 
 transform:  scale(1);
  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+& .horizontal {
+  height: 300px;
+}
 
 
 .title {
