@@ -20,7 +20,7 @@ export const ContainerMobileMenu = styled.div`
   transform: translateX(100%);
   background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
   backdrop-filter: blur(11px);
-  overflow-y: scroll;
+  overflow-y: auto;
   transition: transform 550ms cubic-bezier(0.4, 0, 0.2, 1);
   &.main-menu.open-menu {
     transform: translateX(0);
