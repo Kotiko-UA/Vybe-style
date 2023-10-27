@@ -124,7 +124,7 @@ export const ListItem = ({
         (isVideo ? (
           <PlayerWrapper>
             <StyledPlayer
-              url="https://res.cloudinary.com/deqdv9pvd/video/upload/v1698312530/Video%20for%20website/horizontal_e7586p.mp4"
+              url="https://res.cloudinary.com/deqdv9pvd/video/upload/v1698439429/Video%20for%20website/horizontal_final_tqxmri.mp4"
               controls
               config={{
                 file: {

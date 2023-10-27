@@ -57,3 +57,28 @@
   - БД MongoDB - дані із форми зберігаються в базі даних. За відсутності адмінки
     сайту, може виникнути необхідність очищати базу безпосередньо видаляючи
     окремі записи.
+
+<!-- ------------------ Додати/замінити відео --------------------- -->
+
+How we work section Як змінити відео
+
+- горизонтальне для мобайл/таблет: src/HowWeWork/ListItem/ListItem.jsx
+
+<!-- <PlayerWrapper>
+            <StyledPlayer
+              url="https://res.cloudinary.com/deqdv9pvd/video/upload/v1698312530/Video%20for%20website/horizontal_e7586p.mp4"
+              controls
+              config={{
+                file: {
+                  attributes: {
+                    controlsList: 'nodownload',
+                  },
+                },
+              }}
+            />
+          </PlayerWrapper> -->
+
+в url підставляємо нове значення
+
+- вертикальне для лептоп/декстоп:
+  src/HowWeWork/HowWeWorkSection/HowWeWorkSection.jsx така сама процедура
