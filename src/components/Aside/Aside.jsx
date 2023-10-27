@@ -1,6 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
 import { LanguageContext } from 'components/HookLang/LanguageContext';
-// import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import {
   BurgerMenuBtn,
   ContainerMobileMenu,
@@ -28,6 +27,14 @@ export const Aside = () => {
   const { changeLanguage, currentLanguage } = useContext(LanguageContext);
   const [isOpen, setIsOpen] = useState(false);
   const [isNarrowScreen, setIsNarrowScreen] = useState(false);
+  const disableBodyScroll = () => {
+    document.body.style.overflowX = 'hidden';
+    document.body.style.overflowY = 'hidden';
+  };
+  const enableBodyScroll = () => {
+    document.body.style.overflowX = 'scroll';
+    document.body.style.overflowY = 'scroll';
+  };
 
   useEffect(() => {
     const mediaWatcher = window.matchMedia('(min-width: 1368px)');
@@ -49,18 +56,18 @@ export const Aside = () => {
     }
   }, [isNarrowScreen]);
 
-  // useEffect(() => {
-  //   if (isNarrowScreen) {
-  //     enableBodyScroll(document.body);
-  //     return;
-  //   }
-  //   if (!isNarrowScreen && isOpen) {
-  //     disableBodyScroll(document.body);
-  //   }
-  //   return () => {
-  //     enableBodyScroll(document.body);
-  //   };
-  // }, [isNarrowScreen, isOpen]);
+  useEffect(() => {
+    if (isNarrowScreen) {
+      enableBodyScroll();
+      return;
+    }
+    if (!isNarrowScreen && isOpen) {
+      disableBodyScroll();
+    }
+    return () => {
+      enableBodyScroll();
+    };
+  }, [isNarrowScreen, isOpen]);
 
   useEffect(() => {
     const handleKeydown = e => {
@@ -113,7 +120,7 @@ export const Aside = () => {
                       key={id}
                       className="menu-items"
                       onClick={() => {
-                        // enableBodyScroll(document.body);
+                        enableBodyScroll();
                         closeMenu();
                       }}
                     >
@@ -126,7 +133,7 @@ export const Aside = () => {
                       key={id}
                       className="menu-items"
                       onClick={() => {
-                        // enableBodyScroll(document.body);
+                        enableBodyScroll();
                         closeMenu();
                       }}
                     >
