@@ -19,6 +19,7 @@ export const ContainerMobileMenu = styled.div`
   z-index: 999;
   transform: translateX(100%);
   background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+  -webkit-backdrop-filter: blur(11px);
   backdrop-filter: blur(11px);
   overflow-y: auto;
   transition: transform 550ms cubic-bezier(0.4, 0, 0.2, 1);
