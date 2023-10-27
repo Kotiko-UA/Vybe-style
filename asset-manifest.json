@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Vybe-style/static/css/main.c743012d.css",
+    "main.css": "/Vybe-style/static/css/main.1d8c66d8.css",
     "main.js": "/Vybe-style/static/js/main.13b20e0d.js",
     "static/media/Frame-1000005822.jpg": "/Vybe-style/static/media/Frame-1000005822.aa009cd471404d6dd51d.jpg",
     "static/media/Frame-1000005829.jpg": "/Vybe-style/static/media/Frame-1000005829.2a491813d904a8d6a88d.jpg",
@@ -184,11 +184,11 @@
     "static/media/burger.svg": "/Vybe-style/static/media/burger.f500da283c21e60d5c0fa4b5ad77f524.svg",
     "static/media/plus.svg": "/Vybe-style/static/media/plus.62aa920e29d06cc58b3c3bb6fb89dff8.svg",
     "static/media/close-icon.svg": "/Vybe-style/static/media/close-icon.fec7c356a8b8c8bf7ab2537f6a1e1d5f.svg",
-    "main.c743012d.css.map": "/Vybe-style/static/css/main.c743012d.css.map",
+    "main.1d8c66d8.css.map": "/Vybe-style/static/css/main.1d8c66d8.css.map",
     "main.13b20e0d.js.map": "/Vybe-style/static/js/main.13b20e0d.js.map"
   },
   "entrypoints": [
-    "static/css/main.c743012d.css",
+    "static/css/main.1d8c66d8.css",
     "static/js/main.13b20e0d.js"
   ]
 }
