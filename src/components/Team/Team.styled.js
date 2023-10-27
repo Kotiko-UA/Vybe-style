@@ -20,7 +20,7 @@ export const Container = styled.div`
   position: relative;
   padding-left: 20px;
   padding-right: 20px;
-  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   @media screen and (min-width: 480px) {
     max-width: 480px;

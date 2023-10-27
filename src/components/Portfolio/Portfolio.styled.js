@@ -18,7 +18,7 @@ export const Wrapper = styled.section`
 export const Container = styled.div`
   padding-left: 20px;
   padding-right: 20px;
-  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   @media screen and (min-width: 480px) {
     max-width: 480px;

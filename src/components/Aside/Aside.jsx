@@ -32,8 +32,8 @@ export const Aside = () => {
     document.body.style.overflowY = 'hidden';
   };
   const enableBodyScroll = () => {
-    document.body.style.overflowX = 'scroll';
-    document.body.style.overflowY = 'scroll';
+    document.body.style.overflowX = 'auto';
+    document.body.style.overflowY = 'auto';
   };
 
   useEffect(() => {
