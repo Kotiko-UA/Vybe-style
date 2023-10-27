@@ -113,7 +113,7 @@ export const Aside = () => {
                       key={id}
                       className="menu-items"
                       onClick={() => {
-                        enableBodyScroll(document.body);
+                        // enableBodyScroll(document.body);
                         closeMenu();
                       }}
                     >
@@ -126,7 +126,7 @@ export const Aside = () => {
                       key={id}
                       className="menu-items"
                       onClick={() => {
-                        enableBodyScroll(document.body);
+                        // enableBodyScroll(document.body);
                         closeMenu();
                       }}
                     >
