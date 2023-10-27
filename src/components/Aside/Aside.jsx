@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import { LanguageContext } from 'components/HookLang/LanguageContext';
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+// import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import {
   BurgerMenuBtn,
   ContainerMobileMenu,
@@ -49,18 +49,18 @@ export const Aside = () => {
     }
   }, [isNarrowScreen]);
 
-  useEffect(() => {
-    if (isNarrowScreen) {
-      enableBodyScroll(document.body);
-      return;
-    }
-    if (!isNarrowScreen && isOpen) {
-      disableBodyScroll(document.body);
-    }
-    return () => {
-      enableBodyScroll(document.body);
-    };
-  }, [isNarrowScreen, isOpen]);
+  // useEffect(() => {
+  //   if (isNarrowScreen) {
+  //     enableBodyScroll(document.body);
+  //     return;
+  //   }
+  //   if (!isNarrowScreen && isOpen) {
+  //     disableBodyScroll(document.body);
+  //   }
+  //   return () => {
+  //     enableBodyScroll(document.body);
+  //   };
+  // }, [isNarrowScreen, isOpen]);
 
   useEffect(() => {
     const handleKeydown = e => {
