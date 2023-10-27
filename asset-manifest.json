@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Vybe-style/static/css/main.1d8c66d8.css",
-    "main.js": "/Vybe-style/static/js/main.09434853.js",
+    "main.js": "/Vybe-style/static/js/main.4b62b9ef.js",
     "static/media/Frame-1000005822.jpg": "/Vybe-style/static/media/Frame-1000005822.aa009cd471404d6dd51d.jpg",
     "static/media/Frame-1000005829.jpg": "/Vybe-style/static/media/Frame-1000005829.2a491813d904a8d6a88d.jpg",
     "static/media/Frame-1000005818.jpg": "/Vybe-style/static/media/Frame-1000005818.bcae927e0229ccba011a.jpg",
@@ -103,6 +103,7 @@
     "static/media/hww3Mob@2x-min.jpg": "/Vybe-style/static/media/hww3Mob@2x-min.b21dd39f90c4d0eef291.jpg",
     "static/media/hww4Mob@2x-min.jpg": "/Vybe-style/static/media/hww4Mob@2x-min.72da8553a23a978d8840.jpg",
     "static/media/hww2Tab-min.jpg": "/Vybe-style/static/media/hww2Tab-min.808acf5086220265600e.jpg",
+    "static/media/newMobile2x.png": "/Vybe-style/static/media/newMobile2x.8809af5860c570caa42a.png",
     "static/media/hww4Tab-min.jpg": "/Vybe-style/static/media/hww4Tab-min.27c58c74a4617332fba6.jpg",
     "static/media/hww3Tab-min.jpg": "/Vybe-style/static/media/hww3Tab-min.8b834df0362afed22779.jpg",
     "static/media/bgLogoMax.jpg": "/Vybe-style/static/media/bgLogoMax.a01be4c2346afef1e24a.jpg",
@@ -151,6 +152,7 @@
     "static/media/Roboto-Thin-Italic.woff2": "/Vybe-style/static/media/Roboto-Thin-Italic.672f14d7c53174414ca1.woff2",
     "static/media/manwithbag.jpg": "/Vybe-style/static/media/manwithbag.17245e210e21eb5bbad1.jpg",
     "static/media/bgAppMobile2x.jpg": "/Vybe-style/static/media/bgAppMobile2x.e2ca73601980cba137c9.jpg",
+    "static/media/newMobile.png": "/Vybe-style/static/media/newMobile.ef93f28444c43f782e86.png",
     "static/media/bgWebMobile2x.jpg": "/Vybe-style/static/media/bgWebMobile2x.5888efde5c65c25ab79f.jpg",
     "static/media/mobileBG2x2.png": "/Vybe-style/static/media/mobileBG2x2.b283aead9baf54cddf10.png",
     "static/media/tabletBG2.png": "/Vybe-style/static/media/tabletBG2.c2767d84b163aa0ff2c5.png",
@@ -185,10 +187,10 @@
     "static/media/plus.svg": "/Vybe-style/static/media/plus.62aa920e29d06cc58b3c3bb6fb89dff8.svg",
     "static/media/close-icon.svg": "/Vybe-style/static/media/close-icon.fec7c356a8b8c8bf7ab2537f6a1e1d5f.svg",
     "main.1d8c66d8.css.map": "/Vybe-style/static/css/main.1d8c66d8.css.map",
-    "main.09434853.js.map": "/Vybe-style/static/js/main.09434853.js.map"
+    "main.4b62b9ef.js.map": "/Vybe-style/static/js/main.4b62b9ef.js.map"
   },
   "entrypoints": [
     "static/css/main.1d8c66d8.css",
-    "static/js/main.09434853.js"
+    "static/js/main.4b62b9ef.js"
   ]
 }
