@@ -167,7 +167,7 @@ export const ArrowDropDown = styled.img`
 `;
 
 export const BackgroundMenuOpen = styled.div`
-  position: ${props => (props.$open === 'true' ? 'fixed' : 'absolute')};
+  /* position: ${props => (props.$open === 'true' ? 'fixed' : 'absolute')}; */
   z-index: 998;
   top: 0;
   right: 0;
