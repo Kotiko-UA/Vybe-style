@@ -80,7 +80,7 @@ export const OurClients = () => {
           ></ManWithBagPhoto>
           <YearsBlock>
             <Text>{t('our-cliects-text-4')}</Text>
-            <TitleH3>7</TitleH3>
+            <TitleH3>5</TitleH3>
           </YearsBlock>
           <ProjectsBlock>
             <Text className="projects-text">{t('our-cliects-text-5')}</Text>
