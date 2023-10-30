@@ -57,7 +57,7 @@ export const PopUp = ({ isModalOpen, onCloseModal }) => {
     >
       <Modal className={`modal ${horizontal ? 'horizontal' : ''}`}>
         <CloseSvgBtn onClick={onCloseModal} />
-        <h2 className="title">{t('modal-title')}</h2>
+        <h2 className={`title ${horizontal ? 'list-title-horizontal' : ''}`}>{t('modal-title')}</h2>
         <p data={currentLanguage} className="text">
           {t('modal-text')}
         </p>

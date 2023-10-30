@@ -11,8 +11,8 @@ import newBgTablet from '../../HowWeWork/img/newBGphoto.png';
 import newBgTablet2x from '../../HowWeWork/img/newBGphoto2x.png';
 
 export const Overlay = styled.div`
-  overflow-y: auto;
-  overflow-x: auto;
+  overflow-y: hidden;
+  
   position: fixed;
   top: 0;
   left: 0;
@@ -38,23 +38,26 @@ export const Overlay = styled.div`
     transform: scale(0.5);
   }
   & .horizontal {
-  height: calc(100vh - 20%);
-  width: calc(100vw - 20%);
+  height: 250px;
+  width: 440px;
+  padding-top: 10px !important;
+}
+& .list-title-horizontal{
+margin-bottom: 5px !important;
 }
 
 & .list-horizontal {
   flex-wrap: nowrap !important;
-  width: calc(100% - 20px) !important;
- 
+  width: 100% !important;
+ height: 184px !important;
 }
 
 & .li-item-horizontal {
   width: calc((100% - 54px) / 4) !important;
-  height: 120px !important;
-}
+  }
 
 & .thumb-horizontal {
-  height: 100px !important;
+  height: 120px !important;
 }
 
 & .team-name-horizontal {
