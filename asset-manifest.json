@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Vybe-style/static/css/main.1d8c66d8.css",
-    "main.js": "/Vybe-style/static/js/main.cceb11dc.js",
+    "main.js": "/Vybe-style/static/js/main.1d8a65a5.js",
     "static/media/Frame-1000005822.jpg": "/Vybe-style/static/media/Frame-1000005822.aa009cd471404d6dd51d.jpg",
     "static/media/Frame-1000005829.jpg": "/Vybe-style/static/media/Frame-1000005829.2a491813d904a8d6a88d.jpg",
     "static/media/Frame-1000005818.jpg": "/Vybe-style/static/media/Frame-1000005818.bcae927e0229ccba011a.jpg",
@@ -37,9 +37,9 @@
     "static/media/form_and_footer_background_1920px_2x.png": "/Vybe-style/static/media/form_and_footer_background_1920px_2x.5dd49055afbd02d64b75.png",
     "static/media/g-img.png": "/Vybe-style/static/media/g-img.4045afd62f5a90f05df3.png",
     "static/media/Frame-1000005826.jpg": "/Vybe-style/static/media/Frame-1000005826.37fbd2cc9e5a16939f37.jpg",
-    "static/media/hww1Max@2x-min.jpg": "/Vybe-style/static/media/hww1Max@2x-min.4678c999bcdf83d4dd89.jpg",
     "static/media/Frame-1000005835.jpg": "/Vybe-style/static/media/Frame-1000005835.be5541fb51de0432b0e1.jpg",
     "static/media/hww2Max@2x-min.jpg": "/Vybe-style/static/media/hww2Max@2x-min.eb0759fe7bb4ab1aeea7.jpg",
+    "static/media/hww1Max@2x-min.jpg": "/Vybe-style/static/media/hww1Max@2x-min.2836b81908f9b42a5b65.jpg",
     "static/media/Frame-1000005813.jpg": "/Vybe-style/static/media/Frame-1000005813.ead5564031c68261575b.jpg",
     "static/media/Frame-1000005828.jpg": "/Vybe-style/static/media/Frame-1000005828.38624673cad3ecd23962.jpg",
     "static/media/Frame-1000005814.jpg": "/Vybe-style/static/media/Frame-1000005814.59e67c750ea48850ac28.jpg",
@@ -59,7 +59,6 @@
     "static/media/Roboto-BoldItalic.ttf": "/Vybe-style/static/media/Roboto-BoldItalic.87d61cea6fe1d235d4a8.ttf",
     "static/media/hww6Max@2x-min.jpg": "/Vybe-style/static/media/hww6Max@2x-min.f52dd2ca46afaf2a5a1f.jpg",
     "static/media/hww4Max@2x-min.jpg": "/Vybe-style/static/media/hww4Max@2x-min.c984f9eea6c074ee8fe9.jpg",
-    "static/media/hww1Max-min.jpg": "/Vybe-style/static/media/hww1Max-min.54bd880739ea118277b8.jpg",
     "static/media/hww2Tab@2x-min.jpg": "/Vybe-style/static/media/hww2Tab@2x-min.9749313d7b93056d1a45.jpg",
     "static/media/hww5Tab@2x-min.jpg": "/Vybe-style/static/media/hww5Tab@2x-min.ae3d35db26f389bc3d47.jpg",
     "static/media/v2-y.jpg": "/Vybe-style/static/media/v2-y.6d5a7b34306f3f75da1c.jpg",
@@ -79,6 +78,7 @@
     "static/media/hww3Desk@2x-min.jpg": "/Vybe-style/static/media/hww3Desk@2x-min.4ade06a078fe6870a421.jpg",
     "static/media/hww5Max-min.jpg": "/Vybe-style/static/media/hww5Max-min.12789c04260f55f445ad.jpg",
     "static/media/l-mazur.jpg": "/Vybe-style/static/media/l-mazur.5367a858c5330b69c420.jpg",
+    "static/media/hww1Max-min.jpg": "/Vybe-style/static/media/hww1Max-min.5ea630f3683bbdadb1fe.jpg",
     "static/media/hww4Max-min.jpg": "/Vybe-style/static/media/hww4Max-min.106775a6adeca6505a5d.jpg",
     "static/media/bgAppMax.jpg": "/Vybe-style/static/media/bgAppMax.58fa4934ff8a5a3b3cc4.jpg",
     "static/media/l2-m.jpg": "/Vybe-style/static/media/l2-m.d8f74da219c26fd2d513.jpg",
@@ -131,7 +131,7 @@
     "static/media/bgWebTablet.jpg": "/Vybe-style/static/media/bgWebTablet.2fab3af6d2649d43a9d2.jpg",
     "static/media/bgLogoMobile.jpg": "/Vybe-style/static/media/bgLogoMobile.efa5faa1a124b00bfc91.jpg",
     "static/media/hww5Mob-min.jpg": "/Vybe-style/static/media/hww5Mob-min.fa2ebde9cc270a75bd31.jpg",
-    "static/media/hww1Mob-min.jpg": "/Vybe-style/static/media/hww1Mob-min.60288040c836599d2daf.jpg",
+    "static/media/hww1Mob-min.jpg": "/Vybe-style/static/media/hww1Mob-min.02e7a868292ec36745de.jpg",
     "static/media/hww4Mob-min.jpg": "/Vybe-style/static/media/hww4Mob-min.78356ec6bbe2d239bc7c.jpg",
     "static/media/n-yevtushenko.jpg": "/Vybe-style/static/media/n-yevtushenko.8f69b13e308ee9580463.jpg",
     "static/media/hww6Mob-min.jpg": "/Vybe-style/static/media/hww6Mob-min.139a021418fde3c83af9.jpg",
@@ -187,10 +187,10 @@
     "static/media/plus.svg": "/Vybe-style/static/media/plus.62aa920e29d06cc58b3c3bb6fb89dff8.svg",
     "static/media/close-icon.svg": "/Vybe-style/static/media/close-icon.fec7c356a8b8c8bf7ab2537f6a1e1d5f.svg",
     "main.1d8c66d8.css.map": "/Vybe-style/static/css/main.1d8c66d8.css.map",
-    "main.cceb11dc.js.map": "/Vybe-style/static/js/main.cceb11dc.js.map"
+    "main.1d8a65a5.js.map": "/Vybe-style/static/js/main.1d8a65a5.js.map"
   },
   "entrypoints": [
     "static/css/main.1d8c66d8.css",
-    "static/js/main.cceb11dc.js"
+    "static/js/main.1d8a65a5.js"
   ]
 }
