@@ -200,7 +200,7 @@ export const ProjectYear = styled.span`
   right: 8px;
   top: 12px;
 
-  color: ${props => props.theme.normalСolor};
+  color: ${props => props.theme.normalColor};
   text-align: center;
 
   font-family: 'Inter', sans-serif;
