@@ -230,7 +230,7 @@ export const Services = styled.p`
   left: 8px;
   bottom: 40px;
 
-  color: ${props => props.theme.normalСolor};
+  color: ${props => props.theme.normalColor};
 
   font-family: 'Inter', sans-serif;
   font-size: 16px;
