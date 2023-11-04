@@ -254,8 +254,28 @@ export const NextButton = styled.button`
     background-color: ${props => props.theme.borderAlphaColor};
   }
 `;
+
+//--------------mob cart style------------------
+export const SlideMobWrap = styled.div`
+  display: block;
+  width: 100%;
+  height: 444px;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    height: 382px;
+  }
+  @media screen and (min-width: 1368px) {
+    width: 100%;
+    height: 392px;
+  }
+  @media screen and (min-width: 1920px) {
+    width: 100%;
+    height: 444px;
+  }
+`;
 export const LinkedinSvg = styled(IconLinkedin)``;
-export const SocialsLink = styled.div`
+export const SocialsLink = styled.a`
   position: absolute;
   display: flex;
   justify-content: center;
@@ -264,17 +284,19 @@ export const SocialsLink = styled.div`
   bottom: 8px;
   width: 36px;
   height: 36px;
-  border: 1px solid ${({ theme }) => theme.brandColor};
+  border: 1px solid ${({ theme }) => theme.colorText};
   border-radius: 50%;
   background: transparent;
-  fill: ${({ theme }) => theme.brandColor};
+  fill: ${({ theme }) => theme.colorText};
   z-index: 3;
-  opacity: 0;
-  transition: opacity ${({ theme }) => theme.animationStyles};
+  transition: fill ${({ theme }) => theme.animationStyles},
+    border ${({ theme }) => theme.animationStyles};
   .swiper-slide:hover & {
-    opacity: 1;
+    fill: ${({ theme }) => theme.brandColor};
+    border: 1px solid ${({ theme }) => theme.brandColor};
   }
   .swiper-slide:focus & {
-    opacity: 1;
+    fill: ${({ theme }) => theme.brandColor};
+    border: 1px solid ${({ theme }) => theme.brandColor};
   }
 `;
