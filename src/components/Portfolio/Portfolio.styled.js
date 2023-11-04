@@ -85,7 +85,8 @@ export const Li = styled.li`
   display: block;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  transition: border-top, border-bottom;
+  transition: border-top ${({ theme }) => theme.animationStyles},
+    border-bottom ${({ theme }) => theme.animationStyles};
 
   &:hover,
   :focus {
@@ -110,7 +111,8 @@ export const SlideWrapper = styled.div`
   display: block;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  transition: border-top, border-bottom;
+  transition: border-top ${({ theme }) => theme.animationStyles},
+    border-bottom ${({ theme }) => theme.animationStyles};
 
   &:hover,
   :focus {
@@ -147,7 +149,7 @@ export const DarkImgEl = styled.span`
     z-index: 5;
   }
 
-  transition: background-color;
+  transition: background-color ${({ theme }) => theme.animationStyles};
   .slide-wrap:hover & {
     background-color: transparent;
   }

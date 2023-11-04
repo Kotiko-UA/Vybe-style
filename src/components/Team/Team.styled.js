@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { Swiper } from 'swiper/react';
 import { ReactComponent as IconLinkedin } from './icons/linkedin.svg';
-
+import { ReactComponent as PlusIcon } from './icons/plus.svg';
+import { ReactComponent as CloseIcon } from './icons/close.svg';
 export const Wrapper = styled.section`
   padding: 56px 0;
   width: 100%;
@@ -82,7 +83,7 @@ export const SlideWrapper = styled.div`
   width: 100%;
   height: 100%;
   border-bottom: 1px solid transparent;
-  transition: opacity;
+  transition: border-bottom ${({ theme }) => theme.animationStyles};
   .swiper-slide:hover & {
     border-bottom: 1px solid #c4f934;
   }
@@ -90,7 +91,7 @@ export const SlideWrapper = styled.div`
     border-bottom: 1px solid #c4f934;
   }
 `;
-export const SlideLink = styled.a`
+export const SlideLink = styled.div`
   display: block;
   width: 100%;
   height: 444px;
@@ -136,7 +137,7 @@ export const SlideImg = styled.img`
   object-position: 50% 50%;
   z-index: 2;
   opacity: 1;
-  transition: opacity;
+  transition: opacity ${({ theme }) => theme.animationStyles};
   .swiper-slide:hover & {
     opacity: 0;
   }
@@ -254,27 +255,108 @@ export const NextButton = styled.button`
     background-color: ${props => props.theme.borderAlphaColor};
   }
 `;
+
+//--------------mob cart style------------------
+export const SlideWrapperMob = styled.div`
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom ${({ theme }) => theme.animationStyles};
+`;
+export const SlideMobWrap = styled.div`
+  display: block;
+  width: 100%;
+  height: 444px;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    height: 382px;
+  }
+  @media screen and (min-width: 1368px) {
+    width: 100%;
+    height: 392px;
+  }
+  @media screen and (min-width: 1920px) {
+    width: 100%;
+    height: 444px;
+  }
+`;
 export const LinkedinSvg = styled(IconLinkedin)``;
-export const SocialsLink = styled.div`
+export const SocialsLink = styled.a`
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 0;
-  bottom: 8px;
-  width: 36px;
-  height: 36px;
+  top: 8px;
+  right: 8px;
+  width: 34px;
+  height: 34px;
   border: 1px solid ${({ theme }) => theme.brandColor};
   border-radius: 50%;
   background: transparent;
   fill: ${({ theme }) => theme.brandColor};
   z-index: 3;
-  opacity: 0;
-  transition: opacity;
-  .swiper-slide:hover & {
-    opacity: 1;
+`;
+
+export const ButtonOpenPhoto = styled.button`
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 50%;
+  .active-cart & {
+    border: 1px solid transparent;
   }
-  .swiper-slide:focus & {
-    opacity: 1;
+`;
+export const SvgPlusIcon = styled(PlusIcon)`
+  display: block;
+  .active-cart & {
+    display: none;
+  }
+`;
+export const SvgCloseIcon = styled(CloseIcon)`
+  display: none;
+  .active-cart & {
+    display: block;
+  }
+`;
+export const SlideImgMob = styled.img`
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 380px;
+  object-position: 50% 50%;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity ${({ theme }) => theme.animationStyles};
+  .active-cart & {
+    opacity: 0;
+  }
+  .active-cart & {
+    opacity: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    height: 326px;
+  }
+  @media screen and (min-width: 1368px) {
+    width: 100%;
+    height: 336px;
+  }
+  @media screen and (min-width: 1920px) {
+    width: 100%;
+    height: 380px;
   }
 `;
