@@ -12,7 +12,7 @@ import newBgTablet2x from '../../HowWeWork/img/newBGphoto2x.png';
 
 export const Overlay = styled.div`
   overflow-y: hidden;
-  
+
   position: fixed;
   top: 0;
   left: 0;
@@ -38,22 +38,26 @@ export const Overlay = styled.div`
     transform: scale(0.5);
   }
   & .horizontal {
-    height: calc(100vh - 20%);
-    width: calc(100vw - 20%);
+    height: 250px;
+    width: 440px;
+    padding-top: 10px !important;
+  }
+  & .list-title-horizontal {
+    margin-bottom: 5px !important;
   }
 
   & .list-horizontal {
     flex-wrap: nowrap !important;
-    width: calc(100% - 20px) !important;
+    width: 100% !important;
+    height: 184px !important;
   }
 
   & .li-item-horizontal {
     width: calc((100% - 54px) / 4) !important;
-    height: 120px !important;
   }
 
   & .thumb-horizontal {
-    height: 100px !important;
+    height: 120px !important;
   }
 
   & .team-name-horizontal {
@@ -66,7 +70,7 @@ export const Modal = styled.div`
   width: 352px;
   height: 440px;
   padding: 24px 20px;
-  border: 1px solid ${({ theme }) => theme.brandColor};
+      border: 1px solid ${({ theme }) => theme.brandColor};
   background-color: ${({ theme }) => theme.blackColor};
   background-image: url(${bgMobile}), url(${bgMobile2});
   background-repeat: no-repeat;
@@ -76,35 +80,37 @@ export const Modal = styled.div`
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background-image: url(${bgMobile2x}), url(${bgMobile2x2});
-  }
 
-  transform: scale(1);
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  & .horizontal {
-    height: 300px;
-  }
+   }
 
-  .title {
+transform:  scale(1);
+ transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+& .horizontal {
+  height: 300px;
+}
+
+
+.title {
     margin-bottom: 10px;
-    color: ${({ theme }) => theme.colorText};
+    color:${({ theme }) => theme.colorText};
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    @media screen and (min-width: 1380px) {
+     @media screen and (min-width: 1380px){
       font-size: 24px;
-    }
+     }
   }
   .text {
-    color: ${({ theme }) => theme.normalColor};
+   color: ${({ theme }) => theme.normalColor};
     font-family: Inter;
-    font-size: ${props => (props.data === 'en' ? '16px' : '13px')};
+    font-size: ${props => (props.data === 'en' ? '16px' : '12px')} ;
     font-style: normal;
     font-weight: 300;
-    line-height: normal;
+    line-height: normal;    
     margin-bottom: 10px;
-  }
+}
 
   .list {
     width: 296px;
@@ -113,16 +119,16 @@ export const Modal = styled.div`
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
-  }
-  .li-item {
-    display: flex;
-    width: calc((100% - 15px) / 2);
+}
+  .li-item{
+   display: flex;
+width: calc((100% - 15px) / 2);
 
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-    flex-shrink: 0;
-    cursor: pointer;
+flex-direction: column;
+align-items: flex-start;
+gap: 18px;
+flex-shrink: 0;
+cursor: pointer;
   }
 
   .link {
@@ -130,7 +136,7 @@ export const Modal = styled.div`
   }
 
   .thumb {
-    width: 100%;
+   width: 100%;
     height: 120px;
     flex-shrink: 0;
   }
@@ -142,76 +148,77 @@ export const Modal = styled.div`
   }
 
   .team-role {
-    color: ${({ theme }) => theme.normalColor};
-    font-family: Inter;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 1.43;
-    text-transform: lowercase;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    transition: all ${({ theme }) => theme.animationTransform};
+color: ${({ theme }) => theme.normalColor};
+font-family: Inter;
+font-size: 13px;
+font-style: normal;
+font-weight: 300;
+line-height: 1.43;
+text-transform: lowercase;
+margin-top: 4px;
+margin-bottom: 4px; 
+transition: all ${({ theme }) => theme.animationTransform};
   }
-  .team-name {
+  .team-name{
     color: ${({ theme }) => theme.colorText};
     font-family: Inter;
-    font-size: 12px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 400;
-    text-transform: capitalize;
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        text-transform: capitalize;
+        transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   @media screen and (min-width: 1368px) {
     width: 592px;
     height: 604px;
     padding: 24px;
-    background-image: url(${newBgTablet}), url(${bgTablet2});
-    background-repeat: no-repeat;
-    background-size: 218px 153px, 95px 152px;
-    background-position: left -30px bottom 325px, right 0px top 285px;
-  }
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+            background-image: url(${newBgTablet}), url(${bgTablet2});
+     background-repeat: no-repeat;
+     background-size: 218px 153px, 95px 152px;
+     background-position: left -30px bottom 325px, right 0px top 285px;
+    @media (min-device-pixel-ratio: 2),
+   (min-resolution: 192dpi),
+   (min-resolution: 2dppx) {
     background-image: url(${newBgTablet2x}), url(${bgTablet2x2});
-  }
-  .title {
-    text-align: center;
-  }
-  .text {
-    text-align: center;
-  }
-  .team-name {
+   }
+   .title {
+    text-align:center;
+   }
+    .text {
+    text-align:center;
+   }
+    .team-name{
     font-size: 16px;
+    }
+    .list {
+        margin: 0 auto;
+        width: 520px;
+        height: 485px;
+        padding: 10px;
+        gap:30px;
+        row-gap: 20px;      
+    }
+    .li-item {
+      
+        width: calc((100% - 30px) / 2)
+    }
+    .thumb {
+        width: 100%;
+        height: 190px;
+    }
+      .li-item:hover .team-name {
+    color:${({ theme }) => theme.brandColor};
+    transform: translate(60px,10px) scale(1.2);
+    
   }
-  .list {
-    margin: 0 auto;
-    width: 520px;
-    height: 485px;
-    padding: 10px;
-    gap: 30px;
-    row-gap: 20px;
-  }
-  .li-item {
-    width: calc((100% - 30px) / 2);
-  }
-  .thumb {
-    width: 100%;
-    height: 190px;
-  }
-  .li-item:hover .team-name {
-    color: ${({ theme }) => theme.brandColor};
-    transform: translate(60px, 10px) scale(1.1);
-  }
-  .li-item:hover .team-role {
+.li-item:hover .team-role {
     color: ${({ theme }) => theme.colorText};
-    transform: translate(85px, 10px) scale(1.1);
+    transform: translate(85px, 10px) scale(1.2);
   }
-  .li-item:hover .image {
-    transform: scale(1.1);
-  }
+.li-item:hover .image {
+      transform: scale(1.1);
+    }
   @media screen and (min-width: 1920px) {
     width: 1124px;
     height: 360px;
@@ -234,11 +241,11 @@ export const Modal = styled.div`
     }
     .li-item:hover .team-name {
       color: ${({ theme }) => theme.brandColor};
-      transform: translate(25px, 15px) scale(1.1);
+      transform: translate(25px, 15px) scale(1.2);
     }
     .li-item:hover .team-role {
       color: ${({ theme }) => theme.colorText};
-      transform: translate(60px, 15px) scale(1.1);
+      transform: translate(60px, 15px) scale(1.2);
     }
     .li-item:hover .image {
       transform: scale(1.2);
@@ -246,17 +253,17 @@ export const Modal = styled.div`
   }
 
   @media screen and (min-width: 1920px) {
-    width: 1124px;
-    height: 360px;
-    background-size: 200px 153px, 85px 152px;
-    background-position: left -26px bottom 75px, right -25px top 200px;
-    .list {
-      margin: 0 auto;
-      width: 1060px;
-      height: 240px;
-      flex-wrap: nowrap;
-      padding: 10px;
-      gap: 40px;
+width: 1124px;
+height: 360px;
+background-size: 200px 153px, 85px 152px;
+background-position: left -26px bottom 75px, right -25px top 200px;
+.list {
+        margin: 0 auto;
+        width: 1060px;
+        height: 240px;
+        flex-wrap: nowrap;
+        padding: 10px;
+        gap:40px;
     }
     .li-item {
       width: calc((100% - 160px) / 5);
