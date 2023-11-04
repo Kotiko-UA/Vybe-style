@@ -49,11 +49,7 @@ export const DesktopSwiper = ({ windowWidth }) => {
           return klim ? (
             <SwiperSlide key={id}>
               <SlideWrapper>
-                <SlideLink
-                  href={projectUrl}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                >
+                <SlideLink>
                   <TeamRole>
                     {currentLanguage === 'en' ? teamRole : teamRoleUa}
                   </TeamRole>

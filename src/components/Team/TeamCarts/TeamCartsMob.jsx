@@ -1,16 +1,17 @@
 import { LanguageContext } from 'components/HookLang/LanguageContext';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import teamCarts from '../team-arrey';
 import {
+  ButtonOpenPhoto,
   Buttons,
   LinkedinSvg,
-  SlideDiv,
-  SlideImg,
   SlideImg2,
-  SlideLink,
+  SlideImgMob,
   SlideMobWrap,
-  SlideWrapper,
+  SlideWrapperMob,
   SocialsLink,
+  SvgCloseIcon,
+  SvgPlusIcon,
   SwiperEl,
   TeamName,
   TeamRole,
@@ -23,7 +24,13 @@ import { ReactComponent as ArrorR } from '../../../icons/arrorR.svg';
 import { SwiperButtonNext, SwiperButtonPrev } from '../SwiperButtons';
 
 export const MobSwiper = ({ windowWidth }) => {
+  const [isNextPhotoShow, setNextPhotoShow] = useState(false);
   const { currentLanguage } = useContext(LanguageContext);
+  const onClickButton = id => {
+    const currentCart = document.querySelector(`.team-photo-${id}`);
+    currentCart.classList.toggle('active-cart');
+    setNextPhotoShow(!isNextPhotoShow);
+  };
   return (
     <SwiperEl
       spaceBetween={8}
@@ -42,21 +49,27 @@ export const MobSwiper = ({ windowWidth }) => {
           teamRole,
           teamFotoUrl,
           teamFotoUrl2,
-          projectUrl,
           teamRoleUa,
           teamNameUa,
           klim,
         }) => {
-          return klim ? (
+          return (
             <SwiperSlide key={id}>
-              <SlideWrapper>
-                <SlideMobWrap>
+              <SlideWrapperMob>
+                <SlideMobWrap className={`team-photo-${id}`}>
                   <TeamRole>
                     {currentLanguage === 'en' ? teamRole : teamRoleUa}
                   </TeamRole>
                   <TeamName>
                     {currentLanguage === 'en' ? teamName : teamNameUa}
                   </TeamName>
+                  <ButtonOpenPhoto
+                    type="button"
+                    onClick={() => onClickButton(id)}
+                  >
+                    <SvgPlusIcon />
+                    <SvgCloseIcon />
+                  </ButtonOpenPhoto>
                   {klim && (
                     <SocialsLink
                       href="https://www.linkedin.com/company/vibestyle/about/"
@@ -67,25 +80,14 @@ export const MobSwiper = ({ windowWidth }) => {
                     </SocialsLink>
                   )}
 
-                  <SlideImg loading="lazy" src={teamFotoUrl} alt={teamName} />
+                  <SlideImgMob
+                    loading="lazy"
+                    src={teamFotoUrl}
+                    alt={teamName}
+                  />
                   <SlideImg2 loading="lazy" src={teamFotoUrl2} alt={teamName} />
                 </SlideMobWrap>
-              </SlideWrapper>
-            </SwiperSlide>
-          ) : (
-            <SwiperSlide key={id}>
-              <SlideWrapper>
-                <SlideDiv>
-                  <TeamRole>
-                    {currentLanguage === 'en' ? teamRole : teamRoleUa}
-                  </TeamRole>
-                  <TeamName>
-                    {currentLanguage === 'en' ? teamName : teamNameUa}
-                  </TeamName>
-                  <SlideImg loading="lazy" src={teamFotoUrl} alt={teamName} />
-                  <SlideImg2 loading="lazy" src={teamFotoUrl2} alt={teamName} />
-                </SlideDiv>
-              </SlideWrapper>
+              </SlideWrapperMob>
             </SwiperSlide>
           );
         }
