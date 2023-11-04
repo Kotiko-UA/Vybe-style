@@ -202,7 +202,7 @@ export const ProjectYear = styled.span`
   right: 8px;
   top: 12px;
 
-  color: ${props => props.theme.normalСolor};
+  color: ${props => props.theme.normalColor};
   text-align: center;
 
   font-family: 'Inter', sans-serif;
@@ -232,7 +232,7 @@ export const Services = styled.p`
   left: 8px;
   bottom: 40px;
 
-  color: ${props => props.theme.normalСolor};
+  color: ${props => props.theme.normalColor};
 
   font-family: 'Inter', sans-serif;
   font-size: 16px;

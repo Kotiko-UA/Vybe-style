@@ -11,8 +11,8 @@ import newBgTablet from '../../HowWeWork/img/newBGphoto.png';
 import newBgTablet2x from '../../HowWeWork/img/newBGphoto2x.png';
 
 export const Overlay = styled.div`
-  overflow-y: auto;
-  overflow-x: auto;
+  overflow-y: hidden;
+  
   position: fixed;
   top: 0;
   left: 0;
