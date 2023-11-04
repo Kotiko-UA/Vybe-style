@@ -82,7 +82,7 @@ export const SlideWrapper = styled.div`
   width: 100%;
   height: 100%;
   border-bottom: 1px solid transparent;
-  transition: opacity;
+  transition: border-bottom ${({ theme }) => theme.animationStyles};
   .swiper-slide:hover & {
     border-bottom: 1px solid #c4f934;
   }
@@ -136,7 +136,7 @@ export const SlideImg = styled.img`
   object-position: 50% 50%;
   z-index: 2;
   opacity: 1;
-  transition: opacity;
+  transition: opacity ${({ theme }) => theme.animationStyles};
   .swiper-slide:hover & {
     opacity: 0;
   }
@@ -270,7 +270,7 @@ export const SocialsLink = styled.div`
   fill: ${({ theme }) => theme.brandColor};
   z-index: 3;
   opacity: 0;
-  transition: opacity;
+  transition: opacity ${({ theme }) => theme.animationStyles};
   .swiper-slide:hover & {
     opacity: 1;
   }
