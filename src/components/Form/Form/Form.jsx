@@ -109,7 +109,7 @@ export const ContactForm = () => {
       }
 
       await axios.post(
-        `https://vibestyle-backend.onrender.com/api/contacts`,
+        `https://vibeserver.vibestyle.co.ua/api/contacts`,
         formData
       );
 
