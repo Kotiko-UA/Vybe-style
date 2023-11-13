@@ -149,7 +149,7 @@ export const DarkImgEl = styled.span`
     z-index: 5;
   }
 
-  transition: background-color ${({ theme }) => theme.animationStyles};
+  transition: background-color;
   .slide-wrap:hover & {
     background-color: transparent;
   }
